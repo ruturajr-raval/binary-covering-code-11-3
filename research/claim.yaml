@@ -11,7 +11,7 @@ target:
     - construct-and-verify-a-15-word-cover
     - exclude-all-15-word-covers-with-checked-certificates
 current_supported_claim:
-  statement: The normalized size-15 search has 150 parent branches, of which 112 are certified closed and 38 remain unresolved.
+  statement: The normalized size-15 search has 112 certified parent closures and 38 unresolved parents; 385 of their 2,548 third-word children are excluded by retained static constraints, leaving 2,163 live children.
   exact_value_determined: false
 candidate_claim:
   statement: null
@@ -23,5 +23,5 @@ novelty:
 limitations:
   - No valid 15-word code is currently retained.
   - Thirty-eight normalized parent branches remain unresolved.
+  - The 2,163 live child branches have not yet been exhaustively solved.
   - Solver timeouts and unchecked infeasibility statuses are not proofs.
-

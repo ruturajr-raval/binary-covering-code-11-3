@@ -6,8 +6,10 @@
   "gates": {
     "significant_original_result": false,
     "prior_art_refreshed": false,
-    "complete_branch_manifest": false,
-    "independent_manifest_audit_passes": false,
+    "complete_orbit_manifest": true,
+    "independent_manifest_audit_passes": true,
+    "complete_child_formula_manifest": false,
+    "independent_child_formula_audit_passes": false,
     "construction_verified_twice": false,
     "all_required_proofs_replay": false,
     "clean_checkout_replay_passes": false,
@@ -17,6 +19,5 @@
     "external_review_addressed": false
   },
   "decision": "hold",
-  "reason": "The exact value remains open and the 38 residual parents are not yet closed."
+  "reason": "The live child frontier is authenticated, but child formulas are not yet retained and the 38 residual parents remain open."
 }
-

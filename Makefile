@@ -8,7 +8,7 @@ BUILD_DIR := build
 BASELINE := data/baseline/k2-11-3-linear-16.txt
 PARITY := data/baseline/k2-11-3-parity-columns-16.json
 
-.PHONY: test native-test proof-checker verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean
+.PHONY: test native-test proof-checker verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean
 
 test:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m unittest discover -s tests -v
@@ -105,6 +105,32 @@ audit-third-word-cases: third-word-cases
 		tools/audit_third_word_cases.py \
 		evidence/residual-two-word-cases.json \
 		evidence/third-word-cases.json
+
+third-word-child-frontier:
+	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
+		tools/generate_third_word_child_frontier.py \
+		evidence/residual-two-word-cases.json \
+		evidence/third-word-cases.json \
+		evidence/min-distance-branches.json \
+		evidence/max-degree-reduction.json \
+		evidence/third-word-proof-index.json \
+		evidence/case-reduction-summary.json \
+		evidence/normalized-residual-two-word-cases.json \
+		research/third-word-child-frontier.json
+
+audit-third-word-child-frontier:
+	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
+		tools/audit_third_word_child_frontier.py \
+		evidence/residual-two-word-cases.json \
+		evidence/third-word-cases.json \
+		evidence/min-distance-branches.json \
+		evidence/max-degree-reduction.json \
+		evidence/third-word-proof-index.json \
+		evidence/case-reduction-summary.json \
+		evidence/normalized-residual-two-word-cases.json \
+		research/third-word-child-frontier.json
+
+rebuild-and-audit-third-word-child-frontier: third-word-child-frontier audit-third-word-child-frontier
 
 min-distance-branches: compact-cnf distance-bounds
 	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
