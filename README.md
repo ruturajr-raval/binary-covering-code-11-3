@@ -1,5 +1,7 @@
 # Binary Covering Code `K_2(11,3)`
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22260709.svg)](https://doi.org/10.5281/zenodo.22260709)
+
 Certificate-oriented search for the exact value of the binary covering number
 `K_2(11,3)`, currently bounded by `15 <= K_2(11,3) <= 16`.
 

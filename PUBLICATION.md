@@ -59,4 +59,7 @@ construction route remains open as well.
 ## Citation
 
 Citation metadata is provided in `CITATION.cff`, and `.zenodo.json` supplies
-the metadata for durable release archival.
+the metadata for durable release archival. The archived `v0.1.1` release DOI
+is [10.5281/zenodo.22260710](https://doi.org/10.5281/zenodo.22260710). The
+stable concept DOI for all versions is
+[10.5281/zenodo.22260709](https://doi.org/10.5281/zenodo.22260709).
