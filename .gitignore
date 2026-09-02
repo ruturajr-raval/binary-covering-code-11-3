@@ -1,6 +1,7 @@
 /.venv/
 /build/
 /search-results/
+/.research-artifacts/
 .DS_Store
 __pycache__/
 *.pyc

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "project": "binary-covering-code-11-3",
+  "evaluated_at": "2026-09-02",
+  "candidate_claim": null,
+  "gates": {
+    "significant_original_result": false,
+    "prior_art_refreshed": false,
+    "complete_branch_manifest": false,
+    "independent_manifest_audit_passes": false,
+    "construction_verified_twice": false,
+    "all_required_proofs_replay": false,
+    "clean_checkout_replay_passes": false,
+    "claim_scope_audited": false,
+    "limitations_documented": true,
+    "manuscript_ready": false,
+    "external_review_addressed": false
+  },
+  "decision": "hold",
+  "reason": "The exact value remains open and the 38 residual parents are not yet closed."
+}
+
