@@ -21,7 +21,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip install -r requirements-sat.txt -r requirements-proof.txt
+      - run: make third-word-child-formula-smoke PYTHON=python
       - run: make test PYTHON=python
+      - run: make audit-third-word-child-frontier PYTHON=python
       - run: make verify-baseline verify-independent
       - run: make distance-bounds overlap-bound
       - run: make audit-two-word-cases

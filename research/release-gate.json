@@ -9,7 +9,7 @@
     "complete_orbit_manifest": true,
     "independent_manifest_audit_passes": true,
     "complete_child_formula_manifest": false,
-    "independent_child_formula_audit_passes": false,
+    "independent_child_formula_audit_passes": true,
     "construction_verified_twice": false,
     "all_required_proofs_replay": false,
     "clean_checkout_replay_passes": false,
@@ -19,5 +19,5 @@
     "external_review_addressed": false
   },
   "decision": "hold",
-  "reason": "The live child frontier is authenticated, but child formulas are not yet retained and the 38 residual parents remain open."
+  "reason": "The live child frontier and per-child formula reconstruction are independently audited, but no complete child proof manifest is retained and the 38 residual parents remain open."
 }

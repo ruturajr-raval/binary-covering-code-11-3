@@ -34,10 +34,11 @@ parents, and the 2,163 children that survive all retained static constraints.
 
 Every child branch must be linked to its parent, canonical representative,
 stabilizer data, imposed constraints, and content digest. The current ledger
-provides these links, but child-level CNF generation and audit remain a
-separate release gate. Every closed branch must have a proof accepted by an
-independent checker. Solver status alone is not retained as a mathematical
-conclusion.
+provides these links. A child-level CNF generator and an independent auditor
+now reconstruct the exact minimum-distance, parent, orbit-prefix, and matching
+constraints for any live child. A complete child-formula manifest is not
+retained, and no child is closed without a proof accepted by an independent
+checker. Solver status alone is not retained as a mathematical conclusion.
 
 ## Promotion Standard
 
