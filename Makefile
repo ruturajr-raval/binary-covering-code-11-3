@@ -8,7 +8,7 @@ BUILD_DIR := build
 BASELINE := data/baseline/k2-11-3-linear-16.txt
 PARITY := data/baseline/k2-11-3-parity-columns-16.json
 
-.PHONY: test native-test proof-checker verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier third-word-child-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean
+.PHONY: test native-test proof-checker verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean
 
 test:
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m unittest discover -s tests -v
@@ -132,6 +132,28 @@ audit-third-word-child-frontier:
 
 rebuild-and-audit-third-word-child-frontier: third-word-child-frontier audit-third-word-child-frontier
 
+fourth-word-hard-frontier:
+	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
+		tools/generate_fourth_word_frontier.py \
+		evidence/residual-two-word-cases.json \
+		evidence/third-word-cases.json \
+		research/third-word-child-frontier.json \
+		research/fourth-word-hard-frontier.json \
+		--child-id w4-weight5-intersection0::orbit-005 \
+		--child-id w4-weight5-intersection0::orbit-007 \
+		--child-id w4-weight5-intersection0::orbit-014 \
+		--child-id w4-weight5-intersection0::orbit-015
+
+audit-fourth-word-hard-frontier:
+	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
+		tools/audit_fourth_word_frontier.py \
+		evidence/residual-two-word-cases.json \
+		evidence/third-word-cases.json \
+		research/third-word-child-frontier.json \
+		research/fourth-word-hard-frontier.json
+
+rebuild-and-audit-fourth-word-hard-frontier: fourth-word-hard-frontier audit-fourth-word-hard-frontier
+
 third-word-child-formula-smoke: min-distance-branches
 	mkdir -p .research-artifacts/child-formula-smoke/nonmatching
 	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
@@ -159,6 +181,22 @@ third-word-child-formula-smoke: min-distance-branches
 		tools/audit_third_word_child_formula.py \
 		.research-artifacts/child-formula-smoke/matching/formula.cnf \
 		.research-artifacts/child-formula-smoke/matching/metadata.json
+
+fourth-word-formula-smoke: min-distance-branches
+	mkdir -p .research-artifacts/fourth-formula-smoke
+	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
+		tools/generate_fourth_word_formula.py \
+		evidence/residual-two-word-cases.json \
+		evidence/third-word-cases.json \
+		research/third-word-child-frontier.json \
+		research/fourth-word-hard-frontier.json \
+		w4-weight5-intersection0::orbit-005::fourth-001 \
+		.research-artifacts/fourth-formula-smoke/formula.cnf \
+		.research-artifacts/fourth-formula-smoke/metadata.json
+	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \
+		tools/audit_fourth_word_formula.py \
+		.research-artifacts/fourth-formula-smoke/formula.cnf \
+		.research-artifacts/fourth-formula-smoke/metadata.json
 
 min-distance-branches: compact-cnf distance-bounds
 	PYTHONPATH=$(PYTHONPATH):tools $(PYTHON) \

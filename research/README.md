@@ -25,6 +25,11 @@ The retained frontier record is documented in
 intermediate non-DRAT children, the 2,548 raw children below the 38 active
 parents, and the 2,163 children that survive all retained static constraints.
 
+The four hard children from the first focused parent have an independently
+audited fourth-word split documented in
+`research/FOURTH_WORD_HARD_FRONTIER.md`. It contains 350 exhaustive orbit
+branches. These are search subdivisions, not certified closures.
+
 ## Records
 
 - `claim.yaml` defines the exact scope of the candidate result.
