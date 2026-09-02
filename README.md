@@ -114,7 +114,7 @@ The retained baseline code is:
 11111111111
 ```
 
-## Verified Outcome
+## What Was Achieved
 
 This repository independently verifies the known upper bound
 
@@ -134,6 +134,18 @@ the size-15 search:
 The exact value remains open. No 15-word code has been found, and the retained
 proofs do not yet exclude all 15-word codes. The published interval therefore
 remains `15 <= K_2(11,3) <= 16`.
+
+| Question | Outcome |
+| --- | --- |
+| Is the retained 16-word cover valid? | Yes, by two direct enumeration paths and a syndrome-space cross-check. |
+| Has a valid 15-word cover been found? | No. |
+| Are the size-15 formulas audited? | Yes, for both the full and compact encodings. |
+| What exact structural constraints were proved? | Any hypothetical 15-word cover has minimum distance at most 5, pair-ball overlap at least 1,712, and triple-ball overlap at least 280. |
+| Is the normalized branch cover complete? | Yes, all hypothetical 15-word covers enter one of 150 canonical parent branches. |
+| How much of that cover is certified closed? | 112 normalized branch closures have independently checkable certificates or checked DRAT traces. |
+| What remains unresolved? | 38 normalized residual branches, explicitly listed and authenticated. |
+| Was a new lower bound proved? | No. |
+| Is `K_2(11,3)` determined? | No. The exact value remains either 15 or 16. |
 
 ## Why It Matters
 

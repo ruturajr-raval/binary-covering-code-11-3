@@ -1,11 +1,12 @@
-# Release v0.1.0
+# Release v0.1.1
 
 ## What Was Done
 
-This release independently verifies a known 16-word radius-3 cover of the
-binary 11-cube and develops a proof-producing size-15 search. Exact structural
-certificates, canonical symmetry reductions, and checked DRAT traces close
-112 of 150 normalized branches.
+This archival patch adds a compact results summary to the README and refreshes
+the release and citation metadata after Zenodo integration was enabled. The
+verified 16-word cover, structural certificates, checked DRAT traces, 112
+certified normalized branch closures, and 38 unresolved branches are
+unchanged.
 
 ## Supported Claim
 
@@ -57,5 +58,5 @@ construction route remains open as well.
 
 ## Citation
 
-Citation metadata is provided in `CITATION.cff`. The release metadata in
-`.zenodo.json` is prepared for durable archival.
+Citation metadata is provided in `CITATION.cff`, and `.zenodo.json` supplies
+the metadata for durable release archival.
