@@ -3,6 +3,8 @@
   "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "not_established",
+  "artifact_reproducibility_ready": true,
+  "theorem_announcement_ready": false,
   "result_routes": {
     "construction": {
       "claim_ready": false,
@@ -10,7 +12,7 @@
     },
     "lower_bound": {
       "claim_ready": false,
-      "blocker": "Thirty-eight normalized parent cases remain without a checked exclusion."
+      "blocker": "Thirty-eight normalized residual branches remain without a checked exclusion."
     },
     "baseline": {
       "artifact_complete": true,
@@ -28,7 +30,7 @@
   "limitations": [
     "The exact value remains either 15 or 16.",
     "The retained 15-word near-cover leaves 28 words uncovered.",
-    "Thirty-eight normalized parent cases remain unresolved.",
+    "Thirty-eight normalized residual branches remain unresolved.",
     "Solver timeouts and unlogged statuses are not mathematical evidence of impossibility.",
     "Sharp witnesses for the retained overlap row system are not claimed to be realizable covers.",
     "No external mathematical review has occurred."

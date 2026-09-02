@@ -3,7 +3,7 @@ CXX ?= clang++
 CXXFLAGS ?= -O3 -std=c++20 -Wall -Wextra -Wpedantic
 DRAT_TRIM ?= build/drat-trim-src/drat-trim
 DRAT_TRIM_COMMIT ?= 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
-PYTHONPATH := src
+PYTHONPATH := src:tools
 BUILD_DIR := build
 BASELINE := data/baseline/k2-11-3-linear-16.txt
 PARITY := data/baseline/k2-11-3-parity-columns-16.json

@@ -180,14 +180,14 @@ The work proceeds on two independent routes.
 - Use the fixed-pair stabilizer to select a canonical third-word orbit.
 - Apply the matching constraint only in cases where maximum-degree
   normalization proves it.
-- Continue proof-producing runs on the 38 audited residual parents and check
+- Continue proof-producing runs on the 38 audited residual branches and check
   every retained trace with a separate proof checker.
 
 ## Limitations
 
 - The current 16-word code reproduces the known upper bound.
 - The retained 15-word near-cover still leaves 28 ambient words uncovered.
-- Thirty-eight normalized parent cases remain unresolved.
+- Thirty-eight normalized residual branches remain unresolved.
 - A solver timeout is not evidence that a 15-word code is impossible.
 - CP-SAT `INFEASIBLE` without a proof trace is not promoted to a theorem.
 - Fixing the all-zero codeword is sound only because translating a binary code
