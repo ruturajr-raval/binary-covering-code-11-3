@@ -11,9 +11,9 @@ independent five-minute solver attempts:
 - `w4-weight5-intersection0::orbit-015`
 
 Solver statuses are not proof claims. Reproducible scout reports and their run
-records must be retained before this selection is used outside the private
-workbench. The retained fourth-word frontier is an exact symmetry split of
-those four unresolved formulas.
+records must be retained before this selection is used as research evidence.
+The retained fourth-word frontier is an exact symmetry split of those four
+unresolved formulas.
 
 ## Exact Split
 
@@ -69,6 +69,21 @@ Regenerate and audit it:
 ```text
 make rebuild-and-audit-fourth-word-hard-frontier
 ```
+
+## Retained Scout
+
+At commit `f968cc7`, a four-worker Glucose 4 portfolio scheduled all 350
+branches with a cooperative interrupt request after five seconds per branch.
+It reported 324 UNSAT and 26 UNKNOWN statuses, found no cover, and recorded no
+worker errors.
+
+- `research/runs/2026-09-02-fourth-word-portfolio.json`
+- `research/runs/2026-09-02-fourth-word-portfolio-run.json`
+
+The scout is prioritization evidence only. Its UNSAT statuses have no retained
+proof trace, and cooperative interrupt timing can change statuses near the
+threshold. The measured solve time can also exceed five seconds before the
+solver acknowledges an interrupt.
 
 No fourth-word branch is considered closed until its audited CNF has a proof
 accepted by an independent checker.

@@ -1,0 +1,138 @@
+{
+  "artifacts": [
+    {
+      "path": "research/runs/2026-09-02-fourth-word-portfolio.json",
+      "sha256": "26c2697f9fc44daa652ca49d5c9d8b4355f0265768002f32d214536c0204c975"
+    }
+  ],
+  "command": [
+    "env",
+    "PYTHONPATH=src:tools",
+    "python",
+    "tools/run_fourth_word_portfolio.py",
+    "evidence/residual-two-word-cases.json",
+    "evidence/third-word-cases.json",
+    "research/third-word-child-frontier.json",
+    "research/fourth-word-hard-frontier.json",
+    "research/runs/2026-09-02-fourth-word-portfolio.json",
+    "--solver",
+    "glucose4",
+    "--branch-time-limit",
+    "5.0",
+    "--workers",
+    "4",
+    "--order",
+    "reverse-prefix",
+    "--run-record",
+    "research/runs/2026-09-02-fourth-word-portfolio-run.json",
+    "--run-id",
+    "2026-09-02-fourth-word-portfolio",
+    "--code-output",
+    "research/runs/2026-09-02-fourth-word-portfolio-cover.txt"
+  ],
+  "environment": {
+    "git_worktree": "clean",
+    "multiprocessing_start_method": "spawn",
+    "python": "3.9.6",
+    "python_sat": "1.9.dev15",
+    "solver": "glucose4"
+  },
+  "finished_at": "2026-09-02T23:17:50Z",
+  "git_commit": "f968cc79e9c17f93f79dcd135eb6dbecaa3feb55",
+  "inputs": [
+    {
+      "path": "build/min-distance/k2-11-3-atmost15-mindistance1.cnf",
+      "sha256": "ae33135bb4d8c16bc7740353f06cdf38213fef201e941e8247ddc7993abd1ba1"
+    },
+    {
+      "path": "build/min-distance/k2-11-3-atmost15-mindistance2.cnf",
+      "sha256": "5c813c4547974f2344058ccdc4bc35602aa75d6fd7ded3e005a5538be897dc44"
+    },
+    {
+      "path": "build/min-distance/k2-11-3-atmost15-mindistance3.cnf",
+      "sha256": "3ed98e0ae48185d3a04585b5a31ae5cb530018d8171c366ef5bded02db54d548"
+    },
+    {
+      "path": "build/min-distance/k2-11-3-atmost15-mindistance4.cnf",
+      "sha256": "dd9bbf4db76a7f1dde1e41d1e8a8d7c50bd2548811b612bdb6e182dc352ee564"
+    },
+    {
+      "path": "build/min-distance/k2-11-3-atmost15-mindistance5.cnf",
+      "sha256": "334f6fc940fbefe36e91459e6d01a765f07df67cfffe43bd14beaf31c05d6e93"
+    },
+    {
+      "path": "evidence/residual-two-word-cases.json",
+      "sha256": "db86f574ec45c2cdda689131d612bf4c37eb1cebf15fc717844b74cfb386ebaf"
+    },
+    {
+      "path": "evidence/third-word-cases.json",
+      "sha256": "6dbb1c345688b808f0b1216bad9402fcb36b6ba3755a35bc9cb8dee7033426e8"
+    },
+    {
+      "path": "research/fourth-word-hard-frontier.json",
+      "sha256": "d517095aaf5fdc5ba05f1131d91d10c67a8e862ec5752ec748c88db0c127c5b3"
+    },
+    {
+      "path": "research/third-word-child-frontier.json",
+      "sha256": "d6a5b1082aa64ae37092fe20094e7832f40b3374da059aac1da52d7dd90a1314"
+    },
+    {
+      "path": "src/covering_code/__init__.py",
+      "sha256": "fe5cb909fe8516b47910283e9065e7505dcf1b7c6e9b1e610f67615c4532ce89"
+    },
+    {
+      "path": "src/covering_code/cnf.py",
+      "sha256": "70b672e1fb749420251aba316829955b6897606ecb50bbf2913a49bfe822e7a2"
+    },
+    {
+      "path": "src/covering_code/core.py",
+      "sha256": "5edcb8b2079cb3cffb93607b718bdb3be42d7c4f3257e61f2549dbc3e1d0329a"
+    },
+    {
+      "path": "tools/audit_covering_cnf.py",
+      "sha256": "4a25ea921b8c5eec6ee14326104cf146db7fabb2d91eebbb65e2064a28750232"
+    },
+    {
+      "path": "tools/fourth_word_symmetry.py",
+      "sha256": "aab5244cdd3211ab31d2e12473bdc291508f77b14f5e4cc0d7138608f1b8b81c"
+    },
+    {
+      "path": "tools/generate_third_word_child_formula.py",
+      "sha256": "dcfa8bc0c1e85861c566759d08bea839171ee2ce5d6cb80a91204e315c3ebfc7"
+    },
+    {
+      "path": "tools/matching_constraints.py",
+      "sha256": "4d1799d914c264c73852713a9fea64a7d0fabafcc4d6fe2aa61e7deae87309fa"
+    },
+    {
+      "path": "tools/run_fourth_word_portfolio.py",
+      "sha256": "8cb5b498e197ff47da3ef3b4ef2142f086408b839e7cee28fd0cd38685a65704"
+    },
+    {
+      "path": "tools/run_third_word_child_portfolio.py",
+      "sha256": "96b93410a4de2b0093e529869b04f2c3e0d440d9f712695336887bbdecbbf687"
+    },
+    {
+      "path": "tools/run_two_word_portfolio.py",
+      "sha256": "6929a648fb50975fcea6fa1656608e92319185d40f0ba4c22fff7c7431c62b96"
+    },
+    {
+      "path": "tools/third_word_symmetry.py",
+      "sha256": "d992353d044dcd66f7b152e474997fca21839be55ab8c9d91b35064b5e03f5d1"
+    }
+  ],
+  "metrics": {
+    "completed_branch_count": 350,
+    "elapsed_seconds": 114.468581375,
+    "found_cover": false,
+    "scheduled_branch_count": 350,
+    "unknown_branch_count": 26,
+    "unsat_branch_count": 324,
+    "worker_error_count": 0
+  },
+  "notes": "Solver statuses are exploratory. UNSAT results under assumptions have no retained proof trace. The per-branch threshold requests a cooperative solver interrupt and is not a strict wall-clock limit.",
+  "result": "inconclusive",
+  "run_id": "2026-09-02-fourth-word-portfolio",
+  "schema_version": 1,
+  "started_at": "2026-09-02T23:15:55Z"
+}

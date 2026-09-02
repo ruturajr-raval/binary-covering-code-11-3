@@ -35,6 +35,8 @@ branches. These are search subdivisions, not certified closures.
 - `claim.yaml` defines the exact scope of the candidate result.
 - `release-gate.json` records which promotion requirements have been met.
 - `run.schema.json` defines the minimum metadata for retained computations.
+- `runs/2026-09-02-fourth-word-portfolio.json` retains the complete
+  exploratory fourth-word scout and its adjacent provenance record.
 - `/.research-artifacts/` holds local exploratory outputs and is not tracked.
 
 Every child branch must be linked to its parent, canonical representative,
