@@ -1,0 +1,68 @@
+{
+  "branch_manifest": "evidence/min-distance-branches.json",
+  "case_manifest": "evidence/two-word-cases.json",
+  "selection_rule": "Cases from the prior 63-case certified residue that solved as UNSAT in the five-second closest-pair screen",
+  "cases": [
+    {
+      "case_id": "w2-weight3-intersection2",
+      "minimum_distance": 2
+    },
+    {
+      "case_id": "w3-weight3-intersection2",
+      "minimum_distance": 3
+    },
+    {
+      "case_id": "w3-weight4-intersection3",
+      "minimum_distance": 3
+    },
+    {
+      "case_id": "w3-weight5-intersection3",
+      "minimum_distance": 3
+    },
+    {
+      "case_id": "w4-weight4-intersection3",
+      "minimum_distance": 4
+    },
+    {
+      "case_id": "w4-weight5-intersection3",
+      "minimum_distance": 4
+    },
+    {
+      "case_id": "w4-weight5-intersection4",
+      "minimum_distance": 4
+    },
+    {
+      "case_id": "w5-weight5-intersection0",
+      "minimum_distance": 5,
+      "solver": "cadical195"
+    },
+    {
+      "case_id": "w5-weight5-intersection3",
+      "minimum_distance": 5
+    },
+    {
+      "case_id": "w5-weight5-intersection4",
+      "minimum_distance": 5
+    },
+    {
+      "case_id": "w5-weight6-intersection0",
+      "minimum_distance": 5,
+      "solver": "cadical195"
+    },
+    {
+      "case_id": "w5-weight6-intersection1",
+      "minimum_distance": 5,
+      "solver": "glucose4"
+    },
+    {
+      "case_id": "w5-weight6-intersection2",
+      "minimum_distance": 5,
+      "solver": "cadical195"
+    },
+    {
+      "case_id": "w5-weight6-intersection3",
+      "minimum_distance": 5,
+      "solver": "cadical195"
+    }
+  ]
+}

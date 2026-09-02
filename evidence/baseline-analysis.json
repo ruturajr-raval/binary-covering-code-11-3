@@ -1,0 +1,56 @@
+{
+  "code_size": 16,
+  "codewords": [
+    0,
+    137,
+    341,
+    476,
+    619,
+    738,
+    830,
+    951,
+    1096,
+    1217,
+    1309,
+    1428,
+    1571,
+    1706,
+    1910,
+    2047
+  ],
+  "dimension": 4,
+  "direct_verification": {
+    "ambient_size": 2048,
+    "code_size": 16,
+    "coverage_multiplicity_histogram": {
+      "1": 1248,
+      "3": 768,
+      "5": 32
+    },
+    "covering_radius": 3,
+    "distance_histogram": {
+      "0": 16,
+      "1": 176,
+      "2": 752,
+      "3": 1104
+    },
+    "length": 11,
+    "normalized_sha256": "6f056ff8fb88c423155514f959d6f211bcffb2653c85ff6399731fde3827e691",
+    "radius": 3,
+    "uncovered_words": [],
+    "valid": true
+  },
+  "full_syndrome_space": true,
+  "length": 11,
+  "rank": 7,
+  "reached_syndromes": 128,
+  "syndrome_bits": 7,
+  "syndrome_radius": 3,
+  "syndrome_weight_histogram": {
+    "0": 1,
+    "1": 11,
+    "2": 47,
+    "3": 69
+  },
+  "valid": true
+}

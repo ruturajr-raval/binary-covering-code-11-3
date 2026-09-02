@@ -1,0 +1,111 @@
+{
+  "advanced_counts": {
+    "maximum_degree_normalization": 5,
+    "open": 38,
+    "third_word_drat": 6
+  },
+  "advanced_inputs": {
+    "maximum_degree": {
+      "path": "evidence/max-degree-reduction.json",
+      "sha256": "29e3f55e1dd0343d0180d18f9136c5778a96a3e1516cc4a0a7d1141f4259a822"
+    },
+    "third_word_proofs": {
+      "path": "evidence/third-word-proof-index.json",
+      "sha256": "e17673b39f57ad9aef15e3beee63584a30f1454d2392a4e6d2fd7360a2b95fe6"
+    }
+  },
+  "all_accounted_for": true,
+  "global_exact_value_resolved": false,
+  "matching_constrained_third_word_drat_cases": [
+    "w1-weight7-intersection0",
+    "w4-weight6-intersection0",
+    "w4-weight6-intersection1",
+    "w4-weight6-intersection2"
+  ],
+  "maximum_degree_normalization_cases": [
+    "w1-weight2-intersection1",
+    "w2-weight4-intersection2",
+    "w3-weight4-intersection2",
+    "w3-weight6-intersection3",
+    "w4-weight6-intersection3"
+  ],
+  "open_by_minimum_distance": {
+    "1": 10,
+    "2": 12,
+    "3": 10,
+    "4": 6
+  },
+  "open_cases": [
+    "w1-weight1-intersection0",
+    "w1-weight2-intersection0",
+    "w1-weight3-intersection0",
+    "w1-weight3-intersection1",
+    "w1-weight4-intersection0",
+    "w1-weight4-intersection1",
+    "w1-weight5-intersection0",
+    "w1-weight5-intersection1",
+    "w1-weight6-intersection0",
+    "w1-weight6-intersection1",
+    "w2-weight2-intersection0",
+    "w2-weight2-intersection1",
+    "w2-weight3-intersection0",
+    "w2-weight3-intersection1",
+    "w2-weight4-intersection0",
+    "w2-weight4-intersection1",
+    "w2-weight5-intersection0",
+    "w2-weight5-intersection1",
+    "w2-weight5-intersection2",
+    "w2-weight6-intersection0",
+    "w2-weight6-intersection1",
+    "w2-weight6-intersection2",
+    "w3-weight3-intersection0",
+    "w3-weight3-intersection1",
+    "w3-weight4-intersection0",
+    "w3-weight4-intersection1",
+    "w3-weight5-intersection0",
+    "w3-weight5-intersection1",
+    "w3-weight5-intersection2",
+    "w3-weight6-intersection0",
+    "w3-weight6-intersection1",
+    "w3-weight6-intersection2",
+    "w4-weight4-intersection0",
+    "w4-weight4-intersection1",
+    "w4-weight4-intersection2",
+    "w4-weight5-intersection0",
+    "w4-weight5-intersection1",
+    "w4-weight5-intersection2"
+  ],
+  "problem": {
+    "length": 11,
+    "q": 2,
+    "radius": 3,
+    "target_size": 15
+  },
+  "proof_checker": "drat-trim",
+  "proof_checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "stage1_counts": {
+    "closest_pair_drat": 14,
+    "integer_profile_infeasible": 2,
+    "minimum_distance_at_most_5": 4,
+    "open": 49,
+    "orbit_lp_infeasible": 80,
+    "standalone_drat": 1
+  },
+  "stage1_residual": "evidence/residual-two-word-cases.json",
+  "stage1_residual_sha256": "db86f574ec45c2cdda689131d612bf4c37eb1cebf15fc717844b74cfb386ebaf",
+  "stage1_summary": "evidence/case-reduction-stage1.json",
+  "stage1_summary_sha256": "a1d4dd6db12a0bf0b9cb8b9a2e8b32b6b7b2220e61db199cbc692b78c032e155",
+  "third_word_drat_cases": [
+    "w1-weight7-intersection0",
+    "w4-weight6-intersection0",
+    "w4-weight6-intersection1",
+    "w4-weight6-intersection2",
+    "w5-weight5-intersection1",
+    "w5-weight5-intersection2"
+  ],
+  "third_word_proof_details": {
+    "matching_constrained": 4,
+    "unconstrained": 2
+  },
+  "total_cases": 150
+}

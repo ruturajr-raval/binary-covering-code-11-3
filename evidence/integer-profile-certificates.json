@@ -1,0 +1,3568 @@
+{
+  "case_manifest": "evidence/two-word-cases.json",
+  "certificates": [
+    {
+      "case_id": "w1-weight1-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 1,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 129097,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight2-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 54551,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight2-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 94837,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight3-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 16938,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight3-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 12399,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight4-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 10464,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight4-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 12170,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight5-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 5055,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight5-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 1617,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight6-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 5
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 1467,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight6-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 5
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 10,
+          "value": 1
+        }
+      ],
+      "search_nodes": 598,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w1-weight7-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 6
+        },
+        {
+          "inside": 0,
+          "outside": 10,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 6
+        }
+      ],
+      "search_nodes": 1253,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight2-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 457541,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight2-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 601859,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight3-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 281625,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight3-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 226975,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight3-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 225156,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight4-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 63872,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight4-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 65389,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight4-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 66375,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight5-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 28988,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight5-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 3
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 9,
+          "value": 1
+        }
+      ],
+      "search_nodes": 14740,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight5-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 4
+        }
+      ],
+      "search_nodes": 16778,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight6-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 7
+        },
+        {
+          "inside": 1,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        }
+      ],
+      "search_nodes": 699,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight6-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 9,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 8
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        }
+      ],
+      "search_nodes": 2686,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight6-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 7
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        }
+      ],
+      "search_nodes": 6157,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w2-weight7-intersection0",
+      "search_nodes": 3678,
+      "status": "INTEGER_INFEASIBLE",
+      "trace": "evidence/integer-profile/w2-weight7-intersection0.json.gz",
+      "trace_leaves": 3315,
+      "trace_sha256": "04b71d8bd25bf7331eae5b614f27755b2cb6a16063d85b2d78606afc39b18ea6"
+    },
+    {
+      "case_id": "w2-weight7-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 9
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 4005,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight3-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 793040,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight3-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 8,
+          "value": 1
+        }
+      ],
+      "search_nodes": 213387,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight3-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 850328,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight4-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 298698,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight4-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 292253,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight4-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 170495,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight4-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 8,
+          "value": 1
+        }
+      ],
+      "search_nodes": 188493,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight5-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 91713,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight5-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 8,
+          "value": 1
+        }
+      ],
+      "search_nodes": 27578,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight5-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 7,
+          "value": 1
+        }
+      ],
+      "search_nodes": 41851,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight5-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 5
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 2
+        }
+      ],
+      "search_nodes": 18790,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight6-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        }
+      ],
+      "search_nodes": 25979,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight6-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 1
+        }
+      ],
+      "search_nodes": 8068,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight6-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 4
+        },
+        {
+          "inside": 1,
+          "outside": 8,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 7282,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w3-weight6-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 5
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        }
+      ],
+      "search_nodes": 10053,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight4-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 4,
+          "value": 1
+        }
+      ],
+      "search_nodes": 415433,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight4-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 7,
+          "value": 1
+        }
+      ],
+      "search_nodes": 293055,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight4-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 2,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 190222,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight4-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 5
+        },
+        {
+          "inside": 3,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 234712,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight5-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 1,
+          "value": 1
+        }
+      ],
+      "search_nodes": 208087,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight5-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 7,
+          "value": 1
+        }
+      ],
+      "search_nodes": 103772,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight5-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 5
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 7,
+          "value": 1
+        }
+      ],
+      "search_nodes": 82317,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight5-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 101889,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight5-intersection4",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 6
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 1,
+          "value": 1
+        }
+      ],
+      "search_nodes": 89838,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight6-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 5
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 289442,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight6-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 3
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 1
+        }
+      ],
+      "search_nodes": 118985,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight6-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 23011,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w4-weight6-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 2
+        },
+        {
+          "inside": 1,
+          "outside": 7,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 4
+        },
+        {
+          "inside": 4,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 106071,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight5-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 2
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 119042,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight5-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 28758,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight5-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 4,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 26400,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight5-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 3
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 2,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 19185,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight5-intersection4",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 1,
+          "value": 2
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 149150,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight6-intersection0",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 0,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 6
+        },
+        {
+          "inside": 4,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 37837,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight6-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 5
+        },
+        {
+          "inside": 4,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 2
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 7895,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight6-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 5
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 14041,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight6-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 6,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 5
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 5,
+          "outside": 6,
+          "value": 1
+        }
+      ],
+      "search_nodes": 12206,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w5-weight6-intersection4",
+      "search_nodes": 61358,
+      "status": "INTEGER_INFEASIBLE",
+      "trace": "evidence/integer-profile/w5-weight6-intersection4.json.gz",
+      "trace_leaves": 54342,
+      "trace_sha256": "aa9ab33b44d4d1ef6f30f82895db06c984caef1df627d38d13e396649e8ce000"
+    },
+    {
+      "case_id": "w6-weight6-intersection1",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 1,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 7
+        },
+        {
+          "inside": 5,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 19816,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w6-weight6-intersection2",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 6
+        },
+        {
+          "inside": 6,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 8113,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w6-weight6-intersection3",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 3,
+          "outside": 3,
+          "value": 3
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 5
+        },
+        {
+          "inside": 6,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 1,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 5,
+          "value": 1
+        }
+      ],
+      "search_nodes": 4164,
+      "status": "INTEGER_FEASIBLE"
+    },
+    {
+      "case_id": "w6-weight6-intersection4",
+      "profile": [
+        {
+          "inside": 0,
+          "outside": 0,
+          "value": 1
+        },
+        {
+          "inside": 2,
+          "outside": 5,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 4,
+          "value": 2
+        },
+        {
+          "inside": 3,
+          "outside": 5,
+          "value": 1
+        },
+        {
+          "inside": 4,
+          "outside": 2,
+          "value": 3
+        },
+        {
+          "inside": 4,
+          "outside": 3,
+          "value": 4
+        },
+        {
+          "inside": 5,
+          "outside": 2,
+          "value": 1
+        },
+        {
+          "inside": 6,
+          "outside": 0,
+          "value": 1
+        }
+      ],
+      "search_nodes": 74527,
+      "status": "INTEGER_FEASIBLE"
+    }
+  ],
+  "lp_certificates": "evidence/orbit-lp-certificates.json",
+  "problem": {
+    "length": 11,
+    "radius": 3,
+    "size": 15
+  },
+  "residual_codewords_after_fixed_pair": 12,
+  "status_counts": {
+    "INTEGER_FEASIBLE": 68,
+    "INTEGER_INFEASIBLE": 2
+  }
+}

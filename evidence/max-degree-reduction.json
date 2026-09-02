@@ -1,0 +1,420 @@
+{
+  "cases": [
+    {
+      "case_id": "w1-weight1-intersection0",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 2,
+      "minimum_distance": 1,
+      "second_weight": 1
+    },
+    {
+      "case_id": "w1-weight2-intersection0",
+      "classification": "matching",
+      "first_second_distance": 3,
+      "minimum_distance": 1,
+      "second_weight": 2
+    },
+    {
+      "case_id": "w1-weight2-intersection1",
+      "classification": "maximum_degree_contradiction",
+      "first_second_distance": 1,
+      "minimum_distance": 1,
+      "second_weight": 2
+    },
+    {
+      "case_id": "w1-weight3-intersection0",
+      "classification": "matching",
+      "first_second_distance": 4,
+      "minimum_distance": 1,
+      "second_weight": 3
+    },
+    {
+      "case_id": "w1-weight3-intersection1",
+      "classification": "matching",
+      "first_second_distance": 2,
+      "minimum_distance": 1,
+      "second_weight": 3
+    },
+    {
+      "case_id": "w1-weight4-intersection0",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 1,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w1-weight4-intersection1",
+      "classification": "matching",
+      "first_second_distance": 3,
+      "minimum_distance": 1,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w1-weight5-intersection0",
+      "classification": "matching",
+      "first_second_distance": 6,
+      "minimum_distance": 1,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w1-weight5-intersection1",
+      "classification": "matching",
+      "first_second_distance": 4,
+      "minimum_distance": 1,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w1-weight6-intersection0",
+      "classification": "matching",
+      "first_second_distance": 7,
+      "minimum_distance": 1,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w1-weight6-intersection1",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 1,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w1-weight7-intersection0",
+      "classification": "matching",
+      "first_second_distance": 8,
+      "minimum_distance": 1,
+      "second_weight": 7
+    },
+    {
+      "case_id": "w2-weight2-intersection0",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 4,
+      "minimum_distance": 2,
+      "second_weight": 2
+    },
+    {
+      "case_id": "w2-weight2-intersection1",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 2,
+      "minimum_distance": 2,
+      "second_weight": 2
+    },
+    {
+      "case_id": "w2-weight3-intersection0",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 2,
+      "second_weight": 3
+    },
+    {
+      "case_id": "w2-weight3-intersection1",
+      "classification": "matching",
+      "first_second_distance": 3,
+      "minimum_distance": 2,
+      "second_weight": 3
+    },
+    {
+      "case_id": "w2-weight4-intersection0",
+      "classification": "matching",
+      "first_second_distance": 6,
+      "minimum_distance": 2,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w2-weight4-intersection1",
+      "classification": "matching",
+      "first_second_distance": 4,
+      "minimum_distance": 2,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w2-weight4-intersection2",
+      "classification": "maximum_degree_contradiction",
+      "first_second_distance": 2,
+      "minimum_distance": 2,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w2-weight5-intersection0",
+      "classification": "matching",
+      "first_second_distance": 7,
+      "minimum_distance": 2,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w2-weight5-intersection1",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 2,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w2-weight5-intersection2",
+      "classification": "matching",
+      "first_second_distance": 3,
+      "minimum_distance": 2,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w2-weight6-intersection0",
+      "classification": "matching",
+      "first_second_distance": 8,
+      "minimum_distance": 2,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w2-weight6-intersection1",
+      "classification": "matching",
+      "first_second_distance": 6,
+      "minimum_distance": 2,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w2-weight6-intersection2",
+      "classification": "matching",
+      "first_second_distance": 4,
+      "minimum_distance": 2,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w3-weight3-intersection0",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 6,
+      "minimum_distance": 3,
+      "second_weight": 3
+    },
+    {
+      "case_id": "w3-weight3-intersection1",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 4,
+      "minimum_distance": 3,
+      "second_weight": 3
+    },
+    {
+      "case_id": "w3-weight4-intersection0",
+      "classification": "matching",
+      "first_second_distance": 7,
+      "minimum_distance": 3,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w3-weight4-intersection1",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 3,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w3-weight4-intersection2",
+      "classification": "maximum_degree_contradiction",
+      "first_second_distance": 3,
+      "minimum_distance": 3,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w3-weight5-intersection0",
+      "classification": "matching",
+      "first_second_distance": 8,
+      "minimum_distance": 3,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w3-weight5-intersection1",
+      "classification": "matching",
+      "first_second_distance": 6,
+      "minimum_distance": 3,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w3-weight5-intersection2",
+      "classification": "matching",
+      "first_second_distance": 4,
+      "minimum_distance": 3,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w3-weight6-intersection0",
+      "classification": "matching",
+      "first_second_distance": 9,
+      "minimum_distance": 3,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w3-weight6-intersection1",
+      "classification": "matching",
+      "first_second_distance": 7,
+      "minimum_distance": 3,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w3-weight6-intersection2",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 3,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w3-weight6-intersection3",
+      "classification": "maximum_degree_contradiction",
+      "first_second_distance": 3,
+      "minimum_distance": 3,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w4-weight4-intersection0",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 8,
+      "minimum_distance": 4,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w4-weight4-intersection1",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 6,
+      "minimum_distance": 4,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w4-weight4-intersection2",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 4,
+      "minimum_distance": 4,
+      "second_weight": 4
+    },
+    {
+      "case_id": "w4-weight5-intersection0",
+      "classification": "matching",
+      "first_second_distance": 9,
+      "minimum_distance": 4,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w4-weight5-intersection1",
+      "classification": "matching",
+      "first_second_distance": 7,
+      "minimum_distance": 4,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w4-weight5-intersection2",
+      "classification": "matching",
+      "first_second_distance": 5,
+      "minimum_distance": 4,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w4-weight6-intersection0",
+      "classification": "matching",
+      "first_second_distance": 10,
+      "minimum_distance": 4,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w4-weight6-intersection1",
+      "classification": "matching",
+      "first_second_distance": 8,
+      "minimum_distance": 4,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w4-weight6-intersection2",
+      "classification": "matching",
+      "first_second_distance": 6,
+      "minimum_distance": 4,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w4-weight6-intersection3",
+      "classification": "maximum_degree_contradiction",
+      "first_second_distance": 4,
+      "minimum_distance": 4,
+      "second_weight": 6
+    },
+    {
+      "case_id": "w5-weight5-intersection1",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 8,
+      "minimum_distance": 5,
+      "second_weight": 5
+    },
+    {
+      "case_id": "w5-weight5-intersection2",
+      "classification": "multiple_neighbor",
+      "first_second_distance": 6,
+      "minimum_distance": 5,
+      "second_weight": 5
+    }
+  ],
+  "completeness_argument": "docs/MAXIMUM_DEGREE_NORMALIZATION.md",
+  "contradiction_rule": "if the canonical second word has weight above the minimum distance, zero has degree one; if its distance from the first word equals the minimum distance, the first word has degree at least two",
+  "counts": {
+    "matching": 34,
+    "maximum_degree_contradiction": 5,
+    "multiple_neighbor": 10,
+    "total": 49
+  },
+  "matching_cases": [
+    "w1-weight2-intersection0",
+    "w1-weight3-intersection0",
+    "w1-weight3-intersection1",
+    "w1-weight4-intersection0",
+    "w1-weight4-intersection1",
+    "w1-weight5-intersection0",
+    "w1-weight5-intersection1",
+    "w1-weight6-intersection0",
+    "w1-weight6-intersection1",
+    "w1-weight7-intersection0",
+    "w2-weight3-intersection0",
+    "w2-weight3-intersection1",
+    "w2-weight4-intersection0",
+    "w2-weight4-intersection1",
+    "w2-weight5-intersection0",
+    "w2-weight5-intersection1",
+    "w2-weight5-intersection2",
+    "w2-weight6-intersection0",
+    "w2-weight6-intersection1",
+    "w2-weight6-intersection2",
+    "w3-weight4-intersection0",
+    "w3-weight4-intersection1",
+    "w3-weight5-intersection0",
+    "w3-weight5-intersection1",
+    "w3-weight5-intersection2",
+    "w3-weight6-intersection0",
+    "w3-weight6-intersection1",
+    "w3-weight6-intersection2",
+    "w4-weight5-intersection0",
+    "w4-weight5-intersection1",
+    "w4-weight5-intersection2",
+    "w4-weight6-intersection0",
+    "w4-weight6-intersection1",
+    "w4-weight6-intersection2"
+  ],
+  "maximum_degree_contradiction_cases": [
+    "w1-weight2-intersection1",
+    "w2-weight4-intersection2",
+    "w3-weight4-intersection2",
+    "w3-weight6-intersection3",
+    "w4-weight6-intersection3"
+  ],
+  "multiple_neighbor_cases": [
+    "w1-weight1-intersection0",
+    "w2-weight2-intersection0",
+    "w2-weight2-intersection1",
+    "w3-weight3-intersection0",
+    "w3-weight3-intersection1",
+    "w4-weight4-intersection0",
+    "w4-weight4-intersection1",
+    "w4-weight4-intersection2",
+    "w5-weight5-intersection1",
+    "w5-weight5-intersection2"
+  ],
+  "normalization": "choose a maximum-degree vertex in the minimum-distance graph, translate it to zero, and map one minimum-distance neighbor to the canonical first word",
+  "problem": {
+    "length": 11,
+    "q": 2,
+    "radius": 3,
+    "target_size": 15
+  },
+  "source_residual_manifest": "evidence/residual-two-word-cases.json",
+  "source_residual_manifest_sha256": "db86f574ec45c2cdda689131d612bf4c37eb1cebf15fc717844b74cfb386ebaf",
+  "valid": true
+}

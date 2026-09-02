@@ -1,0 +1,17 @@
+{
+  "anchor_zero": true,
+  "auxiliary_variables": 7416,
+  "cardinality_clauses": 24755,
+  "clauses": 26804,
+  "coverage_clauses": 2048,
+  "encoding": "kmtotalizer",
+  "formula": "build/compact/k2-11-3-atmost15-kmtotalizer.cnf",
+  "length": 11,
+  "padding_equivalence": true,
+  "python_sat_version": "1.9.dev15",
+  "radius": 3,
+  "semantics": "at most size selected codewords",
+  "sha256": "5e09b1af5f41dde0576d8ef8aaf1f3903b1878a63a5f9f4c889a0580ae764140",
+  "size": 15,
+  "variables": 9464
+}

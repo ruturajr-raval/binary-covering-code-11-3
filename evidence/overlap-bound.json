@@ -1,0 +1,265 @@
+{
+  "conclusion": "every hypothetical 15-word radius-3 cover has total pair-ball overlap at least 1712 and total triple-ball overlap at least 280",
+  "definition": "O is the sum, over unordered codeword pairs, of the intersection size of their radius-3 Hamming balls",
+  "integer_identity": {
+    "base_bound": 1708,
+    "combined_coefficients": [
+      92,
+      92,
+      56,
+      56,
+      20,
+      20,
+      0,
+      0,
+      -4,
+      -4,
+      -40
+    ],
+    "identity": "O = 20P + 4J10 + 4J11 + 9D1 + 9D11 + 20(p1+p2) + 4(p9+p10) + 40p11",
+    "multipliers": {
+      "D1": 9,
+      "D11": 9,
+      "J10": 4,
+      "J11": 4,
+      "P": 20
+    },
+    "normalized_rows": {
+      "D1": {
+        "coefficients": [
+          9,
+          7,
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5,
+          -7,
+          -9,
+          -11
+        ],
+        "lower_bound": -77
+      },
+      "D11": {
+        "coefficients": [
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "lower_bound": -7
+      },
+      "J10": {
+        "coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          3,
+          11,
+          11,
+          11
+        ],
+        "lower_bound": 83
+      },
+      "J11": {
+        "coefficients": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "lower_bound": 8
+      }
+    },
+    "residual_coefficients": [
+      20,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      4,
+      40
+    ]
+  },
+  "modular_refinement": {
+    "J10_slack": "u = J10 - 83",
+    "J11_slack": "v = J11 - 8",
+    "equivalent_distance_inequality": "23(p1+p2) + 14(p3+p4) + 5(p5+p6) - (p9+p10) - 10p11 >= 428",
+    "integral_lower_bound": 1712,
+    "minimum_slack_sum": 1,
+    "objective_divisor": 4,
+    "slack_congruence": "u + v is congruent to 1 modulo 4",
+    "strengthened_inequality": "O >= 1712 + 20(p1+p2) + 4(p9+p10) + 40p11"
+  },
+  "objective_coefficients_by_distance": {
+    "1": 112,
+    "10": 0,
+    "11": 0,
+    "2": 112,
+    "3": 56,
+    "4": 56,
+    "5": 20,
+    "6": 20,
+    "7": 0,
+    "8": 0,
+    "9": 0
+  },
+  "problem": {
+    "code_size": 15,
+    "length": 11,
+    "radius": 3
+  },
+  "sharp_for_retained_row_system": {
+    "witness_count": 3,
+    "witnesses": [
+      {
+        "all_rows_satisfied": true,
+        "distance_distribution": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "2": 0,
+          "3": 0,
+          "4": 2,
+          "5": 41,
+          "6": 39,
+          "7": 15,
+          "8": 8,
+          "9": 0
+        },
+        "objective": 1712,
+        "row_values": {
+          "delsarte_1": -154,
+          "delsarte_10": -138,
+          "delsarte_11": -14,
+          "delsarte_2": -722,
+          "delsarte_3": 346,
+          "delsarte_4": 1044,
+          "delsarte_5": -100,
+          "delsarte_6": -900,
+          "delsarte_7": -236,
+          "delsarte_8": 506,
+          "delsarte_9": 158,
+          "pairs": 105,
+          "shell_10": 168,
+          "shell_11": 16,
+          "shell_4": 7666,
+          "shell_5": 10750,
+          "shell_6": 12322,
+          "shell_7": 8782,
+          "shell_8": 4200,
+          "shell_9": 1392
+        }
+      },
+      {
+        "all_rows_satisfied": true,
+        "distance_distribution": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "2": 0,
+          "3": 0,
+          "4": 2,
+          "5": 42,
+          "6": 38,
+          "7": 14,
+          "8": 9,
+          "9": 0
+        },
+        "objective": 1712,
+        "row_values": {
+          "delsarte_1": -154,
+          "delsarte_10": -154,
+          "delsarte_11": -14,
+          "delsarte_2": -706,
+          "delsarte_3": 314,
+          "delsarte_4": 1012,
+          "delsarte_5": -4,
+          "delsarte_6": -900,
+          "delsarte_7": -332,
+          "delsarte_8": 538,
+          "delsarte_9": 190,
+          "pairs": 105,
+          "shell_10": 166,
+          "shell_11": 18,
+          "shell_4": 7696,
+          "shell_5": 10720,
+          "shell_6": 12296,
+          "shell_7": 8808,
+          "shell_8": 4178,
+          "shell_9": 1414
+        }
+      },
+      {
+        "all_rows_satisfied": true,
+        "distance_distribution": {
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "2": 0,
+          "3": 1,
+          "4": 1,
+          "5": 40,
+          "6": 40,
+          "7": 15,
+          "8": 8,
+          "9": 0
+        },
+        "objective": 1712,
+        "row_values": {
+          "delsarte_1": -154,
+          "delsarte_10": -154,
+          "delsarte_11": -14,
+          "delsarte_2": -706,
+          "delsarte_3": 378,
+          "delsarte_4": 1012,
+          "delsarte_5": -196,
+          "delsarte_6": -900,
+          "delsarte_7": -140,
+          "delsarte_8": 538,
+          "delsarte_9": 126,
+          "pairs": 105,
+          "shell_10": 168,
+          "shell_11": 16,
+          "shell_4": 7692,
+          "shell_5": 10724,
+          "shell_6": 12292,
+          "shell_7": 8812,
+          "shell_8": 4180,
+          "shell_9": 1412
+        }
+      }
+    ]
+  },
+  "triple_overlap_consequence": {
+    "ball_size": 232,
+    "definition": "T is the sum, over unordered triples of codewords, of the size of the common intersection of their radius-3 Hamming balls",
+    "lower_bound": 280,
+    "pointwise_inequality": "C(m,3) >= C(m,2) - (m-1) for every m >= 1",
+    "total_incidence_excess": 1432
+  },
+  "valid": true
+}

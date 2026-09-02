@@ -1,0 +1,24 @@
+{
+  "case_id": "w5-weight6-intersection2",
+  "checker": "drat-trim",
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_output": [
+    "c parsing input formula with 9464 variables and 602324 clauses",
+    "c finished parsing",
+    "c detected empty clause; start verification via backward checking",
+    "c 5280 of 602324 clauses in core                            ",
+    "c 612 of 4093 lemmas in core using 115020 resolution steps",
+    "c 0 RAT lemmas in core; 385 redundant literals in core lemmas",
+    "s VERIFIED",
+    "c verification time: <elapsed>"
+  ],
+  "checker_output_line_count": 1500,
+  "checker_output_sha256": "7e040b7cbce315e1284b71737257caaad76512cba5517310bd21b4de2b0c96c1",
+  "checker_timing_normalized": true,
+  "checker_warning_count": 742,
+  "formula_sha256": "fe62f2ef52cffcabe33a0caa7f6a82d717f410e192d9250cfeb72df7ef8aaf9d",
+  "proof_compressed_sha256": "308503c19dfd7fd7311baf6765358143f4bb2cc61af1829b9c1f66bf85129ea1",
+  "proof_uncompressed_sha256": "fc9637c364e6c79e25406575642453b59afcb769b847cfae8d46355d39578d4f",
+  "return_code": 0,
+  "verified": true
+}

@@ -1,0 +1,28 @@
+{
+  "base_formula": "build/min-distance/k2-11-3-atmost15-mindistance5.cnf",
+  "base_formula_sha256": "334f6fc940fbefe36e91459e6d01a765f07df67cfffe43bd14beaf31c05d6e93",
+  "case_formula": "build/proofs/min-distance/w5-weight6-intersection0.cnf",
+  "case_formula_sha256": "e3adc8571fad3407ad2b2193d2e5bd130942381feff9155622cce429c0f84112",
+  "case_id": "w5-weight6-intersection0",
+  "clauses": 602293,
+  "proof_verification": "recorded in a separate check file",
+  "proof_compressed": "evidence/proofs/min-distance/w5-weight6-intersection0.drat.gz",
+  "proof_compressed_bytes": 2347015,
+  "proof_compressed_sha256": "8819f888046ccbebc5a97ff744d639b37e58a64f905151fc7a65fbb284c2f489",
+  "proof_format": "text DRAT",
+  "proof_lines": 577544,
+  "proof_uncompressed_bytes": 12526561,
+  "proof_uncompressed_sha256": "0e074c0dd60894286ce614303d2f7feb5258408e318f7c70d30c57b6ea49cbb9",
+  "python_sat_version": "1.9.dev15",
+  "solve_seconds": 0.27969670799999996,
+  "solver": "cadical195",
+  "solver_statistics": {
+    "conflicts": 2962,
+    "decisions": 4327,
+    "propagations": 249514,
+    "restarts": 93
+  },
+  "status": "UNSAT",
+  "unit_count": 1024,
+  "variables": 9464
+}

@@ -1,0 +1,26 @@
+{
+  "case_formula": "build/proofs/third-word/w4-weight6-intersection0.cnf",
+  "case_formula_sha256": "822b9e94ffc569285c3a08d9eb589293cc41a52598aa6d38d21181dbf0203634",
+  "case_id": "w4-weight6-intersection0",
+  "clauses": 908005,
+  "proof_verification": "recorded in a separate check file",
+  "proof_compressed": "evidence/proofs/third-word/w4-weight6-intersection0.drat.gz",
+  "proof_compressed_bytes": 1619414,
+  "proof_compressed_sha256": "405e5ffb2a61270df360b0821e8ecbe560ca3a93d6395929d81218f786cfccd4",
+  "proof_compression": "gzip",
+  "proof_format": "text DRAT",
+  "proof_lines": 193037,
+  "proof_uncompressed_bytes": 7881812,
+  "proof_uncompressed_sha256": "dc0aecadb5200cf4d5f12d3c87a8ec1edd664af188f30f07d639aed07094b23e",
+  "python_sat_version": "1.9.dev15",
+  "solve_seconds": 1.460125209,
+  "solver": "glucose4",
+  "solver_statistics": {
+    "conflicts": 12445,
+    "decisions": 246793,
+    "propagations": 3091857,
+    "restarts": 26
+  },
+  "status": "UNSAT",
+  "variables": 217384
+}

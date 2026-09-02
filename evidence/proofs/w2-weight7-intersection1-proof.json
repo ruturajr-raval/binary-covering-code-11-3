@@ -1,0 +1,28 @@
+{
+  "base_formula": "build/compact/k2-11-3-atmost15-kmtotalizer.cnf",
+  "base_formula_sha256": "5e09b1af5f41dde0576d8ef8aaf1f3903b1878a63a5f9f4c889a0580ae764140",
+  "case_formula": "build/proofs/w2-weight7-intersection1.cnf",
+  "case_formula_sha256": "8efa00a9c031ed9dbdb249507e663a7e32f999e53374170a39fb7f0aa3f821da",
+  "case_id": "w2-weight7-intersection1",
+  "clauses": 28326,
+  "proof_verification": "recorded in a separate check file",
+  "proof_compressed": "evidence/proofs/w2-weight7-intersection1.drat.gz",
+  "proof_compressed_bytes": 5371726,
+  "proof_compressed_sha256": "7177ba8518c2d6aa5142556b2284073d7718812a1a6197f808ec30ff7921c472",
+  "proof_format": "text DRAT",
+  "proof_lines": 195176,
+  "proof_uncompressed_bytes": 28820071,
+  "proof_uncompressed_sha256": "564ad2e446613c1f3d4fd4890b5ccd2723ee96236ddc78128704fb4d60121133",
+  "python_sat_version": "1.9.dev15",
+  "solve_seconds": 1.706451167,
+  "solver": "cadical300",
+  "solver_statistics": {
+    "conflicts": 63536,
+    "decisions": 184288,
+    "propagations": 12050620,
+    "restarts": 1688
+  },
+  "status": "UNSAT",
+  "unit_count": 1522,
+  "variables": 9464
+}

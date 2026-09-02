@@ -1,0 +1,137 @@
+{
+  "problem": "binary covering code",
+  "parameters": {
+    "q": 2,
+    "n": 11,
+    "radius": 3
+  },
+  "frontier_checked_on": "2026-09-02",
+  "published_interval": {
+    "lower_bound": 15,
+    "upper_bound": 16,
+    "exact_value_known": false
+  },
+  "baseline": {
+    "code": "data/baseline/k2-11-3-linear-16.txt",
+    "code_sha256": "6f056ff8fb88c423155514f959d6f211bcffb2653c85ff6399731fde3827e691",
+    "parity_columns": "data/baseline/k2-11-3-parity-columns-16.json",
+    "parity_columns_sha256": "f22d7d0c976da92c9e0e2e595d2a943ddca07b129ed4afb2110138e167d54c17",
+    "analysis": "evidence/baseline-analysis.json",
+    "size": 16,
+    "covering_radius": 3,
+    "linear_dimension": 4,
+    "verification_paths": [
+      "package direct enumeration",
+      "standalone direct-distance process",
+      "syndrome-space cross-check"
+    ]
+  },
+  "size_15_formulas": {
+    "exact_sequential_counter": {
+      "audit": "evidence/base-cnf-audit.json",
+      "sha256": "d15ee679aef6a19acb0af42b157106cfde9df6840ba177bcde5623d8fac0f3f1",
+      "variables": 34816,
+      "clauses": 131029
+    },
+    "compact_at_most_15": [
+      {
+        "metadata": "evidence/compact-kmtotalizer.json",
+        "sha256": "5e09b1af5f41dde0576d8ef8aaf1f3903b1878a63a5f9f4c889a0580ae764140",
+        "variables": 9464,
+        "clauses": 26804
+      },
+      {
+        "metadata": "evidence/compact-cardnetwrk.json",
+        "sha256": "56bc10e27e46cec86b17deee3f7f999baa059935173a60b9718d30e7782edd10",
+        "variables": 30368,
+        "clauses": 44530
+      }
+    ],
+    "padding_equivalence_documented": true,
+    "small_projection_tests_passed": true
+  },
+  "symmetry_partition": {
+    "minimum_weight": {
+      "manifest": "evidence/min-weight-cases.json",
+      "audit": "evidence/min-weight-case-audit.json",
+      "case_count": 6,
+      "minimum_nonzero_weights": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "completeness_argument": "docs/SYMMETRY_CASES.md"
+    },
+    "canonical_two_word": {
+      "manifest": "evidence/two-word-cases.json",
+      "case_count": 150,
+      "completeness_argument": "docs/TWO_WORD_CASES.md"
+    },
+    "closest_pair": {
+      "manifest": "evidence/min-distance-branches.json",
+      "audit": "evidence/min-distance-branch-audit.json",
+      "case_count": 5,
+      "minimum_distances": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "completeness_argument": "docs/MINIMUM_DISTANCE_BRANCHES.md"
+    },
+    "third_word": {
+      "manifest": "evidence/third-word-cases.json",
+      "parent_case_count": 49,
+      "orbit_count": 3238,
+      "completeness_argument": "docs/THIRD_WORD_SYMMETRY.md"
+    }
+  },
+  "distance_and_overlap": {
+    "distance_distribution": "evidence/distance-distribution-bounds.json",
+    "minimum_distance_at_most": 5,
+    "pairs_at_distance_at_most_6": 28,
+    "pairs_at_distance_at_most_5": 11,
+    "overlap_evidence": "evidence/overlap-bound.json",
+    "pair_ball_overlap_at_least": 1712,
+    "triple_ball_overlap_at_least": 280
+  },
+  "case_reduction": {
+    "stage1": "evidence/case-reduction-stage1.json",
+    "final": "evidence/case-reduction-summary.json",
+    "residual": "evidence/normalized-residual-two-word-cases.json",
+    "total_parent_cases": 150,
+    "certified_normalized_branch_closures": 112,
+    "residual_normalized_branches": 38,
+    "residual_by_minimum_distance": {
+      "1": 10,
+      "2": 12,
+      "3": 10,
+      "4": 6
+    },
+    "proof_checker": "drat-trim",
+    "proof_checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "third_word_proof_index": "evidence/third-word-proof-index.json",
+    "third_word_proof_count": 6,
+    "all_retained_proofs_checked": true,
+    "completeness_argument": "docs/CASE_REDUCTION.md"
+  },
+  "construction_search": {
+    "best_retained_near_cover": "data/search/k2-11-3-near-cover-28.txt",
+    "near_cover_sha256": "241d430ebde518a7515e531d357b81bcd7eab0a7387df17b59589eb1870f245c",
+    "search_record": "evidence/search/local-breakout-seed1.json",
+    "uncovered_words": 28,
+    "found_cover": false
+  },
+  "size_15_result": {
+    "status": "open",
+    "certificate": null,
+    "proof_trace": null,
+    "new_claim": null,
+    "normalized_branches_closed": 112,
+    "normalized_branches_remaining": 38
+  }
+}

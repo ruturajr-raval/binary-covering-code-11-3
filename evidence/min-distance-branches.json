@@ -1,0 +1,79 @@
+{
+  "base_clauses": 26804,
+  "base_formula": "build/compact/k2-11-3-atmost15-kmtotalizer.cnf",
+  "base_formula_sha256": "5e09b1af5f41dde0576d8ef8aaf1f3903b1878a63a5f9f4c889a0580ae764140",
+  "base_variables": 9464,
+  "case_rule": "translate a globally closest pair to include zero, permute the other endpoint to 2^d-1, and forbid every selected pair at distance below d",
+  "cases": [
+    {
+      "canonical_pair": [
+        0,
+        1
+      ],
+      "clauses": 26805,
+      "forbidden_pair_clauses": 0,
+      "formula": "build/min-distance/k2-11-3-atmost15-mindistance1.cnf",
+      "minimum_distance": 1,
+      "sha256": "ae33135bb4d8c16bc7740353f06cdf38213fef201e941e8247ddc7993abd1ba1",
+      "variables": 9464
+    },
+    {
+      "canonical_pair": [
+        0,
+        3
+      ],
+      "clauses": 38069,
+      "forbidden_pair_clauses": 11264,
+      "formula": "build/min-distance/k2-11-3-atmost15-mindistance2.cnf",
+      "minimum_distance": 2,
+      "sha256": "5c813c4547974f2344058ccdc4bc35602aa75d6fd7ded3e005a5538be897dc44",
+      "variables": 9464
+    },
+    {
+      "canonical_pair": [
+        0,
+        7
+      ],
+      "clauses": 94389,
+      "forbidden_pair_clauses": 67584,
+      "formula": "build/min-distance/k2-11-3-atmost15-mindistance3.cnf",
+      "minimum_distance": 3,
+      "sha256": "3ed98e0ae48185d3a04585b5a31ae5cb530018d8171c366ef5bded02db54d548",
+      "variables": 9464
+    },
+    {
+      "canonical_pair": [
+        0,
+        15
+      ],
+      "clauses": 263349,
+      "forbidden_pair_clauses": 236544,
+      "formula": "build/min-distance/k2-11-3-atmost15-mindistance4.cnf",
+      "minimum_distance": 4,
+      "sha256": "dd9bbf4db76a7f1dde1e41d1e8a8d7c50bd2548811b612bdb6e182dc352ee564",
+      "variables": 9464
+    },
+    {
+      "canonical_pair": [
+        0,
+        31
+      ],
+      "clauses": 601269,
+      "forbidden_pair_clauses": 574464,
+      "formula": "build/min-distance/k2-11-3-atmost15-mindistance5.cnf",
+      "minimum_distance": 5,
+      "sha256": "334f6fc940fbefe36e91459e6d01a765f07df67cfffe43bd14beaf31c05d6e93",
+      "variables": 9464
+    }
+  ],
+  "completeness_argument": "docs/MINIMUM_DISTANCE_BRANCHES.md",
+  "distance_bounds": "evidence/distance-distribution-bounds.json",
+  "distance_bounds_sha256": "b18bed33012228508164dc438775ea1eff0fe8b65dcd3a41ae588879dcbe5205",
+  "maximum_minimum_distance": 5,
+  "problem": {
+    "length": 11,
+    "q": 2,
+    "radius": 3,
+    "size": 15
+  }
+}

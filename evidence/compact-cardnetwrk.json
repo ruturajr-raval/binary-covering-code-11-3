@@ -1,0 +1,17 @@
+{
+  "anchor_zero": true,
+  "auxiliary_variables": 28320,
+  "cardinality_clauses": 42481,
+  "clauses": 44530,
+  "coverage_clauses": 2048,
+  "encoding": "cardnetwrk",
+  "formula": "build/compact/k2-11-3-atmost15-cardnetwrk.cnf",
+  "length": 11,
+  "padding_equivalence": true,
+  "python_sat_version": "1.9.dev15",
+  "radius": 3,
+  "semantics": "at most size selected codewords",
+  "sha256": "56bc10e27e46cec86b17deee3f7f999baa059935173a60b9718d30e7782edd10",
+  "size": 15,
+  "variables": 30368
+}

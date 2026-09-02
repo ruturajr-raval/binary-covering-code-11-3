@@ -1,0 +1,45 @@
+{
+  "base_formula_sha256": "d15ee679aef6a19acb0af42b157106cfde9df6840ba177bcde5623d8fac0f3f1",
+  "case_count": 6,
+  "cases": [
+    {
+      "minimum_weight": 1,
+      "sha256": "63057063a326f71f6717442e11ad52e1c7ec7471c05aef44f194e114e04e30d3",
+      "valid": true
+    },
+    {
+      "minimum_weight": 2,
+      "sha256": "9e86fd8e4fdba6510cc54197f26fe6419d78696819e904c276f235a99df65e07",
+      "valid": true
+    },
+    {
+      "minimum_weight": 3,
+      "sha256": "36e4b580c5df753ff12583eef0c30e8e4a221cd5f1b4525edf13374c00b69353",
+      "valid": true
+    },
+    {
+      "minimum_weight": 4,
+      "sha256": "5293355d36df854f5ad878a25af549f93dda207ab3d02c3dd1e167b8279a8919",
+      "valid": true
+    },
+    {
+      "minimum_weight": 5,
+      "sha256": "bb681eefdfd07d5b16074be8247794713f219e317fd6d9efd07582cd0fa199c5",
+      "valid": true
+    },
+    {
+      "minimum_weight": 6,
+      "sha256": "38b00c826487fe88a8ff99e406ece07fb92fe967645320106a2d564f2d5f250d",
+      "valid": true
+    }
+  ],
+  "valid": true,
+  "weights": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

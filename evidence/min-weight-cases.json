@@ -1,0 +1,70 @@
+{
+  "anchor_zero": true,
+  "base_clauses": 131029,
+  "base_formula_sha256": "d15ee679aef6a19acb0af42b157106cfde9df6840ba177bcde5623d8fac0f3f1",
+  "base_variables": 34816,
+  "case_rule": "minimum nonzero weight equals w and one minimum-weight word is coordinate-permuted to 2^w-1",
+  "cases": [
+    {
+      "canonical_word": 1,
+      "clauses": 131030,
+      "forbidden_lower_weight_words": 0,
+      "formula": "build/cases/k2-11-3-size15-minweight1.cnf",
+      "minimum_weight": 1,
+      "sha256": "63057063a326f71f6717442e11ad52e1c7ec7471c05aef44f194e114e04e30d3",
+      "variables": 34816
+    },
+    {
+      "canonical_word": 3,
+      "clauses": 131041,
+      "forbidden_lower_weight_words": 11,
+      "formula": "build/cases/k2-11-3-size15-minweight2.cnf",
+      "minimum_weight": 2,
+      "sha256": "9e86fd8e4fdba6510cc54197f26fe6419d78696819e904c276f235a99df65e07",
+      "variables": 34816
+    },
+    {
+      "canonical_word": 7,
+      "clauses": 131096,
+      "forbidden_lower_weight_words": 66,
+      "formula": "build/cases/k2-11-3-size15-minweight3.cnf",
+      "minimum_weight": 3,
+      "sha256": "36e4b580c5df753ff12583eef0c30e8e4a221cd5f1b4525edf13374c00b69353",
+      "variables": 34816
+    },
+    {
+      "canonical_word": 15,
+      "clauses": 131261,
+      "forbidden_lower_weight_words": 231,
+      "formula": "build/cases/k2-11-3-size15-minweight4.cnf",
+      "minimum_weight": 4,
+      "sha256": "5293355d36df854f5ad878a25af549f93dda207ab3d02c3dd1e167b8279a8919",
+      "variables": 34816
+    },
+    {
+      "canonical_word": 31,
+      "clauses": 131591,
+      "forbidden_lower_weight_words": 561,
+      "formula": "build/cases/k2-11-3-size15-minweight5.cnf",
+      "minimum_weight": 5,
+      "sha256": "bb681eefdfd07d5b16074be8247794713f219e317fd6d9efd07582cd0fa199c5",
+      "variables": 34816
+    },
+    {
+      "canonical_word": 63,
+      "clauses": 132053,
+      "forbidden_lower_weight_words": 1023,
+      "formula": "build/cases/k2-11-3-size15-minweight6.cnf",
+      "minimum_weight": 6,
+      "sha256": "38b00c826487fe88a8ff99e406ece07fb92fe967645320106a2d564f2d5f250d",
+      "variables": 34816
+    }
+  ],
+  "maximum_minimum_weight": 6,
+  "problem": {
+    "length": 11,
+    "q": 2,
+    "radius": 3,
+    "size": 15
+  }
+}

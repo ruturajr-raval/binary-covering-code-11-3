@@ -1,0 +1,43 @@
+{
+  "branch_manifest": "evidence/min-distance-branches.json",
+  "parent_manifest": "evidence/residual-two-word-cases.json",
+  "third_manifest": "evidence/third-word-cases.json",
+  "cases": [
+    {
+      "case_id": "w5-weight5-intersection1",
+      "compression": "gzip",
+      "matching": false,
+      "solver": "glucose4"
+    },
+    {
+      "case_id": "w5-weight5-intersection2",
+      "compression": "xz",
+      "matching": false,
+      "solver": "glucose4"
+    },
+    {
+      "case_id": "w1-weight7-intersection0",
+      "compression": "xz",
+      "matching": true,
+      "solver": "glucose4"
+    },
+    {
+      "case_id": "w4-weight6-intersection0",
+      "compression": "gzip",
+      "matching": true,
+      "solver": "glucose4"
+    },
+    {
+      "case_id": "w4-weight6-intersection1",
+      "compression": "gzip",
+      "matching": true,
+      "solver": "glucose4"
+    },
+    {
+      "case_id": "w4-weight6-intersection2",
+      "compression": "gzip",
+      "matching": true,
+      "solver": "glucose4"
+    }
+  ]
+}

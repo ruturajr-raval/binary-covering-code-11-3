@@ -1,0 +1,5 @@
+/.venv/
+/build/
+/search-results/
+__pycache__/
+*.pyc

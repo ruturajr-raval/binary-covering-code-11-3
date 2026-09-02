@@ -1,0 +1,15 @@
+{
+  "ambient_size": 2048,
+  "anchor_zero": true,
+  "ball_size": 232,
+  "cardinality_clauses": 128980,
+  "clauses": 131029,
+  "coverage_clauses": 2048,
+  "length": 11,
+  "path": "build/k2-11-3-size15.cnf",
+  "radius": 3,
+  "sha256": "d15ee679aef6a19acb0af42b157106cfde9df6840ba177bcde5623d8fac0f3f1",
+  "size": 15,
+  "valid": true,
+  "variables": 34816
+}

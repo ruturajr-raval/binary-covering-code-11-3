@@ -1,0 +1,651 @@
+{
+  "case_count": 49,
+  "cases": [
+    {
+      "case_id": "w1-weight1-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 0,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 1
+      },
+      "second_word": 2,
+      "unit_count": 2,
+      "unit_sha256": "fcb9cc30b0f3e4715d032f3a0ce158e4d6bea8c618bda0f5d1f167300a087b8a"
+    },
+    {
+      "case_id": "w1-weight2-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 10,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 2
+      },
+      "second_word": 6,
+      "unit_count": 12,
+      "unit_sha256": "8829c080c5798c8a5f1785e049db12586787dbf3fe7a47d25345225c8157ccf4"
+    },
+    {
+      "case_id": "w1-weight2-intersection1",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 55,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 2
+      },
+      "second_word": 3,
+      "unit_count": 57,
+      "unit_sha256": "f6dd39b7f2745ea65e16351ae447fd2e932e1cfb5064c55c9b1fdb6a52832990"
+    },
+    {
+      "case_id": "w1-weight3-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 65,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 3
+      },
+      "second_word": 14,
+      "unit_count": 67,
+      "unit_sha256": "006e10688a306b2fdca7320323e986459b99a7c97ce260086bf4f4f3ff8ff91c"
+    },
+    {
+      "case_id": "w1-weight3-intersection1",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 185,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 3
+      },
+      "second_word": 7,
+      "unit_count": 187,
+      "unit_sha256": "2cae40862eaba0ecd3f901de15a1aaac6180b8a2afb9af6bf2377b118e926ba6"
+    },
+    {
+      "case_id": "w1-weight4-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 230,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 4
+      },
+      "second_word": 30,
+      "unit_count": 232,
+      "unit_sha256": "d9426c4492131a1ba90cd2195374206b3d9ff88713311c8b2a5743b9c4911aac"
+    },
+    {
+      "case_id": "w1-weight4-intersection1",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 440,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 4
+      },
+      "second_word": 15,
+      "unit_count": 442,
+      "unit_sha256": "dbe48848ef12bf00f20235b34906c063d5a550376f977b6905bf4a6699e2b6ef"
+    },
+    {
+      "case_id": "w1-weight5-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 560,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 5
+      },
+      "second_word": 62,
+      "unit_count": 562,
+      "unit_sha256": "ad1d735a7113096cd8ddb00e2870e17687817f47eadd2d80af2acbc25e988d4a"
+    },
+    {
+      "case_id": "w1-weight5-intersection1",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 812,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 5
+      },
+      "second_word": 31,
+      "unit_count": 814,
+      "unit_sha256": "f8e711663c071594c15979dca01469196d98e62b4e3e03ccc893475e16a8e987"
+    },
+    {
+      "case_id": "w1-weight6-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 1022,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 6
+      },
+      "second_word": 126,
+      "unit_count": 1024,
+      "unit_sha256": "c9a11f56a5ccd0b067e5c2a9dc6b93249e72547bc614fbf16b9cb7c03edd7d8a"
+    },
+    {
+      "case_id": "w1-weight6-intersection1",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 1232,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 6
+      },
+      "second_word": 63,
+      "unit_count": 1234,
+      "unit_sha256": "5dd87cec3ce346097f35dc76fc27ac36b0b354223456ac8b4c50fafcc8efa500"
+    },
+    {
+      "case_id": "w1-weight7-intersection0",
+      "first_word": 1,
+      "forbidden_earlier_orbit_words": 1484,
+      "minimum_weight": 1,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 7
+      },
+      "second_word": 254,
+      "unit_count": 1486,
+      "unit_sha256": "c64d8715c2962ba2054aaf8341fbc6a468ae7632d513d81840d84ba4c9ebd4e4"
+    },
+    {
+      "case_id": "w2-weight2-intersection0",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 0,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 2
+      },
+      "second_word": 12,
+      "unit_count": 13,
+      "unit_sha256": "0bf2616329fbc71f2092d74aeec16074e658543526d2e109fc2c44331b507de6"
+    },
+    {
+      "case_id": "w2-weight2-intersection1",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 36,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 2
+      },
+      "second_word": 5,
+      "unit_count": 49,
+      "unit_sha256": "172e653168c7c82006b51dd781cdcdf8c4bc58a4ea7cebfe40e94ddce1a85dd9"
+    },
+    {
+      "case_id": "w2-weight3-intersection0",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 54,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 3
+      },
+      "second_word": 28,
+      "unit_count": 67,
+      "unit_sha256": "146e542953bce60cb7f02c18e7937ca4eff384339e8a77db3fbb7d34267e0c46"
+    },
+    {
+      "case_id": "w2-weight3-intersection1",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 138,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 3
+      },
+      "second_word": 13,
+      "unit_count": 151,
+      "unit_sha256": "b79182a69ae20a8f31d94d924c0052cfce314c373c97381008b1c0a6b4092ff4"
+    },
+    {
+      "case_id": "w2-weight4-intersection0",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 219,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 4
+      },
+      "second_word": 60,
+      "unit_count": 232,
+      "unit_sha256": "3b2d31efde548d869020113190d677a0dd4288d658c1091f8ee6868d437b2871"
+    },
+    {
+      "case_id": "w2-weight4-intersection1",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 345,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 4
+      },
+      "second_word": 29,
+      "unit_count": 358,
+      "unit_sha256": "4ad5237ea6bd73c6ea803a8edcde332a7d7c76395b36122cc710b57cbee39116"
+    },
+    {
+      "case_id": "w2-weight4-intersection2",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 513,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 4
+      },
+      "second_word": 15,
+      "unit_count": 526,
+      "unit_sha256": "acdca38dfd31ec295787f51f03c08ef2fe200f34a0136b6e4501559de29add7a"
+    },
+    {
+      "case_id": "w2-weight5-intersection0",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 549,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 5
+      },
+      "second_word": 124,
+      "unit_count": 562,
+      "unit_sha256": "27dd532286677be8f848b8c7c3ca4edc7b5a6a7f6bb8836bc3525f792c814d76"
+    },
+    {
+      "case_id": "w2-weight5-intersection1",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 675,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 5
+      },
+      "second_word": 61,
+      "unit_count": 688,
+      "unit_sha256": "ce5542520d88f775209bd85ec30c288080826a0c6cb25dc76bbdc7dda370f30a"
+    },
+    {
+      "case_id": "w2-weight5-intersection2",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 927,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 5
+      },
+      "second_word": 31,
+      "unit_count": 940,
+      "unit_sha256": "f7f6b4841e2b9084b0c87f810364c11f36123d467bc5f5aa0becea408c4dc7a0"
+    },
+    {
+      "case_id": "w2-weight6-intersection0",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 1011,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 6
+      },
+      "second_word": 252,
+      "unit_count": 1024,
+      "unit_sha256": "ea39534fbdb3ada573567d88e18094a7ebe53f12e4d95aac4395ebaf853edee0"
+    },
+    {
+      "case_id": "w2-weight6-intersection1",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 1095,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 6
+      },
+      "second_word": 125,
+      "unit_count": 1108,
+      "unit_sha256": "b64100d0f6c3f5a4d258ac17ffad7182ec607daa930e6cbc4bf5649984d3fac3"
+    },
+    {
+      "case_id": "w2-weight6-intersection2",
+      "first_word": 3,
+      "forbidden_earlier_orbit_words": 1347,
+      "minimum_weight": 2,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 6
+      },
+      "second_word": 63,
+      "unit_count": 1360,
+      "unit_sha256": "4d75c0881592c53aa21f7a8344354f959d3272d5380d6db53208e7dc0038c5b4"
+    },
+    {
+      "case_id": "w3-weight3-intersection0",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 0,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 3
+      },
+      "second_word": 56,
+      "unit_count": 68,
+      "unit_sha256": "9170de358392ca442c4f7396f6cbe4ac6de1e8f29e13433e6c1e828a882e0d0a"
+    },
+    {
+      "case_id": "w3-weight3-intersection1",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 56,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 3
+      },
+      "second_word": 25,
+      "unit_count": 124,
+      "unit_sha256": "021e577f7acca49b9a815823fa229ae299a0aab9fa57bdeeec619cb3d5350e60"
+    },
+    {
+      "case_id": "w3-weight4-intersection0",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 164,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 4
+      },
+      "second_word": 120,
+      "unit_count": 232,
+      "unit_sha256": "a939028567c69b0aae996afe23cf0656137dbc55d1135cde496424c953068e34"
+    },
+    {
+      "case_id": "w3-weight4-intersection1",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 234,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 4
+      },
+      "second_word": 57,
+      "unit_count": 302,
+      "unit_sha256": "06bac7066af07f493c049410ed9933d3df167bcbeb9d72833c65fc4464a6921e"
+    },
+    {
+      "case_id": "w3-weight4-intersection2",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 402,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 4
+      },
+      "second_word": 27,
+      "unit_count": 470,
+      "unit_sha256": "663cfe1c004f40ce88ebeba35f590d7e55ad8910b12c3996187e32ac41630514"
+    },
+    {
+      "case_id": "w3-weight5-intersection0",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 494,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 5
+      },
+      "second_word": 248,
+      "unit_count": 562,
+      "unit_sha256": "f3d413e225e8300443cc419a51f38f8dab92de6edf0560a8bb44ec2fe79caf42"
+    },
+    {
+      "case_id": "w3-weight5-intersection1",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 550,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 5
+      },
+      "second_word": 121,
+      "unit_count": 618,
+      "unit_sha256": "ea8645065fbc031ee27d0573cf206034ce406d47caf96428f069e53788b22011"
+    },
+    {
+      "case_id": "w3-weight5-intersection2",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 760,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 5
+      },
+      "second_word": 59,
+      "unit_count": 828,
+      "unit_sha256": "2d6c6dc73f35107fec9f993e9adb9121cf951f59e3d082f49e5aac0ccf3f723e"
+    },
+    {
+      "case_id": "w3-weight6-intersection0",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 956,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 6
+      },
+      "second_word": 504,
+      "unit_count": 1024,
+      "unit_sha256": "e259b1b9e42d1927d19f081bfcc871f6e867d3dd57ff17794199cc813e4a9468"
+    },
+    {
+      "case_id": "w3-weight6-intersection1",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 984,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 6
+      },
+      "second_word": 249,
+      "unit_count": 1052,
+      "unit_sha256": "1a6ddc4d9bd52d1d0308d9a2c24ca2bceaaf11ed3d67efc54bcb7fab1e8e9808"
+    },
+    {
+      "case_id": "w3-weight6-intersection2",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 1152,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 6
+      },
+      "second_word": 123,
+      "unit_count": 1220,
+      "unit_sha256": "dbe1f4658eb561990d6667854dc79053fdec850675fe0dc8b98d4bc868f2c3f0"
+    },
+    {
+      "case_id": "w3-weight6-intersection3",
+      "first_word": 7,
+      "forbidden_earlier_orbit_words": 1362,
+      "minimum_weight": 3,
+      "second_descriptor": {
+        "intersection": 3,
+        "weight": 6
+      },
+      "second_word": 63,
+      "unit_count": 1430,
+      "unit_sha256": "8e3d71d74650ab67b1ea19ed263b58f74967cf9d0c384bc9966a48e134536cae"
+    },
+    {
+      "case_id": "w4-weight4-intersection0",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 0,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 4
+      },
+      "second_word": 240,
+      "unit_count": 233,
+      "unit_sha256": "b44741c4d8fd0f98e4a4cc996f717beb673025e779079cdb7c0602598b5c8d3a"
+    },
+    {
+      "case_id": "w4-weight4-intersection1",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 35,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 4
+      },
+      "second_word": 113,
+      "unit_count": 268,
+      "unit_sha256": "a4febe19e82772684b735546ec3e5df7f70ddccc768748d7da4cfa7fcf065b7b"
+    },
+    {
+      "case_id": "w4-weight4-intersection2",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 175,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 4
+      },
+      "second_word": 51,
+      "unit_count": 408,
+      "unit_sha256": "5f1e18e164130d26630c6d25725d59eec00c57fee16b1733dc398009b0cd932a"
+    },
+    {
+      "case_id": "w4-weight5-intersection0",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 329,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 5
+      },
+      "second_word": 496,
+      "unit_count": 562,
+      "unit_sha256": "a5ff53d4a18bac85b2e11561aa4faa2558ceea56026a45edb7c2432e6523190f"
+    },
+    {
+      "case_id": "w4-weight5-intersection1",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 350,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 5
+      },
+      "second_word": 241,
+      "unit_count": 583,
+      "unit_sha256": "b10aaea3fafc43b83282ca886f8eb89596ff599486269b70d2e5c567dfeb40b6"
+    },
+    {
+      "case_id": "w4-weight5-intersection2",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 490,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 5
+      },
+      "second_word": 115,
+      "unit_count": 723,
+      "unit_sha256": "d598a1f3406dd59a80d308b62052d0c48d5e12c78b797ba7c22aaf6bcce4e117"
+    },
+    {
+      "case_id": "w4-weight6-intersection0",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 791,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 0,
+        "weight": 6
+      },
+      "second_word": 1008,
+      "unit_count": 1024,
+      "unit_sha256": "264169a8b76b734dc5164dbd35390bd0d06ac3e7f85152a07be0878fbc04983f"
+    },
+    {
+      "case_id": "w4-weight6-intersection1",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 798,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 6
+      },
+      "second_word": 497,
+      "unit_count": 1031,
+      "unit_sha256": "61bcfd9a5086ada90920fbe4065fd9ef347e2ba63733a3931e525822b542db28"
+    },
+    {
+      "case_id": "w4-weight6-intersection2",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 882,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 6
+      },
+      "second_word": 243,
+      "unit_count": 1115,
+      "unit_sha256": "f3d65a99e3b1d7644ce084be167574c576955b09230f700f05852deaccddcd20"
+    },
+    {
+      "case_id": "w4-weight6-intersection3",
+      "first_word": 15,
+      "forbidden_earlier_orbit_words": 1092,
+      "minimum_weight": 4,
+      "second_descriptor": {
+        "intersection": 3,
+        "weight": 6
+      },
+      "second_word": 119,
+      "unit_count": 1325,
+      "unit_sha256": "1c523a71a53c56db30a3db6a481aaa1d54883c52d691eacf35c62f9407adb087"
+    },
+    {
+      "case_id": "w5-weight5-intersection1",
+      "first_word": 31,
+      "forbidden_earlier_orbit_words": 6,
+      "minimum_weight": 5,
+      "second_descriptor": {
+        "intersection": 1,
+        "weight": 5
+      },
+      "second_word": 481,
+      "unit_count": 569,
+      "unit_sha256": "40a9adc7e51815f96a627fa9d27a0e808295f721519dcac4ba59fc1cb5aaf623"
+    },
+    {
+      "case_id": "w5-weight5-intersection2",
+      "first_word": 31,
+      "forbidden_earlier_orbit_words": 81,
+      "minimum_weight": 5,
+      "second_descriptor": {
+        "intersection": 2,
+        "weight": 5
+      },
+      "second_word": 227,
+      "unit_count": 644,
+      "unit_sha256": "bf7335ca22165c17b92d1989ea7932ad88a0dbcca011b568a35dae56a7669e97"
+    }
+  ],
+  "descriptor_order": [
+    "weight",
+    "intersection_with_first_word"
+  ],
+  "length": 11,
+  "maximum_minimum_weight": 5,
+  "reduction_summary": "evidence/case-reduction-stage1.json",
+  "source_manifest": "evidence/two-word-cases.json",
+  "source_manifest_sha256": "32f2a0326240da777034da918e07c4183e967ba66bafb5c7be632b0170ef7e54"
+}

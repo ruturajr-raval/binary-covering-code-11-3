@@ -1,0 +1,46 @@
+{
+  "base_formula_sha256": "5e09b1af5f41dde0576d8ef8aaf1f3903b1878a63a5f9f4c889a0580ae764140",
+  "case_count": 5,
+  "cases": [
+    {
+      "forbidden_pair_clauses": 0,
+      "minimum_distance": 1,
+      "sha256": "ae33135bb4d8c16bc7740353f06cdf38213fef201e941e8247ddc7993abd1ba1",
+      "valid": true
+    },
+    {
+      "forbidden_pair_clauses": 11264,
+      "minimum_distance": 2,
+      "sha256": "5c813c4547974f2344058ccdc4bc35602aa75d6fd7ded3e005a5538be897dc44",
+      "valid": true
+    },
+    {
+      "forbidden_pair_clauses": 67584,
+      "minimum_distance": 3,
+      "sha256": "3ed98e0ae48185d3a04585b5a31ae5cb530018d8171c366ef5bded02db54d548",
+      "valid": true
+    },
+    {
+      "forbidden_pair_clauses": 236544,
+      "minimum_distance": 4,
+      "sha256": "dd9bbf4db76a7f1dde1e41d1e8a8d7c50bd2548811b612bdb6e182dc352ee564",
+      "valid": true
+    },
+    {
+      "forbidden_pair_clauses": 574464,
+      "minimum_distance": 5,
+      "sha256": "334f6fc940fbefe36e91459e6d01a765f07df67cfffe43bd14beaf31c05d6e93",
+      "valid": true
+    }
+  ],
+  "distance_bounds_sha256": "b18bed33012228508164dc438775ea1eff0fe8b65dcd3a41ae588879dcbe5205",
+  "manifest": "evidence/min-distance-branches.json",
+  "minimum_distances": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "valid": true
+}

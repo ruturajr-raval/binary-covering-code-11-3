@@ -1,0 +1,24 @@
+{
+  "case_id": "w4-weight5-intersection3",
+  "checker": "drat-trim",
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_output": [
+    "c parsing input formula with 9464 variables and 264282 clauses",
+    "c finished parsing",
+    "c UNSAT via unit propagation on the input instance",
+    "c 3 of 264282 clauses in core                            ",
+    "c 1 of 409 lemmas in core using 3 resolution steps",
+    "c 0 RAT lemmas in core; 0 redundant literals in core lemmas",
+    "s VERIFIED",
+    "c verification time: <elapsed>"
+  ],
+  "checker_output_line_count": 344,
+  "checker_output_sha256": "13b26ef14cc401ed1c735f7789ab7dd7d299160536d2744dc23cd68ea7f63686",
+  "checker_timing_normalized": true,
+  "checker_warning_count": 164,
+  "formula_sha256": "381458d62cef6b6c71c01243f31d0f554b4f520b43d71dd79ec2ab5718120ae6",
+  "proof_compressed_sha256": "2e8c23c98ea7e2266fc8e68c1c9ee82ea0161f7efdb0f54d41867c6113a3aa35",
+  "proof_uncompressed_sha256": "371bcccdb7ee0b89f64d6180ff58ad031b81c5cd078ca2763fc6e0a9130c4a49",
+  "return_code": 0,
+  "verified": true
+}
