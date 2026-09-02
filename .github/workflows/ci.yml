@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements-sat.txt -r requirements-proof.txt
+      - run: make test PYTHON=python
+      - run: make verify-baseline verify-independent
+      - run: make distance-bounds overlap-bound
+      - run: make audit-two-word-cases
+      - run: make verify-orbit-certificates PYTHON=python
+      - run: make verify-integer-profile-certificates PYTHON=python

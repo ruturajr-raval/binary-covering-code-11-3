@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or its retained proof evidence, please cite the repository release."
+title: "Proof-Producing Search for the Binary Covering Number K_2(11,3)"
+type: software
+abstract: "Verification and proof-producing search for K_2(11,3), with a checked 16-word cover, exact structural certificates, 112 certified normalized branch closures, and 38 unresolved branches. The exact value remains open."
+authors:
+  - family-names: Raval
+    given-names: Ruturaj R
+repository-code: "https://github.com/ruturajr-raval/binary-covering-code-11-3"
+license: MIT
+version: 0.1.0
+date-released: 2026-09-02

@@ -17,6 +17,18 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def dimacs_text(
+    variable_count: int,
+    clauses: list[tuple[int, ...]],
+) -> str:
+    lines = [f"p cnf {variable_count} {len(clauses)}"]
+    lines.extend(
+        " ".join(str(literal) for literal in clause) + " 0"
+        for clause in clauses
+    )
+    return "\n".join(lines) + "\n"
+
+
 def run_command(arguments: list[str], *, environment: dict[str, str]) -> None:
     result = subprocess.run(
         arguments,
@@ -102,7 +114,17 @@ def main() -> int:
         proof = args.proof_directory / f"{case_id}.drat.gz"
         summary = args.proof_directory / f"{case_id}-proof.json"
         check = args.proof_directory / f"{case_id}-check.json"
-        if not args.verify_existing:
+        if args.verify_existing:
+            base_variables, base_clauses, _ = read_dimacs(base_formula)
+            units = case_units(case, int(case_manifest["length"]))
+            expected_clauses = list(base_clauses)
+            expected_clauses.extend((literal,) for literal in units)
+            formula.parent.mkdir(parents=True, exist_ok=True)
+            formula.write_text(
+                dimacs_text(base_variables, expected_clauses),
+                encoding="ascii",
+            )
+        else:
             run_command(
                 [
                     args.python,

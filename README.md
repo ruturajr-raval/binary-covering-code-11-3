@@ -3,6 +3,10 @@
 Certificate-oriented search for the exact value of the binary covering number
 `K_2(11,3)`, currently bounded by `15 <= K_2(11,3) <= 16`.
 
+This repository verifies a known 16-word cover and records a complete
+150-branch normalization of the size-15 search, with 112 certified normalized
+branch closures and 38 unresolved branches. The exact value remains open.
+
 ## The Problem
 
 Let `F_2^11` be the set of all 2,048 binary words of length 11. A code
@@ -202,12 +206,22 @@ The work proceeds on two independent routes.
 
 ## Reproduction
 
-The core tools require Python 3.9 or newer and use only the standard library.
-Proof replay also requires Git, Make, and a C compiler. `make proof-checker`
-fetches and builds the pinned checker revision.
+The direct verifiers require Python 3.9 or newer and use only the standard
+library. Exact formula generation and certificate replay additionally require
+`python-sat` and `highspy`. Proof replay also requires Git, Make, and a C
+compiler. `make proof-checker` fetches and builds the pinned checker revision.
+
+Create an environment with all proof-replay dependencies:
 
 ```bash
-make test
+python3 -m venv .venv
+.venv/bin/python -m pip install \
+  -r requirements-sat.txt \
+  -r requirements-proof.txt
+```
+
+```bash
+make test PYTHON=.venv/bin/python
 make proof-checker
 make verify-baseline
 make verify-independent
@@ -235,18 +249,13 @@ make local-search-smoke
 Install the optional exact-search dependency with:
 
 ```bash
-python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-solver.txt
 make solver-test PYTHON=.venv/bin/python
 make search-smoke PYTHON=.venv/bin/python
 ```
 
-Install the optional CDCL portfolio dependency with:
-
-```bash
-.venv/bin/python -m pip install -r requirements-sat.txt
-make sat-smoke PYTHON=.venv/bin/python
-```
+Run `make sat-smoke PYTHON=.venv/bin/python` for the optional CDCL portfolio
+smoke test.
 
 ## Current Result Status
 
@@ -292,5 +301,6 @@ maintainers of the covering-code tables and formal database.
 
 ## License
 
-The original source code and documentation in this repository are released
-under the MIT License. External sources are referenced, not copied.
+Unless otherwise noted, the source code, documentation, generated
+certificates, proof traces, and retained project data in this repository are
+released under the MIT License. External sources are referenced, not copied.

@@ -1,0 +1,20 @@
+{
+  "title": "Proof-Producing Search for the Binary Covering Number K_2(11,3)",
+  "upload_type": "software",
+  "description": "Verification and proof-producing search for K_2(11,3), with a checked 16-word cover, exact structural certificates, 112 certified normalized branch closures, and 38 unresolved branches. The exact value remains open.",
+  "creators": [
+    {
+      "name": "Raval, Ruturaj R"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "covering codes",
+    "coding theory",
+    "SAT",
+    "DRAT",
+    "combinatorics",
+    "reproducible research"
+  ],
+  "version": "0.1.0"
+}

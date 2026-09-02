@@ -11,7 +11,7 @@
     },
     "third_word_proofs": {
       "path": "evidence/third-word-proof-index.json",
-      "sha256": "e17673b39f57ad9aef15e3beee63584a30f1454d2392a4e6d2fd7360a2b95fe6"
+      "sha256": "997c225958d287807f013ac747e99ae081d08de116b17f837229b783146ade1e"
     }
   },
   "all_accounted_for": true,

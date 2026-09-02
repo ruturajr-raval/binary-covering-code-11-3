@@ -1,9 +1,13 @@
 {
+  "version": "0.1.0",
+  "release_date": "2026-09-02",
   "artifact_status": "verified_baseline_structural_bounds_and_partial_proof_frontier",
   "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "not_established",
+  "partial_progress_status": "significant_verified_proof_frontier",
   "artifact_reproducibility_ready": true,
+  "artifact_release_ready": true,
   "theorem_announcement_ready": false,
   "result_routes": {
     "construction": {

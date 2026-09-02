@@ -24,8 +24,9 @@ bound to the Graham-Sloane construction line. The binary PDF was generated on
   separately records the historical lower bound 15 and upper bound 16.
 - The semidefinite hierarchy in arXiv:2504.01932 reports numerical value
   `12.4700` for the relevant binary cell, below the historical lower bound 15.
-- The 2026-08-27 preprint arXiv:2608.19872 reports improved covering-code
-  bounds for alphabet sizes 5 through 21, not for the binary cell here.
+- The preprint arXiv:2608.19872, submitted on 2026-08-20, reports improved
+  covering-code bounds for alphabet sizes 6 and 7, not for the binary cell
+  here.
 - Searches for the exact notation, parameter tuple, and a post-2011 exact
   determination did not locate a primary source closing the gap.
 - Neighboring one-gap covering problems have been closed recently with
@@ -54,3 +55,15 @@ A potentially new result is either a verified 15-word code or a checked
 proof that all 15-word codes are impossible. A search or structural lemma may
 also be publishable if it strictly improves the proof frontier and survives a
 refreshed audit.
+
+## References
+
+- Gabor Keri, tables of bounds for covering codes, binary table generated
+  2009-10-15 and table site last revised in 2011.
+- Gerard Cohen, Iiro Honkala, Simon Litsyn, and Antoine Lobstein,
+  *Covering Codes*, North-Holland, 1997.
+- Dion Gijswijt and Sven Polak, "Semidefinite lower bounds for covering
+  codes", arXiv:2504.01932, 2025.
+- Badih Ghazi, Pablo Piantanida, Aravind Velingker, and Jialin Zheng,
+  "Improved covering codes over medium-sized alphabets", arXiv:2608.19872,
+  2026.

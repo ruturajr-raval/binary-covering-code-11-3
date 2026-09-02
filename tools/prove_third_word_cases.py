@@ -100,23 +100,22 @@ def main() -> int:
         summary = args.proof_directory / f"{case_id}-proof.json"
         check = args.proof_directory / f"{case_id}-check.json"
 
-        if not args.verify_existing:
-            generate_arguments = [
-                args.python,
-                "tools/generate_third_word_formula.py",
-                str(branches[distance]),
-                str(parent_manifest_path),
-                str(third_manifest_path),
-                case_id,
-                str(formula),
-                str(formula_metadata),
-            ]
-            if matching:
-                generate_arguments.append("--matching")
-            run_command(
-                generate_arguments,
-                environment,
-            )
+        generate_arguments = [
+            args.python,
+            "tools/generate_third_word_formula.py",
+            str(branches[distance]),
+            str(parent_manifest_path),
+            str(third_manifest_path),
+            case_id,
+            str(formula),
+            str(formula_metadata),
+        ]
+        if matching:
+            generate_arguments.append("--matching")
+        run_command(
+            generate_arguments,
+            environment,
+        )
         run_command(
             [
                 args.python,
