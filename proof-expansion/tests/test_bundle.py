@@ -19,6 +19,7 @@ from fourth_word_drat.bundle import (
     branch_slug,
     case_filenames,
     case_index_record,
+    certification_resource_limits,
     clean_stale_bundle_staging,
     CommandRegistry,
     coordinator_signal_handlers,
@@ -31,6 +32,7 @@ from fourth_word_drat.bundle import (
     promote_bundle,
     recover_promotion,
     require_free_space,
+    require_certification_resource_limits,
     require_path_separation,
     run_case,
     solver_environment_record,
@@ -1697,60 +1699,93 @@ class BundleUtilityTests(unittest.TestCase):
     def test_staged_bundle_fields_drive_real_promotion(self) -> None:
         ARTIFACTS.mkdir(exist_ok=True)
         plan = json.loads(PLAN.read_text(encoding="ascii"))
-        planned = plan["cases"][0]
-        names = case_filenames(str(planned["branch_id"]))
+        case_records = [
+            {"plan_case": planned} for planned in plan["cases"]
+        ]
         with tempfile.TemporaryDirectory(dir=ARTIFACTS) as directory:
             parent = Path(directory)
             workspace = parent / "workspace"
-            source = workspace / "cases" / branch_slug(
-                str(planned["branch_id"])
-            )
-            source.mkdir(parents=True)
-            for filename in names.values():
-                (source / filename).write_bytes(
-                    f"{filename}\n".encode("ascii")
+            for planned in plan["cases"]:
+                names = case_filenames(str(planned["branch_id"]))
+                source = workspace / "cases" / branch_slug(
+                    str(planned["branch_id"])
                 )
-            case_record = {"plan_case": planned}
-            indexed_case = {
-                "branch_id": planned["branch_id"],
-                "branch_sha256": planned["branch_sha256"],
-                "parent_child_id": planned["parent_child_id"],
-                "fourth_orbit_index": planned["fourth_orbit_index"],
-            }
+                source.mkdir(parents=True)
+                for filename in names.values():
+                    (source / filename).write_bytes(
+                        f"{filename}\n".encode("ascii")
+                    )
+
+            def fake_validate(
+                _directory: Path,
+                planned: dict[str, object],
+            ) -> dict[str, object]:
+                return {"plan_case": planned}
+
+            def fake_index(
+                record: dict[str, object],
+                **_kwargs,
+            ) -> dict[str, object]:
+                planned = record["plan_case"]
+                return {
+                    "branch_id": planned["branch_id"],
+                    "branch_sha256": planned["branch_sha256"],
+                    "parent_child_id": planned["parent_child_id"],
+                    "fourth_orbit_index": planned[
+                        "fourth_orbit_index"
+                    ],
+                }
+
             proof_directory = parent / "proofs"
             output = parent / "index.json"
             journal = parent / ".promotion.json"
             with mock.patch(
                 "fourth_word_drat.bundle.validate_case_directory",
-                return_value=case_record,
+                side_effect=fake_validate,
             ):
                 with mock.patch(
                     "fourth_word_drat.bundle.validate_flat_case",
-                    return_value=case_record,
+                    side_effect=fake_validate,
                 ):
                     with mock.patch(
                         "fourth_word_drat.bundle.case_index_record",
-                        return_value=indexed_case,
+                        side_effect=fake_index,
                     ):
-                        staged = stage_bundle(
-                            [case_record],
-                            root=ROOT,
-                            workspace=workspace,
-                            plan=plan,
-                            plan_path=PLAN,
-                            plan_sha256=file_sha256(PLAN),
-                            proof_directory=proof_directory,
-                            output_path=output,
-                            checker_commit="2" * 40,
-                            checker_sha256="3" * 64,
-                            pipeline_files={},
-                            pipeline_python_tree={},
-                            solver_environment={},
-                            resource_limits={
-                                "minimum_free_bytes": 1,
-                            },
-                        )
+                        with mock.patch(
+                            "fourth_word_drat.bundle.require_free_space",
+                        ):
+                            staged = stage_bundle(
+                                case_records,
+                                root=ROOT,
+                                workspace=workspace,
+                                plan=plan,
+                                plan_path=PLAN,
+                                plan_sha256=file_sha256(PLAN),
+                                proof_directory=proof_directory,
+                                output_path=output,
+                                checker_commit="2" * 40,
+                                checker_sha256="3" * 64,
+                                pipeline_files={},
+                                pipeline_python_tree={},
+                                solver_environment={},
+                                resource_limits=(
+                                    certification_resource_limits(1)
+                                ),
+                            )
             self.assertIsInstance(staged, StagedBundle)
+            staged_index = json.loads(
+                staged.index_path.read_text(encoding="ascii")
+            )
+            self.assertEqual(staged_index["case_count"], 140)
+            self.assertEqual(len(staged_index["cases"]), 140)
+            self.assertEqual(
+                staged_index["resource_limits"],
+                certification_resource_limits(1),
+            )
+            self.assertEqual(
+                len(list(staged.proof_directory.iterdir())),
+                420,
+            )
             self.assertEqual(
                 staged.proof_directory_sha256,
                 directory_sha256(staged.proof_directory),
@@ -1801,6 +1836,43 @@ class BundleUtilityTests(unittest.TestCase):
 
     def test_proof_command_timeout_covers_inner_limits(self) -> None:
         self.assertEqual(PROOF_COMMAND_TIMEOUT_SECONDS, 2400)
+
+    def test_certification_resource_limits_are_complete(self) -> None:
+        self.assertEqual(
+            certification_resource_limits(1),
+            {
+                "workers": 1,
+                "minimum_free_bytes": 8 * 1024 * 1024 * 1024,
+                "solve_seconds_per_case": 300,
+                "raw_proof_bytes_per_case": 1024 * 1024 * 1024,
+                "retained_proof_bytes_per_case": 256 * 1024 * 1024,
+                "memory_watchdog_bytes_per_case": 12 * 1024 * 1024 * 1024,
+                "checker_seconds_per_run": 900,
+                "checker_output_bytes_per_run": 4 * 1024 * 1024,
+                "proof_command_seconds": 2400,
+            },
+        )
+
+    def test_certification_resource_limits_reject_bad_workers(self) -> None:
+        for workers in (True, 0, 3):
+            with self.subTest(workers=workers):
+                with self.assertRaisesRegex(
+                    RuntimeError,
+                    "worker count is invalid",
+                ):
+                    certification_resource_limits(workers)
+
+    def test_certification_resource_limit_schema_is_required(self) -> None:
+        with self.assertRaisesRegex(
+            RuntimeError,
+            "certification resource limits are invalid",
+        ):
+            require_certification_resource_limits(
+                {
+                    "workers": 1,
+                    "minimum_free_bytes": 8 * 1024 * 1024 * 1024,
+                }
+            )
 
     def test_solver_probe_ignores_unchecked_package_bytecode(self) -> None:
         spec = importlib.util.find_spec("pysat")

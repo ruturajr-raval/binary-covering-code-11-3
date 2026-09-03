@@ -2,6 +2,31 @@
 
 ## 2026-09-03
 
+- Authenticated an exact 140-case solver-proof plan selected from the retained
+  exploratory scout and recorded the other 26 non-RUP branches separately.
+- Benchmarked one difficult selected branch from each of the four hard
+  children, then retained the one-worker configuration after checking memory,
+  proof size, and free-space margins.
+- Generated solver DRAT proofs for all 140 selected branches, checked every raw
+  proof before core extraction, and independently replayed every retained core
+  with pinned `drat-trim`.
+- A pre-promotion run exposed an undefined resource-limit name after all 140
+  checkpoints completed. No evidence was promoted. The limit record was
+  centralized, staging was restricted to the exact ordered 140-case plan, and
+  regression coverage was expanded to a real 420-artifact promotion.
+- Passed all 80 focused proof-expansion tests, the authenticated plan audit,
+  the structural bundle audit, and the independent full replay of all 140
+  retained proofs.
+- Promoted the 420-artifact v2 bundle with proof-directory digest
+  `44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`
+  and index digest
+  `342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`.
+- Retained a 422-entry exact-membership manifest for the v2 plan, index, and
+  proof tree with digest
+  `be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+- The combined fourth-word certificate now closes 324 of 350 branches and
+  leaves 26 unresolved. It closes no complete selected child or normalized
+  parent and does not change the interval `15 <= K_2(11,3) <= 16`.
 - Classified all 350 fourth-word branches under branch assumptions by unit
   propagation with Glucose 4 and cross-checked every status with Glucose 4.2.
 - Identified exactly 184 RUP-conflicting branches and 166 branches outside
@@ -44,9 +69,9 @@
   `076a0f6703de2c6513799c0b43bfe689480fabda`: regenerated and checked all 184
   formulas and proofs, verified both proof manifests and the release manifest,
   and finished with a clean checkout.
-- Recorded the exact claim boundary: 166 fourth-word branches remain, no
-  selected third-word child is closed, no normalized parent is newly closed,
-  and the exact covering number remains 15 or 16.
+- Recorded the v1 RUP-only claim boundary: 166 fourth-word branches remained,
+  no selected third-word child was closed, no normalized parent was newly
+  closed, and the exact covering number remained 15 or 16.
 - Separated proof generation from proof replay after a full-workflow check
   exposed that the residual verifier regenerated a platform-dependent gzip
   stream and run-dependent timing metadata.

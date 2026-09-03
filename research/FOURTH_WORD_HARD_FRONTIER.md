@@ -143,12 +143,56 @@ command in privacy-safe form, Python executable, `pysat` source tree, native
 authenticates the classification, proof plan, proof index, replay attestation,
 and all 554 proof artifacts.
 
-The certification is branch-level. Each selected third-word child still has
-at least one residual fourth-word branch, so this bundle closes no complete
-third-word child and no normalized parent. The global frontier therefore
-remains at 38 unresolved normalized parents, and the exact value remains 15 or
-16.
+## Certified Solver DRAT Closures
 
-The next proof step is to seek checked nontrivial DRAT certificates for the
-166 residual branches. Branches that remain hard after proof-producing solver
-runs can be subdivided by a fifth-word orbit split.
+The authenticated scout selected 140 of the 166 non-RUP branches for
+proof-producing Glucose4 runs. Each raw solver proof was checked before core
+extraction, and every retained DRAT core was independently replayed with the
+pinned `drat-trim` revision.
+
+| Third-word child | RUP certified | DRAT certified | Residual | Total |
+| --- | ---: | ---: | ---: | ---: |
+| `orbit-005` | 50 | 29 | 6 | 85 |
+| `orbit-007` | 53 | 15 | 8 | 76 |
+| `orbit-014` | 41 | 28 | 4 | 73 |
+| `orbit-015` | 40 | 68 | 8 | 116 |
+| **Total** | **184** | **140** | **26** | **350** |
+
+The principal v2 records are:
+
+- `proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json`
+- `proof-expansion/evidence/fourth-word-solver-drat-index-v2.json`
+- `proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256`
+- `proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json` in a
+  finalized release
+- `proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/`
+
+The v2 index SHA-256 is
+`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`.
+The exact 422-entry v2 bundle manifest SHA-256 is
+`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+The 420-artifact proof-directory digest is
+`44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
+The structural audit and independent replay of all 140 retained proofs passed
+on 2026-09-03.
+
+Verify exact v2 bundle membership from the repository root:
+
+```text
+.venv/bin/python tools/verify_checksum_manifest.py proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
+```
+
+Verify a finalized revision attestation:
+
+```text
+.venv/bin/python release-tools/manage_fourth_word_solver_drat_revision.py --verify --release-revision HEAD
+```
+
+The certification remains branch-level. Every selected third-word child still
+has at least one residual fourth-word branch, so the combined 324 closures
+close no complete third-word child and no normalized parent. The global
+frontier therefore remains at 38 unresolved normalized parents, and the exact
+value remains 15 or 16.
+
+The next proof step is an audited fifth-word orbit split of the 26 remaining
+branches, alongside continued search for a verified 15-word code.

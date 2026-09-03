@@ -25,6 +25,7 @@ from repository_lock import subprocess_lock_kwargs
 
 from fourth_word_drat.proof_core import (
     BUFFER_SIZE,
+    DEFAULT_MAX_CHECKER_OUTPUT_BYTES,
     DEFAULT_MAX_CHECKER_SECONDS,
     DEFAULT_MAX_MEMORY_BYTES,
     DEFAULT_MAX_RAW_PROOF_BYTES,
@@ -265,6 +266,41 @@ def workspace_free_space_requirement(
     return minimum_bytes + workers * (
         raw_proof_bytes + 2 * retained_proof_bytes
     )
+
+
+def certification_resource_limits(
+    workers: int,
+) -> dict[str, int]:
+    if type(workers) is not int or workers < 1 or workers > 2:
+        raise RuntimeError("worker count is invalid")
+    return {
+        "workers": workers,
+        "minimum_free_bytes": DEFAULT_MIN_FREE_BYTES,
+        "solve_seconds_per_case": DEFAULT_MAX_SOLVE_SECONDS,
+        "raw_proof_bytes_per_case": DEFAULT_MAX_RAW_PROOF_BYTES,
+        "retained_proof_bytes_per_case": (
+            DEFAULT_MAX_RETAINED_PROOF_BYTES
+        ),
+        "memory_watchdog_bytes_per_case": DEFAULT_MAX_MEMORY_BYTES,
+        "checker_seconds_per_run": DEFAULT_MAX_CHECKER_SECONDS,
+        "checker_output_bytes_per_run": (
+            DEFAULT_MAX_CHECKER_OUTPUT_BYTES
+        ),
+        "proof_command_seconds": PROOF_COMMAND_TIMEOUT_SECONDS,
+    }
+
+
+def require_certification_resource_limits(
+    resource_limits: dict[str, object],
+) -> None:
+    if not isinstance(resource_limits, dict):
+        raise RuntimeError("certification resource limits are invalid")
+    workers = resource_limits.get("workers")
+    if (
+        type(workers) is not int
+        or resource_limits != certification_resource_limits(workers)
+    ):
+        raise RuntimeError("certification resource limits are invalid")
 
 
 def promotion_index_free_space_requirement(
@@ -1481,6 +1517,23 @@ def stage_bundle(
     solver_environment: dict[str, object],
     resource_limits: dict[str, object],
 ) -> StagedBundle:
+    require_certification_resource_limits(resource_limits)
+    planned_cases = plan.get("cases")
+    if (
+        plan.get("case_count") != 140
+        or not isinstance(planned_cases, list)
+        or len(planned_cases) != 140
+        or [
+            record.get("plan_case")
+            if isinstance(record, dict)
+            else None
+            for record in case_records
+        ]
+        != planned_cases
+    ):
+        raise RuntimeError(
+            "bundle staging requires the complete ordered plan"
+        )
     token = secrets.token_hex(8)
     staging_directory = proof_directory.parent / (
         f".{proof_directory.name}.{token}"

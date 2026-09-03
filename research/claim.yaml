@@ -3,7 +3,7 @@ project: binary-covering-code-11-3
 author: Ruturaj R Raval
 orcid: 0000-0003-4930-8981
 updated: 2026-09-03
-status: exploratory
+status: certified-partial-result
 target:
   type: exact-covering-number
   object: K_2(11,3)
@@ -16,19 +16,20 @@ current_supported_claim:
     unresolved parents. Retained static constraints exclude 385 of their
     2,548 third-word children, leaving 2,163 live children. Within four
     selected live children, checked RUP certificates exclude 184 of 350
-    fourth-word branches, leaving 166 branches and all four children open.
+    fourth-word branches and checked solver-generated DRAT certificates
+    exclude 140 more. The remaining 26 branches leave all four children open.
   exact_value_determined: false
 candidate_claim:
   statement: null
   certificate_sha256: null
   verifier_commits: []
 novelty:
-  literature_checked_through: 2026-09-02
+  literature_checked_through: 2026-09-03
   known_interval: 15-16
 limitations:
   - No valid 15-word code is currently retained.
   - Thirty-eight normalized parent branches remain unresolved.
   - The 2,163 live child branches have not yet been exhaustively solved.
   - The fourth-word proof bundle closes no complete third-word child or normalized parent.
-  - One hundred sixty-six branches in the selected fourth-word split remain unresolved.
+  - Twenty-six branches in the selected fourth-word split remain unresolved.
   - Solver timeouts and unchecked infeasibility statuses are not proofs.

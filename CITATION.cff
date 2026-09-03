@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "For the tagged 0.2.0 release, cite repository version 0.2.0 and the Zenodo concept DOI."
 title: "Proof-Producing Search for the Binary Covering Number K_2(11,3)"
 type: software
-abstract: "Verification and proof-producing search for K_2(11,3), with a checked 16-word cover, exact structural certificates, 112 certified normalized branch closures, and a checked 184-of-350 fourth-word branch reduction within four selected hard children. The exact value remains open."
+abstract: "Verification and proof-producing search for K_2(11,3), with a checked 16-word cover, exact structural certificates, 112 certified normalized branch closures, and a checked 324-of-350 fourth-word branch reduction within four selected hard children. The exact value remains open."
 authors:
   - family-names: Raval
     given-names: Ruturaj R

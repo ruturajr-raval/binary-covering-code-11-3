@@ -8,9 +8,10 @@ Certificate-oriented search for the exact value of the binary covering number
 This repository verifies a known 16-word cover and records a complete
 150-branch normalization of the size-15 search, with 112 certified normalized
 branch closures and 38 unresolved branches. Within four selected hard
-third-word children, a further 350-branch split has 184 checked closures and
-166 residual branches. No complete child or normalized parent is closed by
-that split, so the exact value remains open.
+third-word children, a further 350-branch split now has 324 checked closures:
+184 by reverse unit propagation and 140 by solver-generated DRAT proofs. The
+remaining 26 branches leave every selected child and normalized parent open,
+so the exact value remains unresolved.
 
 ## The Problem
 
@@ -101,9 +102,12 @@ impossibility frontier:
     canonical cover and leaves 38 normalized residual branches.
 14. Four selected hard third-word children have a complete 350-branch
     fourth-word orbit split. Checked RUP certificates close 184 branches and
-    leave 166 unresolved, without closing any complete child or normalized
-    parent.
-15. Construction searches have not found a 15-word cover. The best retained
+    identify 166 branches outside that proof class.
+15. Independently checked solver-generated DRAT certificates close 140 of
+    those 166 branches. The combined fourth-word certificate closes 324 of
+    350 branches and leaves 26 unresolved, without closing any complete child
+    or normalized parent.
+16. Construction searches have not found a 15-word cover. The best retained
     near-cover leaves 28 ambient words uncovered.
 
 The retained baseline code is:
@@ -150,7 +154,9 @@ The retained fourth-word refinement additionally establishes:
 4 selected hard third-word children
 350 exhaustive fourth-word branches
 184 checked RUP closures
-166 unresolved fourth-word branches
+140 checked solver-generated DRAT closures
+324 total certified closures
+26 unresolved fourth-word branches
 0 complete third-word children closed
 ```
 
@@ -167,7 +173,7 @@ remains `15 <= K_2(11,3) <= 16`.
 | Is the normalized branch cover complete? | Yes, all hypothetical 15-word covers enter one of 150 canonical parent branches. |
 | How much of that cover is certified closed? | 112 normalized branch closures have independently checkable certificates or checked DRAT traces. |
 | What remains unresolved? | 38 normalized residual branches, explicitly listed and authenticated. |
-| What does the fourth-word bundle add? | It closes 184 of 350 exhaustive fourth-word branches within four selected hard third-word children. |
+| What does the fourth-word bundle add? | It closes 324 of 350 exhaustive fourth-word branches within four selected hard third-word children: 184 by RUP and 140 by solver-generated DRAT. |
 | Does that bundle close a complete child or parent? | No. All four selected children and all 38 residual normalized parents remain open. |
 | Was a new lower bound proved? | No. |
 | Is `K_2(11,3)` determined? | No. The exact value remains either 15 or 16. |
@@ -224,16 +230,16 @@ The work proceeds on two independent routes.
 - Split selected hard third-word children into exhaustive fourth-word orbits.
 - Retain only branch exclusions with proof traces accepted by the separately
   pinned checker.
-- Continue proof-producing runs on the 166 residual fourth-word branches, then
-  extend the split where needed across the remaining live children.
+- Subdivide the 26 remaining fourth-word branches by audited fifth-word orbit
+  splits, while continuing the independent 15-word construction search.
 
 ## Limitations
 
 - The current 16-word code reproduces the known upper bound.
 - The retained 15-word near-cover still leaves 28 ambient words uncovered.
 - Thirty-eight normalized residual branches remain unresolved.
-- The retained fourth-word bundle closes 184 branches but leaves 166 branches
-  open and closes no complete third-word child or normalized parent.
+- The retained fourth-word bundles close 324 branches but leave 26 branches
+  open and close no complete third-word child or normalized parent.
 - A solver timeout is not evidence that a 15-word code is impossible.
 - CP-SAT `INFEASIBLE` without a proof trace is not promoted to a theorem.
 - Fixing the all-zero codeword is sound only because translating a binary code
@@ -275,6 +281,25 @@ match across equivalent runs on different hosts. Only the revision, final
 diff, and final status outputs have invariant semantics checked independently
 by the record validator.
 
+The solver-generated v2 bundle is indexed by
+`proof-expansion/evidence/fourth-word-solver-drat-index-v2.json`. Its index
+SHA-256 is
+`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`,
+its exact-membership bundle manifest is
+`proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256` with
+SHA-256
+`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`,
+and its 420-artifact proof-directory digest is
+`44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
+All 140 retained proofs were independently replayed on 2026-09-03.
+Finalized releases additionally retain
+`proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json`. The
+record is validated by
+`release-tools/manage_fourth_word_solver_drat_revision.py`, which binds the
+certified source revision, normalized replay outputs, and a strict
+single-parent finalization commit. `release.json` is the authoritative
+readiness record.
+
 Create an environment with all proof-replay dependencies:
 
 ```bash
@@ -314,6 +339,18 @@ make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python
 make verify-release-manifest PYTHON=.venv/bin/python
 make native-test
 make local-search-smoke
+make -C proof-expansion test
+make -C proof-expansion audit-plan
+make -C proof-expansion audit-bundle-structure
+make -C proof-expansion audit-bundle
+.venv/bin/python tools/verify_checksum_manifest.py \
+  proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
+  --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
+  --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
+  --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
+.venv/bin/python \
+  release-tools/manage_fourth_word_solver_drat_revision.py \
+  --verify --release-revision HEAD
 ```
 
 Install the optional exact-search dependency with:
@@ -338,8 +375,9 @@ The current supported claim is:
 - independently checkable certificates closing 112 normalized branches;
 - an explicit, hashed frontier of 38 unresolved normalized branches;
 - a complete 350-branch fourth-word split within four selected hard children;
-- checked RUP certificates closing 184 of those branches, with 166 unresolved
-  and no complete child or parent closure.
+- checked RUP certificates closing 184 branches and checked solver-generated
+  DRAT certificates closing 140 more, with 26 unresolved and no complete child
+  or parent closure.
 
 This is substantive progress on the proof frontier, not a determination of
 `K_2(11,3)`.

@@ -10,6 +10,11 @@
     "independent_manifest_audit_passes": true,
     "fourth_word_rup_classification_audited": true,
     "fourth_word_rup_proofs_replay": true,
+    "fourth_word_solver_drat_plan_audited": true,
+    "fourth_word_solver_drat_proofs_replay": true,
+    "fourth_word_solver_drat_bundle_manifest_valid": true,
+    "fourth_word_solver_drat_revision_attested": false,
+    "finalization_path_policy_passes": false,
     "all_selected_fourth_word_branches_closed": false,
     "closed_third_word_child_from_fourth_word_bundle": false,
     "closed_normalized_parent_from_fourth_word_bundle": false,
@@ -17,14 +22,14 @@
     "independent_child_formula_audit_passes": true,
     "construction_verified_twice": true,
     "all_required_proofs_replay": true,
-    "clean_checkout_replay_passes": true,
+    "clean_checkout_replay_passes": false,
     "claim_scope_audited": true,
     "limitations_documented": true,
     "manuscript_ready": false,
     "external_review_addressed": false
   },
-  "artifact_decision": "ready",
+  "artifact_decision": "verification_pending",
   "decision_scope": "theorem_announcement",
   "decision": "hold",
-  "reason": "The strengthened fourth-word v1 partial-result artifact is clean-checkout certified at revision 06ecaa7bc28503efd871faf4450005f43e625124 and is ready for release. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
+  "reason": "The fourth-word evidence contains 184 checked RUP closures and 140 independently replayed solver-generated DRAT closures. Its exact 422-artifact v2 checksum manifest is valid, but a revision-bound clean-checkout replay remains pending. A theorem announcement remains on hold because 26 fourth-word branches, every selected child, and all 38 residual parents remain open."
 }

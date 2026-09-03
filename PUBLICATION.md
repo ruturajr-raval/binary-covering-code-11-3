@@ -4,9 +4,11 @@
 
 This release adds an exhaustive fourth-word orbit split for four selected hard
 third-word children. The split contains 350 branches. Checked RUP certificates
-close 184 branches and leave 166 unresolved. Each retained proof is bound to
-its reconstructed formula, checked by the pinned `drat-trim` revision, and
-covered by exact-membership checksum manifests.
+close 184 branches, and checked solver-generated DRAT certificates close 140
+more. The combined certificates close 324 branches and leave 26 unresolved.
+Each retained proof is bound to its reconstructed formula, checked by the
+pinned `drat-trim` revision, and covered by exact-membership checksum
+manifests.
 
 ## Supported Claim
 
@@ -14,14 +16,14 @@ The retained 16-word code has covering radius 3. Any hypothetical 15-word
 cover satisfies the retained exact distance and overlap bounds. The complete
 150-branch normalization has 112 certified branch closures and 38 explicitly
 listed residual branches. Within four selected hard third-word children under
-residual normalized parents, 184 of 350 exhaustive fourth-word branches are
-certified unsatisfiable by RUP.
+residual normalized parents, 324 of 350 exhaustive fourth-word branches are
+certified unsatisfiable: 184 by RUP and 140 by solver-generated DRAT proofs.
 
 ## Not Claimed
 
 - No 15-word cover has been found.
 - The remaining 38 normalized branches have not been excluded.
-- The 166 residual fourth-word branches have not been excluded.
+- The 26 residual fourth-word branches have not been excluded.
 - No complete third-word child or normalized parent is closed by this bundle.
 - The exact value of `K_2(11,3)` remains either 15 or 16.
 - Solver timeouts and statuses without retained proof traces are not
@@ -34,7 +36,8 @@ certified unsatisfiable by RUP.
 `evidence/min-distance-proof-index.json` and
 `evidence/third-word-proof-index.json` authenticate the retained proof traces.
 `evidence/case-reduction-summary.json` records the final 112/38 ledger.
-`evidence/proof-bundle.sha256` authenticates every retained proof artifact.
+`evidence/proof-bundle.sha256` authenticates the retained root proof tree
+outside the solver-generated v2 expansion.
 `evidence/fourth-word-rup-bundle-v1.sha256` authenticates the new fourth-word
 index, attestation, classification, plan, and proof tree.
 `evidence/fourth-word-rup-revision-v1.json` binds those artifacts to the
@@ -46,7 +49,26 @@ Exact invocation construction is frozen in the certified source tree. The
 output hashes include host-dependent text and are not cross-host comparison
 targets. Only the revision, final diff, and final status outputs have invariant
 semantics checked independently by the record validator.
-`release-manifest.sha256` authenticates the principal release files.
+`proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256`
+authenticates the v2 plan, index, and exact 420-artifact proof tree. Its
+SHA-256 is
+`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+The v2 index SHA-256 is
+`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`,
+and the proof-directory digest is
+`44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
+The v2 bundle has passed its structural audit and independent replay of all
+140 proofs. `release-manifest.sha256` authenticates the principal release
+files, including metadata that binds the dedicated v2 manifest by hash. The
+root release command does not traverse the v2 proof tree by itself, so both
+manifest verification commands below are required.
+
+For a finalized artifact, the retained
+`proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json` record
+must bind the certified source revision, clean-checkout replay, and strict
+single-parent finalization policy. Its validator is
+`release-tools/manage_fourth_word_solver_drat_revision.py`. The authoritative
+readiness state is recorded in `release.json`.
 
 ## Reproduction
 
@@ -65,16 +87,31 @@ make audit-third-word-child-frontier PYTHON=.venv/bin/python
 make audit-fourth-word-hard-frontier PYTHON=.venv/bin/python
 make audit-fourth-word-rup-plan PYTHON=.venv/bin/python
 make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python
+make -C proof-expansion test
+make -C proof-expansion audit-plan
+make -C proof-expansion audit-bundle-structure
+make -C proof-expansion audit-bundle
+.venv/bin/python tools/verify_checksum_manifest.py \
+  proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
+  --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
+  --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
+  --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
 make verify-release-manifest PYTHON=.venv/bin/python
+.venv/bin/python \
+  release-tools/manage_fourth_word_solver_drat_revision.py \
+  --verify --release-revision HEAD
 ```
 
 The proof audit reconstructs every exact CNF, checks every retained trace, and
-validates the replay attestation. The release verification also enforces exact
-manifest membership, so undeclared additions and missing artifacts fail.
+validates the replay attestation. The root and v2 manifest commands jointly
+enforce exact membership. The revision validator additionally checks the
+certified source revision, retained replay outputs, finalization ancestry,
+allowed changed paths, Git file modes, evidence bindings, and theorem-hold
+scope.
 
 ## Limitations And Remaining Work
 
-The 166 residual branches within the selected fourth-word split are the
+The 26 residual branches within the selected fourth-word split are the
 immediate proof frontier. Even closing all four selected children would leave
 other live children under the 38 residual normalized parents. A final
 lower-bound result requires a complete checked exclusion cover. The independent

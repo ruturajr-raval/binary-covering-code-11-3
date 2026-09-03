@@ -259,6 +259,7 @@ def audit_structure(
             "checker_output_bytes_per_run",
             "proof_command_seconds",
         }
+        or type(resource_limits["workers"]) is not int
         or resource_limits["workers"] not in {1, 2}
         or resource_limits["minimum_free_bytes"]
         != 8 * 1024 * 1024 * 1024

@@ -6,21 +6,21 @@ Date: 2026-09-03
 
 ## Objective
 
-This workbench targets 140 fourth-word branches that were not closed by
+This workbench certifies 140 fourth-word branches that were not closed by
 unit propagation but were reported UNSAT by an authenticated exploratory
-Glucose4 run. Exploratory solver status is used only to select cases. A
-branch is counted as certified only after a retained DRAT proof is checked
-independently with the pinned `drat-trim` revision.
+Glucose4 run. Exploratory solver status was used only to select cases. Every
+counted branch has a retained DRAT proof checked independently with the pinned
+`drat-trim` revision.
 
-## Certified Starting Point
+## Certified Result
 
 The published certificate closes 184 of 350 fourth-word branches by RUP.
 Its proof index, replay attestation, checksum bundle, and certified source
 revision are direct inputs to the expansion plan.
 
-The selected expansion is:
+The completed expansion is:
 
-| Child | RUP certified | Planned DRAT | Remaining | Total |
+| Child | RUP certified | DRAT certified | Remaining | Total |
 | --- | ---: | ---: | ---: | ---: |
 | `orbit-005` | 50 | 29 | 6 | 85 |
 | `orbit-007` | 53 | 15 | 8 | 76 |
@@ -28,10 +28,26 @@ The selected expansion is:
 | `orbit-015` | 40 | 68 | 8 | 116 |
 | **Total** | **184** | **140** | **26** | **350** |
 
-If every planned proof verifies, the combined certificate will close 324
-of 350 branches. It will still leave 26 branches unresolved, close none
-of the four selected third-word children, close no normalized parent, and
-leave the covering number at 15 or 16.
+The combined certificate closes 324 of 350 branches. It leaves 26 branches
+unresolved, closes none of the four selected third-word children, closes no
+normalized parent, and leaves the covering number at 15 or 16.
+
+The retained index is
+`evidence/fourth-word-solver-drat-index-v2.json`. Its SHA-256 is
+`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`.
+The exact-membership bundle manifest is
+`evidence/fourth-word-solver-drat-bundle-v2.sha256`. Its SHA-256 is
+`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+The 420-artifact proof directory has digest
+`44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
+The 80 focused tests, structural audit, and independent replay of all 140
+retained proofs passed on 2026-09-03.
+
+Finalized releases also retain
+`evidence/fourth-word-solver-drat-revision-v2.json`. From the repository
+root, `release-tools/manage_fourth_word_solver_drat_revision.py --verify`
+checks its certified source revision, retained replay outputs, exact
+finalization ancestry, allowed paths, Git file modes, and release scope.
 
 The lower endpoint 15 is inherited from the previously published
 computational lower bound. This workbench does not reconstruct that
@@ -95,6 +111,20 @@ make audit-bundle-structure
 make audit-bundle
 ```
 
+From the repository root, verify the exact plan, index, and proof-tree
+membership with:
+
+```sh
+.venv/bin/python tools/verify_checksum_manifest.py \
+  proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
+  --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
+  --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
+  --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
+.venv/bin/python \
+  release-tools/manage_fourth_word_solver_drat_revision.py \
+  --verify --release-revision HEAD
+```
+
 The default is one proof worker. Two workers are permitted only after
 hard-case resource measurements establish that concurrent execution is
 safe on the host.
@@ -123,8 +153,8 @@ a malicious privileged host.
 
 ## Claim Boundary
 
-This work does not claim a 15-word covering code, a proof that no such code
-exists, a closed third-word child, a closed normalized parent, or a final
-value for `K_2(11,3)`. Any future claim must be derived from retained,
-independently replayed proof artifacts rather than exploratory solver
-status.
+This work claims 140 new branch-level DRAT closures and 324 certified closures
+across the selected 350-branch fourth-word split when combined with the prior
+184 RUP certificates. It does not claim a 15-word covering code, a proof that
+no such code exists, a closed third-word child, a closed normalized parent, a
+new global bound, or a final value for `K_2(11,3)`.

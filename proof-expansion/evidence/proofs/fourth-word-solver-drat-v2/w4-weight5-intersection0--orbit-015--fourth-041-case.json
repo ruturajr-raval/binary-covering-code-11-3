@@ -1,0 +1,25 @@
+{
+  "formula": {
+    "clauses": 1411938,
+    "sha256": "9815a3f9317f18208e6d7a1e6d304529fad55ba000cf435e5c27b1b49096c406",
+    "variables": 392448
+  },
+  "plan_case": {
+    "branch_id": "w4-weight5-intersection0::orbit-015::fourth-041",
+    "branch_sha256": "1698d1d3155829967517a6a675812dddac81da55e30915c1e465eba616b4a757",
+    "fourth_orbit_index": 41,
+    "parent_child_id": "w4-weight5-intersection0::orbit-015",
+    "scout_task_index": 308
+  },
+  "proof": {
+    "filename": "w4-weight5-intersection0--orbit-015--fourth-041.drat.gz",
+    "sha256": "c162efd51e937e99b950687876d0a1adaeea5a282ee32447397ca30627050841"
+  },
+  "proof_summary": {
+    "filename": "w4-weight5-intersection0--orbit-015--fourth-041-proof.json",
+    "sha256": "7310f095cb8eb5ef0b1d7a4c44495806ce5aba751cfc89b14642647e87c953c7"
+  },
+  "record_type": "fourth-word-solver-drat-case",
+  "schema_version": 2,
+  "verified": true
+}

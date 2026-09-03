@@ -46,6 +46,7 @@ from bootstrap_drat_trim import validate_pinned_checkout
 from fourth_word_drat.bundle import (
     authenticated_file_sha256,
     build_cases,
+    certification_resource_limits,
     clean_stale_bundle_staging,
     DEFAULT_MIN_FREE_BYTES,
     directory_sha256,
@@ -62,8 +63,6 @@ from fourth_word_drat.bundle import (
     workspace_free_space_requirement,
 )
 from fourth_word_drat.proof_core import (
-    DEFAULT_MAX_CHECKER_OUTPUT_BYTES,
-    DEFAULT_MAX_CHECKER_SECONDS,
     DEFAULT_MAX_MEMORY_BYTES,
     DEFAULT_MAX_RAW_PROOF_BYTES,
     DEFAULT_MAX_RETAINED_PROOF_BYTES,
@@ -339,21 +338,7 @@ def main() -> int:
     if len(case_records) != 140:
         raise RuntimeError("complete promotion requires all 140 cases")
 
-    resource_limits = {
-        "workers": args.workers,
-        "minimum_free_bytes": DEFAULT_MIN_FREE_BYTES,
-        "solve_seconds_per_case": DEFAULT_MAX_SOLVE_SECONDS,
-        "raw_proof_bytes_per_case": DEFAULT_MAX_RAW_PROOF_BYTES,
-        "retained_proof_bytes_per_case": (
-            DEFAULT_MAX_RETAINED_PROOF_BYTES
-        ),
-        "memory_watchdog_bytes_per_case": DEFAULT_MAX_MEMORY_BYTES,
-        "checker_seconds_per_run": DEFAULT_MAX_CHECKER_SECONDS,
-        "checker_output_bytes_per_run": (
-            DEFAULT_MAX_CHECKER_OUTPUT_BYTES
-        ),
-        "proof_command_seconds": PROOF_COMMAND_TIMEOUT_SECONDS,
-    }
+    resource_limits = certification_resource_limits(args.workers)
     staged = stage_bundle(
         case_records,
         root=root,

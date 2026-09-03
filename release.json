@@ -1,17 +1,54 @@
 {
   "version": "0.2.0",
   "release_status": "candidate",
-  "artifact_release_status": "ready",
+  "artifact_release_status": "verification_pending_clean_checkout",
   "theorem_release_status": "hold",
   "release_date": null,
-  "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_fourth_word_rup_bundle",
-  "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches, leaving 166 branches and all four children open.",
+  "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_combined_fourth_word_proof_bundle",
+  "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches and checked solver-generated DRAT certificates close 140 more. The combined certificates close 324 branches, leaving 26 branches and all four children open.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
-  "new_result_status": "certified_partial_fourth_word_branch_reduction",
+  "new_result_status": "certified_partial_solver_drat_branch_reduction",
   "partial_progress_status": "significant_verified_proof_frontier_without_complete_child_closure",
-  "artifact_reproducibility_ready": true,
-  "artifact_release_ready": true,
+  "artifact_reproducibility_ready": false,
+  "artifact_release_ready": false,
   "theorem_announcement_ready": false,
+  "artifact_verification": {
+    "status": "pending_clean_checkout_replay",
+    "pending_requirement": "Replay the committed v2 proof bundle and release checks from an independent clean checkout, then retain a revision-bound attestation.",
+    "solver_drat_plan": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json",
+      "sha256": "3f047f5d3dd4f5e9ffe67d38e425ccb4b6f5ea3274c07580c9ee57d08d0baa94"
+    },
+    "solver_drat_index": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-index-v2.json",
+      "sha256": "342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8"
+    },
+    "solver_drat_bundle_manifest": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256",
+      "sha256": "be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf",
+      "artifact_count": 422
+    },
+    "solver_drat_proof_directory": {
+      "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2",
+      "artifact_count": 420,
+      "digest": "44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f"
+    },
+    "revision_manager": {
+      "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
+      "sha256": "af00188ec8a95cd4299a218f179bc102cb34e8de63ed42c0e4302d3590a19559"
+    },
+    "certified_revision_record": null
+  },
+  "research_records": {
+    "claim": {
+      "path": "research/claim.yaml",
+      "sha256": "cf2f71ea2da97a79b4e85d81fb8f6a9ea6d6b21bd2bbb71a7642b9532d831924"
+    },
+    "release_gate": {
+      "path": "research/release-gate.json",
+      "sha256": "10d4e509ffef15cdb1ebd36d7cab0640928801b6d6bd0eade6d195b991ef3b54"
+    }
+  },
   "result_routes": {
     "construction": {
       "claim_ready": false,
@@ -35,19 +72,24 @@
     },
     "fourth_word_rup_bundle": {
       "artifact_complete": true,
-      "scope": "184 of 350 exhaustive fourth-word branches closed within four selected hard third-word children; 166 branches remain and no complete child or normalized parent is closed."
+      "scope": "The v1 RUP layer closes 184 of 350 exhaustive fourth-word branches within four selected hard third-word children."
+    },
+    "fourth_word_solver_drat_bundle": {
+      "artifact_complete": true,
+      "scope": "The v2 solver-generated DRAT layer closes 140 additional branches. Combined with v1, 324 of 350 branches are certified closed; 26 remain and no complete child or normalized parent is closed."
     }
   },
   "limitations": [
     "The exact value remains either 15 or 16.",
     "The retained 15-word near-cover leaves 28 words uncovered.",
     "Thirty-eight normalized residual branches remain unresolved.",
-    "The fourth-word bundle leaves 166 branches unresolved and closes no complete third-word child or normalized parent.",
+    "The combined fourth-word proof bundles leave 26 branches unresolved and close no complete third-word child or normalized parent.",
     "Solver timeouts and unlogged statuses are not mathematical evidence of impossibility.",
     "Sharp witnesses for the retained overlap row system are not claimed to be realizable covers.",
     "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
     "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
     "Zenodo assigns a version-specific DOI only after a tagged release is archived; pre-release metadata uses the stable concept DOI.",
+    "The v2 artifact remains a release candidate until its committed revision passes an independent clean-checkout replay.",
     "No external mathematical review has occurred."
   ],
   "last_reviewed": "2026-09-03"

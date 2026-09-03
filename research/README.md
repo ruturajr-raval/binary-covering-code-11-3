@@ -28,9 +28,10 @@ parents, and the 2,163 children that survive all retained static constraints.
 The four hard children from the first focused parent have an independently
 audited fourth-word split documented in
 `research/FOURTH_WORD_HARD_FRONTIER.md`. It contains 350 exhaustive orbit
-branches. Checked reverse-unit-propagation certificates close 184 individual
-branches, while 166 remain unresolved. No complete third-word child or
-normalized parent is closed by this bundle.
+branches. Checked reverse-unit-propagation certificates close 184 branches,
+and independently replayed solver-generated DRAT certificates close 140 more.
+The remaining 26 branches leave every selected third-word child and normalized
+parent open.
 
 ## Records
 
@@ -47,6 +48,19 @@ normalized parent is closed by this bundle.
   replay as an unsigned, hash-bound local self-attestation.
 - `evidence/fourth-word-rup-bundle-v1.sha256` authenticates the complete
   fourth-word v1 evidence bundle.
+- `proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json` authenticates
+  the 140-case solver-proof selection.
+- `proof-expansion/evidence/fourth-word-solver-drat-index-v2.json` indexes 140
+  independently replayed solver-generated DRAT certificates.
+- `proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256`
+  authenticates the v2 plan, index, and exact 420-artifact proof tree.
+- `proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json`, when
+  present in a finalized release, binds the committed source replay and
+  strict finalization policy.
+- `release-tools/manage_fourth_word_solver_drat_revision.py` validates that
+  revision record and the release metadata that points to it.
+- `proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/` retains the
+  420 v2 proof artifacts.
 
 Every child branch must be linked to its parent, canonical representative,
 stabilizer data, imposed constraints, and content digest. The current ledger
@@ -54,9 +68,10 @@ provides these links. A child-level CNF generator and an independent auditor
 now reconstruct the exact minimum-distance, parent, orbit-prefix, and matching
 constraints for any live child. For the four selected hard children, the
 retained v1 proof bundle authenticates 184 branch formulas and their
-independently checked RUP certificates. The remaining 166 branches have no
-retained closure, and solver status alone is not treated as a mathematical
-conclusion.
+independently checked RUP certificates. The retained v2 bundle authenticates
+140 additional formulas and checked DRAT certificates. The remaining 26
+branches have no retained closure, and solver status alone is not treated as a
+mathematical conclusion.
 
 ## Promotion Standard
 

@@ -1,0 +1,81 @@
+{
+  "case_formula_sha256": "43a6c9e717977c8ffc924af8d48b831a9cc8fd9190b5b6a109175904a327b9fe",
+  "case_id": "w4-weight5-intersection0::orbit-015::fourth-039",
+  "clauses": 1411908,
+  "core_extraction_check": {
+    "output": [
+      "c parsing input formula with 392448 variables and 1411908 clauses",
+      "c finished parsing",
+      "c detected empty clause; start verification via backward checking",
+      "c 2207 of 1411908 clauses in core                            ",
+      "c 30 of 68 lemmas in core using 24265 resolution steps",
+      "c 0 RAT lemmas in core; 9 redundant literals in core lemmas",
+      "s VERIFIED",
+      "c verification time: <elapsed>"
+    ],
+    "output_line_count": 16,
+    "output_sha256": "7a64b0e2a332fdfb1a174beaa7961beec7ff7928004be5fdee3f8946d49226e8",
+    "return_code": 0,
+    "verified": true,
+    "verified_marker_count": 1
+  },
+  "production": {
+    "checker_binary_sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "core_extractor": "drat-trim",
+    "core_extractor_mode": "-l",
+    "python_sat_version": "1.9.dev15",
+    "solver": "glucose4",
+    "solver_output": "text DRAT"
+  },
+  "raw_solver_proof": {
+    "bytes": 10032376,
+    "format": "text DRAT",
+    "lines": 468328,
+    "retained": false,
+    "sha256": "69e6ecd21c665ba67b5a204d50b18969a1253b7107c032e1479157766df49ec3"
+  },
+  "record_type": "solver-generated-drat-core-proof",
+  "resource_limits": {
+    "checker_output_bytes": 4194304,
+    "checker_seconds": 900,
+    "memory_watchdog_bytes": 12884901888,
+    "raw_proof_bytes": 1073741824,
+    "retained_proof_bytes": 268435456,
+    "solve_seconds": 300
+  },
+  "retained_proof": {
+    "compressed_bytes": 10615,
+    "compressed_sha256": "e728ede95af363b86328fc78c4cf40a71e1839d77c2d011fe29b6623ef6be02e",
+    "compression": "gzip",
+    "filename": "w4-weight5-intersection0--orbit-015--fourth-039.drat.gz",
+    "format": "text DRAT",
+    "strategy": "drat-trim core lemmas",
+    "uncompressed_bytes": 37979,
+    "uncompressed_lines": 1100,
+    "uncompressed_sha256": "f52fe73952e8b58a8fa1949eafc9d204d4726c7c3be1f6af96d3d1b54428473e"
+  },
+  "retained_replay": {
+    "checker": "drat-trim",
+    "checker_binary_sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "output": [
+      "c parsing input formula with 392448 variables and 1411908 clauses",
+      "c finished parsing",
+      "c detected empty clause; start verification via backward checking",
+      "c 2424 of 1411908 clauses in core                            ",
+      "c 26 of 31 lemmas in core using 20599 resolution steps",
+      "c 0 RAT lemmas in core; 5 redundant literals in core lemmas",
+      "s VERIFIED",
+      "c verification time: <elapsed>"
+    ],
+    "output_line_count": 16,
+    "output_sha256": "74f1827208468355958674b1b9d63588f71fe41f0904a216735c6639bb8126da",
+    "return_code": 0,
+    "verified": true,
+    "verified_marker_count": 1
+  },
+  "schema_version": 2,
+  "status": "UNSAT",
+  "variables": 392448
+}

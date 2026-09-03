@@ -1,0 +1,3639 @@
+{
+  "case_count": 140,
+  "cases": [
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-004",
+      "branch_sha256": "fa8e0b305ec51d7a4cb9e13ca79e1ef5c8a597d05e6944911241004c8890a717",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-004-case.json",
+        "sha256": "db860d5a3b4a88a16d2294aa404427351a3b5c3ad0c2396bda1e4b66ec1ee254"
+      },
+      "formula": {
+        "clauses": 1411460,
+        "sha256": "356ef5b8b3530d54c02d726864def551cc2e7b6afa402b8fbb9ba208ef614bc4",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-004.drat.gz",
+        "sha256": "42ee7d27db93e13b8f759b96d18ff3a6492a1815ab12c82ffb5d1453443c9496"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-004-proof.json",
+        "sha256": "66ec714ad7c8b0a25d637890af06d0a35bd682927151a87787d80b2ed62fc105"
+      },
+      "scout_task_index": 80,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-005",
+      "branch_sha256": "3f9fa9fc8a1b4d6f64ea8b074a6f7ee01262ead037d09b7a9cbeb9f982987ce1",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-005-case.json",
+        "sha256": "9ba748160012cefd33e36b33855e9efefc3d1df4fae2750a393294b4de62d190"
+      },
+      "formula": {
+        "clauses": 1411463,
+        "sha256": "c3340820ce09d89324f70db0458503df47ad0d926714bd62b387ce68c5a4e625",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 5,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-005.drat.gz",
+        "sha256": "b91c2455b49f69d3fd0740d81c9b04605069c04394ac16f9d7c10ea5a9ebec72"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-005-proof.json",
+        "sha256": "032b2fb18806c8cc08f838abc33146227ebd69fd341d16cab5b7b5d3ebdabe88"
+      },
+      "scout_task_index": 79,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-007",
+      "branch_sha256": "d053c5d5c486b716f1b7e7ac3a4c2d2b415f82add3cc57ac3ca00ef16a703402",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-007-case.json",
+        "sha256": "f2f3d84f9c73c829b71b5a048c72041dcf6d5f4b927416022733d69e020448e3"
+      },
+      "formula": {
+        "clauses": 1411469,
+        "sha256": "f42a3f26aacf8338ee6c03f023d58d714be2d1e61be05f31549ba1589f680d43",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-007.drat.gz",
+        "sha256": "7bb080b2e704897640bc7cbd85518088df9e6af493bb509b5fabf9abb9787c66"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-007-proof.json",
+        "sha256": "4c89cab6523566a677592878999dfeeb64ca36deda128981b8d8b51af23863de"
+      },
+      "scout_task_index": 77,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-008",
+      "branch_sha256": "52d235a37131c4d0227b930fded7ab150ca55574853a471dded8e9fb8e10369d",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-008-case.json",
+        "sha256": "d997635c928fecc2b8f4a41f586b079b0fe8ef5dd8226b93d77f9df40d930851"
+      },
+      "formula": {
+        "clauses": 1411475,
+        "sha256": "ba02ea929b09d82bec8e3f55481db0b0c33192d3ff76bf8dd4f26e346e301204",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-008.drat.gz",
+        "sha256": "19aca600b938803b7a4130b7032ac61da373ab046406a1aa569bc8d12302342f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-008-proof.json",
+        "sha256": "987ef98af129984aea06d451c2185bac13f314f72088bb3264329ae8dd2b6dbb"
+      },
+      "scout_task_index": 76,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-009",
+      "branch_sha256": "d0d1cd473340f9c76734023642484b7c438fe25f4af8b26fd4b4188785f6eb39",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-009-case.json",
+        "sha256": "2a3ef5450e2468a757e5e20413634fc9a62b1e926431587ba664bac5154a9679"
+      },
+      "formula": {
+        "clauses": 1411477,
+        "sha256": "9a63a3e23b6b3e3de78fbef981d809d1b7acea779132dbf9efdd9e58a1e86ad7",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-009.drat.gz",
+        "sha256": "629602a1feff75a3be4bcb2bf5ea175591c26f83e092e52735dfc11ef8b4af94"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-009-proof.json",
+        "sha256": "67265a38db48c9c36e6e11e7c4b924557b9a68bf1799d39839ebb6fb4d52e28e"
+      },
+      "scout_task_index": 75,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-010",
+      "branch_sha256": "12e854d31239b828171997cc974e8e441b06b19f6b807abd42b4027535da4660",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-010-case.json",
+        "sha256": "dd85215f211fe1e314090d6ed8e3be77cf0afb9e8ac94000c3b410966f225464"
+      },
+      "formula": {
+        "clauses": 1411478,
+        "sha256": "d550788d8d6b502c670d5d0420dd1dd92a31dd215776ce4eb29c0c372880a9a3",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-010.drat.gz",
+        "sha256": "d09451c9a319e1913dff99a8e6f4ad9863e0ce5bb1e989bd0152a8517c89ff6a"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-010-proof.json",
+        "sha256": "37596eb9bfe87314717fd076a89d048c3da5b2c1684a440ec3bffa9fa7d4b836"
+      },
+      "scout_task_index": 74,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-011",
+      "branch_sha256": "0c25d0148906c5aefde4b798098d332792823cab72a41d3713c5dcae851fc326",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-011-case.json",
+        "sha256": "b40c919568c0f53b7967ef52d60ca6932265e8f4dea888ecee5f75cc04515d6f"
+      },
+      "formula": {
+        "clauses": 1411484,
+        "sha256": "8b3e7b232d5a24fa0d77c7304966cf76b60a667e35da51d4ce2abd336855511d",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-011.drat.gz",
+        "sha256": "1bc6e652cc875a5422649f7551a93b8fcc55b545820bc4dcd9ca012d5e6057b9"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-011-proof.json",
+        "sha256": "e530f995d5762d2bfec5117834debf4b6b414e9c5aad28d65456f4bcc72fd566"
+      },
+      "scout_task_index": 73,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-013",
+      "branch_sha256": "71063dd154cc4eb2f7bfb1febd511fad101330bd81f173733f262b1598a56c0f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-013-case.json",
+        "sha256": "82438e0f6e8594d957b05dbe26c28545dd21f71e75f77643736c84ebf3de4b4c"
+      },
+      "formula": {
+        "clauses": 1411556,
+        "sha256": "c6181d213ea2944c70dfda19a9ef837ec6db82483719c31deea9a079b769b9ab",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-013.drat.gz",
+        "sha256": "1f73796d1f1a74f3dc34a56fd6e1aeb5f7b62497bc2462948e85d4900f3789f5"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-013-proof.json",
+        "sha256": "03439827407ed3027658d2e0aed5b29f19bb8ce61d0972106c2f07887cb0b1ef"
+      },
+      "scout_task_index": 71,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-014",
+      "branch_sha256": "8fc12b583e7bcdb2cbff392dc70ce334b8dc5cb78a4f8b79479d0443f795ed8e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-014-case.json",
+        "sha256": "7e91929d02ce18e90b71332aaf648b502053c5339847b5fb9e220cbbfd71d7d6"
+      },
+      "formula": {
+        "clauses": 1411574,
+        "sha256": "516fe41f450445bf7cc97bd86bbaf81dd3705f6082b29c4e578b9c4ad9d5bd0f",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-014.drat.gz",
+        "sha256": "4ca55ddb173281ceabe468079ea0678c83f0edf43ff3f9dff21a98fcf45d8131"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-014-proof.json",
+        "sha256": "bdaed1eecd2d66014d14929c6102e4b1f1d212fbba527ab1ac6357c3c3ad0082"
+      },
+      "scout_task_index": 70,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-015",
+      "branch_sha256": "0e5b8229eb3a4869d36d2b2ee74bbbf1521991549b4588c7d7e84372a3c75eb0",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-015-case.json",
+        "sha256": "4469a425e1dc5495c8641c1c6bcc591c31a0561b99d0e3bcd2cc66317d97a256"
+      },
+      "formula": {
+        "clauses": 1411592,
+        "sha256": "fb85a616934d85de5af5a1e33837596a3f043a016fba0141b0c80e07bdb028c5",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-015.drat.gz",
+        "sha256": "937f8cd2d665204700e4367be231ef58baf624857838c299a30412d6c8197047"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-015-proof.json",
+        "sha256": "ef150fe82c6fe972caae0541976a5bd954957140375a30e9dd617761c8af77cf"
+      },
+      "scout_task_index": 69,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-016",
+      "branch_sha256": "183ef39a104e9c4c2dbc555fe26fb189ca03ff54c2ae58e4e28997a4fdc34cc7",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-016-case.json",
+        "sha256": "4cc58b7aea1446b5e59488aa0f3b6dbd3ecbbcdcb4b3e48f960451b8d938e68f"
+      },
+      "formula": {
+        "clauses": 1411598,
+        "sha256": "385e77112099a73a83ae21b6e2e939471c85376ab69d0035c8f904a4fa83f63e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-016.drat.gz",
+        "sha256": "38bcc0f5e7c853fe9cca82099bb56553e5835c5dfc1400d649ac3d2624b764ef"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-016-proof.json",
+        "sha256": "0a18452515b01113a069f34707b578d54682820874f3c83a3594a4433d31b625"
+      },
+      "scout_task_index": 68,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-017",
+      "branch_sha256": "2a70df66db4a24fffeace9d96786e327123b348271875a1a82ec1847a8bd41d8",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-017-case.json",
+        "sha256": "8fb93ed8d78eaf69e321bea0b7af0413c2860e15a2bd9bb3ee5cf3142f74547d"
+      },
+      "formula": {
+        "clauses": 1411616,
+        "sha256": "c6f2397015e7457f8a8a70521342634999abd7250799c31a05018774fe001d81",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-017.drat.gz",
+        "sha256": "b1cd2bb692accfebff8d978dd3d00d77abe07f42e4054d9228d8ebd5fce6d425"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-017-proof.json",
+        "sha256": "1880966e5c96c3b03be9464ba7bac443ef4594c5a9a1eac8e0078f284d8f2e40"
+      },
+      "scout_task_index": 67,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-018",
+      "branch_sha256": "97aedd8025b3d391c516efcba440575764342b5914178ffe428ef92cc0086c2a",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-018-case.json",
+        "sha256": "e3eb3cec48e00bf9bb064c7ee7dd4ed8b85127c26f88a9c72c36ec0482a2bc79"
+      },
+      "formula": {
+        "clauses": 1411634,
+        "sha256": "a17f83ebbd81610d5ad4918ba8b8fb7425814fa2380ff518dded1e5a43c6ada4",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-018.drat.gz",
+        "sha256": "ad3f30243dcb566fa59adabe7efade4e673a44323bb84030c69bfff9d561413c"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-018-proof.json",
+        "sha256": "17de71ab4acb0ef33a92d46e301f8368be413f4ba2072425a7d66bfd24ebf099"
+      },
+      "scout_task_index": 66,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-019",
+      "branch_sha256": "d27d73d362eda8f7a05766db7c2f31f13aabde9cbc3c22f4d83847607bf4f7bf",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-019-case.json",
+        "sha256": "cbb4229edb546aa9923e14ab8e3e44f9a09c891f8d7105fbe1d3450acf35d0ad"
+      },
+      "formula": {
+        "clauses": 1411670,
+        "sha256": "82eafa53a15e6ef1f49150ba046ecbebde2497eac40fa1f7c64b7931a8eb5901",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-019.drat.gz",
+        "sha256": "6cf6645a4ff2c040d47fce0c56e55acbf8e3e58a3ad09605e6737ea086e4b0d6"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-019-proof.json",
+        "sha256": "0f77ab27c1bcbdeca57169d702c8428f2f9d2f88421136a7154512d3641c8406"
+      },
+      "scout_task_index": 65,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-020",
+      "branch_sha256": "d6002fc3caadca3efde06e6d278dd703156f85d44bdb18dc0cabfa92ab6a6208",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-020-case.json",
+        "sha256": "15fe6f3b9750b3c1732b798203befe907ea6446287fcd178266fcc2ae24c1322"
+      },
+      "formula": {
+        "clauses": 1411706,
+        "sha256": "539c828696872fffe5e411b12bf391baa7b87c258b4cc2d3200f54b8daa36b7e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-020.drat.gz",
+        "sha256": "52ef3997dd6a34a46a824b5fab396d40dabd19fa4f38253c736ec3651ec735d7"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-020-proof.json",
+        "sha256": "a4b41293b0f0dff8ff04186f6ab5688b31f4a134534a70e708b22ba314748eb5"
+      },
+      "scout_task_index": 64,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-021",
+      "branch_sha256": "4dd1c87d5465b51cad64df0f4651bd25fdf5b8ffeed615ca5720c3912449b325",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-021-case.json",
+        "sha256": "e3ab509330f25f7baee59646306da9cd3f0d3ee5d7a5c5ed6c1de6854a0b4c61"
+      },
+      "formula": {
+        "clauses": 1411742,
+        "sha256": "ff3188d50543e1a6e08fa7a80d7f2a00d7c4feb2ab9e79a697d8c3f0df040017",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-021.drat.gz",
+        "sha256": "4f6bacf37cdea443d0acd505dade87ea3ad35cc0bf544b8e7ddbfec870daf948"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-021-proof.json",
+        "sha256": "05a53bddf5cd2a8fd93aa175bb96498de920b013176fa31c6b0ef158ec40c54e"
+      },
+      "scout_task_index": 63,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-022",
+      "branch_sha256": "39ecb50b3f5a4214977ef60827aeb16d8d5ac573b43664570cc86b7ce69d771c",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-022-case.json",
+        "sha256": "5f124086ba0ebe21d3e1eed0ace595110ba1146f37559221f6a041ed08196afe"
+      },
+      "formula": {
+        "clauses": 1411778,
+        "sha256": "36a5f21154ce750681b464ac48b876c6b3d074d25a7a837a19d732c9d5ffe7ae",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-022.drat.gz",
+        "sha256": "3d9b7fee29f3d40cd583667721a1f8a13e7b4327264b318d40e4c32f5d7d1449"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-022-proof.json",
+        "sha256": "3c4e95060a76a4c245dfddc4d6436c1c6509371157d6402a68712ae734e21c7e"
+      },
+      "scout_task_index": 62,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-023",
+      "branch_sha256": "a982318c5eca0848b7b3ef5703ba1a7ee6790199551951e72db1eaa64135144e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-023-case.json",
+        "sha256": "a9cb1e103ad38e2577392225fedb6a39653c8e4d540b87e2c283662d9d64b1fb"
+      },
+      "formula": {
+        "clauses": 1411790,
+        "sha256": "4b3ab75b78e2c1b0708a6e256b4ccb38348caea7c2ac2da3bf757525c31f665e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-023.drat.gz",
+        "sha256": "b275c3cb58c52d379bfb1d4fb93b9ddbe1cf1fae5c50a3f3ba3ad1b653f6bd47"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-023-proof.json",
+        "sha256": "bda145ff7a5604fc2b7668767c7964ccfec68f0d01cf3a72351b12f178bc11fe"
+      },
+      "scout_task_index": 61,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-024",
+      "branch_sha256": "eaa650ae21b083fd47b6639101a191479a8e9e50a5ce97b47fdea6d38214d2f6",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-024-case.json",
+        "sha256": "38c008dc063d65a7de4ed8a94260acf729d80b2d26e29c10c627dbd09dcad4e0"
+      },
+      "formula": {
+        "clauses": 1411808,
+        "sha256": "c689bc4274a8afde4e90ed0f8511b9bbf9514afbdefc739759bd4f9972f4267e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-024.drat.gz",
+        "sha256": "9b93c015c6b6adcccd483c2e70ec0a79091278964548b337b969cec277f1c14a"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-024-proof.json",
+        "sha256": "655b10b37b4340535aacc08889cf5a190f7062c76ef3414354b09df56da33830"
+      },
+      "scout_task_index": 60,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-025",
+      "branch_sha256": "c0d14fe7a40a891913d469cfb008e48be771a3c0fff5424dfcbbba3aa6ae9203",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-025-case.json",
+        "sha256": "fd42fac58e8209d4237b21d4a639bce069525b6f542010993b417b1b53d40700"
+      },
+      "formula": {
+        "clauses": 1411826,
+        "sha256": "0a3b0301e93e890f7231d0539d8aedcb7fd996f5368fe86b1c3b18e69fea580e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-025.drat.gz",
+        "sha256": "af6c6f513d8ae46f9bb99bd211560f92160fd2e4f43a92d767d910fe1d2e52f1"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-025-proof.json",
+        "sha256": "015a1c90fecaf0ffae66a8ca6010998732cc389d4614e2cf19ce07318015d15e"
+      },
+      "scout_task_index": 59,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-026",
+      "branch_sha256": "76af45c8de86bd1a6abf62de6ef5b14f5ab31418521b9ce0e7119a6d753dc452",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-026-case.json",
+        "sha256": "20f8ba23b2b1d8de41a35bea2d1bcfef0e95c48bb86f1a77a3268f44c3b12bff"
+      },
+      "formula": {
+        "clauses": 1411832,
+        "sha256": "49b672c3a61a2eabd83d3e49e8945677c9c24243a3ff5f7648c36f0980ff3c45",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 26,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-026.drat.gz",
+        "sha256": "96d42fab70af73cdafe98dc670fceb0648f48354281601aa2d9a6ac4e75ab82f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-026-proof.json",
+        "sha256": "3c11476d1a15161c83b86d34800e3776959dfb0c3a4f78835296cac755dcac1c"
+      },
+      "scout_task_index": 58,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-029",
+      "branch_sha256": "4694115a968908b12ddb1ef82a4474b6f9ce1c83543bc83109820dd631e1b429",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-029-case.json",
+        "sha256": "19c488871b52b450054985b47a5b7beaf59e5f8a1dd61d286464a1ff5d9a79fd"
+      },
+      "formula": {
+        "clauses": 1411846,
+        "sha256": "82ed8230e9a59aa95608dd153f47492769dbbb8fe2e789c49e0fae797854dbd3",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 29,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-029.drat.gz",
+        "sha256": "334cf2f1ca7309c8a354da90015f1a82b0904584d7be8e17a33903056239e581"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-029-proof.json",
+        "sha256": "d198734666355c45ce11993a1a363591e07d76dda4da007eabe2d3e559914cbd"
+      },
+      "scout_task_index": 55,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-030",
+      "branch_sha256": "e200b291911d6a463f36b7463fc31449915aff4b0aaf59550eeb657fa973db83",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-030-case.json",
+        "sha256": "89c65446697dc488358f1db44661e3749d6b1d30b6fb574b7dfc0768c1aaa188"
+      },
+      "formula": {
+        "clauses": 1411852,
+        "sha256": "ed23a318aa3deca38ae9037556b5dd3b7b0f11aade9fe60ee5255c6086275f3a",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 30,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-030.drat.gz",
+        "sha256": "1a27c4a90fa7dc1b511027eb7baf32d557c26094c64eabc9980b0406a5e131b2"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-030-proof.json",
+        "sha256": "8261f5eaea0c998904074304aea10ced8fc3108469cff97ae9f2d2d79f82ac80"
+      },
+      "scout_task_index": 54,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-031",
+      "branch_sha256": "94dc5846dc1bbcb83ce1143ee967d7d65bd4a5db6530f65c5929b1437ea7251d",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-031-case.json",
+        "sha256": "45b18682cfe899d6011b3433b16d4e67d145f7f2406629b5a5a0bcf9e85e91f7"
+      },
+      "formula": {
+        "clauses": 1411858,
+        "sha256": "aaa9181a11297ae3d312a7ef3025132e99244c92606909989d5ee256bee0a79a",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-031.drat.gz",
+        "sha256": "1129affd725ab1093114c344d0bdae0cdfc0566ada68b2ec479ba089af979d60"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-031-proof.json",
+        "sha256": "24f5190ef6fcb576810059136ef13e62306a4f98d89a877d78204f9c7627178c"
+      },
+      "scout_task_index": 53,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-032",
+      "branch_sha256": "26f74f6bb3ddde27e8186d602b5926147fcf4327e1c4acdd7f5ebcfc9223ab8e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-032-case.json",
+        "sha256": "359b9b91b8a129b20f59c9c8f9e45d92b1e8808f927b1fee7f82dd635e26c08f"
+      },
+      "formula": {
+        "clauses": 1411864,
+        "sha256": "ed44617e7ee93a9656a2de6e362736f9e2397f79ac5f2a72996021428d0da30b",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-032.drat.gz",
+        "sha256": "3b54c9369b8e0d31d27060f85ccda6a52ac9d0cde4f1781e0fc56ca7ba018c6a"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-032-proof.json",
+        "sha256": "5a1e9f8f6a6321b03fef37c5284aa47f421540db720087e7f916322ff4a49199"
+      },
+      "scout_task_index": 52,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-035",
+      "branch_sha256": "64336e8e47643f489c3519a54ea69cbf78f296e96fe8e158349efa2ced193cbc",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-035-case.json",
+        "sha256": "9bbd94eefed7efde6fc5cc372377526706e25e97a56e6ff72c0cae342c985a88"
+      },
+      "formula": {
+        "clauses": 1411890,
+        "sha256": "60ef825de158bd82f5a05a561253ea641e504547e685586460850b922945ce16",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-035.drat.gz",
+        "sha256": "67b9c3fe3d492b2ebbd8a55f0a7d0e1f63de877d64496c8fabe731c067a2b8ca"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-035-proof.json",
+        "sha256": "4435c9136850c8cee98e4dce5f76beec8140c57524dcccedfbd4272a7c417d97"
+      },
+      "scout_task_index": 49,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-036",
+      "branch_sha256": "ea313e00712c468f4e25c065e1d1314480262da5deb54cf858ec3ad49b2373c2",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-036-case.json",
+        "sha256": "7c46733e63d325d4848e9f76241692852a99f5ae086196f98ae8c7d529dc9e79"
+      },
+      "formula": {
+        "clauses": 1411902,
+        "sha256": "118ffb5ed5000b79b4c7e35ae39d0d67626abfa36f54e6e25829b6be64c8f80c",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 36,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-036.drat.gz",
+        "sha256": "3925ea18730506710f96eb14f36c966daa1fe0903f2acc790f1002702ae31a96"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-036-proof.json",
+        "sha256": "f54a7e95c068902cfe74f86d5eca703e3979a32318f6e3581af2712810f1983e"
+      },
+      "scout_task_index": 48,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-037",
+      "branch_sha256": "c312cab37ddb2e6065e0070d111b510da19eac9fdb2347bd665edb8d1ea356ef",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-037-case.json",
+        "sha256": "09ceb356398f4a4bc2f332a494409037f12f54afe850d8959aec39db6269d0dc"
+      },
+      "formula": {
+        "clauses": 1411906,
+        "sha256": "4534c07d4e477c4db50b3a0db911a22393bac7d341e07c3badd2700bc916f0cf",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-037.drat.gz",
+        "sha256": "155583153075fcd89fbf1c4ec71d3901b06f54e7400653a9cd652ff22f229a5d"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-037-proof.json",
+        "sha256": "e33c842222fef4c90d0637f5cdd531a4230b859ac56eb745e705f599bc2d572a"
+      },
+      "scout_task_index": 47,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-040",
+      "branch_sha256": "e185faaccb1fda8f8f87fa2d86f3cac9d2693b2598af3c602a4c7295b8537d54",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-040-case.json",
+        "sha256": "0b15272a5a648d6ebc0b7578dbe42dc30942d190c88c40c95e7fb10400d446b4"
+      },
+      "formula": {
+        "clauses": 1411918,
+        "sha256": "4ef3ef83deeb2ef42f95b26f17666fd672ff4ba2c039ccfa57e80bac2880b293",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 40,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-040.drat.gz",
+        "sha256": "35fdc17af1e34e8d3ee6d2f5e99318a5b1a747526554367be7719174137311f4"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-005--fourth-040-proof.json",
+        "sha256": "121c1e02690c57fb316c5b1148d3d5587e6ec72f8b63544cc9ee5773bb8bfaca"
+      },
+      "scout_task_index": 44,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-004",
+      "branch_sha256": "3ac0e5a0c785a56a08d1be572e518a1022b4ffa7c641235a8a3bb06a77ceb5f2",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-004-case.json",
+        "sha256": "81eb9ef3ffc69be62b6b52ca09ccc41ba47573236779303d90e24e8ab28e464e"
+      },
+      "formula": {
+        "clauses": 1411571,
+        "sha256": "283950a523120fe9116b5de005f52f50fb97bb97b2754d24474229aa64670b46",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-004.drat.gz",
+        "sha256": "1a789ffc1de6fb6a1b14ba4aeabb536c60fd157f476f3f2210c5fb9bb96f44e5"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-004-proof.json",
+        "sha256": "230847a2b811fe9635dd3fd376d292cd5fb16c138bcc50d30bcb04dcccc84a91"
+      },
+      "scout_task_index": 156,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-007",
+      "branch_sha256": "653d498fd8fcf9571530098603b5cf72d74477ede9dc1318bb6715f3bbafc6b8",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-007-case.json",
+        "sha256": "942ba255ebf6040b378f2683c2cf6bc643b36ea0fbf5004063c197fc55089949"
+      },
+      "formula": {
+        "clauses": 1411591,
+        "sha256": "939fc0ffa26f7ea441915c344ba8bb309abedde5df3d3d7d5827f0514b64cb83",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-007.drat.gz",
+        "sha256": "6b07c37973d2042d28410add996f78ce1577d47e0f36e4aad24745cbd0c3aa2b"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-007-proof.json",
+        "sha256": "ae2eb435a1358afaf505e69a09d6c17b088e8470152f5bd238db0ae958eb7bd5"
+      },
+      "scout_task_index": 153,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-008",
+      "branch_sha256": "d523e5969528d5d003645dd5b9e4cfff73f948c4a498b6b403b736cd335a6639",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-008-case.json",
+        "sha256": "2980c4d447b30888816fdd71f287b79e8c3ce419d70f61d8b64b6d6b639d02c1"
+      },
+      "formula": {
+        "clauses": 1411600,
+        "sha256": "55656b351d71a31173188c600bf0332b0b1e32431f686ecdcd6a977d6b039686",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-008.drat.gz",
+        "sha256": "08af44ce85b5e44650630ae54c903f920b00ec3dbe60aaa307fc3a914db33d95"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-008-proof.json",
+        "sha256": "34d558d071eb5c97fe27cef4eee5905581f93367898c174f7ae2ecda07fe0325"
+      },
+      "scout_task_index": 152,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-009",
+      "branch_sha256": "9b8d1e81720d26e3a36097546a1994e24122bfba9290bfaaa7517480ab725305",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-009-case.json",
+        "sha256": "3dac1d308b15617ac7b9e41417b14b77eab73fe943f56aa564830862731c0c0b"
+      },
+      "formula": {
+        "clauses": 1411603,
+        "sha256": "760ff4639823ad5ea968133cdd0ff280cc19b403faf839547fc55cbc07df9b5e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-009.drat.gz",
+        "sha256": "1e86195005f57fce7f28ac79e4673e7d29af80dfd5c22d9f2e680045f7b256e8"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-009-proof.json",
+        "sha256": "dbad3b14b2f094203e3f398903d1c2bc0b1c1bf21d8603c9bd652c159dcaa5b1"
+      },
+      "scout_task_index": 151,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-011",
+      "branch_sha256": "1374660ac2def62a6ed50c17c2b96472b34bfd8f94188c7a4f1eb0315d4e5860",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-011-case.json",
+        "sha256": "5c7d8da5f148a4794ec7b528620fa6497547f63e9a470e455598e532e44ad7eb"
+      },
+      "formula": {
+        "clauses": 1411622,
+        "sha256": "6e20628b03610009dbfbe9007d8c8a90b094a7ac0d60bf2eff21d5c65323fcd9",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-011.drat.gz",
+        "sha256": "7f749c43ffabf4ad99aaad098aa58a92c1adb326b0d54bd5bd879fbea576e014"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-011-proof.json",
+        "sha256": "aff34525c322fd10f2bf71dbead47984733d98afb8a41038295ff075ea650c48"
+      },
+      "scout_task_index": 149,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-013",
+      "branch_sha256": "bb196e747e7b9a02625207628de6810aacfdf9d912003a2395eac2109871e4e6",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-013-case.json",
+        "sha256": "1be6df24f1cefe657df8701b88603cfeb718ad01ca443ad00aba3502de9e889a"
+      },
+      "formula": {
+        "clauses": 1411630,
+        "sha256": "7c9fc695df3f8302c00bcbc13655bca7c40b608b57c1b587434a7ad508fdd3dd",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-013.drat.gz",
+        "sha256": "4b40ca4be5b9f5005680aaf7a80387a09f8a94ede100e505d77a9163157d6577"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-013-proof.json",
+        "sha256": "4af34cd4ce46ca4b87909c5bb58dea816d7e7306860c92b3e685a440d8099ee4"
+      },
+      "scout_task_index": 147,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-014",
+      "branch_sha256": "5c98af3cbdcc9a12c88d44e3be2f3779a3379b5892586dacdf5ca4fe8c1f306b",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-014-case.json",
+        "sha256": "12a725175115dd28fa816e12771fcd1149f01a6aa2fef8cf76605df4866c4f59"
+      },
+      "formula": {
+        "clauses": 1411666,
+        "sha256": "065099de1a975e09c2283e9022639840b6f601823b43e996a357a335043c39e5",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-014.drat.gz",
+        "sha256": "bebe4334410c697896a8f87d4f5693816bc2be91e6c31a0be8051d2cbf376c35"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-014-proof.json",
+        "sha256": "9ff2cf90ae4bdfbd19ac38b2a3ea53b68e230ceea6803cd493d90cb589b7685d"
+      },
+      "scout_task_index": 146,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-015",
+      "branch_sha256": "5a2fc602609ba7313efcc8defd16d43643b03ae2de3a4bede2499a6c6550fb1e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-015-case.json",
+        "sha256": "c867778cd0cc287b0e351ce005052d1083cffc354a421e127a4d07faa9e8158d"
+      },
+      "formula": {
+        "clauses": 1411702,
+        "sha256": "dda48bbd7b5255d655a6351f6cc78b13ec05b58bc99e17dbcabf66f6d6841d43",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-015.drat.gz",
+        "sha256": "2879e2bd755c16000fa92e323ecac1e290788d0976ca9f4d137b63587b136b2a"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-015-proof.json",
+        "sha256": "41a6e7de2b923593eecb7d6327ca27ec13449716b2bea4dd069308f91f3011ae"
+      },
+      "scout_task_index": 145,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-016",
+      "branch_sha256": "b7605b4599c3f04f8a1daa6977e004c5e5cbd6e18059a2417f93129ed4df7c9e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-016-case.json",
+        "sha256": "9e56dcf3e16bac36ba58ba4f926579a811d4ee5255feea1801f01e37889b2e01"
+      },
+      "formula": {
+        "clauses": 1411738,
+        "sha256": "e9080158e9be9321238a38b6adef05f524f7b4305827fe3e5500e6be7a32b369",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-016.drat.gz",
+        "sha256": "5bd251109995e5f510261e60b7cddbbce837d2cdc96312661082b8f7cdf3a85f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-016-proof.json",
+        "sha256": "b89841de55046b3f250d1cda913350373575bfe004062367286ae338e6299123"
+      },
+      "scout_task_index": 144,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-017",
+      "branch_sha256": "ef431be7fe7267fd37abc31f613a338d0d0b2a6fea6acd14aa52e209182611fb",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-017-case.json",
+        "sha256": "cf84b712c2956b96f9600597355f125c05a444f06bdf61aafb9ffdb7bbd54bd5"
+      },
+      "formula": {
+        "clauses": 1411774,
+        "sha256": "5ba57e1d9af059ba1593ca30801a1eecf308c8a8b49dca380b1bedd4d317baf8",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-017.drat.gz",
+        "sha256": "1d551d6ac80b614b9f809b220718b54cb3b836d1b2aacb845908f073cf25e62b"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-017-proof.json",
+        "sha256": "7a182d74fbe214534f2638af88220ecd77b2e99967ebdeb54d27dee959b586b3"
+      },
+      "scout_task_index": 143,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-018",
+      "branch_sha256": "e8e4a30f3e2449f070348eb357e2ea372a84de64afa29647f26e8fc81ee224e0",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-018-case.json",
+        "sha256": "30d27e13914981600a42a0c2dd78cab25fb9701f147b02a9b7303a5622d044ed"
+      },
+      "formula": {
+        "clauses": 1411810,
+        "sha256": "02ac14946461bfd29667d9bdf50c7f803845f0de268b596672e47029598d482a",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-018.drat.gz",
+        "sha256": "719efae86eb186cc24e49081be113f7f010040d583173aad17d774e54d769cae"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-018-proof.json",
+        "sha256": "74b30ac868df10e6d6c4f348525de67887820d84ed31532374e961050346a5f7"
+      },
+      "scout_task_index": 142,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-021",
+      "branch_sha256": "ba931d24211907a6d54abecf974f7ba67594bb1bacf37dbce25378f13a24bec4",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-021-case.json",
+        "sha256": "83b856c7487b74802278ad74d4b7ac823801539a0a320b885304d0ad5f1d5c89"
+      },
+      "formula": {
+        "clauses": 1411846,
+        "sha256": "acac901391124e1961449007a9bff985decc09ad53e313f26fc9a7353062ba9b",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-021.drat.gz",
+        "sha256": "719efae86eb186cc24e49081be113f7f010040d583173aad17d774e54d769cae"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-021-proof.json",
+        "sha256": "8c6bbeb1707afceeef626c3e8977b79eb507bcbf2d0ac358e57cca85520f1eca"
+      },
+      "scout_task_index": 139,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-022",
+      "branch_sha256": "e940b5742886de116fe3055f06f8e3798201511d0bfd8fbbb3a1730e5ca49366",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-022-case.json",
+        "sha256": "e9ecb3d80337e839ae7a9ddc0975d9efb0b1a1d290d3606350ba7d6f30c2a8fb"
+      },
+      "formula": {
+        "clauses": 1411850,
+        "sha256": "def2d74b8bcada48284e7134007cc5ba96c07ed00a8ca0b6b30ecfd18e12c899",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-022.drat.gz",
+        "sha256": "a2ea2493ff0ea6bf412e202de4f8083e7f7e25b5d778c982fbb4bfb8d6d57c41"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-022-proof.json",
+        "sha256": "7652283dc841822cad110db7e22a4260df9651e8d16126d7c8f8cb0ff17d03f3"
+      },
+      "scout_task_index": 138,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-024",
+      "branch_sha256": "2be516657a7617a10c88460758c60cc7538cabe0b52eef57a77842d244edf0a0",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-024-case.json",
+        "sha256": "ce82e823fc914885a522728d0f086b9fc5dfc41c2e2ccb94adf446e5660c140b"
+      },
+      "formula": {
+        "clauses": 1411860,
+        "sha256": "405d4f52dba38bb494a0f6f02da157e7e5cb6977db32be76a6a88cba1766458d",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-024.drat.gz",
+        "sha256": "038e1a40553b864947d02dbed9673df508e82616651f1690b0adc56c78755f27"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-024-proof.json",
+        "sha256": "a36bebddce2d89dcb7b1d13cdc2ecf943b08c701dbdc2a7324010b8a6964bc1d"
+      },
+      "scout_task_index": 136,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-028",
+      "branch_sha256": "51010fbdbc09d8d45dcd6fc8022d7beb8177956efaa937c85f5bca772c77132f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-028-case.json",
+        "sha256": "7486e029afe211c61f692868299eed1a4941ef9de77a25b319523f85e823bc60"
+      },
+      "formula": {
+        "clauses": 1411920,
+        "sha256": "74258a467112323ace59b5d14152189eb109ee5bf678478bda96b73cbd4f08ab",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-028.drat.gz",
+        "sha256": "3b6ecd74b7a0851991c34556d6df3550b17e158037ed8611582a3ffeef8af483"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-007--fourth-028-proof.json",
+        "sha256": "97c7d3513521d39cbff5460ce3531c6d059b80cce3c080ee7de32a34bb83a23d"
+      },
+      "scout_task_index": 132,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-004",
+      "branch_sha256": "82fd95179be4bd3d2f30d1f2df934948d9fbfdccffda1e208704cf92503664c6",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-004-case.json",
+        "sha256": "3a1c9993fc6d5877aaf1f51151f1f477be3b943fead1d8430a7f78122dd588e2"
+      },
+      "formula": {
+        "clauses": 1411712,
+        "sha256": "c7ed38067fcadbbcc50e415f0e379d8b4c46b2c11452a0c6a34a8c5545bac273",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-004.drat.gz",
+        "sha256": "98dd36987319898fd11dcf60d8f51b92c6c96eaf479af7b038a5b1d8cf162978"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-004-proof.json",
+        "sha256": "2f26934341388cd5075aa8b37215e15babb30c0b67b38ae910b4fdfdf12c4df5"
+      },
+      "scout_task_index": 229,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-005",
+      "branch_sha256": "22e01b3ca20982b6bbad25caab627eb94f0e2509a5f0afc6c3d624ee8755c0b8",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-005-case.json",
+        "sha256": "7a9d805061a27e65582e0160b6dffa2ffe75bd64e4a0e5cccf1c5c1278b4f413"
+      },
+      "formula": {
+        "clauses": 1411716,
+        "sha256": "afe4bf410b6d034f04db29dbfb9baf400099c63929472ba3c418c730ad44b087",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 5,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-005.drat.gz",
+        "sha256": "8df953e287b7b8c93f3770ce70cd0d0843938b190adcbc922c670eadbccb07a2"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-005-proof.json",
+        "sha256": "521f63dba6446fccf7d0a02fd374159ee26ceb062a8ce8e85d4984af8013d22d"
+      },
+      "scout_task_index": 228,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-006",
+      "branch_sha256": "8a94a7db42814371d6118703b74955924a2b61268b45e87438d08e1e94cef974",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-006-case.json",
+        "sha256": "3218c537612a50eed7221389af80bc90cb503c4657c258d25a21ede3ef0d3778"
+      },
+      "formula": {
+        "clauses": 1411724,
+        "sha256": "db1f681bffd07b093c893e0d8dde7fe711165160b3478bdb2167aed88f2b77dc",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 6,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-006.drat.gz",
+        "sha256": "9f05b17620e00027dbf2b6cb6fcb84051f637e232af30b745f0a19e081d45457"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-006-proof.json",
+        "sha256": "c339f1b7ee2d1bcf65169d051cc3ed205527b2aa2b125a360b7d03421cf17025"
+      },
+      "scout_task_index": 227,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-007",
+      "branch_sha256": "bccd8507a0d117f4863421e6d6d49eafb2c2b8bfa584f3cb7e73d1f649a0440f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-007-case.json",
+        "sha256": "2593fb093d1382776e41c43ac858814ab086147540e637bb8d704dfc39ffa4a2"
+      },
+      "formula": {
+        "clauses": 1411732,
+        "sha256": "340773223f28b2eb3de9a21e3f85a7190ed99441203791e2b481fcf3e5a62520",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-007.drat.gz",
+        "sha256": "0efdaaaf1fc79ad37cfe9abd3405c93939057b28e60d38f19b0d5de30f6cecb3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-007-proof.json",
+        "sha256": "94ba2276b5f8cf0f108ff1deb7641b9f9c19a78080270080ede5c55c9c81c527"
+      },
+      "scout_task_index": 226,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-008",
+      "branch_sha256": "728ebd47b1abd054bfcb91cbbdcaa1d8e6ad8d8d18278ad2724d4cebf5551845",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-008-case.json",
+        "sha256": "c76f6d0c5b6c826c88cf2f8adc9f4324636db5e3d5a0ab10690f03b4b149fa5b"
+      },
+      "formula": {
+        "clauses": 1411734,
+        "sha256": "1ae911bfba96d55e1e9d7ead476853afd00484574b8f6c350a071f2337e70226",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-008.drat.gz",
+        "sha256": "07d641b31cd439af527ac3f97a74c6301344d4eef711c36dc11eed05dd1f5c59"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-008-proof.json",
+        "sha256": "31ad78868b7f123f2db18a0312dbd7bdab20089c602dd8587e5390be85fddf44"
+      },
+      "scout_task_index": 225,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-009",
+      "branch_sha256": "43c640e2c3b709a154ae4c564623979eb0d7504634553e1a0b501597de63ba5c",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-009-case.json",
+        "sha256": "909910f7f7db8da6f006e9329c32fee281c9704d2c0b767b866cb265bac1bc44"
+      },
+      "formula": {
+        "clauses": 1411736,
+        "sha256": "964faa90cd08da5ef31adbf30accb934001e8d4c19796ba16e84bdac7e819eb8",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-009.drat.gz",
+        "sha256": "f964a3c8b363284a6800967c2cf9222e3c8e1b88cb80e5de515c080cb4b60cc9"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-009-proof.json",
+        "sha256": "a9eb389e3dcb31d33213c37a4918dab17f1e9df3c33c293f0a6425bcaf2cca7b"
+      },
+      "scout_task_index": 224,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-010",
+      "branch_sha256": "02131e03e1e0d98a3b559850a13885b7280dcc6249ed753550c29462c37057dd",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-010-case.json",
+        "sha256": "1ccbc8fe0edc1e73a82cad759fe0e061f665485028e7c939879af117f515b26d"
+      },
+      "formula": {
+        "clauses": 1411737,
+        "sha256": "2a4f01a6ccfce8a801fd158ec018b61ca96f0f33f38c4086f646ead9925b9612",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-010.drat.gz",
+        "sha256": "c82a8ec1d38afd56d309934d650ce3d4c1b20332d9ed2e767401294f875a0699"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-010-proof.json",
+        "sha256": "b941b279796c78ac731e92bdb6190f9dd8f44e6e93e46c70dfaf7f2e6d1c3dcf"
+      },
+      "scout_task_index": 223,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-011",
+      "branch_sha256": "c96f9780fc4bf18d3b00c7701b0a50a5e82eae052cc3701f70d7ab93cf180d4c",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-011-case.json",
+        "sha256": "2e6d0d5438493472dcefba7c7a3ee6f207b207335c93d1b32e6c362a0d46ef9a"
+      },
+      "formula": {
+        "clauses": 1411769,
+        "sha256": "1e4abeaf2d3d21d7967e04292832cace543f159fd6188853e83175dcbf71ee48",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-011.drat.gz",
+        "sha256": "40f4c50dbc5d9dd03b1385d6edadbc606849e64616100fe9aafed6e48cef9b36"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-011-proof.json",
+        "sha256": "dd3d5d943a06b8ca736b6e00b562a9e3d2775b8c29d34c17d1d8238e8ac55664"
+      },
+      "scout_task_index": 222,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-012",
+      "branch_sha256": "daad5744109245fb7c5713d9e2105c9e2d87e10eb334c6385ba4b5494af68c1c",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-012-case.json",
+        "sha256": "e0b92771aeabb0fa46ad22e9f05c4955b446872a85a6f28c7a1530756e477d75"
+      },
+      "formula": {
+        "clauses": 1411777,
+        "sha256": "2f08bf31ea552cf354fa9f4ea731ace248bfd4e8b4ac403f097b004b5063b670",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 12,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-012.drat.gz",
+        "sha256": "7faac4bc0b396bb0fd8145a0334a030dc1505fb97ebec7d56f182f5ee9db1970"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-012-proof.json",
+        "sha256": "e04ef318084d4ee4c0ec71688ae9d1f838bd09771f859ca71eee8de2a39a7117"
+      },
+      "scout_task_index": 221,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-013",
+      "branch_sha256": "a706d4b13f57448640cb1551c186338112cd792284be510c922097049e20a808",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-013-case.json",
+        "sha256": "a7345d533d4bb9ce4bd0294da7bbc2d0a27df5c45b4b077138212618a082bcd5"
+      },
+      "formula": {
+        "clauses": 1411789,
+        "sha256": "8149dfc43e97d4d876be27884fd68645126e53a7a8eb00916d55b1126528b2f5",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-013.drat.gz",
+        "sha256": "2016c131d5d33f210459571fcaacdd467250697f49266cd0738b34ab71231329"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-013-proof.json",
+        "sha256": "26c5c864846c254dfe35a19b46683c95bf08bccec799d89f42d7a2d55451738c"
+      },
+      "scout_task_index": 220,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-014",
+      "branch_sha256": "869402f0c4b9f420e5a1caa45f87f79f806d79559d9c270c8d91f2d739d07215",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-014-case.json",
+        "sha256": "3d677f62ebde2eee352404471128703693f6fd91c961ac297b30aa8ff4d44f8e"
+      },
+      "formula": {
+        "clauses": 1411837,
+        "sha256": "470adc3617a5b175abd30b7e2386f27b7011e9ff35b7612a2b27b566f0ed30cf",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-014.drat.gz",
+        "sha256": "33c5e8fa82fb83f822b631b9ac32b78020df2f125b638eb166f299cdbc322dd3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-014-proof.json",
+        "sha256": "9f1236e9947c97a6595bcc0ef1b94044c08bd99f2d0a3b20b2ab20535a3f6690"
+      },
+      "scout_task_index": 219,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-015",
+      "branch_sha256": "c26f272806b96177381dd44b737b63c7bab74fe7db288931b35f27b74438b8bc",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-015-case.json",
+        "sha256": "2f2cd244c7399798b7c8f18dcfe878d0c8f28ea9ecbdfcc07f543e960cacad84"
+      },
+      "formula": {
+        "clauses": 1411849,
+        "sha256": "05cedc5592bc61f18e6b2b5e07cd1efb298fa450ad3427cef1762f9b8bab9fcd",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-015.drat.gz",
+        "sha256": "88a41c82b41a963a1ef29043f52e9773a44ed51a354a72407b9d2620e0f1fd72"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-015-proof.json",
+        "sha256": "e41a9e14f29fe8387aabf0cef990f238bed0f9522928eec0ca5cdb4b7e53543e"
+      },
+      "scout_task_index": 218,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-016",
+      "branch_sha256": "731c2370bd33708f7e6190955e67d3b9e66a965cb7ba39783e176c8e1e10d8ff",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-016-case.json",
+        "sha256": "1cc03ba7ec69ec4139c2107bccc77b184e25e51434954b95ef649eaa8da9454d"
+      },
+      "formula": {
+        "clauses": 1411897,
+        "sha256": "60514c1e265832a87b44b1719aecfdc32bc006f637d5cb8c588f0f137d3805dc",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-016.drat.gz",
+        "sha256": "38a3eb1c2d3485217e1199778f906f50a95993e812f713c0f20b435a9127637d"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-016-proof.json",
+        "sha256": "9c24f4f80fe94790b9caa781862b2f7c0bccc6d3772c958e4964c495f90a34e8"
+      },
+      "scout_task_index": 217,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-017",
+      "branch_sha256": "5654bf4700cce3ff749be4b639609d54847e4160fa5db9c40ed249b5b0b02b7f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-017-case.json",
+        "sha256": "41210d0965dfb71bb563306128f090712695ef7d2423ea39c53e6b79fd74fcc7"
+      },
+      "formula": {
+        "clauses": 1411921,
+        "sha256": "96ff04f4b86f06fd9e8250cb22db9a7c596c3fc9b254333ff97f7e500082a84e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-017.drat.gz",
+        "sha256": "06fc8d4b711bce0c32dc13f516030d4b74422d48652c9020b49c7f26eddc7470"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-017-proof.json",
+        "sha256": "8c70fcb19251fe9de4343e71b24add8234295d3cd6220db32c3b6203e4c6c635"
+      },
+      "scout_task_index": 216,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-018",
+      "branch_sha256": "5a79eddf3881433015471dad7aaefd6980ac564e51989f7bc6273a0d540d50d4",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-018-case.json",
+        "sha256": "d25aad2e9a6915642af31df6a940acd39df818cbdc94c390da29a2babfc0a0f3"
+      },
+      "formula": {
+        "clauses": 1411933,
+        "sha256": "49e550f0dcff3a8a70fdca317d5f9d1cbf319d11aec31ec096232b12172ba3b5",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-018.drat.gz",
+        "sha256": "3f21c999518333da1c618809941adbc83e941537a7ac5a5ebcc5d89621ef16b3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-018-proof.json",
+        "sha256": "bb0b83c5e4261d94c8f7fb11940aba516b1a329901e08e5945a705c282de134e"
+      },
+      "scout_task_index": 215,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-019",
+      "branch_sha256": "419d33bacca0d5d68c8371904ae90e7e58bc5f7c834c24631673e7fb510324d8",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-019-case.json",
+        "sha256": "5850a3ac85f8c248fc7df8268c8c860cb7efab767a0d94b38043069c113c513c"
+      },
+      "formula": {
+        "clauses": 1411957,
+        "sha256": "4cebee714c51afe1b41a2d205e396dcaf678df76a68d5ad651c2889d8aeb1fed",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-019.drat.gz",
+        "sha256": "2b5f2f91ca69f9080f998979acb7ae902d0f65768cfac82867716b4b220bba1d"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-019-proof.json",
+        "sha256": "47533eb41523c3be1daecc4dae6e8e4c00772c9f4e83e9f3466e0027fbcd00b9"
+      },
+      "scout_task_index": 214,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-020",
+      "branch_sha256": "f7456d37472764156b764eda6f69557a3531db1d6ae367aa91c35e86cea519ba",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-020-case.json",
+        "sha256": "f82ddacc3115fde316058b3683919470609559547aaedbc1f7e5c7e668e884eb"
+      },
+      "formula": {
+        "clauses": 1411965,
+        "sha256": "1abae01edbbcc03914bdfdfdd2aec00f9f7264400e750050d1db205e7b3fe15c",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-020.drat.gz",
+        "sha256": "3f42bc9e71f3cff72d45d6d7ccd764b5bdfa94e7c94285ce2a032d2ab95572e6"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-020-proof.json",
+        "sha256": "ca3e65502e7ba3e597407d5eac5cfe75cdee3fd27fab42740c08c7c5488b3ba4"
+      },
+      "scout_task_index": 213,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-021",
+      "branch_sha256": "828d553f9ae827cd56738aac241e1f66b85a8fc9565da620e1d285179a85f821",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-021-case.json",
+        "sha256": "c79aa855ee40a629d5a4795aefcd9459d306d0a357c419b089209a552c88400e"
+      },
+      "formula": {
+        "clauses": 1411997,
+        "sha256": "c10c073a9de9a4087845f4b43b3067ba37b6b50ab8bbf5d65d34f19ef4e5fa68",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-021.drat.gz",
+        "sha256": "7cabc5b548cbb68d0a6972e2e85ac52012d0b822ef7412aaed5980e6ec2d33af"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-021-proof.json",
+        "sha256": "56a5d0520ff20e014e87eeb8e516a1a7c000f4563fc31cd1771d93dd55fdf354"
+      },
+      "scout_task_index": 212,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-022",
+      "branch_sha256": "cd38cf8be4a2f02b54010c3c684b8fb79c8e19d00a21a4b960f32db5c0fcc17f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-022-case.json",
+        "sha256": "9e297dbdd27433cd6525beb2a8a53044cf23dfbe6663ff6b80e82fefa3bbf77c"
+      },
+      "formula": {
+        "clauses": 1412013,
+        "sha256": "f3258a89d6e043dfe04a78790badcfc8395d33d0bb9e18d356472adc0713756c",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-022.drat.gz",
+        "sha256": "6dd639b5e1dd17795f05a3d031852a2d74fe9a05d5f9f4625c5239808e4c99ea"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-022-proof.json",
+        "sha256": "926cc51ceedd025daec60dba96baa3388c8ecdeb177e7d4e34cf805975cfeb40"
+      },
+      "scout_task_index": 211,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-023",
+      "branch_sha256": "5a6cd84ab05c49a265383e6836e78ec1a3597390a58b25c16d1fab8e1bd5cfd5",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-023-case.json",
+        "sha256": "e9e789aad7aaa85ef69c07f0015eb1ac1c3324e168d28c05d10b1201dee8c462"
+      },
+      "formula": {
+        "clauses": 1412021,
+        "sha256": "3723837919313d81e25c678da456cafab442e58c268672bb2338940ee943ff35",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-023.drat.gz",
+        "sha256": "70dfa39acbce42b7d70f30deb2b53e7d9bde60f7a48dfeaf937b65b5cfafea42"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-023-proof.json",
+        "sha256": "f302d94c140526e8c345afa43cb8832f5f0d1e5a53dc794d8efb2c182eaf2a6f"
+      },
+      "scout_task_index": 210,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-024",
+      "branch_sha256": "d5534b1dff86869d2481b836e215407b0718e84a70dd370a9b34badae7d38094",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-024-case.json",
+        "sha256": "46dcf2955afa05c0d2a71856c537bc8531707bb300a37acb37584c2acded9eeb"
+      },
+      "formula": {
+        "clauses": 1412037,
+        "sha256": "71d5aa5014887db685710081aace4ed7204252cb975defcedf90a550b4512137",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-024.drat.gz",
+        "sha256": "700f51bb7abcff4d328456e16f1247e52d371d153e1636925623134b7c91ab9c"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-024-proof.json",
+        "sha256": "55a7ebe42ac41d66c416f76761a4bd164c0ea11e710aafee3341a7dc7d52ca75"
+      },
+      "scout_task_index": 209,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-025",
+      "branch_sha256": "30f225b8caf3817d38cc9706b95bdebf54ae46715e720357841e511ade8c9d1f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-025-case.json",
+        "sha256": "6e3f5e9f0f5f027585938f9fadd2236702c56d76dd806d1f00786a90611a138a"
+      },
+      "formula": {
+        "clauses": 1412069,
+        "sha256": "6ce81dce1d651536c7cf0e8093aeeab52fcc78658416eaf81cb7433a041eadc5",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-025.drat.gz",
+        "sha256": "cd351769fe02b0438c4d91a52fd100f52a390b0902831951a102e1d51db82809"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-025-proof.json",
+        "sha256": "9971c4d49d3ce82990a9a576a5a93b037072694ad53fec9b1fa1ed1544656ad5"
+      },
+      "scout_task_index": 208,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-027",
+      "branch_sha256": "63dd25abc76fe156c402d144c3a735f93843a9417b66662cb2fa3fa572ab4e31",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-027-case.json",
+        "sha256": "d1e15c4e7c3b6e999fe72366cc8f32ad37bfdc5d7129ca3ffafe2a48c10aedae"
+      },
+      "formula": {
+        "clauses": 1412093,
+        "sha256": "c276325474ce95b39260c4d980490a1e829c0081d80430172a0f99ecee1e8c67",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 27,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-027.drat.gz",
+        "sha256": "0ba58c4cc7fff2dd7b42d69d89a766650bccd99c9058030227dd4a1cd292e010"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-027-proof.json",
+        "sha256": "8d942a6473bba8053d1e6c373eb1e624aeb137c857a6377676a1fff27e3beb07"
+      },
+      "scout_task_index": 206,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-028",
+      "branch_sha256": "71f033a37e2fc0e932d2e41bd79ad4c3c108a07894f9c45796107c2502d1af9a",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-028-case.json",
+        "sha256": "f959ac2ad86e2f90d76eba49e2830c9ac96d9cf7b5cb38831772fe8701f173a6"
+      },
+      "formula": {
+        "clauses": 1412109,
+        "sha256": "390e68e7edc0536aff76cc792980a124cee788328b75fba9831017989d4361ac",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-028.drat.gz",
+        "sha256": "39994186312bed29c16b234c47b5ca61a1eb987b198a459d46a4ba5f9c890818"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-028-proof.json",
+        "sha256": "3bcdc76487487223e1f1f9734e197e84400bdd1a344d6204dc11481c7b872b99"
+      },
+      "scout_task_index": 205,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-031",
+      "branch_sha256": "7eefc4444928d88ed6885e0dce1c166c10abd66e3006ef1d68002a4668d2c6f4",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-031-case.json",
+        "sha256": "a90e07663ea51e6344b05076cd94bfe2a4846d357b619e6962bc2b317f6638de"
+      },
+      "formula": {
+        "clauses": 1412127,
+        "sha256": "de48c127e29641c6a10ca71e5636d51f81e05f8280017b29464ba82ea77ec364",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-031.drat.gz",
+        "sha256": "cf4cffce0a34c7a031a54456dfb26a37b94b89f99b5a28a685166567adc5104d"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-031-proof.json",
+        "sha256": "fd9613ff895caf8437820c935c673f48d74df89e61d68c05ef4d10e4117ac3b7"
+      },
+      "scout_task_index": 202,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-033",
+      "branch_sha256": "68c50e213ad83a3740c290d5337f95df09b6d6ef8895800f32b34dad8cdcbcf7",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-033-case.json",
+        "sha256": "08106e68748f57e228ba845bc5ed9bad6f8519265e74a0d2cfe47d06a7237ab0"
+      },
+      "formula": {
+        "clauses": 1412133,
+        "sha256": "553c161637ae29d6b887c5857cd7a6a4cade83b8c724cdf3a5e779478335621e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 33,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-033.drat.gz",
+        "sha256": "244de5df3d0c1c94b0103fab4eb09334d4fd506434b69ddccff48805e10300ff"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-033-proof.json",
+        "sha256": "89fd2cca3ebd2406ec903608a2068a0e53c23588d6f042a39190b00e96943909"
+      },
+      "scout_task_index": 200,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-034",
+      "branch_sha256": "304fd5083e099f643ba7017e196b92125ff1b76fb79f69f58a805c49052b1fdc",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-034-case.json",
+        "sha256": "da0b8c0e13aa41218ef8495e260344f1d217b107fe9bd59036aa4778a718d493"
+      },
+      "formula": {
+        "clauses": 1412137,
+        "sha256": "4b0488602662d7af2ff6d0dc58392c2c9a23d2a6459ad2c8d3090c4e0d988255",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 34,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-034.drat.gz",
+        "sha256": "9f16f04d11d64aad23408d562cd137e88e34d34821bc5df5e549fde239e93702"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-034-proof.json",
+        "sha256": "95897ad8d4372799af332b92a2900bf1f14223e49ab3f48b6195886fc936c552"
+      },
+      "scout_task_index": 199,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-037",
+      "branch_sha256": "135c418af5aad4448930364039f9d8a37f1cdafd24116ce31be6673c9fd2eb1f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-037-case.json",
+        "sha256": "d83dbd974204bfc2c07e03af57529f84a2aee00e766e2f21b014d42abb377a73"
+      },
+      "formula": {
+        "clauses": 1412147,
+        "sha256": "aaf1ff693272fb6c074d31e9d973c4af3a2952a76a92b1d61f49fe26a06341a2",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-037.drat.gz",
+        "sha256": "39c2aa5ed88264f2a9f0360846dd92ced3d8f0efc20c0d19d51460a638464c36"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-014--fourth-037-proof.json",
+        "sha256": "26ad0e9c494925eedd93ec2b4f5933a90e2f904a4c03c3a67ac751622671cf18"
+      },
+      "scout_task_index": 196,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-000",
+      "branch_sha256": "b9fb742afe917d94df4bf33ac1e6a96ad928dcf35c540faebc684ed31735561c",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-000-case.json",
+        "sha256": "c9ed46e68813b598358280213ac101ad57debd82662782413984eb124c10ca53"
+      },
+      "formula": {
+        "clauses": 1411692,
+        "sha256": "d59a2db4ef6955c7e1fe63e43f2258c82bd851b983c2ae2b55d5c3bb9e265048",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 0,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-000.drat.gz",
+        "sha256": "0386a2a25d10a0616c1020e7d26078214fcb16bc0d182e2fee7acf484a293784"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-000-proof.json",
+        "sha256": "5d557cb8b3f6c8b32aaf4e8aeda24eab61cda4b945070525da0af502a70b51d7"
+      },
+      "scout_task_index": 349,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-002",
+      "branch_sha256": "fac04e13f0a8dd08031b51fbf906edf569ac597aae27e95274b0cae1bab23264",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-002-case.json",
+        "sha256": "4ffcc782448a311d0ea04ad5355f5bb0b7a424f294b7cbfe7dce5c7ffbce97d0"
+      },
+      "formula": {
+        "clauses": 1411719,
+        "sha256": "5c9f9228df45b8e4b4d5e080a1e4f406466f6aefef2d473fecf701874c9a4ecb",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 2,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-002.drat.gz",
+        "sha256": "061e38f794b519945bac76e8a3132f21e84dbce4520a1ad28f8a87f0bb7f8fab"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-002-proof.json",
+        "sha256": "fa198807e668bc87d7d42970ff73f985ff087d08080fd566b33c35a08a0a9dbb"
+      },
+      "scout_task_index": 347,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-007",
+      "branch_sha256": "c44e1d8e07be9bb8062c6c6dea1509b735917a1683591d014d8dfa6c144722d8",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-007-case.json",
+        "sha256": "5f5c93615a26051842e1e1014f7499b8f18f9e4056446aea2042b2114e96c54c"
+      },
+      "formula": {
+        "clauses": 1411737,
+        "sha256": "00820c0ce60659f174e376c01a5a09dedce6ec5e926ce601aeafebc1b5b4b348",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-007.drat.gz",
+        "sha256": "71428775945dc5b6f70c0d9c5f8624a6cfbfcdb6242bfc86059414cb54a21597"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-007-proof.json",
+        "sha256": "13cb4c30f8ba0d78504ce97719bc7ee6eb113370842f6d89dcb7ccbfa64ddbd0"
+      },
+      "scout_task_index": 342,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-008",
+      "branch_sha256": "f5024c91efc99f5d6c40c27e7a07cba66daf06cdb50658aa466c968a6c6c80e8",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-008-case.json",
+        "sha256": "25d658b0a47c0446fdda3c1f840858f525f7bfbdb373bce68de8e7517e3e009c"
+      },
+      "formula": {
+        "clauses": 1411741,
+        "sha256": "0a660c451098a5bfb825ee4dfd4a04824a5efeb67e069e1c43081d2965f32146",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-008.drat.gz",
+        "sha256": "854a332019d1a77621ad6d0abf404d6bde38839ce5b0ad631231bb045f2d482a"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-008-proof.json",
+        "sha256": "b3042e4782a87eca46d8786f539a53d6669d2ffe6da45f19e220dfe317914aa6"
+      },
+      "scout_task_index": 341,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-010",
+      "branch_sha256": "2b46f8b76f4d04a27f87a2af11096cd1fb27cd106a2c7652a860297596d4619d",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-010-case.json",
+        "sha256": "e8a72a86e9d4e51b1a0a7262459cab0088f6471fd03c0eb763ff768f6f984d1b"
+      },
+      "formula": {
+        "clauses": 1411746,
+        "sha256": "4a07a3eccf6d3b64de12214b6432424339aacd877dba30b1d82eea21c2a59d78",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-010.drat.gz",
+        "sha256": "22fcf685b774820f14df5fece1a41af69ad9fa4d3270a3b61d64c2c7eef3799c"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-010-proof.json",
+        "sha256": "ae2d580f48f58f221bc7b9c9a0a7981c6ef8182184eed3c6c5e050fbf2cb49c7"
+      },
+      "scout_task_index": 339,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-011",
+      "branch_sha256": "b5e666ce36746b48edca9f00322bfb3a2a1be52f9b7b5a8ee4437a2bd2f4e124",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-011-case.json",
+        "sha256": "79343affc70ae2e7d10ce661bd64bc5c21c788877c291391f5388497f31c6936"
+      },
+      "formula": {
+        "clauses": 1411747,
+        "sha256": "a06fe251abc077b1119adc23f81784a6083bbef0969df45e669795d6104c7747",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-011.drat.gz",
+        "sha256": "8eff671b73fe9900f5d6755c995d1cd921395f9e27c8b3658b25c271845de37e"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-011-proof.json",
+        "sha256": "9035796002c605ec3f481756e9f16a36a920a217d7c78c4a498e9072c6b969e1"
+      },
+      "scout_task_index": 338,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-014",
+      "branch_sha256": "afda29bcb1c4adafc327044b9db0c7b5ceb606a22ddcf20a654bdcae5c2164ce",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-014-case.json",
+        "sha256": "e7c2693d6cf8b085432c1301e5e1cba5d9d0704c6e0ea8048d9fab1e16d5cb4a"
+      },
+      "formula": {
+        "clauses": 1411780,
+        "sha256": "a111fb8669c2e26c34a4559fce0beb4910e9c7b80078d62f04eef72dc6df20fa",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-014.drat.gz",
+        "sha256": "c22e198e7d2177a428e093af04e8a6e7b7acf0e216fbb6c399d0eb00461bc60b"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-014-proof.json",
+        "sha256": "38ba8a362d0a596517171590c4b2bb6d6797dbf119dbf4f12b75ce749f91815a"
+      },
+      "scout_task_index": 335,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-015",
+      "branch_sha256": "9c76d778b83bbbf4c6517abdd02c58ae3720c5142f0dc13f015bf46f577af60f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-015-case.json",
+        "sha256": "f94b7ee8d9d91b7440c7b42b2c172abaedc5935d3b1c6ff743acfe02c7197c37"
+      },
+      "formula": {
+        "clauses": 1411786,
+        "sha256": "74fcfe080049acf94c41ba3916a80133f03f1edd9a19e3677ab40fafae155b4f",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-015.drat.gz",
+        "sha256": "86494786c2a468964547d450e627cb003ab364d808cdc769b5d28eb5c6b78ea2"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-015-proof.json",
+        "sha256": "4b4567f5659fd567a21adcb7882c1944a235d204a10f9799249937a78ac19183"
+      },
+      "scout_task_index": 334,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-016",
+      "branch_sha256": "86164a68ca99162718e7517df5052b8823f52fedf4f9468f853103b0430fb1d5",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-016-case.json",
+        "sha256": "af0eeeab0d794337a7f9238e28060d3bcddbd9aa3167706972857b3d4cc22537"
+      },
+      "formula": {
+        "clauses": 1411789,
+        "sha256": "697e2938fc1fbbabea42530f56803c733681029591505af8f2c67c636a5cf239",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-016.drat.gz",
+        "sha256": "30938c4039d3b894af8f67fc2d0a86dfdb71fdbc5ca6287e86c569652ac5ee9f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-016-proof.json",
+        "sha256": "dae29fc47f778209dc703e8012bf8d01b215146e11a6487ea242e48644364d97"
+      },
+      "scout_task_index": 333,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-017",
+      "branch_sha256": "16ab9dc8950df2461fbb8ac50db6a277cb4739db96e44238dda33a602c260343",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-017-case.json",
+        "sha256": "e7e4ab803522153f8ac254bd06e2bfc4a5b5f8681d523cb22317fcb4eac5cf7b"
+      },
+      "formula": {
+        "clauses": 1411801,
+        "sha256": "1ae7c76df8e13dabcad5f23b1514982729dbefc90eb86c6647ac18db3d579458",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-017.drat.gz",
+        "sha256": "8cd0cc075951535ffb2623c453b5e733bc0d33074caaf6a3a3f00f4ebd0acd5d"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-017-proof.json",
+        "sha256": "6d12980da48b147ced8cb4823b3eb74402b364c34b6d2764b1357df750b942f8"
+      },
+      "scout_task_index": 332,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-018",
+      "branch_sha256": "8c2fe94143eb27e5bcb5fd6889072babba7b4b5d19bbbaee48985adcd68691c7",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-018-case.json",
+        "sha256": "5f4210d98c38a5e84a0ce2ebadeb535d4aa8385cb3f225ab9ca4c68b114b2aed"
+      },
+      "formula": {
+        "clauses": 1411804,
+        "sha256": "20e592c4b6e15f1b4263d51883c8ba751b90070743e22a8f225e335b010d215f",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-018.drat.gz",
+        "sha256": "424febe8c8c9644eb7ed326836159764286f964cc7bec5da560cc329bdd448d2"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-018-proof.json",
+        "sha256": "8e99fd994817676c162b4e209a171b74e5060d7e796316f12c2aa3ce5e989aef"
+      },
+      "scout_task_index": 331,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-019",
+      "branch_sha256": "1caf3901d8a1df55f61c2f32f4c9688e151700bf36e934e9d49fc098fc97d50a",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-019-case.json",
+        "sha256": "deb964ebda4252ee4e6605a277cd389460a259721b583cb0a86e563548097851"
+      },
+      "formula": {
+        "clauses": 1411828,
+        "sha256": "5da7384a5e84ce608dbea56dae59fd4fb21a2ed329c01e8ce5332e311f55105f",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-019.drat.gz",
+        "sha256": "d955a4fef4eb0f5fca95cfbe5dcaf21108777611cd84d706457ed16f5f1d3449"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-019-proof.json",
+        "sha256": "ba385dcd5f2e6888915dabbedd62e199c09425491c29c43671f46f67f0e38b9e"
+      },
+      "scout_task_index": 330,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-020",
+      "branch_sha256": "a2bfd38ee33b06c21899e4c5ac1900fb8d5d3c29cf20b20b84e74ac9042faf0c",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-020-case.json",
+        "sha256": "07d851c7da36e1ac1a46d6682abb468d72ca6c5477e5161ce6167b9c737b57a5"
+      },
+      "formula": {
+        "clauses": 1411840,
+        "sha256": "e973f52fab2b2594b368012b1e40bf22f984f5730429f009ac18714c8cd5e38c",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-020.drat.gz",
+        "sha256": "16de93ad4f73dfafe0f01d0cf4aef6f801b775bd6ba20e9426a2643b11cd0f00"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-020-proof.json",
+        "sha256": "73d5ecc20a00366bed74500fcb8eb5adce32081422f7b8a8d8f8afae13cd2278"
+      },
+      "scout_task_index": 329,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-021",
+      "branch_sha256": "676daba4cd51ab359d7229f517456857affa33bd1ed6ef549b20692ea55f68ec",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-021-case.json",
+        "sha256": "2f9cfee300c3bae67d6ec516e775249361dddfa18a91d0cd202f8e0f7d89efaf"
+      },
+      "formula": {
+        "clauses": 1411846,
+        "sha256": "fdb03fb2f7c431467065f5081dfbca7b92f3c8ef156ed339b095a12bf652052f",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-021.drat.gz",
+        "sha256": "b6b1bc25b67abf658065cc5ebd68c4f0244c66affa7abbcfb8a96bec27ad99a8"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-021-proof.json",
+        "sha256": "4f93951224465bb75059e73c65483f416c938bd1691c06f58a440f6b18cf6c6a"
+      },
+      "scout_task_index": 328,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-022",
+      "branch_sha256": "398ff5a33f212b1638732a12c11d8bfad3eefef57680ad16a7c4ea11b01fe65b",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-022-case.json",
+        "sha256": "f8b421e7f8b893d9c6689edff927b74d3b30b2dd2b54734b0e6ac1ff783b66fa"
+      },
+      "formula": {
+        "clauses": 1411858,
+        "sha256": "7638e08da4577f3e0cde75b8ffc095ca0ecc0aa055d2f6f2246dd80f95f4d3ee",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-022.drat.gz",
+        "sha256": "268e8cf729410bb0f622a7c501c980da381f495e9831c573b202c38b8c6a5f1a"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-022-proof.json",
+        "sha256": "bdb4c39feb9b183acef5d426f69cfec80666a6b7cdbe3eebe712bb2e317abace"
+      },
+      "scout_task_index": 327,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-023",
+      "branch_sha256": "cade73350b2b3d6f73c8fc1bc57ce888b0454e6eba89007feb222ca95e087b2e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-023-case.json",
+        "sha256": "dd6037d995eb29806d8aafb124d53f8e53b7d80cacf5a9da3e5706255a6a29e5"
+      },
+      "formula": {
+        "clauses": 1411861,
+        "sha256": "445b0b8f99e97fdc538167ecb2179a0835238a64c2c1fd7afae5576679d35e61",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-023.drat.gz",
+        "sha256": "eb114ac9758d6c67fd3be3e7ef08b250ce8320623d7dd4b41df4d65d49b2c31b"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-023-proof.json",
+        "sha256": "ef9601858b8ca1218d1d8ac68f62bedc75264986f0b322dca7ded24c04cedd67"
+      },
+      "scout_task_index": 326,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-024",
+      "branch_sha256": "833578498076dd24ddbab8d15cb308d8507aef0aefab2042dc2c5044714aad73",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-024-case.json",
+        "sha256": "f69c92575c0385988953c9f0c3b6880fd7574b65d5dd980b9e7ecd6355417a95"
+      },
+      "formula": {
+        "clauses": 1411867,
+        "sha256": "1295ba152c3d2e0c1e35e199110dd89c64154f7a80d3d2619ab6e2c4b436e6af",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-024.drat.gz",
+        "sha256": "05461933903177977b2bbeabfece3debb63784ffc3a01d923f89e9f401e490e0"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-024-proof.json",
+        "sha256": "8bb1209431bf288722c797e80b64b7afb9e15b7a528b77c6c683748cdbeda875"
+      },
+      "scout_task_index": 325,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-025",
+      "branch_sha256": "e288bc3040d90c57640e585e307a76c52879434641b9442f6a3774902fe88069",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-025-case.json",
+        "sha256": "9351020c8309bf99533a110abf097939e46bb12eb9f5ead843973e69beb870c0"
+      },
+      "formula": {
+        "clauses": 1411870,
+        "sha256": "0a659934599de6b589c3b59170ae0565a2235a3e396d19869dbccf5dcd471323",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-025.drat.gz",
+        "sha256": "3ce149b78741de5dc71f973f049f2f5d700d4be37a5759439bbc967230890cc8"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-025-proof.json",
+        "sha256": "b682e5a3659d630e1012f00845a4577be1c2dbaa4b9b1efed3194e6f616d0a67"
+      },
+      "scout_task_index": 324,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-026",
+      "branch_sha256": "a308ce7bb935086d22938dcfb5bda6c01252aadabacd9e94663ad603dd88cfa0",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-026-case.json",
+        "sha256": "521bb167e7f018bc34fa3b4525e0afc2de342e9481adb658efae72b929ead7aa"
+      },
+      "formula": {
+        "clauses": 1411871,
+        "sha256": "f908bd840af09aedcd7f47d31240bf4666c391c0a8b49dd5dbb083ca49350ebd",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 26,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-026.drat.gz",
+        "sha256": "447a66f0f452bebdd25356aead4d5ce5f01b392d34a2b064b6917aefa774954e"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-026-proof.json",
+        "sha256": "e16a26fa4d392c938d7dd8fad620de8d35ed37dafe78706581eb5978846585f4"
+      },
+      "scout_task_index": 323,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-027",
+      "branch_sha256": "f163cf9bf7e18b83854a1f871147b085dc9c7fd7b3ad7ce344bc712a4d0bbd37",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-027-case.json",
+        "sha256": "9862d206783c57f0b0c9a249e3df92693468fdd107102f56f317101ba01678a0"
+      },
+      "formula": {
+        "clauses": 1411875,
+        "sha256": "a8f1461dfb663a61c96b5af9922984fef7c930b184dbe9bd7327484fc7ccf9ca",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 27,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-027.drat.gz",
+        "sha256": "843941a81ea1c1d63aca02164d55dfc1beecb10a28c8fd66083298c010361791"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-027-proof.json",
+        "sha256": "9e3287c5449305ae1adc35aa137271e0401e2f0851f0c70c6178b28e7ddbb869"
+      },
+      "scout_task_index": 322,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-028",
+      "branch_sha256": "c41ec99724bcc4970daff37066406dbc76c0c62553939e964746ee84a840c90a",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-028-case.json",
+        "sha256": "3b73fa5da5caecbfa53c7bdda51af660af60015dc2120c96af254cd79b321876"
+      },
+      "formula": {
+        "clauses": 1411877,
+        "sha256": "6f82dec8a6c5bd32d81047caffd928e34e33b5576508b78508cdba0c29c1798d",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-028.drat.gz",
+        "sha256": "4d564274bae96e2edab7140562e650de1ff2f53a708b1b17c47b61b748cf75f3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-028-proof.json",
+        "sha256": "107d8d5f656265738abeabcd0a82ef489627680a771ed8888a50bc03c039a2c4"
+      },
+      "scout_task_index": 321,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-029",
+      "branch_sha256": "2fa6747414c50c70dd740d1ebda65b948df14be30f4916e11075fac2eacc3d0a",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-029-case.json",
+        "sha256": "00aef3582260000362e1ab4e27db34a8013879c827fb6be7dd4ed54988de11ab"
+      },
+      "formula": {
+        "clauses": 1411878,
+        "sha256": "8db72e09510191c302a83ffd06dac81666cdcc4724bd8f75ae0c9bc545295df6",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 29,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-029.drat.gz",
+        "sha256": "6e33344d1d0b837fc83529cc74f5b8d51113041d948b941c6b91af26900775a9"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-029-proof.json",
+        "sha256": "da956bad247c045a4ab737393d582c90db33afd161a7b27ccd38171ff11884ce"
+      },
+      "scout_task_index": 320,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-030",
+      "branch_sha256": "bb9830425e5535659316ded85e9c40d011044b24109081c7e96be148bd4e9d2f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-030-case.json",
+        "sha256": "37ecac8465d2c53e90fa3fedbc0d21e395ed15a4d46381d8fdac5653ffcaf2ac"
+      },
+      "formula": {
+        "clauses": 1411880,
+        "sha256": "b13488d8b39bc0a5d31d6b7b19b1b8d90c8605585fa74638db797e1e89372188",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 30,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-030.drat.gz",
+        "sha256": "4b1ad4b87977e4e08e183fbd305e294483ae3250466c913e8cc2d8d7cb5cb0d4"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-030-proof.json",
+        "sha256": "e5d4357a8b0925ae7af17ad4c65ce2666879c38a95ace89fc3429a10ea8ff84d"
+      },
+      "scout_task_index": 319,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-031",
+      "branch_sha256": "924dc23ee4c7019fd55c50d94f1cb51a15aaf16613406c5cf469d6d31a6e527d",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-031-case.json",
+        "sha256": "1b2b147b0654ce5d7fe55e217346d525110214e95664e46e4e1f74d601453748"
+      },
+      "formula": {
+        "clauses": 1411888,
+        "sha256": "742d95849568db285778f6317290b0dfeba973e62df52bbc52a8487eb23a8f2f",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-031.drat.gz",
+        "sha256": "abb974f9c74d6bb3abd1393ad685ee055e7b713c9ee2f9de80691346362658cd"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-031-proof.json",
+        "sha256": "47bf0bb1d1cfdcdebcf59521b128e9a67f1e20b0448b5a2c3aa599bedab4f1dc"
+      },
+      "scout_task_index": 318,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-032",
+      "branch_sha256": "5091c1b9d8e04e2808026e6b54dda3e017be7a1eda6f2ce00a31c1f7899ffceb",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-032-case.json",
+        "sha256": "e43443fbcee1933f1150c3bf7f722267001c2003c76ac457a4ec9b461f7959f3"
+      },
+      "formula": {
+        "clauses": 1411892,
+        "sha256": "57ddf4a0cb4c6cfe3b9b1294ff26c99f32bf59c0fb08500c1894f8de7cedafde",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-032.drat.gz",
+        "sha256": "4ec2932388b4c441d02cc76d1c66ae06a7428865e88e65c76ce6fbd65b9b2a16"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-032-proof.json",
+        "sha256": "2213b12ea1d8e1e7d5c1f6cfe53d6c3583b48ab054023d44b2a34167cf293b8e"
+      },
+      "scout_task_index": 317,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-033",
+      "branch_sha256": "5fc5be10e1273466dc64083d12595235fae759dd7405fbe5876c51dafde25735",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-033-case.json",
+        "sha256": "42191cf57bea8ad82445f967906e4cbc5dd07d2bee635ddcf8aaf1bd162b4a2f"
+      },
+      "formula": {
+        "clauses": 1411894,
+        "sha256": "ffbd45550b2542f529c3a2e768f379e40756aea100d840ccf3c7afff13ff209c",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 33,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-033.drat.gz",
+        "sha256": "a1f3f6c902af93fae31a56909d0566262ec11a562784bf05c2c4502b4381c912"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-033-proof.json",
+        "sha256": "e3e5a7a8a42c45c5838a397e8ec334a2d25dcfc175f83349c3824e3f6444f58a"
+      },
+      "scout_task_index": 316,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-034",
+      "branch_sha256": "6ff08d4bb4e75f4316a1ee21c40aaa9377f5bdefe5d7d2171768bdaf26b4bfa2",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-034-case.json",
+        "sha256": "7aa2b284cbad3b02e90f2fd69965ad28fa871a14bb0535707411099acebf06a8"
+      },
+      "formula": {
+        "clauses": 1411898,
+        "sha256": "af0dece678d48fac896fffa182350db49200aa83e3a0b06811976ad252813b87",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 34,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-034.drat.gz",
+        "sha256": "54d8214d2ae8729f6b10ec3cfdb449bc904ce8cd5245864f1f38e6f503f7a358"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-034-proof.json",
+        "sha256": "c660ec016249af574ced9d75bedb5ae7d245528990250dbf96a6fe564b123ad4"
+      },
+      "scout_task_index": 315,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-035",
+      "branch_sha256": "5ea8b59388fd89d224c05fcc24a2ce44d81e861433f05ce5bfcd24d66f40845b",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-035-case.json",
+        "sha256": "c4e58300a43d540f564529083f00749db4790127593c62f463da70b3415a821e"
+      },
+      "formula": {
+        "clauses": 1411900,
+        "sha256": "02cd4f174c70c5e5e69fda9c377b151587b4bb19d37bdbaf13a557cfc92d5270",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-035.drat.gz",
+        "sha256": "4c62f507b9d1a15bfc71420a7eda3ba27767fdd2cf51cdf13386abb4548a8cc0"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-035-proof.json",
+        "sha256": "2bc3f3b5555a1b6ea81708002c9fa244ef855e5e7507075b4fe775d2507990c2"
+      },
+      "scout_task_index": 314,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-036",
+      "branch_sha256": "3c0c33c618bbf8cf929e63ca16a9c91ae5b2304da19034dd76df5ad0686f09aa",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-036-case.json",
+        "sha256": "c07e61ddb8cc805056f8748b38db84e3ae27efad1e6c9bd98c2f724d239b8d40"
+      },
+      "formula": {
+        "clauses": 1411902,
+        "sha256": "a2ab2ba21e52f1d339fe00534e447622f87d38a14c2937349a27af167ac0de04",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 36,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-036.drat.gz",
+        "sha256": "291039941f6f913ebe0a1cfae537b0ababaea6f4f11f5adc093b814b80a72908"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-036-proof.json",
+        "sha256": "f104b4bf8767fa0d6a652ffc1b6dfc74005007a8543ad9c88ee267ee746dbd2b"
+      },
+      "scout_task_index": 313,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-037",
+      "branch_sha256": "9c4a14b0e697de862e16dc39b4edb1e2cbc4c1612581479a2f86af063cd4cfe5",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-037-case.json",
+        "sha256": "7e218142cde201eaea64e539e9d1f21b78225d91557b483da279f2058d2132da"
+      },
+      "formula": {
+        "clauses": 1411903,
+        "sha256": "20d33fd82ebdc4728152fa964259e65119e56a96da21e8a0bcb84171780fc746",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-037.drat.gz",
+        "sha256": "da831d4f6044eece97c24b94cc4e124fc3bb4fa6cc36dbe147784237a3405765"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-037-proof.json",
+        "sha256": "1e20c38dde5ebd92b1d516a1fc756c8daf7f931e085760cbf629f0c5e520b511"
+      },
+      "scout_task_index": 312,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-038",
+      "branch_sha256": "6d3dc0b6a81cd0959f5e270e8857f04dfdb885e25d400aaecf79d244502344c4",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-038-case.json",
+        "sha256": "2dbc3f48d1218d7e06e7632780535299b1308f0e019a9da73be1cf77368c4bff"
+      },
+      "formula": {
+        "clauses": 1411907,
+        "sha256": "4f92e0c2857b20f496e7676db0289edea55ab91dbdfd81fa51b695384a4ac5a1",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 38,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-038.drat.gz",
+        "sha256": "a4c1b7f66cc083ed831c4bc52c76dd602452edb23479fb87fc017681f3528b6d"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-038-proof.json",
+        "sha256": "f3f4b3d024fac27268873b748245cf6589e3742f91fc5e123ed94f42ca9ac2f9"
+      },
+      "scout_task_index": 311,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-039",
+      "branch_sha256": "db6f970ea1ca12b338978e2fa378851c09c48ccc06809ae3914fca427adfb7b2",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-039-case.json",
+        "sha256": "8d7e8b176b40b2d97fdf034666b86c00d6119b05bb28f5774b4a042dc35ee23e"
+      },
+      "formula": {
+        "clauses": 1411908,
+        "sha256": "43a6c9e717977c8ffc924af8d48b831a9cc8fd9190b5b6a109175904a327b9fe",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 39,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-039.drat.gz",
+        "sha256": "e728ede95af363b86328fc78c4cf40a71e1839d77c2d011fe29b6623ef6be02e"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-039-proof.json",
+        "sha256": "384f16e3c57ea7107749be2705e0e281493ec45f0e4afe15edca44ed08515ac0"
+      },
+      "scout_task_index": 310,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-040",
+      "branch_sha256": "a5241abf02ec53eb3d01ce614f4326346fa6ffb2063a589f370e51fbd73a992e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-040-case.json",
+        "sha256": "b9ce05ef9774cd0d2256eeec399183c5424e61b9bee619361ed7f53fb11ee4c3"
+      },
+      "formula": {
+        "clauses": 1411914,
+        "sha256": "6edddd221811b0bb7191a0cdda13a557844294032f0f7ab931276d50d1851794",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 40,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-040.drat.gz",
+        "sha256": "7a3ecc85756802ef1b65b6151eb7be75e78731d00957cf4aa358324a5c720666"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-040-proof.json",
+        "sha256": "f4ceaf2a4668a5842472155d837db7b0b88201bb9fe72ba5d85ed30828a71c6e"
+      },
+      "scout_task_index": 309,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-041",
+      "branch_sha256": "1698d1d3155829967517a6a675812dddac81da55e30915c1e465eba616b4a757",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-041-case.json",
+        "sha256": "87c688ddace4504db0fe292da3d021e338815a5d9bb8a45596b604cf02830bc7"
+      },
+      "formula": {
+        "clauses": 1411938,
+        "sha256": "9815a3f9317f18208e6d7a1e6d304529fad55ba000cf435e5c27b1b49096c406",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 41,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-041.drat.gz",
+        "sha256": "c162efd51e937e99b950687876d0a1adaeea5a282ee32447397ca30627050841"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-041-proof.json",
+        "sha256": "7310f095cb8eb5ef0b1d7a4c44495806ce5aba751cfc89b14642647e87c953c7"
+      },
+      "scout_task_index": 308,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-042",
+      "branch_sha256": "18adbb9386111e31bacfd4cb90d35c7da50e50f8873fd7f671b8d5b5b67df086",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-042-case.json",
+        "sha256": "7b3714adf71ea32f4f9bf0e030d9c902f5d9d6e6e4c82ed2cc77e5ff68f39bae"
+      },
+      "formula": {
+        "clauses": 1411944,
+        "sha256": "c848fdc080b9f0aee0ca84942fd0f812443b74d5f8a3a6b8eadb3a9730c87995",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 42,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-042.drat.gz",
+        "sha256": "5e3ec473f9af25bf516d20779a26f88701d625a35b586b41914f740ec6aa909c"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-042-proof.json",
+        "sha256": "559b8468631cb4225265f02da6ac7967df78edc3fba2ec35ea7d9c9f82cf5a4a"
+      },
+      "scout_task_index": 307,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-043",
+      "branch_sha256": "8f2bf8bab753c45aa0b898a4a580c62c977a5636860935a532888b7b561711ac",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-043-case.json",
+        "sha256": "7676ec63eb31cadca37aeb19ebea4b8025e5df7bb1bc02705c49c7fe38ec3097"
+      },
+      "formula": {
+        "clauses": 1411956,
+        "sha256": "1a3318f8a7419f69337b5f50da08fc755b5863bea63040d7deefa37068d92792",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 43,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-043.drat.gz",
+        "sha256": "7239da4d430f1c7d6ba9b3d9ba1f4f49be4c4614275be2d602319fc818cd5f7c"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-043-proof.json",
+        "sha256": "fc491938337638a068487d7e69d722441f7ce6dbe40e8e7e360b756405082a8c"
+      },
+      "scout_task_index": 306,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-044",
+      "branch_sha256": "550fc5a970d4cdd211e57f60d5aa4c80220bf413f852beaee4c34701564eb5b7",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-044-case.json",
+        "sha256": "d8d6ef465de6de78fc2987be5eb8b8f0d840eeb87b127595bbb0cc574be7f92c"
+      },
+      "formula": {
+        "clauses": 1411962,
+        "sha256": "4b8511548efca02a576c4c7ba52f9662ddfc4d9a12aca95a2ce22a1e34a55060",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 44,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-044.drat.gz",
+        "sha256": "e3720a753c8693af1b8af1aed952d5d1fdd09491476a2fdb68b0b5349129eeb0"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-044-proof.json",
+        "sha256": "f490a25a8143e6169926610f86c2ed155dc42c37a3531eb377f9f2bd905399b8"
+      },
+      "scout_task_index": 305,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-045",
+      "branch_sha256": "da64694b497d9d8b05a11a674eb23d97cf18e435ce36aea2929957303db05392",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-045-case.json",
+        "sha256": "034e5ac26550f9adc7f92ddc74a93d195237ae4becbf8005dade72230a42b117"
+      },
+      "formula": {
+        "clauses": 1411965,
+        "sha256": "6a5919458d27fec66c5b131542a97a0bdd8e1987fb621ac88b4940ca20ea9385",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 45,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-045.drat.gz",
+        "sha256": "74631c13b5116ce9c61439a51758a9c838cf2b63af12438fae0334b4f27f9af7"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-045-proof.json",
+        "sha256": "8471221c83f0c90dfcb96f0139edbf9316e06493621fbe312446db21bec7d8d4"
+      },
+      "scout_task_index": 304,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-046",
+      "branch_sha256": "1b686b2bd355203e884db330ece0bbeafd36f0b82ab97006384ba4ec4c4490bf",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-046-case.json",
+        "sha256": "ffa088843c2add8b5b5152fcc64a2e79c5fe469326a60a33831518091143c52a"
+      },
+      "formula": {
+        "clauses": 1411971,
+        "sha256": "62f3c7e7abf2a8ebe63d7443782681290c3acc715e7f229dd68a456d6c644c88",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 46,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-046.drat.gz",
+        "sha256": "e43a1a82cb95e81bb667fd5fc93cf4547dbc98bf130e499e86013190fb0bc28b"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-046-proof.json",
+        "sha256": "743dfb0948b4b918fa68e8908134b39243dfa6ebd87c2c9d1d656eb41e1ac23f"
+      },
+      "scout_task_index": 303,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-047",
+      "branch_sha256": "5fabd33752b07eb33cd849321e15711b90215d38ce807866d29a549c9db8a115",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-047-case.json",
+        "sha256": "68e822ce1b73a288132f6d611e277b67d5f036575b64bfb8b86d829a199e3d15"
+      },
+      "formula": {
+        "clauses": 1411974,
+        "sha256": "ec2aea04a02cf7d6ddcb806db43fedc0ad7e92b6d444dfe9bba3363dc3c1fd2e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 47,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-047.drat.gz",
+        "sha256": "57754a27c6e810ab9ea57c862b41ea1b27e80f6416534be014ab0258dd9c47a9"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-047-proof.json",
+        "sha256": "a5e8be2b3a7afa858a95be8e83e5e1af5241ddf901fa89c036fd068da6e81273"
+      },
+      "scout_task_index": 302,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-048",
+      "branch_sha256": "ecb6274b5ad395b5b6222ee77a934b0c5ff9e5e1a8172dfa4dcfa4e4a2a34529",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-048-case.json",
+        "sha256": "3da618e88652210753f9e17068f325bcf5081b57821b9fa1ed452b8988a921cd"
+      },
+      "formula": {
+        "clauses": 1411986,
+        "sha256": "aec87e737c91640d39da1a87395ac5190fe483424eca8752cdcc67f63e539c4e",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 48,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-048.drat.gz",
+        "sha256": "27c362a93ba0db3328fc7579abe8f05b193768d7f1fcb45d8dfd220ed5e19020"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-048-proof.json",
+        "sha256": "be5c056433edff7ae858fb052a25674213a182b74337c6c9d531a19f8a7b80c3"
+      },
+      "scout_task_index": 301,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-049",
+      "branch_sha256": "00f3a5b420cdc2835eb25c4552f5f3812e86bb564697b33bec0721b75d4a7b96",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-049-case.json",
+        "sha256": "9b12020e842e7b06a61c42086423f7de4fd4f8e400fee1175f65f0b630c443e7"
+      },
+      "formula": {
+        "clauses": 1411989,
+        "sha256": "1c82f36fcc7e3328fe0c0bc01545feb34e066917a58926a99085f3c599eee578",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 49,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-049.drat.gz",
+        "sha256": "fdc8028785f8ee7e87bc824852b40d378f47f09c752c6355ff9eff97a5714d95"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-049-proof.json",
+        "sha256": "c2372db9a69eac3d4c09133e32a9d88b6c1ce5d293c012b9a5384058097ad557"
+      },
+      "scout_task_index": 300,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-050",
+      "branch_sha256": "97bfaedc538a8df067e5d4cb09cd7223a273907ca7c699a9bd94ae94648df6e1",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-050-case.json",
+        "sha256": "798d562fde5cc4a75fb27faed411a301b2234865b2f8e4529ee4c756f34705fd"
+      },
+      "formula": {
+        "clauses": 1411995,
+        "sha256": "12fe373d1a3b15b5ab72a85b031f4f12f732ac3efad2832a9bb2148f8afcd0a8",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 50,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-050.drat.gz",
+        "sha256": "5ee4de87923fa997c900c31e43d76ed924fb45e78c2dae902959d1a45170dcca"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-050-proof.json",
+        "sha256": "f9b8886250a44b77d21142c73a4388822b0cb1cddcc840989d704efd2061af22"
+      },
+      "scout_task_index": 299,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-051",
+      "branch_sha256": "5ba586d03676dc8b85916cfe3c26a09e5a11c909d8db4aaf9c8717f5a25f5fa5",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-051-case.json",
+        "sha256": "8ce6b39b901f270f6239c91ce8479ffc654ae97cd3d2d7c5bad86cfe085dd02f"
+      },
+      "formula": {
+        "clauses": 1412019,
+        "sha256": "a454d93ed0a7220066b96660a3c69163177caa872b72ad4a71894a94284723cc",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 51,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-051.drat.gz",
+        "sha256": "a494fd4f9301748a2002c1d8db1b9eea7a58f8d1215b3dd3a44f34183f55942f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-051-proof.json",
+        "sha256": "325960555361789a7d8b6ce52d734444eaf076aee4f53d1a0061e4c9ee67d63b"
+      },
+      "scout_task_index": 298,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-052",
+      "branch_sha256": "83e0f35338654ca38f902bb9526dfca7e7b2c0baedd67654ab7dd40d62f76a15",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-052-case.json",
+        "sha256": "8c106cb03e929344c3b5c3e5f006334ed4d1614375ced19a8cef37ea942309fd"
+      },
+      "formula": {
+        "clauses": 1412031,
+        "sha256": "8134b6e1d46f64f8d35af21eb7e3a295fb793357030f754e01df4712dbed8d6d",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 52,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-052.drat.gz",
+        "sha256": "9e412ec1ed7765cdcc0d9bcbd3c08fe02cc2231853a86498da727933806714b5"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-052-proof.json",
+        "sha256": "51b9ee78857526f497315aa26c7d0ab743766fa8fb71eb03262c1f31e4c1fddb"
+      },
+      "scout_task_index": 297,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-053",
+      "branch_sha256": "061031d74a755d71d0734c06cad9ce2b1e55b12bc0d0adfb0db1965b24b76299",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-053-case.json",
+        "sha256": "6a222676b3b55836654665c957fa467f9fdb9ea17cb7b0b7fd51e0e10c92301b"
+      },
+      "formula": {
+        "clauses": 1412037,
+        "sha256": "5d95307e486989253c9293e3b134bc756987af9cc4890256b8f583d1f9258e88",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 53,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-053.drat.gz",
+        "sha256": "54cc1d972875de0573665ed20b5f56ab954a30323ffa2062db7b160ad232da72"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-053-proof.json",
+        "sha256": "3a74a0d0adb86b87ec81a76986c884d50a89e43f3936368909f449d9527ca8f1"
+      },
+      "scout_task_index": 296,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-054",
+      "branch_sha256": "c153b68f2ad5ecdb12a5885a3bf67de314d08329604007bdef6174f93dccfe7d",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-054-case.json",
+        "sha256": "f481a9b3ed40255d43626844f30d5091a6355f9414b8300521a2ca39ee7d34d0"
+      },
+      "formula": {
+        "clauses": 1412049,
+        "sha256": "c8292875dd8fb286f5fbb3c23acedb7787c5dadde0d245919ef3fda2dc707f5a",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 54,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-054.drat.gz",
+        "sha256": "33df589caf228962dfb5627e25dbacafc4d32b9d949eed412f06c58058f0b2e3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-054-proof.json",
+        "sha256": "b307bc968235187799224f64201d482f7e6691902cd39c080e57571f19deed79"
+      },
+      "scout_task_index": 295,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-055",
+      "branch_sha256": "11d0dcc86a58460c509137bfc58632b7f86f691fe4f9d0a44a67865c40e33889",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-055-case.json",
+        "sha256": "ae90998227655177c315420a332e25ffeaf6920ac93a87e84627226357e0c3b8"
+      },
+      "formula": {
+        "clauses": 1412061,
+        "sha256": "331baf1e2d5e821ee5b49a40cb43ad60f90ccfb59cf6ef889a8dfbe219a1c612",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 55,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-055.drat.gz",
+        "sha256": "93480802151b7e9fd73cb35809265e6876dd8cddf8b1db2303ea9d8116b181e2"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-055-proof.json",
+        "sha256": "325cf9cfb74b20d8e214fcd53fad15267935771a162a533c918e26574c738287"
+      },
+      "scout_task_index": 294,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-056",
+      "branch_sha256": "f0314bae22875769647b135d19bebcfec3b5f552ec11de7fa6f8eacf4720fece",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-056-case.json",
+        "sha256": "a1302ceb3fd8594a2b6abf30c02004088f1eccc42e1e0f71ea0c5a8556b47e35"
+      },
+      "formula": {
+        "clauses": 1412067,
+        "sha256": "adc3db71a6e26ccc958800b3822f0f0b6f5da94513770ddf4036a51214722cbb",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 56,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-056.drat.gz",
+        "sha256": "432e4fcee1f1f37827b321e25f300ed66f3cc7603bce8c0f7b17a9560037ccf9"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-056-proof.json",
+        "sha256": "504389373916f5b5c7ee9693acd2e73b2b8bdcfe8a3eab0f15a87b312e03c1b3"
+      },
+      "scout_task_index": 293,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-057",
+      "branch_sha256": "0d2238218adb3fc3d37a3b26b37f4ce88887c457617ca6786948b5b6283b53c5",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-057-case.json",
+        "sha256": "f0b181756409ec852de688765c9244a211723b3232239e500f702df9bfc8df2e"
+      },
+      "formula": {
+        "clauses": 1412070,
+        "sha256": "1b51f7fbf576a5c322360de27039e46a7a9e701237afab073a1e9d306249e8da",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 57,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-057.drat.gz",
+        "sha256": "e86b7c4c920af0c028d4e7ce68f996628d5a494d27764006528bd81e78e9c66e"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-057-proof.json",
+        "sha256": "023c166c5d114a70e158b1ba3f69cc289dfa99a1def0a0b353f48def4816384a"
+      },
+      "scout_task_index": 292,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-058",
+      "branch_sha256": "015ddee811fab504d9c51e718e82c7a81c13f174fe9c44fb18d01b3c31346544",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-058-case.json",
+        "sha256": "bc25b228676874ab98bdd868afe819676c85cbfc6dbdf3ad368c6967d2b19e7e"
+      },
+      "formula": {
+        "clauses": 1412076,
+        "sha256": "5735aaf83604efc59ba84afaf7b33e8329d7b30fec59ab506b8f49c095eeef74",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 58,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-058.drat.gz",
+        "sha256": "df2f2c1a76d36f2433bece9903d734149710ef459ecd1e1be5d524bc31da47ec"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-058-proof.json",
+        "sha256": "edb09eacae75a88bc5eae95f84c71961a079843d12d595919c70bb63187299a7"
+      },
+      "scout_task_index": 291,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-059",
+      "branch_sha256": "695ad7963efbbb44ef9069f6946524fc0d8d6b66ff01adde30054747880705cd",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-059-case.json",
+        "sha256": "c8517c97aa5c28bd37d91c388c4dba9db0349860fc6437461982eb0edbd8828e"
+      },
+      "formula": {
+        "clauses": 1412079,
+        "sha256": "46d8c9144a1aa1798ff34bf143d6c5cad61b286adaa1a4601cb511f2a6803685",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 59,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-059.drat.gz",
+        "sha256": "914c29a5ece1c798507aa5f2a8ad340d8e3268002f88bf2695c8349c502fe8f2"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-059-proof.json",
+        "sha256": "4f0c8f8f2b8f1e6f4221e7920bde5245e462d3bbebf2d4128fc6e458f63a11ac"
+      },
+      "scout_task_index": 290,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-060",
+      "branch_sha256": "df487b28c8afb1c61e4ab0ff5888ddb8f873f89d53fb137723ad9267c00e6cc9",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-060-case.json",
+        "sha256": "216e7b44d150e35b48a506d912e70772e78462a3cddd057fafaf67cc81315b41"
+      },
+      "formula": {
+        "clauses": 1412080,
+        "sha256": "b7777ae035717cd35fb2a2bfed7c0e5cfe4f4f22ceb282627286bd1d12abfea3",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 60,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-060.drat.gz",
+        "sha256": "f39c086fff2bf8ea6b14db958b13a575d444643c1cfd0bb94642dc3cc539b25f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-060-proof.json",
+        "sha256": "c8bc8fd858280bd7fc1119fd4cd738d2b03f1ec1b30c085966a01ca25eedc34c"
+      },
+      "scout_task_index": 289,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-061",
+      "branch_sha256": "6a2d2d0760e0696d2f7b763f26c32ba8c83a40531bf055552fa52b044964404f",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-061-case.json",
+        "sha256": "c7270ed1a9e49393b94ba83226af1be83f1d5b4cf7ee3aa1d0d2d6564d763d1a"
+      },
+      "formula": {
+        "clauses": 1412084,
+        "sha256": "841e331956085d3a4424024c4b395f81f76ae3fe8038fb71e121e2d3483f200b",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 61,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-061.drat.gz",
+        "sha256": "e201c4b5f5d88398aabe560608d1294e786e473f6f4182de6c330c9a7114fde3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-061-proof.json",
+        "sha256": "149aa14f0af38fd7b9d690dd374f905818b9d381f98dd7630197bb43dfeca598"
+      },
+      "scout_task_index": 288,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-062",
+      "branch_sha256": "3cea3a2ccbd0f6acb4a4d0059930a55be64e98fc6514904a038cc4f1fd412b55",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-062-case.json",
+        "sha256": "40eee12661ce8954f0f0e86f31b1af99767c491f882cea2b7b0e062a31ce99c4"
+      },
+      "formula": {
+        "clauses": 1412086,
+        "sha256": "71ffb8dca6f8b53d47e35ada799a5e3626e0827736f1a94e93a6e6efcab5908d",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 62,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-062.drat.gz",
+        "sha256": "fed14887a23351d563d0b0ea1ea6f3eb5c262980e0e78bdfe1cc2c50ccaf77b8"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-062-proof.json",
+        "sha256": "98aa5328b778b26a0babbc493ccb48c07c5c74b762dc0107f693daf7be684ffd"
+      },
+      "scout_task_index": 287,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-063",
+      "branch_sha256": "3cb6d3cdbefaea5d00f5042c0b16bfeb3d279437bef0bbedc4c01dc07d556a78",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-063-case.json",
+        "sha256": "411f343afd393a5da7521ee1ef0d4b90a5d2697c4472e12e1e5a4eb21743850e"
+      },
+      "formula": {
+        "clauses": 1412087,
+        "sha256": "69768d59cdd248c7026ea2e1e1a66f8f507d13a9dde4dd70729e5b88d38c4478",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 63,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-063.drat.gz",
+        "sha256": "62addb16bbaeac6017fc8eff90775cffda08bf5d0db945e4d0beaa2597e53003"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-063-proof.json",
+        "sha256": "bb0294acff0379158729f5b8cdca7c820e4664db3236a80e6fbe30e7c1f25c97"
+      },
+      "scout_task_index": 286,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-064",
+      "branch_sha256": "e8a36e14e1443280978a8898039caf7573542ee7ed17157a2ac6114c67b2f4c1",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-064-case.json",
+        "sha256": "56a7c2faab2b8f56ec0b7778e947baa4596ca7af50b899a175d5c0f3f9acf49d"
+      },
+      "formula": {
+        "clauses": 1412089,
+        "sha256": "16c99a5b85886f3b18017ebc723c045e9347696cafb3783f0cc6830405963056",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 64,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-064.drat.gz",
+        "sha256": "f5599eb4c719743235bc3e42630a477dd2fcfe7c6999214bd8ffdbde7dbf35d6"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-064-proof.json",
+        "sha256": "24955bacb0780563c35924e5807212262299b4fcb3f16575ba7928043844a478"
+      },
+      "scout_task_index": 285,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-065",
+      "branch_sha256": "7f2d7dd142bf97a4bc11213cb09523ed8cf798548dcd8262335ce0fdc2c0cfde",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-065-case.json",
+        "sha256": "d8db86f46a56f39127eeed3f41167278a9aae33e7e9fc4c99b60b8bc55bc49ef"
+      },
+      "formula": {
+        "clauses": 1412091,
+        "sha256": "d2d9576e5dd78ab211dae6533fcf0066c5d857bb7e0f73008a51593066671393",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 65,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-065.drat.gz",
+        "sha256": "15b7df781952336b2ba722c36294631458d5f9bad8d5ca5e1cef163a716028fd"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-065-proof.json",
+        "sha256": "e5f7750e126a11155abf9d15f3028614d32f10be1e8204d9a4b1ff265106afbc"
+      },
+      "scout_task_index": 284,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-066",
+      "branch_sha256": "a5ba2ffebd93e7a32017b810f0981b7d7644235e80e6e32995951a99dd982282",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-066-case.json",
+        "sha256": "d44e5be5818bac06deb798df8d41c3e44352b98c1c898fbd8c533b129bff562e"
+      },
+      "formula": {
+        "clauses": 1412099,
+        "sha256": "c586842c533c591a40ffc1b17ebd5fe8124fb45cce69c267b851122b27c284fb",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 66,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-066.drat.gz",
+        "sha256": "cb21e4ab9d7b1ea1f9e6c27a945e2d88a8bd0afd68a55e33a89c9c72ae40bb3f"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-066-proof.json",
+        "sha256": "1f702e4e74d1696233a0e9114828416c370709a918d7265189bfa19221915398"
+      },
+      "scout_task_index": 283,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-067",
+      "branch_sha256": "f1915f3f67d95849361e8135957ea8d989e61483c2527816afdb5eda3d7cc71b",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-067-case.json",
+        "sha256": "efb7af19c205c6f2cea0ed066c7c390c314322a01f4e3f3a3834360d6fb5e080"
+      },
+      "formula": {
+        "clauses": 1412103,
+        "sha256": "63039b3c0d882922442a5e6e222f90e12eaee37c7eb9bb7203cdfcbd63df4501",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 67,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-067.drat.gz",
+        "sha256": "a94f06eedf7bdf1be45c95511d9702a843884e6fa3287eac939e5c01b3fd0b14"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-067-proof.json",
+        "sha256": "08cf8f0687b7a4f6a24dc8c951833870e07b474f5cc739764009e8834bcf5166"
+      },
+      "scout_task_index": 282,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-068",
+      "branch_sha256": "b78c22beb3f086bd8a939d72d45b8cd9ce3bc9d0206cee80512c96d937cb9f2e",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-068-case.json",
+        "sha256": "9ecdc6c7448061659fdb9e278ea2626d3c08a04aed02e41feb05d8be51a912cc"
+      },
+      "formula": {
+        "clauses": 1412105,
+        "sha256": "66767e5160515cf309c1baea9c6e9654eaaab626f11ee808a762c47dbed61ac6",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 68,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-068.drat.gz",
+        "sha256": "643a3d4d1a0e4cbb7c7d14624f97edd9a0082d6a359193f0fba6773cdecb5a93"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-068-proof.json",
+        "sha256": "56b7e8ea1bd00fb76891eecac56b1fc203e889335a8ea5bd9e804dca5de09387"
+      },
+      "scout_task_index": 281,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-069",
+      "branch_sha256": "0c2d17ff7b2b8805583e06386ad8c50a1f355886a27e9e5867ed32c5d5c3aa31",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-069-case.json",
+        "sha256": "d26eaa0345f8a00c05771314da0ad9a6b67005799c23a01730333b97e95d37dd"
+      },
+      "formula": {
+        "clauses": 1412109,
+        "sha256": "bf8b36353992276184e49665536b3b263e664a2264b5ff937754cdd68c28d3ad",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 69,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-069.drat.gz",
+        "sha256": "77796f49c9ba65416a83062d8ebfe6fcb46922a5c2fc53f73410f74c117594e3"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-069-proof.json",
+        "sha256": "bb28367735e835713389c69a3e2257cd9d6cc035860a17f7508607453e9aba77"
+      },
+      "scout_task_index": 280,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-070",
+      "branch_sha256": "060da52fc1609fe2b568a42e8953ea88bf292ad6e18249c2db7459ce4b35c663",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-070-case.json",
+        "sha256": "4d2e037dbfae802e6d9cb401c0eb69c46b7cbf3d84e696c45be4b1c2368787d3"
+      },
+      "formula": {
+        "clauses": 1412111,
+        "sha256": "f4770608d53ff0d360692ebb66d821d90d3850f2affbbe6625a991c6b31208c7",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 70,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-070.drat.gz",
+        "sha256": "83fd151f1b383f0371c3b9fb9e3e4f531a005fc68b64d666a5a5982dd595d46b"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-070-proof.json",
+        "sha256": "180fb6e91ec34075d6dbd4a75a1f276149ae179ba6b9eb4a07f7a4ba05b27f5a"
+      },
+      "scout_task_index": 279,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-071",
+      "branch_sha256": "92fc860d21f3d6532d13e4ad20d6ec670123b895293dc07525154926f6081820",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-071-case.json",
+        "sha256": "4bace18deaf30ff9c39b79fab87b159fd824295fff62d5fbada9866f91243d53"
+      },
+      "formula": {
+        "clauses": 1412113,
+        "sha256": "3e356a360be248dd58a4270e98f5c1c0f1ea815614003590af8e5682cd41faf5",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 71,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-071.drat.gz",
+        "sha256": "dc6bf54cd16d78339f43e063cd85b6b05d432d7c235493b5a69c83edef3ee0f1"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-071-proof.json",
+        "sha256": "90485dc500c2809058ee0a0ce803b9b3b4e66401e5443ecb0be04aeec4715b13"
+      },
+      "scout_task_index": 278,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-072",
+      "branch_sha256": "0658ab65487aac654123b4c101b9d565012c92f513fe23182245b5e54f5318fe",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-072-case.json",
+        "sha256": "2420a6cbe98e301d5dd2b9dbd8fcd9b44530b4445f2564dfc255d9a78bf0f549"
+      },
+      "formula": {
+        "clauses": 1412115,
+        "sha256": "2b5560d048815ffe64487a8063ecad35978df948e9b421eb6b46d34fce82d45b",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 72,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-072.drat.gz",
+        "sha256": "6c8cd5ec2996c53c48f508301ab0b60085df880310da6275a2c95e77a0a74f56"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-072-proof.json",
+        "sha256": "9b27245c5649d7c619012a8b6798e327d72f387fe4ff62a58672713490a7735c"
+      },
+      "scout_task_index": 277,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-073",
+      "branch_sha256": "048706cf1ef75c65d8ccdadb0f9f37baf62e1400e4c732b067e91215db556ba3",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-073-case.json",
+        "sha256": "132fc1cbf09400a398e1aaea1eca3644c5b87f7fdaece13ce6cf21fae7ec0698"
+      },
+      "formula": {
+        "clauses": 1412116,
+        "sha256": "dd22333758dd1ab4117e4a6ea3c04f23cd4c2878bd56e5d2dfc32ef23c53e3a1",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 73,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-073.drat.gz",
+        "sha256": "82a3f1a017c5b3113e31db7feed241cebad0bae1f984ee4b79f39e901b26d1c8"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-073-proof.json",
+        "sha256": "8d80c777cb9cd20e121bbd0b48d811498f8db067d77521fb8e3569f427b2c1d1"
+      },
+      "scout_task_index": 276,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-075",
+      "branch_sha256": "2b24fd5a1ffdbdee9979fbe458ba4cef897482ec9212b0d27c46088688eb68aa",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-075-case.json",
+        "sha256": "5acefd7f6f1f8ffd490d38b3621a3c7fe77ec1b6e0663729bee026b6df1e2d57"
+      },
+      "formula": {
+        "clauses": 1412119,
+        "sha256": "e6ca29b06af01c3d428c4239f1ab60be85a247673c299001ef29298cab920a0a",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 75,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-075.drat.gz",
+        "sha256": "599f1ace021bba63db3f1c73b7f474d669c504fca0e71d5b83385828e2a66b17"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-075-proof.json",
+        "sha256": "7d5058ee03109364a60546222e5ee03e3c8664d4656e59e06c4e540dce345867"
+      },
+      "scout_task_index": 274,
+      "verified": true
+    },
+    {
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-083",
+      "branch_sha256": "914385994f0cb016051e9909e33b63cd338aa166d03dcd9a368d2fa1f4f00638",
+      "case_record": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-083-case.json",
+        "sha256": "9344608fb05e14828da30e67c75a450d37bbaad0ba40e54c68622ce723a0acbb"
+      },
+      "formula": {
+        "clauses": 1412197,
+        "sha256": "16c3d3e51969e7f14e0981496a42027b0564809724304fa703a956c062662037",
+        "variables": 392448
+      },
+      "fourth_orbit_index": 83,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-083.drat.gz",
+        "sha256": "f8f37718402f3eae3160ac8ea0150113749bd4bc48573563c0076dccde6c4642"
+      },
+      "proof_summary": {
+        "path": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/w4-weight5-intersection0--orbit-015--fourth-083-proof.json",
+        "sha256": "2ef896990da2406a43ae6da62258e055040df32e0ed83e13efe1b48ea2b96b3b"
+      },
+      "scout_task_index": 266,
+      "verified": true
+    }
+  ],
+  "certification_date": "2026-09-03",
+  "checker": {
+    "binary_sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "name": "drat-trim"
+  },
+  "per_child": [
+    {
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "proof_count": 29
+    },
+    {
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "proof_count": 15
+    },
+    {
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "proof_count": 28
+    },
+    {
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "proof_count": 68
+    }
+  ],
+  "pipeline_files": {
+    "Makefile": "edb7017e43a0f6f3b9aba0428dcdc47554d76e2984c178337007f01498300553",
+    "proof-expansion/Makefile": "d1ed43c7f55b94f878a35906ad88922783ec6a3b4b92cc3304c7c03aa591784c",
+    "proof-expansion/cli/audit_bundle.py": "767c5b70a92978e7ef98e494f264b77f0739f3666d3732551df9d83501cb1a9f",
+    "proof-expansion/cli/audit_plan.py": "6e531e96a10d84a575111b83022c6a3f9714529e2f30d67d272e9c3d06e1afcf",
+    "proof-expansion/cli/bootstrap_checker.py": "6d27430205bd7f7021ee5602eb7c782b3fe23987e08137326aa4dd3fa87ce469",
+    "proof-expansion/cli/build_bundle.py": "8d55b569c8fdddfe2fa7c83958f59aed1d23248c99e25404300f5b25db8aa312",
+    "proof-expansion/cli/generate_plan.py": "ce303b201341b3e43a02b995328a0088c1d5a12f927336cb027f7b806c8c73d9",
+    "proof-expansion/cli/prove_formula.py": "19a364afa201bf4d956b5d1ad259f4be36befd3e22bd52b8bdc41f51c5994be9",
+    "proof-expansion/src/fourth_word_drat/__init__.py": "48ed7d904e88602219a1b19e98393f4c088977f39ed0c4b277f704391b3899d0",
+    "proof-expansion/src/fourth_word_drat/bundle.py": "9e68193d65ef4c6161fb88653f47ca7044bd503cbd2a596bb63cc5892dff558b",
+    "proof-expansion/src/fourth_word_drat/proof_core.py": "bda89e414af56dc6dec1e65eb60ebaa5d373dea2137559a71d6d572308b5fae8",
+    "proof-expansion/src/fourth_word_drat/secure_io.py": "ce1a22e6843d892c8677b0f581d1298d05e48d1bdf7d6f8eace52c75f7a06074",
+    "requirements-proof.txt": "ebb8e5f98cc8645b1b56264be490a29f4e36905b32fbb6e1d56f42fdfca1ed8a",
+    "requirements-replay.txt": "857c2a422093d2d2e8f6aeb669b082a4b69a950084d9a00df2c3d814e6ea4dfa",
+    "requirements-sat.txt": "5c39718c34ee37edf082a7e7052045ef83ae6640f6099427d592ffcdd8391cdd"
+  },
+  "pipeline_python_tree": {
+    "file_count": 67,
+    "roots": [
+      "src",
+      "tools"
+    ],
+    "sha256": "7e984c759af935abf75f1d1234d4934688745317937b6fe9b72778d2c2994ab8"
+  },
+  "plan": {
+    "path": "proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json",
+    "sha256": "3f047f5d3dd4f5e9ffe67d38e425ccb4b6f5ea3274c07580c9ee57d08d0baa94"
+  },
+  "prior_rup_certificate": {
+    "bundle_manifest": {
+      "path": "evidence/fourth-word-rup-bundle-v1.sha256",
+      "sha256": "c0df74342c2fbf7c3e95e3609034d6b8106b9b9ab3129c994daa99348d6124aa"
+    },
+    "certified_branch_count": 184,
+    "certified_revision": {
+      "path": "evidence/fourth-word-rup-revision-v1.json",
+      "sha256": "cccb38a745c97d75dbe4493d508163ecbe0240b5b44326b1d450a95b7e272e93"
+    },
+    "proof_index": {
+      "path": "evidence/fourth-word-rup-proof-index-v1.json",
+      "sha256": "457eeb2fdcf68ca6dcdcd8b3e1c8c0934e23eb5dfaba8259ac4de25f662f2ef4"
+    },
+    "replay_attestation": {
+      "path": "evidence/fourth-word-rup-replay-attestation-v1.json",
+      "sha256": "a00aa7d2ee8d1aebc3c52f05f25a5b19041a31c675b6ea467fb0e7003ab40099"
+    }
+  },
+  "proof_directory": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2",
+  "record_type": "fourth-word-solver-drat-proof-index",
+  "resource_limits": {
+    "checker_output_bytes_per_run": 4194304,
+    "checker_seconds_per_run": 900,
+    "memory_watchdog_bytes_per_case": 12884901888,
+    "minimum_free_bytes": 8589934592,
+    "proof_command_seconds": 2400,
+    "raw_proof_bytes_per_case": 1073741824,
+    "retained_proof_bytes_per_case": 268435456,
+    "solve_seconds_per_case": 300,
+    "workers": 1
+  },
+  "result": {
+    "combined_certified_branch_count": 324,
+    "covering_number_status": "15 or 16",
+    "frontier_branch_count": 350,
+    "fully_closed_normalized_parent_count": 0,
+    "fully_closed_selected_child_count": 0,
+    "lower_bound_15": {
+      "basis": "inherited historical computational result",
+      "independently_reconstructed_here": false,
+      "literature_source": "literature_audit",
+      "table_update_date": "2006-01-17"
+    },
+    "newly_certified_branch_count": 140,
+    "remaining_branch_count": 26
+  },
+  "schema_version": 2,
+  "solver": "glucose4",
+  "solver_environment": {
+    "platform_machine": "arm64",
+    "platform_system": "Darwin",
+    "python_executable_path": {
+      "scope": "repository-relative",
+      "value": ".venv/bin/python"
+    },
+    "python_executable_sha256": "bdea59019a38eb6600cc9e71e984a97fedadc406448431281e7657030f54987e",
+    "python_implementation": "CPython",
+    "python_sat_distribution_version": "1.9.dev15",
+    "python_sat_native_modules": {
+      "pycard": {
+        "filename": "pycard.cpython-39-darwin.so",
+        "sha256": "5c83f6e48a6055ab9f59a668e8cfb8d8689d8d0b3bcfe64f23d56af4091c16ae"
+      },
+      "pyformula": {
+        "filename": "pyformula.cpython-39-darwin.so",
+        "sha256": "5658a4d0b5af690cd70d89e0bdb128389012e0e379f2dab3dea962ddc531ec9c"
+      },
+      "pysolvers": {
+        "filename": "pysolvers.cpython-39-darwin.so",
+        "sha256": "789d1a81ce5cd8cf4df9bed01f80b5829fd40fadd4fdad6b8015577643967aff"
+      }
+    },
+    "python_sat_tree": {
+      "file_count": 28,
+      "root": "pysat",
+      "sha256": "a8203508155c1d7021fbb039907ad4f4fc3f3814779a142a9f3d282a9bb25230"
+    },
+    "python_sat_version": "1.9.dev15",
+    "python_version": "3.9.6"
+  }
+}
