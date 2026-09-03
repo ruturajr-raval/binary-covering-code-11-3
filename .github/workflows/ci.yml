@@ -14,19 +14,32 @@ jobs:
       matrix:
         python-version:
           - "3.9"
+          - "3.10"
+          - "3.11"
           - "3.12"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: ${{ matrix.python-version }}
-      - run: python -m pip install -r requirements-sat.txt -r requirements-proof.txt
+      - run: >-
+          python -I -m pip install --isolated --no-input --no-cache-dir
+          --require-hashes --only-binary=:all: --no-deps
+          --index-url https://pypi.org/simple -r requirements-replay.txt
       - run: make third-word-child-formula-smoke fourth-word-formula-smoke PYTHON=python
       - run: make test PYTHON=python
+      - if: matrix.python-version == '3.9'
+        run: make fourth-word-rup-proof-smoke PYTHON=python
       - run: make audit-third-word-child-frontier PYTHON=python
       - run: make audit-fourth-word-hard-frontier PYTHON=python
+      - run: make audit-fourth-word-rup-plan PYTHON=python
+      - run: make check-fourth-word-rup-proof-index PYTHON=python
       - run: make verify-baseline verify-independent
       - run: make distance-bounds overlap-bound
       - run: make audit-two-word-cases
       - run: make verify-orbit-certificates PYTHON=python
       - run: make verify-integer-profile-certificates PYTHON=python
+      - run: make verify-release-manifest

@@ -1,0 +1,24 @@
+{
+  "case_id": "w4-weight5-intersection0::orbit-005::fourth-063",
+  "checker": "drat-trim",
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "checker_output": [
+    "c parsing input formula with 392448 variables and 1412140 clauses",
+    "c finished parsing",
+    "c UNSAT via unit propagation on the input instance",
+    "c 280 of 1412140 clauses in core                            ",
+    "c 1 of 2 lemmas in core using 280 resolution steps",
+    "c 0 RAT lemmas in core; 0 redundant literals in core lemmas",
+    "s VERIFIED",
+    "c verification time: <elapsed>"
+  ],
+  "checker_output_line_count": 16,
+  "checker_output_sha256": "d8bbc93de6d173a4c4bfc0222ba05ac9ee97faa9ec5b05eecfa1fc01c7f4f34f",
+  "checker_timing_normalized": true,
+  "checker_warning_count": 0,
+  "formula_sha256": "bda7fd249c2bf0a84faa6a7259b348c5e2f48cb6fcfe77b76f34dc7412c444a3",
+  "proof_compressed_sha256": "89ed3b723e0e40d8957a2df55fcb04d57b6d95fa665c5fe67b098df7f29694ae",
+  "proof_uncompressed_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+  "return_code": 0,
+  "verified": true
+}

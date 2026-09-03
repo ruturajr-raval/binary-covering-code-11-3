@@ -1,0 +1,40 @@
+{
+  "bundle_manifest": {
+    "path": "evidence/fourth-word-rup-bundle-v1.sha256",
+    "sha256": "7e10f03b7dc9ef216c08d41a030f9f114725de96763d6e25c06f70beca2bb11e"
+  },
+  "certified_release_manifest": null,
+  "certified_revision": null,
+  "certified_tree": null,
+  "clean_checkout_replay": {
+    "command_results_sha256": null,
+    "commands": [
+      "git clone --no-hardlinks --no-checkout <repository> <clean-replay>",
+      "git checkout --detach <certified-revision>",
+      "git rev-parse HEAD",
+      "python -I -m venv .venv",
+      ".venv/bin/python -I -m pip install --isolated --disable-pip-version-check --no-input --no-cache-dir --require-hashes --only-binary=:all: --no-deps --index-url https://pypi.org/simple -r requirements-replay.txt",
+      "make test PYTHON=.venv/bin/python",
+      "make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python",
+      "make verify-release-manifest PYTHON=.venv/bin/python ALLOW_PENDING_REVISION=1",
+      "git diff --exit-code",
+      "git status --porcelain --untracked-files=all"
+    ],
+    "completed_on": null,
+    "passed": false,
+    "revision": null,
+    "toolchain": null,
+    "working_tree_clean": false
+  },
+  "proof_index": {
+    "path": "evidence/fourth-word-rup-proof-index-v1.json",
+    "sha256": "56d74184e9f7d911bc952962ed818bec63948ad5bb8b7f5bb1347463e67a3b23"
+  },
+  "record_type": "fourth-word-rup-certified-revision",
+  "replay_attestation": {
+    "path": "evidence/fourth-word-rup-replay-attestation-v1.json",
+    "sha256": "a04adc03c27955eb68b36e9814fed709fb1bb6bec274fda2c80a18171bef3cad"
+  },
+  "schema_version": 1,
+  "status": "pending-clean-checkout-replay"
+}

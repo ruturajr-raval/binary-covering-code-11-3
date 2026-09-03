@@ -9,6 +9,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from repository_lock import subprocess_lock_kwargs
+
 
 def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -21,6 +23,7 @@ def run_command(arguments: list[str], environment: dict[str, str]) -> None:
         capture_output=True,
         text=True,
         env=environment,
+        **subprocess_lock_kwargs(environment),
     )
     if result.returncode != 0:
         output = result.stdout + result.stderr

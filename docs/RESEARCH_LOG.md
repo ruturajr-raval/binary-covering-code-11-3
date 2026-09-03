@@ -1,5 +1,45 @@
 # Research Log
 
+## 2026-09-03
+
+- Classified all 350 fourth-word branches under branch assumptions by unit
+  propagation with Glucose 4 and cross-checked every status with Glucose 4.2.
+- Identified exactly 184 RUP-conflicting branches and 166 branches outside
+  that proof class.
+- Regenerated and independently audited each of the 184 selected branch
+  formulas.
+- Retained an immutable v1 bundle with formula metadata, proof summaries, and
+  checker records for all 184 branch certificates.
+- Rebuilt `drat-trim` from pinned commit
+  `2e3b2dc0ecf938addbd779d42877b6ed69d9a985`, validated the exact tracked
+  modes and raw source bytes, and accepted every proof.
+- Staged the complete bundle, audited it independently, rechecked its exact
+  digests, and durably promoted it with interruption recovery.
+- Replayed all 184 retained certificates in a second fresh run against
+  freshly regenerated formulas.
+- Retained an unsigned local self-attestation binding the proof-index hash,
+  checker binary, pipeline source hashes, exact interpreter command, Python
+  executable, `pysat` source tree, native modules, and all 184 outcomes.
+- Serialized authenticated writers, auditors, and manifest verification with
+  a shared inherited repository lock.
+- Made classification and proof-plan publication a crash-recoverable,
+  journaled two-file transaction.
+- Required structural index audits to match every current pipeline file and
+  the complete current Python source tree.
+- Added a dedicated 558-entry root manifest for the classification, plan,
+  index, attestation, and 554 proof artifacts, with exact declared membership.
+- Added a hash-locked replay dependency set for CPython 3.9 through 3.12 and
+  checked every retained wheel hash against package-index metadata.
+- Added an isolated clean-checkout certification path that sanitizes Git,
+  Make, Python, package-manager, hook, filter, and environment state before
+  rerunning the full test and proof-audit sequence.
+- Required the final certification record to bind a Git revision, release
+  manifest, command-result digest, and SHA-256 hashes of the Git, Make, and
+  Python executables used for replay.
+- Recorded the exact claim boundary: 166 fourth-word branches remain, no
+  selected third-word child is closed, no normalized parent is newly closed,
+  and the exact covering number remains 15 or 16.
+
 ## 2026-09-02
 
 - Audited the current binary covering-code table and selected the one-gap cell

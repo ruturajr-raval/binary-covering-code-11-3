@@ -1,0 +1,19 @@
+{
+  "case_formula": "build/proofs/fourth-word/w4-weight5-intersection0--orbit-005--fourth-081.cnf",
+  "case_formula_sha256": "02194363b620b94b2bf6dfc06882825410c87c2bcc68fd670a036e1bc563bdd7",
+  "case_id": "w4-weight5-intersection0::orbit-005::fourth-081",
+  "clauses": 1412213,
+  "proof_compressed": "evidence/proofs/fourth-word-rup-v1/empty-clause-rup.drat.gz",
+  "proof_compressed_bytes": 22,
+  "proof_compressed_sha256": "89ed3b723e0e40d8957a2df55fcb04d57b6d95fa665c5fe67b098df7f29694ae",
+  "proof_compression": "gzip",
+  "proof_format": "text DRAT",
+  "proof_lines": 1,
+  "proof_strategy": "empty-clause RUP",
+  "proof_uncompressed_bytes": 2,
+  "proof_uncompressed_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+  "proof_verification": "recorded in a separate check file",
+  "solver": "unit propagation",
+  "status": "UNSAT",
+  "variables": 392448
+}

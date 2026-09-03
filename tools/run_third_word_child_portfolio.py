@@ -21,6 +21,7 @@ from generate_third_word_child_formula import (
     repository_root,
     resolve_repository_path,
 )
+from repository_lock import subprocess_lock_kwargs
 
 
 class StatisticsSolver(Protocol):
@@ -67,6 +68,7 @@ def current_git_commit(root: Path) -> str:
         capture_output=True,
         text=True,
         cwd=root,
+        **subprocess_lock_kwargs(),
     )
     commit = result.stdout.strip()
     if len(commit) != 40:
@@ -81,6 +83,7 @@ def git_worktree_state(root: Path) -> str:
         capture_output=True,
         text=True,
         cwd=root,
+        **subprocess_lock_kwargs(),
     )
     return "dirty" if result.stdout else "clean"
 

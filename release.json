@@ -1,13 +1,14 @@
 {
-  "version": "0.1.1",
-  "release_date": "2026-09-02",
-  "artifact_status": "verified_baseline_structural_bounds_and_partial_proof_frontier",
-  "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches.",
+  "version": "0.2.0",
+  "release_status": "candidate",
+  "release_date": null,
+  "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_fourth_word_rup_bundle",
+  "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches, leaving 166 branches and all four children open.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
-  "new_result_status": "not_established",
-  "partial_progress_status": "significant_verified_proof_frontier",
-  "artifact_reproducibility_ready": true,
-  "artifact_release_ready": true,
+  "new_result_status": "certified_partial_fourth_word_branch_reduction",
+  "partial_progress_status": "significant_verified_proof_frontier_without_complete_child_closure",
+  "artifact_reproducibility_ready": false,
+  "artifact_release_ready": false,
   "theorem_announcement_ready": false,
   "result_routes": {
     "construction": {
@@ -29,15 +30,21 @@
     "partial_proof_frontier": {
       "artifact_complete": true,
       "scope": "112 of 150 normalized branches closed, with 38 residual branches listed and hashed."
+    },
+    "fourth_word_rup_bundle": {
+      "artifact_complete": true,
+      "scope": "184 of 350 exhaustive fourth-word branches closed within four selected hard third-word children; 166 branches remain and no complete child or normalized parent is closed."
     }
   },
   "limitations": [
     "The exact value remains either 15 or 16.",
     "The retained 15-word near-cover leaves 28 words uncovered.",
     "Thirty-eight normalized residual branches remain unresolved.",
+    "The fourth-word bundle leaves 166 branches unresolved and closes no complete third-word child or normalized parent.",
     "Solver timeouts and unlogged statuses are not mathematical evidence of impossibility.",
     "Sharp witnesses for the retained overlap row system are not claimed to be realizable covers.",
+    "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
     "No external mathematical review has occurred."
   ],
-  "last_reviewed": "2026-09-02"
+  "last_reviewed": "2026-09-03"
 }

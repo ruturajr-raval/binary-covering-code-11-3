@@ -1,23 +1,28 @@
 {
   "schema_version": 1,
   "project": "binary-covering-code-11-3",
-  "evaluated_at": "2026-09-02",
+  "evaluated_at": "2026-09-03",
   "candidate_claim": null,
   "gates": {
     "significant_original_result": false,
     "prior_art_refreshed": false,
     "complete_orbit_manifest": true,
     "independent_manifest_audit_passes": true,
+    "fourth_word_rup_classification_audited": true,
+    "fourth_word_rup_proofs_replay": true,
+    "all_selected_fourth_word_branches_closed": false,
+    "closed_third_word_child_from_fourth_word_bundle": false,
+    "closed_normalized_parent_from_fourth_word_bundle": false,
     "complete_child_formula_manifest": false,
     "independent_child_formula_audit_passes": true,
     "construction_verified_twice": false,
     "all_required_proofs_replay": false,
     "clean_checkout_replay_passes": false,
-    "claim_scope_audited": false,
+    "claim_scope_audited": true,
     "limitations_documented": true,
     "manuscript_ready": false,
     "external_review_addressed": false
   },
   "decision": "hold",
-  "reason": "The live child frontier and per-child formula reconstruction are independently audited, but no complete child proof manifest is retained and the 38 residual parents remain open."
+  "reason": "The attested fourth-word v1 bundle checks 184 of 350 branches across four selected children. The other 166 branches remain unresolved, no selected child or normalized parent is closed, and all 38 residual parents remain open."
 }

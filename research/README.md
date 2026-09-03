@@ -1,6 +1,6 @@
-# Research Workbench
+# Research Record
 
-This directory records the attempt to determine the exact value of
+This record documents the attempt to determine the exact value of
 `K_2(11,3)`.
 
 The current certified frontier is a verified 16-word cover and a complete
@@ -28,24 +28,35 @@ parents, and the 2,163 children that survive all retained static constraints.
 The four hard children from the first focused parent have an independently
 audited fourth-word split documented in
 `research/FOURTH_WORD_HARD_FRONTIER.md`. It contains 350 exhaustive orbit
-branches. These are search subdivisions, not certified closures.
+branches. Checked reverse-unit-propagation certificates close 184 individual
+branches, while 166 remain unresolved. No complete third-word child or
+normalized parent is closed by this bundle.
 
 ## Records
 
-- `claim.yaml` defines the exact scope of the candidate result.
-- `release-gate.json` records which promotion requirements have been met.
-- `run.schema.json` defines the minimum metadata for retained computations.
-- `runs/2026-09-02-fourth-word-portfolio.json` retains the complete
+- `research/claim.yaml` defines the exact scope of the candidate result.
+- `research/release-gate.json` records which promotion requirements have been
+  met.
+- `research/run.schema.json` defines the minimum metadata for retained
+  computations.
+- `research/runs/2026-09-02-fourth-word-portfolio.json` retains the complete
   exploratory fourth-word scout and its adjacent provenance record.
-- `/.research-artifacts/` holds local exploratory outputs and is not tracked.
+- `evidence/fourth-word-rup-proof-index-v1.json` indexes 184 checked
+  fourth-word branch certificates.
+- `evidence/fourth-word-rup-replay-attestation-v1.json` records a second full
+  replay as an unsigned, hash-bound local self-attestation.
+- `evidence/fourth-word-rup-bundle-v1.sha256` authenticates the complete
+  fourth-word v1 evidence bundle.
 
 Every child branch must be linked to its parent, canonical representative,
 stabilizer data, imposed constraints, and content digest. The current ledger
 provides these links. A child-level CNF generator and an independent auditor
 now reconstruct the exact minimum-distance, parent, orbit-prefix, and matching
-constraints for any live child. A complete child-formula manifest is not
-retained, and no child is closed without a proof accepted by an independent
-checker. Solver status alone is not retained as a mathematical conclusion.
+constraints for any live child. For the four selected hard children, the
+retained v1 proof bundle authenticates 184 branch formulas and their
+independently checked RUP certificates. The remaining 166 branches have no
+retained closure, and solver status alone is not treated as a mathematical
+conclusion.
 
 ## Promotion Standard
 

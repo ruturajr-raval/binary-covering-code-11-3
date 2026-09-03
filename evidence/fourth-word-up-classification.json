@@ -1,0 +1,2861 @@
+{
+  "branch_count": 350,
+  "branches": [
+    {
+      "assumption_count": 1,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-000",
+      "branch_sha256": "317c471ab3b19ce58b0696702f2014269359aee527cf0eddbba6fa9ff92b56fd",
+      "fourth_orbit_index": 0,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 10,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-001",
+      "branch_sha256": "78a1a479ea712caee1bcc42759a60390fc6e2219910946976f130cf2eaede020",
+      "fourth_orbit_index": 1,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 28,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-002",
+      "branch_sha256": "ad7a02563b4bd9951907bdb199e424b456554582c695fa85ee82c77383439354",
+      "fourth_orbit_index": 2,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 46,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-003",
+      "branch_sha256": "b52a77a64bfe6b7c0ac914072c7a5d17fc71dbbea61390993d669ba37dbe182c",
+      "fourth_orbit_index": 3,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 55,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-004",
+      "branch_sha256": "fa8e0b305ec51d7a4cb9e13ca79e1ef5c8a597d05e6944911241004c8890a717",
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 58,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-005",
+      "branch_sha256": "3f9fa9fc8a1b4d6f64ea8b074a6f7ee01262ead037d09b7a9cbeb9f982987ce1",
+      "fourth_orbit_index": 5,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 61,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-006",
+      "branch_sha256": "d42c14a4685742876df11531851f3ae3c9b62c3ae1ffd9b21a352272743d03a9",
+      "fourth_orbit_index": 6,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 64,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-007",
+      "branch_sha256": "d053c5d5c486b716f1b7e7ac3a4c2d2b415f82add3cc57ac3ca00ef16a703402",
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 70,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-008",
+      "branch_sha256": "52d235a37131c4d0227b930fded7ab150ca55574853a471dded8e9fb8e10369d",
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 72,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-009",
+      "branch_sha256": "d0d1cd473340f9c76734023642484b7c438fe25f4af8b26fd4b4188785f6eb39",
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 73,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-010",
+      "branch_sha256": "12e854d31239b828171997cc974e8e441b06b19f6b807abd42b4027535da4660",
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 79,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-011",
+      "branch_sha256": "0c25d0148906c5aefde4b798098d332792823cab72a41d3713c5dcae851fc326",
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 115,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-012",
+      "branch_sha256": "5e969ac743aa42f5e82c013086fb5cda2a2f8b5c5762622b915a7383541469cf",
+      "fourth_orbit_index": 12,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 151,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-013",
+      "branch_sha256": "71063dd154cc4eb2f7bfb1febd511fad101330bd81f173733f262b1598a56c0f",
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 169,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-014",
+      "branch_sha256": "8fc12b583e7bcdb2cbff392dc70ce334b8dc5cb78a4f8b79479d0443f795ed8e",
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 187,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-015",
+      "branch_sha256": "0e5b8229eb3a4869d36d2b2ee74bbbf1521991549b4588c7d7e84372a3c75eb0",
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 193,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-016",
+      "branch_sha256": "183ef39a104e9c4c2dbc555fe26fb189ca03ff54c2ae58e4e28997a4fdc34cc7",
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 211,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-017",
+      "branch_sha256": "2a70df66db4a24fffeace9d96786e327123b348271875a1a82ec1847a8bd41d8",
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 229,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-018",
+      "branch_sha256": "97aedd8025b3d391c516efcba440575764342b5914178ffe428ef92cc0086c2a",
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 265,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-019",
+      "branch_sha256": "d27d73d362eda8f7a05766db7c2f31f13aabde9cbc3c22f4d83847607bf4f7bf",
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 301,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-020",
+      "branch_sha256": "d6002fc3caadca3efde06e6d278dd703156f85d44bdb18dc0cabfa92ab6a6208",
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 337,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-021",
+      "branch_sha256": "4dd1c87d5465b51cad64df0f4651bd25fdf5b8ffeed615ca5720c3912449b325",
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 373,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-022",
+      "branch_sha256": "39ecb50b3f5a4214977ef60827aeb16d8d5ac573b43664570cc86b7ce69d771c",
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 385,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-023",
+      "branch_sha256": "a982318c5eca0848b7b3ef5703ba1a7ee6790199551951e72db1eaa64135144e",
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 403,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-024",
+      "branch_sha256": "eaa650ae21b083fd47b6639101a191479a8e9e50a5ce97b47fdea6d38214d2f6",
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 421,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-025",
+      "branch_sha256": "c0d14fe7a40a891913d469cfb008e48be771a3c0fff5424dfcbbba3aa6ae9203",
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 427,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-026",
+      "branch_sha256": "76af45c8de86bd1a6abf62de6ef5b14f5ab31418521b9ce0e7119a6d753dc452",
+      "fourth_orbit_index": 26,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 433,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-027",
+      "branch_sha256": "acf7aad35b98850f9f0aa65121dfce06735ea30195bb61d7c1770b1756db5bd3",
+      "fourth_orbit_index": 27,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 435,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-028",
+      "branch_sha256": "234749e8fb43137762c6069347f1959bf9f5ca183b74d6423455401301855675",
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 441,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-029",
+      "branch_sha256": "4694115a968908b12ddb1ef82a4474b6f9ce1c83543bc83109820dd631e1b429",
+      "fourth_orbit_index": 29,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 447,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-030",
+      "branch_sha256": "e200b291911d6a463f36b7463fc31449915aff4b0aaf59550eeb657fa973db83",
+      "fourth_orbit_index": 30,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 453,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-031",
+      "branch_sha256": "94dc5846dc1bbcb83ce1143ee967d7d65bd4a5db6530f65c5929b1437ea7251d",
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 459,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-032",
+      "branch_sha256": "26f74f6bb3ddde27e8186d602b5926147fcf4327e1c4acdd7f5ebcfc9223ab8e",
+      "fourth_orbit_index": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 461,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-033",
+      "branch_sha256": "8444226b9152556f81179c9d991d1ffd69b17042c56f67f577854fa6043a5d45",
+      "fourth_orbit_index": 33,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 473,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-034",
+      "branch_sha256": "48a2b2b54a24ac9d4c363ed5b2d1be205fc1e14ea9f6ea7847afff0f040fcd08",
+      "fourth_orbit_index": 34,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 485,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-035",
+      "branch_sha256": "64336e8e47643f489c3519a54ea69cbf78f296e96fe8e158349efa2ced193cbc",
+      "fourth_orbit_index": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 497,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-036",
+      "branch_sha256": "ea313e00712c468f4e25c065e1d1314480262da5deb54cf858ec3ad49b2373c2",
+      "fourth_orbit_index": 36,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 501,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-037",
+      "branch_sha256": "c312cab37ddb2e6065e0070d111b510da19eac9fdb2347bd665edb8d1ea356ef",
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 505,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-038",
+      "branch_sha256": "3123e2436f5a1d5795ac5a4541b652ba643d835de0b4d869d5222636ba924529",
+      "fourth_orbit_index": 38,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 511,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-039",
+      "branch_sha256": "42a264c0137a976fe9a4773ebb9ebcd9a4870c735ed4858dda89d707235d4cf7",
+      "fourth_orbit_index": 39,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 513,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-040",
+      "branch_sha256": "e185faaccb1fda8f8f87fa2d86f3cac9d2693b2598af3c602a4c7295b8537d54",
+      "fourth_orbit_index": 40,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 515,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-041",
+      "branch_sha256": "6f4623972ed4ca7f9903d055396aa6f897d4b2dfc050039623444a915137e53d",
+      "fourth_orbit_index": 41,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 521,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-042",
+      "branch_sha256": "d99282623f342e4de60e24d2c8eb68f904fc97b0e6564582840e565631b63e50",
+      "fourth_orbit_index": 42,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 522,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-043",
+      "branch_sha256": "7d44c7c3d34b2fc206b0213b0ea2cf68fb1e15d13efa5b83bf2ca4a0d0f7be77",
+      "fourth_orbit_index": 43,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 531,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-044",
+      "branch_sha256": "01179c5dd5d3d3bd855db87684216bbba71d192bb3b4a4b22a234540dcedab95",
+      "fourth_orbit_index": 44,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 540,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-045",
+      "branch_sha256": "0536f04c4513dc074b06b4979d6aa54682dd055da0c945f9a4645868af10f4dc",
+      "fourth_orbit_index": 45,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 558,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-046",
+      "branch_sha256": "12c2f53e95073acdd4ac988acb5c3c6630a8f993de620fdbe014c2b5a82530f5",
+      "fourth_orbit_index": 46,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 576,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-047",
+      "branch_sha256": "25bda2764961eda903bd7c854271d11983904d12d07d920990e8e09c651bbebe",
+      "fourth_orbit_index": 47,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 594,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-048",
+      "branch_sha256": "97c68f13bdb58c3036db86f48fe584c7579055b7112992a0df7fa3c69a3ce088",
+      "fourth_orbit_index": 48,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 600,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-049",
+      "branch_sha256": "1e2af2626511fdb1532d2ec517deb87b46a1853bf94eb168c6bd65bbc01536f9",
+      "fourth_orbit_index": 49,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 609,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-050",
+      "branch_sha256": "c488b53798593028983c7d70d72239632abd8dc513577197e97cd4883ad3d659",
+      "fourth_orbit_index": 50,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 612,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-051",
+      "branch_sha256": "dce279a537f09ea0b8beca86e5f439f8f2dfe30a381539e5c54170d1888bf27d",
+      "fourth_orbit_index": 51,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 615,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-052",
+      "branch_sha256": "b850cb7c5eb393920ca04bcf4ea890c2b033892757ded7d755f36e95bfa63163",
+      "fourth_orbit_index": 52,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 618,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-053",
+      "branch_sha256": "0b1f9fc81d6456b2a2b9fda7d52322140551c6779510ff55098452b2259d7c9b",
+      "fourth_orbit_index": 53,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 627,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-054",
+      "branch_sha256": "46c1217533754cb28149b3171348c57ed4381bfb1328c7b5e5fe427237374870",
+      "fourth_orbit_index": 54,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 636,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-055",
+      "branch_sha256": "5e3742dcdc77930c13fa12494d51b131b274472f707d63f60602dfbd73e66e5a",
+      "fourth_orbit_index": 55,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 645,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-056",
+      "branch_sha256": "3839698998cc2fb0f32a1b64d60ee6af611bbabef6ba47df2bcc16bf7f6663d4",
+      "fourth_orbit_index": 56,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 654,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-057",
+      "branch_sha256": "30e7e383fc9bf9252f4ddfaee873cbd98f2af761e64722296449aea59737aad5",
+      "fourth_orbit_index": 57,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 657,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-058",
+      "branch_sha256": "e472b144b221c0a1f178cce7f2c1fc177bddf7c7a6bff5914272d8a689f9f913",
+      "fourth_orbit_index": 58,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 675,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-059",
+      "branch_sha256": "5d6bc89a4d11c03197eb47d31f61ac7b88a0408473634505ae096b77cd19bfca",
+      "fourth_orbit_index": 59,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 693,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-060",
+      "branch_sha256": "7bb2916be1cc383521ebc89e066b5c4f2e99640bc7031ed3c50c124f6ea8f65d",
+      "fourth_orbit_index": 60,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 711,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-061",
+      "branch_sha256": "b41322c6999069f995dca0420712a3d7099136b1c04bbf3ce808881b5b4199e3",
+      "fourth_orbit_index": 61,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 729,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-062",
+      "branch_sha256": "89dcce838cc735dc55ce314756bb0bf82bdc93d906d9a32310bab6855cd3ea6f",
+      "fourth_orbit_index": 62,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 735,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-063",
+      "branch_sha256": "ef21af9d035529c0ab6c0160ad452a2b2a1b5c11bea23046c42ba0fb47aec5da",
+      "fourth_orbit_index": 63,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 741,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-064",
+      "branch_sha256": "a18ba755706a3d4cb2f01f9b099564ca7c3f4ea71bd66a3a10d0de9e62313d6a",
+      "fourth_orbit_index": 64,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 750,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-065",
+      "branch_sha256": "7bfe4a65f579e3e100a2d4852462e4c80de3092eba7b88430893453225248653",
+      "fourth_orbit_index": 65,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 759,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-066",
+      "branch_sha256": "eb442f0a5a5160c66882cd946c875bd57eafd3c59bedf5adb1e7875d725a4579",
+      "fourth_orbit_index": 66,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 762,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-067",
+      "branch_sha256": "770206cda42c065f858c6169f6e4ce7963dc663f744df8981caebacea901956f",
+      "fourth_orbit_index": 67,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 765,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-068",
+      "branch_sha256": "aa496832db60a65a89ca4ca37c66f4fcaa7ade01ffc50e4633b827fbb2646d20",
+      "fourth_orbit_index": 68,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 766,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-069",
+      "branch_sha256": "ae34547489f92fc853b36cafb387aebfacb9c317a69354196d31182ac6e117bc",
+      "fourth_orbit_index": 69,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 769,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-070",
+      "branch_sha256": "d667c09ade8b45dd68a77540cbbed7d6e2f11351bd3ed1fe7ef1d72fba892dc6",
+      "fourth_orbit_index": 70,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 772,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-071",
+      "branch_sha256": "e68f555b9d86468b15c49a0cb4993d0bfaae90ac9865e68abb681ddb95c84c32",
+      "fourth_orbit_index": 71,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 775,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-072",
+      "branch_sha256": "02bcfa20e6d0c361b7f7c76031efc681f7e1fcc569c2c73c0284228bcf133d47",
+      "fourth_orbit_index": 72,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 778,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-073",
+      "branch_sha256": "2c03024a704bd3b74e311cb163f0a5cb5dca82c9dc569284f1bd03d71e06295b",
+      "fourth_orbit_index": 73,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 779,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-074",
+      "branch_sha256": "d329f8e9e9be21246008bd27bd682dcc2148f08bd3455c9f7f796217b7b6923e",
+      "fourth_orbit_index": 74,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 780,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-075",
+      "branch_sha256": "1fb875875e057e24e9d331db1b2a1fa99dcabfac1cc1e2f1e262b7d54a82a8ec",
+      "fourth_orbit_index": 75,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 786,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-076",
+      "branch_sha256": "1107641e234ca78d911af30ed5b08452edb3dd88b40ac999a17c6a4189d8059f",
+      "fourth_orbit_index": 76,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 792,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-077",
+      "branch_sha256": "7cbc0aa922e11d9a616e77cebaeca87ec5ad920529919302a44510999d3e9948",
+      "fourth_orbit_index": 77,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 798,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-078",
+      "branch_sha256": "72052f6d3e87236029b025b0545852b0592e918311c6a20c8d21a9410d71fa99",
+      "fourth_orbit_index": 78,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 804,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-079",
+      "branch_sha256": "d362aa18b1df46c22c3e53888a3b68f0660b51562ecfc4c142e510bb5b7b2d50",
+      "fourth_orbit_index": 79,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 806,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-080",
+      "branch_sha256": "648633dc64598052d541a899205e6fb822938c7dc5a87217e60dbe8300517dbb",
+      "fourth_orbit_index": 80,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 808,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-081",
+      "branch_sha256": "401debb9310f45b145a7302178f199c133b38d0d2c9a95bcb28146c6cb3fe65d",
+      "fourth_orbit_index": 81,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 811,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-082",
+      "branch_sha256": "a9ec0290f465e65935e55c44f664fa007daf627f2042eef357fcf64bb06b2363",
+      "fourth_orbit_index": 82,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 814,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-083",
+      "branch_sha256": "641e640c6c29d07281540a27d1d1f859fc3b6eb2cdbc95b78763503efc9067ad",
+      "fourth_orbit_index": 83,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 815,
+      "branch_id": "w4-weight5-intersection0::orbit-005::fourth-084",
+      "branch_sha256": "3e2b11fd8f012cc9c2c12eb1be4d2ce47b231c136ac624f616774a4b64b80721",
+      "fourth_orbit_index": 84,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 1,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-000",
+      "branch_sha256": "8de406543643079ccbd78aaf8dcf732208e492e2245b1ef22aa4b6e3cb58df75",
+      "fourth_orbit_index": 0,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 4,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-001",
+      "branch_sha256": "27ae3b2d10909201117ab6538fd8fb57e2890c73438d3caba4600e2f9e09c1b9",
+      "fourth_orbit_index": 1,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 22,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-002",
+      "branch_sha256": "e3ea64f4d1a36b5ffbd68760a67a02ee697efdd0a2cac8a3cb43933f0a90a18e",
+      "fourth_orbit_index": 2,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 40,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-003",
+      "branch_sha256": "fd79deb2b29799d9501f092ff8bf879e2614c6722c7f0f968a6d22861e99e0a3",
+      "fourth_orbit_index": 3,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 46,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-004",
+      "branch_sha256": "3ac0e5a0c785a56a08d1be572e518a1022b4ffa7c641235a8a3bb06a77ceb5f2",
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 48,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-005",
+      "branch_sha256": "87076c39ba922dfc0fe0585ec69701c308a96eba9d4f2d0d67e5a14aaa56361b",
+      "fourth_orbit_index": 5,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 57,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-006",
+      "branch_sha256": "2b41d2baacc09e7cc6e79b983e4635f11b8cf6d0f7ae745dbdc487c41568587a",
+      "fourth_orbit_index": 6,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 66,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-007",
+      "branch_sha256": "653d498fd8fcf9571530098603b5cf72d74477ede9dc1318bb6715f3bbafc6b8",
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 75,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-008",
+      "branch_sha256": "d523e5969528d5d003645dd5b9e4cfff73f948c4a498b6b403b736cd335a6639",
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 78,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-009",
+      "branch_sha256": "9b8d1e81720d26e3a36097546a1994e24122bfba9290bfaaa7517480ab725305",
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 79,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-010",
+      "branch_sha256": "6ba8ddffe45349a0f2f97d5411b48ee7d8ecf0fd335f49c81df775484cd6a821",
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 97,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-011",
+      "branch_sha256": "1374660ac2def62a6ed50c17c2b96472b34bfd8f94188c7a4f1eb0315d4e5860",
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 103,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-012",
+      "branch_sha256": "05f40016a13fba7f9522abcb5a3cb6b0fcbc48dc3287bbe7b0be0af526355327",
+      "fourth_orbit_index": 12,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 105,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-013",
+      "branch_sha256": "bb196e747e7b9a02625207628de6810aacfdf9d912003a2395eac2109871e4e6",
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 141,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-014",
+      "branch_sha256": "5c98af3cbdcc9a12c88d44e3be2f3779a3379b5892586dacdf5ca4fe8c1f306b",
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 177,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-015",
+      "branch_sha256": "5a2fc602609ba7313efcc8defd16d43643b03ae2de3a4bede2499a6c6550fb1e",
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 213,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-016",
+      "branch_sha256": "b7605b4599c3f04f8a1daa6977e004c5e5cbd6e18059a2417f93129ed4df7c9e",
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 249,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-017",
+      "branch_sha256": "ef431be7fe7267fd37abc31f613a338d0d0b2a6fea6acd14aa52e209182611fb",
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 285,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-018",
+      "branch_sha256": "e8e4a30f3e2449f070348eb357e2ea372a84de64afa29647f26e8fc81ee224e0",
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 297,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-019",
+      "branch_sha256": "ddd98e3757b8bd76042e06b40b6f9632b6afa1868ed7a25802f01b5f83169e93",
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 309,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-020",
+      "branch_sha256": "66b28b2e190d35da2d96d28144772b0afad20731dbbb2de6cb63b26eddc36ad4",
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 321,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-021",
+      "branch_sha256": "ba931d24211907a6d54abecf974f7ba67594bb1bacf37dbce25378f13a24bec4",
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 325,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-022",
+      "branch_sha256": "e940b5742886de116fe3055f06f8e3798201511d0bfd8fbbb3a1730e5ca49366",
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 329,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-023",
+      "branch_sha256": "7d8c8b27f5e01c70f0ee67b3a0dd410d05dc23bf644775cdafc27dbd45451109",
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 335,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-024",
+      "branch_sha256": "2be516657a7617a10c88460758c60cc7538cabe0b52eef57a77842d244edf0a0",
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 341,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-025",
+      "branch_sha256": "85b50a9a79b091a8aab59b762d3601e018b0d9aa7ab6dc0826adbb240b77650b",
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 359,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-026",
+      "branch_sha256": "2de8fc2591b16ad0ff3ab630e1f170ce21ecd602bbbb6357967d41f3e4bc246c",
+      "fourth_orbit_index": 26,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 377,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-027",
+      "branch_sha256": "01fcf06335eea47cc1a3a2f5960b8d76e9e6722936aa92ba6b94f3a81993e947",
+      "fourth_orbit_index": 27,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 395,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-028",
+      "branch_sha256": "51010fbdbc09d8d45dcd6fc8022d7beb8177956efaa937c85f5bca772c77132f",
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 401,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-029",
+      "branch_sha256": "03f756f80e43b5be6efafb986849b6465502860ceb1370316f48867b2ab38c2f",
+      "fourth_orbit_index": 29,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 419,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-030",
+      "branch_sha256": "c66733fb6b476bf5938ce177a6f67a57668e0fc2780af1ae75cea5749eeb9b6e",
+      "fourth_orbit_index": 30,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 437,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-031",
+      "branch_sha256": "db773b609223f591fdeb16130b57b053e6a08845581cf8fb2e325af64f65f830",
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 455,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-032",
+      "branch_sha256": "f1699b819d54fc2f7808a9bf81c2b04e49f086ede9dd8ea7e0598d9c0b8d81e0",
+      "fourth_orbit_index": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 461,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-033",
+      "branch_sha256": "22c9fb03aeeba099f3aa5813c95a07ff9f886a029bfb3a4b038316e5df38cb8d",
+      "fourth_orbit_index": 33,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 467,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-034",
+      "branch_sha256": "ee8af8aab5606066bf8b45024d65e6e2bdaa786136810e2b13c757eafbe97f75",
+      "fourth_orbit_index": 34,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 473,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-035",
+      "branch_sha256": "b147d7b4bc7e275db618d76763d0f7f30f345ed41d6027a70008c25e466a6f9c",
+      "fourth_orbit_index": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 475,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-036",
+      "branch_sha256": "a6807f4f12704e4c19888022050d2c950c66d4a90e8f5e1d31ccf8c6d8f98138",
+      "fourth_orbit_index": 36,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 477,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-037",
+      "branch_sha256": "181a9237c32c8ded1bbaf68fdc90cac21eb0739d8acc993240cfb43e320828cb",
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 486,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-038",
+      "branch_sha256": "b47c4f97ae73a5a4421697b1456f9de204f7fa71ccd6ede2aa7fe52f70485740",
+      "fourth_orbit_index": 38,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 495,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-039",
+      "branch_sha256": "552c4eeac1203e4dc107d99664dfa520506c7eec02d398c4977b8aac83ada558",
+      "fourth_orbit_index": 39,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 498,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-040",
+      "branch_sha256": "828fe137df927265b1c301a1a21ddf2c827d1eec586eeba4e874dba687c2afea",
+      "fourth_orbit_index": 40,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 499,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-041",
+      "branch_sha256": "1dcb3b33bcb57be596676717c0249bd8eac3fbdcb985b6b9349e6f75b9421bc3",
+      "fourth_orbit_index": 41,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 505,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-042",
+      "branch_sha256": "3c12eecd4d34bb8433ee69610b2591f76a8ce46a8f2e1922703925f3bfd88275",
+      "fourth_orbit_index": 42,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 511,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-043",
+      "branch_sha256": "067bc29d6fc268a2da9773e49062bfef6d4a6510c8f9f1dfc82534f160bc0931",
+      "fourth_orbit_index": 43,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 529,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-044",
+      "branch_sha256": "5c20d0e7cef02cf1c7d245a72baa37b040f0a20e09f9e59072c8131eac389fe0",
+      "fourth_orbit_index": 44,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 547,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-045",
+      "branch_sha256": "0c33f45eacf4e9f3768d920f8dc83b063b03d49f8f6939dcab88ea8bae62824a",
+      "fourth_orbit_index": 45,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 565,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-046",
+      "branch_sha256": "2f237ee5ae9acb436ea6c29945ef22d58508277fa354df63bd9f47f62d39ac59",
+      "fourth_orbit_index": 46,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 571,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-047",
+      "branch_sha256": "67edef39c95b29ccf30b0f9c423bb4add86832fb0c265c0b6c964f2a3d298916",
+      "fourth_orbit_index": 47,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 589,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-048",
+      "branch_sha256": "a22de7401a8cd25a2edfc9eb22740a90ff9603602c4388396280e753c4b760b8",
+      "fourth_orbit_index": 48,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 607,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-049",
+      "branch_sha256": "22a7a02a02a208c275725bf6081d2c49fd1ffa6710fb0ed409791772d4452037",
+      "fourth_orbit_index": 49,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 625,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-050",
+      "branch_sha256": "3a6973ce427ef5d68431effc692249404702d8a0731565ee4b82921b13f9072a",
+      "fourth_orbit_index": 50,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 631,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-051",
+      "branch_sha256": "cbd869160cc56869b8e5c5c946bb5db4def7f457b00ecd9e89916b44f74f8fa6",
+      "fourth_orbit_index": 51,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 637,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-052",
+      "branch_sha256": "3d180a7742d0d462cd95d4dc07aa47c298f922e23d445ad7d5e3b3acc3f25590",
+      "fourth_orbit_index": 52,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 643,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-053",
+      "branch_sha256": "3ed302eed2528b68f60614a9bd6c21474891b5f2914db5dabd0b8c6ccea38630",
+      "fourth_orbit_index": 53,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 645,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-054",
+      "branch_sha256": "6f405a427dec7c4af66a20e68ea8f274fc367813535c004ae7b389f3e63b1f2e",
+      "fourth_orbit_index": 54,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 647,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-055",
+      "branch_sha256": "1dd66d6c80633e25ee8a1abbfbcb133e2df3b6bf5d1020b322d7aa9d419e70ea",
+      "fourth_orbit_index": 55,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 650,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-056",
+      "branch_sha256": "a1a2aabfc9e1410d7215def7faf797ee2fc284fd7eda2f4abbe963443a2fed53",
+      "fourth_orbit_index": 56,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 653,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-057",
+      "branch_sha256": "0fd6721f47dfc8162bf4be5e25e2e4e31f1a9b29068738ae48a54b77844784f4",
+      "fourth_orbit_index": 57,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 656,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-058",
+      "branch_sha256": "f66e105054f815c2bff63eac4d9341c32c6cd02222a245724bc2997637fb1851",
+      "fourth_orbit_index": 58,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 657,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-059",
+      "branch_sha256": "0018cfc9aa982503beef295fca629fb0c9db1e8a5758f3cbccf8b59f38052e24",
+      "fourth_orbit_index": 59,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 660,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-060",
+      "branch_sha256": "e46a385ff0f6e1bd22703e29548f5bfa953c7a8a01382e908e3fa0506cba339c",
+      "fourth_orbit_index": 60,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 669,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-061",
+      "branch_sha256": "c014cb2a1a088910b175d4ab5c976b5938cd85e4319bfd62fc27db7b85d19af6",
+      "fourth_orbit_index": 61,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 678,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-062",
+      "branch_sha256": "960366b630b3515219f1832188dc3ede4c0fb1bac908c6c03033bb59b8b720de",
+      "fourth_orbit_index": 62,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 687,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-063",
+      "branch_sha256": "c4b6b005d5886e40988f6b03b6156f4a537e499f62718c7e20e479e1e52f7887",
+      "fourth_orbit_index": 63,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 696,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-064",
+      "branch_sha256": "7e93a69591433fbde42921b64b35933146a2fe42e2091b7739a6502a3a697df1",
+      "fourth_orbit_index": 64,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 699,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-065",
+      "branch_sha256": "c433951ed07b56b4d7692a4ac327d60835c253a2f1ffd46a95456399971e230b",
+      "fourth_orbit_index": 65,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 702,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-066",
+      "branch_sha256": "5a575b02648236bc0414a4164ac0a58711b918b6d1028f7954009ac44f65c43c",
+      "fourth_orbit_index": 66,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 711,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-067",
+      "branch_sha256": "69d7f7a8e5a31383313ecee7bbc1359764a79e8349b554711b49171d7a110177",
+      "fourth_orbit_index": 67,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 720,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-068",
+      "branch_sha256": "e7fe1c61fe72a217916f7bf50bcf4d74abf90e57eadbd0e925502bc86bcc2260",
+      "fourth_orbit_index": 68,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 729,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-069",
+      "branch_sha256": "c7363c244f1481038bdcfa41d8edc235a4f9afeebed272dfcf7f4cf6daa65852",
+      "fourth_orbit_index": 69,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 738,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-070",
+      "branch_sha256": "d6116c4487ca41178a080df6ba6af717b99a6497202461a74a6d0e3329e745b1",
+      "fourth_orbit_index": 70,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 741,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-071",
+      "branch_sha256": "c417bef48591d105ef914dba94b8cddce8a6fd330f208abb43db24aa14ac4649",
+      "fourth_orbit_index": 71,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 744,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-072",
+      "branch_sha256": "9e16afa3b9522dc029a9a51999246fdc662a4377342868c87dbca565d84173b3",
+      "fourth_orbit_index": 72,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 747,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-073",
+      "branch_sha256": "ef56f2af49eaeaf80996c257cfeca407a80fdca21c5f597221915f70c078f39c",
+      "fourth_orbit_index": 73,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 750,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-074",
+      "branch_sha256": "f89708fea47040fc5f1f2c48fb8c24977f575d3b9a11bc44ee623a6e5c827be1",
+      "fourth_orbit_index": 74,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 751,
+      "branch_id": "w4-weight5-intersection0::orbit-007::fourth-075",
+      "branch_sha256": "3c4cb8414a4c95d3d20c648f14d3c5457443bdfcfaf78acf3041af18fee337a1",
+      "fourth_orbit_index": 75,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 1,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-000",
+      "branch_sha256": "8d74662286a0a1207c4e1129d2db6af06ae829fe07d647bf835a912a96faf81f",
+      "fourth_orbit_index": 0,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 25,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-001",
+      "branch_sha256": "82492acefbcde6b4e50cf16a1de388488f892b60b610981b9f917eb5a81c425e",
+      "fourth_orbit_index": 1,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 31,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-002",
+      "branch_sha256": "2bfbe186087ca409ed02138adcd8a3f8f41a71e2c6ce879aa45bc5927bebc333",
+      "fourth_orbit_index": 2,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 35,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-003",
+      "branch_sha256": "7e1392a7c61bf7ac6b81b400e12755704c176df1fa2292eac589406c391867c2",
+      "fourth_orbit_index": 3,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 51,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-004",
+      "branch_sha256": "82fd95179be4bd3d2f30d1f2df934948d9fbfdccffda1e208704cf92503664c6",
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 55,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-005",
+      "branch_sha256": "22e01b3ca20982b6bbad25caab627eb94f0e2509a5f0afc6c3d624ee8755c0b8",
+      "fourth_orbit_index": 5,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 63,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-006",
+      "branch_sha256": "8a94a7db42814371d6118703b74955924a2b61268b45e87438d08e1e94cef974",
+      "fourth_orbit_index": 6,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 71,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-007",
+      "branch_sha256": "bccd8507a0d117f4863421e6d6d49eafb2c2b8bfa584f3cb7e73d1f649a0440f",
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 73,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-008",
+      "branch_sha256": "728ebd47b1abd054bfcb91cbbdcaa1d8e6ad8d8d18278ad2724d4cebf5551845",
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 75,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-009",
+      "branch_sha256": "43c640e2c3b709a154ae4c564623979eb0d7504634553e1a0b501597de63ba5c",
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 76,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-010",
+      "branch_sha256": "02131e03e1e0d98a3b559850a13885b7280dcc6249ed753550c29462c37057dd",
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 108,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-011",
+      "branch_sha256": "c96f9780fc4bf18d3b00c7701b0a50a5e82eae052cc3701f70d7ab93cf180d4c",
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 116,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-012",
+      "branch_sha256": "daad5744109245fb7c5713d9e2105c9e2d87e10eb334c6385ba4b5494af68c1c",
+      "fourth_orbit_index": 12,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 128,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-013",
+      "branch_sha256": "a706d4b13f57448640cb1551c186338112cd792284be510c922097049e20a808",
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 176,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-014",
+      "branch_sha256": "869402f0c4b9f420e5a1caa45f87f79f806d79559d9c270c8d91f2d739d07215",
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 188,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-015",
+      "branch_sha256": "c26f272806b96177381dd44b737b63c7bab74fe7db288931b35f27b74438b8bc",
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 236,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-016",
+      "branch_sha256": "731c2370bd33708f7e6190955e67d3b9e66a965cb7ba39783e176c8e1e10d8ff",
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 260,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-017",
+      "branch_sha256": "5654bf4700cce3ff749be4b639609d54847e4160fa5db9c40ed249b5b0b02b7f",
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 272,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-018",
+      "branch_sha256": "5a79eddf3881433015471dad7aaefd6980ac564e51989f7bc6273a0d540d50d4",
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 296,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-019",
+      "branch_sha256": "419d33bacca0d5d68c8371904ae90e7e58bc5f7c834c24631673e7fb510324d8",
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 304,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-020",
+      "branch_sha256": "f7456d37472764156b764eda6f69557a3531db1d6ae367aa91c35e86cea519ba",
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 336,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-021",
+      "branch_sha256": "828d553f9ae827cd56738aac241e1f66b85a8fc9565da620e1d285179a85f821",
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 352,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-022",
+      "branch_sha256": "cd38cf8be4a2f02b54010c3c684b8fb79c8e19d00a21a4b960f32db5c0fcc17f",
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 360,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-023",
+      "branch_sha256": "5a6cd84ab05c49a265383e6836e78ec1a3597390a58b25c16d1fab8e1bd5cfd5",
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 376,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-024",
+      "branch_sha256": "d5534b1dff86869d2481b836e215407b0718e84a70dd370a9b34badae7d38094",
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 408,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-025",
+      "branch_sha256": "30f225b8caf3817d38cc9706b95bdebf54ae46715e720357841e511ade8c9d1f",
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 424,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-026",
+      "branch_sha256": "a9c158de9e3365e0b411deec652042ece751205cc8f70f5bb59f4c0bbb26d6d8",
+      "fourth_orbit_index": 26,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 432,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-027",
+      "branch_sha256": "63dd25abc76fe156c402d144c3a735f93843a9417b66662cb2fa3fa572ab4e31",
+      "fourth_orbit_index": 27,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 448,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-028",
+      "branch_sha256": "71f033a37e2fc0e932d2e41bd79ad4c3c108a07894f9c45796107c2502d1af9a",
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 456,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-029",
+      "branch_sha256": "cba61ebbc3c716cb8b530eb198ab57af38fa0a03384b834e2945670d76d013f0",
+      "fourth_orbit_index": 29,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 458,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-030",
+      "branch_sha256": "1c0bfaf01c85d82a3fba10735473dce597adb0140c244d025c2ac73d3a285753",
+      "fourth_orbit_index": 30,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 466,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-031",
+      "branch_sha256": "7eefc4444928d88ed6885e0dce1c166c10abd66e3006ef1d68002a4668d2c6f4",
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 470,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-032",
+      "branch_sha256": "17dfa45a3170d70b1695c300c5a954715579bc9ce4bf5dd513c48e65590ee168",
+      "fourth_orbit_index": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 472,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-033",
+      "branch_sha256": "68c50e213ad83a3740c290d5337f95df09b6d6ef8895800f32b34dad8cdcbcf7",
+      "fourth_orbit_index": 33,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 476,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-034",
+      "branch_sha256": "304fd5083e099f643ba7017e196b92125ff1b76fb79f69f58a805c49052b1fdc",
+      "fourth_orbit_index": 34,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 478,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-035",
+      "branch_sha256": "5b553f4a743f6691b573460e9adb3f552335642061c9d46204d44a052db1a25e",
+      "fourth_orbit_index": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 482,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-036",
+      "branch_sha256": "aed622e82ced8f65092126fadb137e4fd829a0b5d70801be2449f700513f46d1",
+      "fourth_orbit_index": 36,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 486,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-037",
+      "branch_sha256": "135c418af5aad4448930364039f9d8a37f1cdafd24116ce31be6673c9fd2eb1f",
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 488,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-038",
+      "branch_sha256": "5fd36dc562c4ad8531e6123bea40109f796dd58304c8c030abce274ddcd46b0c",
+      "fourth_orbit_index": 38,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 489,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-039",
+      "branch_sha256": "5027d41563c57125759f5a33b38e1609c2477bf54e0120349bd543bc36f16078",
+      "fourth_orbit_index": 39,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 505,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-040",
+      "branch_sha256": "7ecf8515e0d3db0b8123f593d647df672c332c9ef52d6321f8fbfaf98798164c",
+      "fourth_orbit_index": 40,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 509,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-041",
+      "branch_sha256": "66f559979cb9b9276be08c567fad41f6fb5f5bc4a8bd8a4db50d895cfb701a63",
+      "fourth_orbit_index": 41,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 513,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-042",
+      "branch_sha256": "d17cab96246c81b11c9111ed174f4e111502fd749b3ef13e59003fab8503a8b8",
+      "fourth_orbit_index": 42,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 521,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-043",
+      "branch_sha256": "3f167f15a56add954e629e31a18e14a67355f57c76d5d6236e2e49cbda3b9ee1",
+      "fourth_orbit_index": 43,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 545,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-044",
+      "branch_sha256": "99c222528a2924d8f84d39381aba948c900bec0546b57e1575aaadaf8531611f",
+      "fourth_orbit_index": 44,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 557,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-045",
+      "branch_sha256": "d119c1feb08fcb1976ce59efb714a20e4004c03518155341f54fe0905341e1da",
+      "fourth_orbit_index": 45,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 563,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-046",
+      "branch_sha256": "dc9309a817ae41e791881faf22e223979e6ccc08e0aed89da7f9d34a137a56be",
+      "fourth_orbit_index": 46,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 575,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-047",
+      "branch_sha256": "3cb7d57bb37485643048beee126e59007cc79233f227d79d5e98cad3d958ddca",
+      "fourth_orbit_index": 47,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 599,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-048",
+      "branch_sha256": "ac7cb7e7d3818843cff6f883d8dd1d2ef57fd90fe5035d2910287da739b018a7",
+      "fourth_orbit_index": 48,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 605,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-049",
+      "branch_sha256": "b23b6c05de45d92a4d0904d822e118e3e8af0818b49e47c637b06ea8e5e22a2b",
+      "fourth_orbit_index": 49,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 617,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-050",
+      "branch_sha256": "1e8c26724019c50f50ef3bcba614df538c8add5768e39a6006e1f992f487043e",
+      "fourth_orbit_index": 50,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 623,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-051",
+      "branch_sha256": "66bafaece258f87722c88e32bae59da28d8af487edc26ea15667ccc1c545469e",
+      "fourth_orbit_index": 51,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 627,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-052",
+      "branch_sha256": "966527620e84f20b1512776d1efb1732b0e3e043a44116436f237926040c362f",
+      "fourth_orbit_index": 52,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 643,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-053",
+      "branch_sha256": "61e9be4e602c6f58311309251661cb4383b25fb5a63e4fc84e0d27e62be4cc4e",
+      "fourth_orbit_index": 53,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 651,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-054",
+      "branch_sha256": "6af41f55fbcbf8a80a746492c3423a81206428807243ddf9fa66b4ded828edc9",
+      "fourth_orbit_index": 54,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 655,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-055",
+      "branch_sha256": "3be4d68b3e291cc979f2b4776878464e1e96462bb6a5866e0af09bb1fd118c4a",
+      "fourth_orbit_index": 55,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 663,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-056",
+      "branch_sha256": "42fe381f22f0f03d7464073af29f8ff6830dbaee815189123c4414e934dc6cc6",
+      "fourth_orbit_index": 56,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 667,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-057",
+      "branch_sha256": "aa784617402b673a376fa259a8701cbc602df92fde3d4086f5adcef0500b9f8e",
+      "fourth_orbit_index": 57,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 683,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-058",
+      "branch_sha256": "15157be4b46711f6d511cdb5735c1832f6e6da28d5bf593e27bb55983b0b6940",
+      "fourth_orbit_index": 58,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 691,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-059",
+      "branch_sha256": "e98d8f245b13018c59e87338bd2e8f24e14a5fb6e011dcb4a6b86e0d0f909f77",
+      "fourth_orbit_index": 59,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 695,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-060",
+      "branch_sha256": "78a28309d523ee997d672f430a5e8d325aa8859c00fc0c966b76037828d45b2f",
+      "fourth_orbit_index": 60,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 703,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-061",
+      "branch_sha256": "714204283fb3fd6b4de87be688684b4d89b8c01ffb1fb2790a8af25dae0aeef9",
+      "fourth_orbit_index": 61,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 707,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-062",
+      "branch_sha256": "2ca8d1f05722c7fe34f54624785b3abe5e9e70a9e292584ba1fe02f6abca0848",
+      "fourth_orbit_index": 62,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 708,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-063",
+      "branch_sha256": "0d7e6d196f86a4a46b5d8d6f544a8bd34080e656b0e59ca9492d9dd91f773e6b",
+      "fourth_orbit_index": 63,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 712,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-064",
+      "branch_sha256": "d23280bbe30e2c8766b0da5339a93434a102c72753fc29458c28e9f3422ebd22",
+      "fourth_orbit_index": 64,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 714,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-065",
+      "branch_sha256": "0a0c0e7538897273bd17770ea96207b02c5d9f9d6b7ed3c67ff1ff94b89cf90f",
+      "fourth_orbit_index": 65,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 715,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-066",
+      "branch_sha256": "5644cd32b2e4b8b0f12445060f431b1e19fadbe17b5ed7f52694f37a5322481c",
+      "fourth_orbit_index": 66,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 717,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-067",
+      "branch_sha256": "66f58900fb7555302e88266769afda3538b7209c8b9ff6875c16d0a3efb9fa11",
+      "fourth_orbit_index": 67,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 718,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-068",
+      "branch_sha256": "fc835e6bfbf4059918128f9457c86740714fbdf4ea3bed158110469bae29352c",
+      "fourth_orbit_index": 68,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 722,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-069",
+      "branch_sha256": "ce25a3e6086fcda5b665dfe796a1daa105cd36fc13da8e101722949c4986873e",
+      "fourth_orbit_index": 69,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 724,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-070",
+      "branch_sha256": "597f171a2db45960b337b766454fde60b4fd8cb246e40bb464575ea79f4aa30d",
+      "fourth_orbit_index": 70,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 725,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-071",
+      "branch_sha256": "a574cc0abf9b5173ec16156b96442ed2d98550aa99d4220a674fb7370bccdf03",
+      "fourth_orbit_index": 71,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 727,
+      "branch_id": "w4-weight5-intersection0::orbit-014::fourth-072",
+      "branch_sha256": "a55856477f0daf540a9d45de39c29a4790d82a0d20eb8f4032f766ad8b1588d9",
+      "fourth_orbit_index": 72,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 1,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-000",
+      "branch_sha256": "b9fb742afe917d94df4bf33ac1e6a96ad928dcf35c540faebc684ed31735561c",
+      "fourth_orbit_index": 0,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 4,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-001",
+      "branch_sha256": "ce8a865417e49e7b684a81d60c62467fc3bbc5c4dc8218f7a12ecf43c911b43d",
+      "fourth_orbit_index": 1,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 28,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-002",
+      "branch_sha256": "fac04e13f0a8dd08031b51fbf906edf569ac597aae27e95274b0cae1bab23264",
+      "fourth_orbit_index": 2,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 34,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-003",
+      "branch_sha256": "f7dae2f9610d9cc43223c99f39718f973fd3ff4060209f663956bf6d8b45c6fb",
+      "fourth_orbit_index": 3,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 40,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-004",
+      "branch_sha256": "052a9705236187f7cffb26a1daed1d5a82377b1d0c9bf30f090681eb79c684dd",
+      "fourth_orbit_index": 4,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 41,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-005",
+      "branch_sha256": "dbab08d9bccd4416400acf60a6d193f968c92dda880660f86d8b78103b4fac3d",
+      "fourth_orbit_index": 5,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 45,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-006",
+      "branch_sha256": "6e21886b7d48cc7067c1856d88ce78fba504da1d6e1ee3e5f89ea864cb6c7242",
+      "fourth_orbit_index": 6,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 46,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-007",
+      "branch_sha256": "c44e1d8e07be9bb8062c6c6dea1509b735917a1683591d014d8dfa6c144722d8",
+      "fourth_orbit_index": 7,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 50,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-008",
+      "branch_sha256": "f5024c91efc99f5d6c40c27e7a07cba66daf06cdb50658aa466c968a6c6c80e8",
+      "fourth_orbit_index": 8,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 54,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-009",
+      "branch_sha256": "ad33313aae81943cc4554a536c91b9f12d93ac2e87e6fc2b0c83dc26e0c5bb1e",
+      "fourth_orbit_index": 9,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 55,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-010",
+      "branch_sha256": "2b46f8b76f4d04a27f87a2af11096cd1fb27cd106a2c7652a860297596d4619d",
+      "fourth_orbit_index": 10,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 56,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-011",
+      "branch_sha256": "b5e666ce36746b48edca9f00322bfb3a2a1be52f9b7b5a8ee4437a2bd2f4e124",
+      "fourth_orbit_index": 11,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 80,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-012",
+      "branch_sha256": "5f49364e61b331cbdae122a119d4847adec1620bd943ec5c58405296b672a55e",
+      "fourth_orbit_index": 12,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 86,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-013",
+      "branch_sha256": "0e23897bd0a4f3256574854787be6a6a101440f34ea79aab3db4f926544f728a",
+      "fourth_orbit_index": 13,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 89,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-014",
+      "branch_sha256": "afda29bcb1c4adafc327044b9db0c7b5ceb606a22ddcf20a654bdcae5c2164ce",
+      "fourth_orbit_index": 14,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 95,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-015",
+      "branch_sha256": "9c76d778b83bbbf4c6517abdd02c58ae3720c5142f0dc13f015bf46f577af60f",
+      "fourth_orbit_index": 15,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 98,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-016",
+      "branch_sha256": "86164a68ca99162718e7517df5052b8823f52fedf4f9468f853103b0430fb1d5",
+      "fourth_orbit_index": 16,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 110,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-017",
+      "branch_sha256": "16ab9dc8950df2461fbb8ac50db6a277cb4739db96e44238dda33a602c260343",
+      "fourth_orbit_index": 17,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 113,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-018",
+      "branch_sha256": "8c2fe94143eb27e5bcb5fd6889072babba7b4b5d19bbbaee48985adcd68691c7",
+      "fourth_orbit_index": 18,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 137,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-019",
+      "branch_sha256": "1caf3901d8a1df55f61c2f32f4c9688e151700bf36e934e9d49fc098fc97d50a",
+      "fourth_orbit_index": 19,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 149,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-020",
+      "branch_sha256": "a2bfd38ee33b06c21899e4c5ac1900fb8d5d3c29cf20b20b84e74ac9042faf0c",
+      "fourth_orbit_index": 20,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 155,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-021",
+      "branch_sha256": "676daba4cd51ab359d7229f517456857affa33bd1ed6ef549b20692ea55f68ec",
+      "fourth_orbit_index": 21,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 167,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-022",
+      "branch_sha256": "398ff5a33f212b1638732a12c11d8bfad3eefef57680ad16a7c4ea11b01fe65b",
+      "fourth_orbit_index": 22,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 170,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-023",
+      "branch_sha256": "cade73350b2b3d6f73c8fc1bc57ce888b0454e6eba89007feb222ca95e087b2e",
+      "fourth_orbit_index": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 176,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-024",
+      "branch_sha256": "833578498076dd24ddbab8d15cb308d8507aef0aefab2042dc2c5044714aad73",
+      "fourth_orbit_index": 24,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 179,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-025",
+      "branch_sha256": "e288bc3040d90c57640e585e307a76c52879434641b9442f6a3774902fe88069",
+      "fourth_orbit_index": 25,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 180,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-026",
+      "branch_sha256": "a308ce7bb935086d22938dcfb5bda6c01252aadabacd9e94663ad603dd88cfa0",
+      "fourth_orbit_index": 26,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 184,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-027",
+      "branch_sha256": "f163cf9bf7e18b83854a1f871147b085dc9c7fd7b3ad7ce344bc712a4d0bbd37",
+      "fourth_orbit_index": 27,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 186,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-028",
+      "branch_sha256": "c41ec99724bcc4970daff37066406dbc76c0c62553939e964746ee84a840c90a",
+      "fourth_orbit_index": 28,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 187,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-029",
+      "branch_sha256": "2fa6747414c50c70dd740d1ebda65b948df14be30f4916e11075fac2eacc3d0a",
+      "fourth_orbit_index": 29,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 189,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-030",
+      "branch_sha256": "bb9830425e5535659316ded85e9c40d011044b24109081c7e96be148bd4e9d2f",
+      "fourth_orbit_index": 30,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 197,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-031",
+      "branch_sha256": "924dc23ee4c7019fd55c50d94f1cb51a15aaf16613406c5cf469d6d31a6e527d",
+      "fourth_orbit_index": 31,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 201,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-032",
+      "branch_sha256": "5091c1b9d8e04e2808026e6b54dda3e017be7a1eda6f2ce00a31c1f7899ffceb",
+      "fourth_orbit_index": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 203,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-033",
+      "branch_sha256": "5fc5be10e1273466dc64083d12595235fae759dd7405fbe5876c51dafde25735",
+      "fourth_orbit_index": 33,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 207,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-034",
+      "branch_sha256": "6ff08d4bb4e75f4316a1ee21c40aaa9377f5bdefe5d7d2171768bdaf26b4bfa2",
+      "fourth_orbit_index": 34,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 209,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-035",
+      "branch_sha256": "5ea8b59388fd89d224c05fcc24a2ce44d81e861433f05ce5bfcd24d66f40845b",
+      "fourth_orbit_index": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 211,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-036",
+      "branch_sha256": "3c0c33c618bbf8cf929e63ca16a9c91ae5b2304da19034dd76df5ad0686f09aa",
+      "fourth_orbit_index": 36,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 212,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-037",
+      "branch_sha256": "9c4a14b0e697de862e16dc39b4edb1e2cbc4c1612581479a2f86af063cd4cfe5",
+      "fourth_orbit_index": 37,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 216,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-038",
+      "branch_sha256": "6d3dc0b6a81cd0959f5e270e8857f04dfdb885e25d400aaecf79d244502344c4",
+      "fourth_orbit_index": 38,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 217,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-039",
+      "branch_sha256": "db6f970ea1ca12b338978e2fa378851c09c48ccc06809ae3914fca427adfb7b2",
+      "fourth_orbit_index": 39,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 223,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-040",
+      "branch_sha256": "a5241abf02ec53eb3d01ce614f4326346fa6ffb2063a589f370e51fbd73a992e",
+      "fourth_orbit_index": 40,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 247,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-041",
+      "branch_sha256": "1698d1d3155829967517a6a675812dddac81da55e30915c1e465eba616b4a757",
+      "fourth_orbit_index": 41,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 253,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-042",
+      "branch_sha256": "18adbb9386111e31bacfd4cb90d35c7da50e50f8873fd7f671b8d5b5b67df086",
+      "fourth_orbit_index": 42,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 265,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-043",
+      "branch_sha256": "8f2bf8bab753c45aa0b898a4a580c62c977a5636860935a532888b7b561711ac",
+      "fourth_orbit_index": 43,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 271,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-044",
+      "branch_sha256": "550fc5a970d4cdd211e57f60d5aa4c80220bf413f852beaee4c34701564eb5b7",
+      "fourth_orbit_index": 44,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 274,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-045",
+      "branch_sha256": "da64694b497d9d8b05a11a674eb23d97cf18e435ce36aea2929957303db05392",
+      "fourth_orbit_index": 45,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 280,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-046",
+      "branch_sha256": "1b686b2bd355203e884db330ece0bbeafd36f0b82ab97006384ba4ec4c4490bf",
+      "fourth_orbit_index": 46,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 283,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-047",
+      "branch_sha256": "5fabd33752b07eb33cd849321e15711b90215d38ce807866d29a549c9db8a115",
+      "fourth_orbit_index": 47,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 295,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-048",
+      "branch_sha256": "ecb6274b5ad395b5b6222ee77a934b0c5ff9e5e1a8172dfa4dcfa4e4a2a34529",
+      "fourth_orbit_index": 48,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 298,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-049",
+      "branch_sha256": "00f3a5b420cdc2835eb25c4552f5f3812e86bb564697b33bec0721b75d4a7b96",
+      "fourth_orbit_index": 49,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 304,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-050",
+      "branch_sha256": "97bfaedc538a8df067e5d4cb09cd7223a273907ca7c699a9bd94ae94648df6e1",
+      "fourth_orbit_index": 50,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 328,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-051",
+      "branch_sha256": "5ba586d03676dc8b85916cfe3c26a09e5a11c909d8db4aaf9c8717f5a25f5fa5",
+      "fourth_orbit_index": 51,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 340,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-052",
+      "branch_sha256": "83e0f35338654ca38f902bb9526dfca7e7b2c0baedd67654ab7dd40d62f76a15",
+      "fourth_orbit_index": 52,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 346,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-053",
+      "branch_sha256": "061031d74a755d71d0734c06cad9ce2b1e55b12bc0d0adfb0db1965b24b76299",
+      "fourth_orbit_index": 53,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 358,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-054",
+      "branch_sha256": "c153b68f2ad5ecdb12a5885a3bf67de314d08329604007bdef6174f93dccfe7d",
+      "fourth_orbit_index": 54,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 370,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-055",
+      "branch_sha256": "11d0dcc86a58460c509137bfc58632b7f86f691fe4f9d0a44a67865c40e33889",
+      "fourth_orbit_index": 55,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 376,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-056",
+      "branch_sha256": "f0314bae22875769647b135d19bebcfec3b5f552ec11de7fa6f8eacf4720fece",
+      "fourth_orbit_index": 56,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 379,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-057",
+      "branch_sha256": "0d2238218adb3fc3d37a3b26b37f4ce88887c457617ca6786948b5b6283b53c5",
+      "fourth_orbit_index": 57,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 385,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-058",
+      "branch_sha256": "015ddee811fab504d9c51e718e82c7a81c13f174fe9c44fb18d01b3c31346544",
+      "fourth_orbit_index": 58,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 388,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-059",
+      "branch_sha256": "695ad7963efbbb44ef9069f6946524fc0d8d6b66ff01adde30054747880705cd",
+      "fourth_orbit_index": 59,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 389,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-060",
+      "branch_sha256": "df487b28c8afb1c61e4ab0ff5888ddb8f873f89d53fb137723ad9267c00e6cc9",
+      "fourth_orbit_index": 60,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 393,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-061",
+      "branch_sha256": "6a2d2d0760e0696d2f7b763f26c32ba8c83a40531bf055552fa52b044964404f",
+      "fourth_orbit_index": 61,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 395,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-062",
+      "branch_sha256": "3cea3a2ccbd0f6acb4a4d0059930a55be64e98fc6514904a038cc4f1fd412b55",
+      "fourth_orbit_index": 62,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 396,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-063",
+      "branch_sha256": "3cb6d3cdbefaea5d00f5042c0b16bfeb3d279437bef0bbedc4c01dc07d556a78",
+      "fourth_orbit_index": 63,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 398,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-064",
+      "branch_sha256": "e8a36e14e1443280978a8898039caf7573542ee7ed17157a2ac6114c67b2f4c1",
+      "fourth_orbit_index": 64,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 400,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-065",
+      "branch_sha256": "7f2d7dd142bf97a4bc11213cb09523ed8cf798548dcd8262335ce0fdc2c0cfde",
+      "fourth_orbit_index": 65,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 408,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-066",
+      "branch_sha256": "a5ba2ffebd93e7a32017b810f0981b7d7644235e80e6e32995951a99dd982282",
+      "fourth_orbit_index": 66,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 412,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-067",
+      "branch_sha256": "f1915f3f67d95849361e8135957ea8d989e61483c2527816afdb5eda3d7cc71b",
+      "fourth_orbit_index": 67,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 414,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-068",
+      "branch_sha256": "b78c22beb3f086bd8a939d72d45b8cd9ce3bc9d0206cee80512c96d937cb9f2e",
+      "fourth_orbit_index": 68,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 418,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-069",
+      "branch_sha256": "0c2d17ff7b2b8805583e06386ad8c50a1f355886a27e9e5867ed32c5d5c3aa31",
+      "fourth_orbit_index": 69,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 420,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-070",
+      "branch_sha256": "060da52fc1609fe2b568a42e8953ea88bf292ad6e18249c2db7459ce4b35c663",
+      "fourth_orbit_index": 70,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 422,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-071",
+      "branch_sha256": "92fc860d21f3d6532d13e4ad20d6ec670123b895293dc07525154926f6081820",
+      "fourth_orbit_index": 71,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 424,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-072",
+      "branch_sha256": "0658ab65487aac654123b4c101b9d565012c92f513fe23182245b5e54f5318fe",
+      "fourth_orbit_index": 72,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 425,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-073",
+      "branch_sha256": "048706cf1ef75c65d8ccdadb0f9f37baf62e1400e4c732b067e91215db556ba3",
+      "fourth_orbit_index": 73,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 426,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-074",
+      "branch_sha256": "a70461c2958bd989343dee84b336002ca0ef39c6a7f646e990c4e1f43f9dfd07",
+      "fourth_orbit_index": 74,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 428,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-075",
+      "branch_sha256": "2b24fd5a1ffdbdee9979fbe458ba4cef897482ec9212b0d27c46088688eb68aa",
+      "fourth_orbit_index": 75,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 452,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-076",
+      "branch_sha256": "d402065bb11c1e17210292c95aa8ffa29d12c97f8d5191c6665e217128f16a0d",
+      "fourth_orbit_index": 76,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 464,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-077",
+      "branch_sha256": "d23239b7c2b86f0aa833782926b0d471ecc810211418b35644157d368f08fb69",
+      "fourth_orbit_index": 77,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 470,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-078",
+      "branch_sha256": "89f8d82649fc22acff1538dbf5b2f66f11de20571222056983b5d74202a0f104",
+      "fourth_orbit_index": 78,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 482,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-079",
+      "branch_sha256": "5c95e0bd0f2f14a76994574524c470e4fffe3b2220c5a027bc9b2221e6f55a8b",
+      "fourth_orbit_index": 79,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 494,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-080",
+      "branch_sha256": "340a168a8f4e2512316517c36cb3da85a6bdaf872c12a54a91d1b98c662f0d36",
+      "fourth_orbit_index": 80,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 497,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-081",
+      "branch_sha256": "3c30dc3c02b94f92330b4602e45a06a89c0214f09902fb8f7621e7b670348a2c",
+      "fourth_orbit_index": 81,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 503,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-082",
+      "branch_sha256": "43b4db3ee9b0b34320dc3ba1ecc5c6f7d7a72a2580eeb99b71b0111f40d34f26",
+      "fourth_orbit_index": 82,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 506,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-083",
+      "branch_sha256": "914385994f0cb016051e9909e33b63cd338aa166d03dcd9a368d2fa1f4f00638",
+      "fourth_orbit_index": 83,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "not-rup-conflict"
+    },
+    {
+      "assumption_count": 509,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-084",
+      "branch_sha256": "54ec3a4d8d19634faf9355e304059d65313eecf9dc7303aa59b2dcc9fd5edb1b",
+      "fourth_orbit_index": 84,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 521,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-085",
+      "branch_sha256": "b23f0e7a35512e599c4dd87a5bc8a44605e955b9a80331d5d3f1e5ea353dc1e6",
+      "fourth_orbit_index": 85,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 527,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-086",
+      "branch_sha256": "94933c676a9f32d6ac1c4a64ec80271569dfb7b1b283e38bbee69da2bdda3725",
+      "fourth_orbit_index": 86,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 530,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-087",
+      "branch_sha256": "1734b2eb34d96ef62b1f3b768fbccf5cbb907584c645ee400f6805b691a28778",
+      "fourth_orbit_index": 87,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 536,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-088",
+      "branch_sha256": "e2f7986651381848dd936918d3e2d94197d36b0336c3b899de7c4ef0831901e1",
+      "fourth_orbit_index": 88,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 542,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-089",
+      "branch_sha256": "915e4ea461f4c235d68f999f0feeeb30dd0f1f29b8fd4b3f07431a012a8f3a6f",
+      "fourth_orbit_index": 89,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 566,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-090",
+      "branch_sha256": "3bc3f7073bbe6c0ebe89f5f746bf9eeff7691587bec123e829abc68709fe1037",
+      "fourth_orbit_index": 90,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 578,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-091",
+      "branch_sha256": "870180eb7a5f24f7781fc7bf360c0f1d6d372f1535d11187f237b25631004a78",
+      "fourth_orbit_index": 91,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 584,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-092",
+      "branch_sha256": "fbbe318b10ab616e2c152341397a10e3fb9c882898c90403a1742aff1c207c30",
+      "fourth_orbit_index": 92,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 596,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-093",
+      "branch_sha256": "f51e5dcea849f8910445a1d2cacfc6739a3099d92fd255d9460610f6c72e62f5",
+      "fourth_orbit_index": 93,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 602,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-094",
+      "branch_sha256": "3eaf795d54cda6d58e5267308563996829fac61840c7d3614867404fc832b10b",
+      "fourth_orbit_index": 94,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 614,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-095",
+      "branch_sha256": "65831b767fa72a2f593fc01312b9ecbc3698acc739dea3395734f33b141db64a",
+      "fourth_orbit_index": 95,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 620,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-096",
+      "branch_sha256": "66ddf3550d34b3de851fd6161e3d38c72077d54dab83118c64f0c9d552e74be0",
+      "fourth_orbit_index": 96,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 623,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-097",
+      "branch_sha256": "83d488d087680e5ffc1d3fe2bbf4919fb5a6639812a2dd9dca2cec34d635d1ac",
+      "fourth_orbit_index": 97,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 629,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-098",
+      "branch_sha256": "031668c9f852c4c757fb7261250b38d48cd45fe3eede0f15009c03bf7a45aad1",
+      "fourth_orbit_index": 98,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 632,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-099",
+      "branch_sha256": "eff3c11a81529ba4a30d7fa31c9a23aa752f30c66ee325872a40269ed2721a33",
+      "fourth_orbit_index": 99,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 633,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-100",
+      "branch_sha256": "d060ca23bec4c4d5f30337a7f0dce423a3799384be595102143e78c52d537371",
+      "fourth_orbit_index": 100,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 637,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-101",
+      "branch_sha256": "9b6b0f39cb2d0e12440972514286e70709181886d28d7f9e1dc162c4eeabd655",
+      "fourth_orbit_index": 101,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 639,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-102",
+      "branch_sha256": "edef22d23c61f0beee2686bfeed76c529f147fcb699472e27ca7ad95538e0914",
+      "fourth_orbit_index": 102,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 640,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-103",
+      "branch_sha256": "d5e0d84474d0760e79f7a362aa58dc8a764a76241286e5afe00755d9ed0684c1",
+      "fourth_orbit_index": 103,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 642,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-104",
+      "branch_sha256": "8ffe2b583c10734640093ec22bd9008612ae114a573d0f0de565d46832695542",
+      "fourth_orbit_index": 104,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 643,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-105",
+      "branch_sha256": "a0c6e1d6bc2462d6edc7aa3f33d8238d693e60dd157dffbca1fdb61a847e611b",
+      "fourth_orbit_index": 105,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 645,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-106",
+      "branch_sha256": "89910b1253319916b937557315fd10fbe41ff4f1e3dbe1529590f3fadecab443",
+      "fourth_orbit_index": 106,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 653,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-107",
+      "branch_sha256": "fc1fb73c0977c9403226ab3dbda728f965100e92f3bd0e11fb71adf7e1d5bf18",
+      "fourth_orbit_index": 107,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 657,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-108",
+      "branch_sha256": "e834a6a3c9f1db61b66c3a0dc9f7b64ca8bbc076dd1e03e77e19785528a81f26",
+      "fourth_orbit_index": 108,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 659,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-109",
+      "branch_sha256": "849e52a416c1c206120adbef6897e13f3d536f6978d1498380df4ae1da3e071a",
+      "fourth_orbit_index": 109,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 663,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-110",
+      "branch_sha256": "dbdecd309be073f177cddb581c2e0aff30361a9cfe16465455291e1723c6715e",
+      "fourth_orbit_index": 110,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 665,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-111",
+      "branch_sha256": "33d488f25ab28244466e96016aee03fd647fe9da8e24b452ae3c476f344fcf43",
+      "fourth_orbit_index": 111,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 669,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-112",
+      "branch_sha256": "60e66b6ceb1fc4406d1d8e2065d123ab629eb863727984f04efdc4edeb7b2784",
+      "fourth_orbit_index": 112,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 671,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-113",
+      "branch_sha256": "d3f27f9c3148a4a183c2b2000adc46a71b7f1a029eabfcc07e4ecd5f275af146",
+      "fourth_orbit_index": 113,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 672,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-114",
+      "branch_sha256": "e0024c13fa632d70ba5626e406623ba57d1c752256fbf251573840e4d9a68f7e",
+      "fourth_orbit_index": 114,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    },
+    {
+      "assumption_count": 674,
+      "branch_id": "w4-weight5-intersection0::orbit-015::fourth-115",
+      "branch_sha256": "cec733620c409044b95922c6205c21ab9c6ffd6cd590ee18985f22a5fd0ed083",
+      "fourth_orbit_index": 115,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "status": "rup-conflict"
+    }
+  ],
+  "closed_set_sha256": "414d614aab49a3d01a604622d24b714c21e36ec1589afbe4a24b2980db7ef216",
+  "cross_check_solver": "glucose42",
+  "method": "propagation under branch units without SAT search",
+  "not_rup_conflict_count": 166,
+  "per_child": [
+    {
+      "branch_count": 85,
+      "not_rup_conflict_count": 35,
+      "parent_child_id": "w4-weight5-intersection0::orbit-005",
+      "rup_conflict_count": 50
+    },
+    {
+      "branch_count": 76,
+      "not_rup_conflict_count": 23,
+      "parent_child_id": "w4-weight5-intersection0::orbit-007",
+      "rup_conflict_count": 53
+    },
+    {
+      "branch_count": 73,
+      "not_rup_conflict_count": 32,
+      "parent_child_id": "w4-weight5-intersection0::orbit-014",
+      "rup_conflict_count": 41
+    },
+    {
+      "branch_count": 116,
+      "not_rup_conflict_count": 76,
+      "parent_child_id": "w4-weight5-intersection0::orbit-015",
+      "rup_conflict_count": 40
+    }
+  ],
+  "proof_claim": false,
+  "python_sat_version": "1.9.dev15",
+  "record_type": "fourth-word-unit-propagation-classification",
+  "residual_set_sha256": "f52df0cc136bd8d2854040ab3f869e84661d3a7261a751a99ec2f1cbe9273638",
+  "rup_conflict_count": 184,
+  "schema_version": 1,
+  "solver": "glucose4",
+  "solver_agreement": true,
+  "sources": {
+    "child_frontier": {
+      "path": "research/third-word-child-frontier.json",
+      "sha256": "d6a5b1082aa64ae37092fe20094e7832f40b3374da059aac1da52d7dd90a1314"
+    },
+    "fourth_frontier": {
+      "path": "research/fourth-word-hard-frontier.json",
+      "sha256": "d517095aaf5fdc5ba05f1131d91d10c67a8e862ec5752ec748c88db0c127c5b3"
+    },
+    "parent_manifest": {
+      "path": "evidence/residual-two-word-cases.json",
+      "sha256": "db86f574ec45c2cdda689131d612bf4c37eb1cebf15fc717844b74cfb386ebaf"
+    },
+    "third_word_manifest": {
+      "path": "evidence/third-word-cases.json",
+      "sha256": "6dbb1c345688b808f0b1216bad9402fcb36b6ba3755a35bc9cb8dee7033426e8"
+    }
+  }
+}

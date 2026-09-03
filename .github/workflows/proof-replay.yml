@@ -8,17 +8,29 @@ permissions:
 
 jobs:
   replay:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 240
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
-          python-version: "3.12"
-      - run: python -m pip install -r requirements-sat.txt -r requirements-proof.txt
-      - run: make test PYTHON=python
-      - run: make proof-checker PYTHON=python
-      - run: make verify-residual-case PYTHON=python
-      - run: make audit-min-distance-proofs PYTHON=python
-      - run: make audit-third-word-proofs PYTHON=python
-      - run: make case-reduction PYTHON=python
+          python-version: "3.12.11"
+      - run: >-
+          python -I -m pip install --isolated --no-input --no-cache-dir
+          --require-hashes --only-binary=:all: --no-deps
+          --index-url https://pypi.org/simple -r requirements-replay.txt
+      - run: |
+          make \
+            test \
+            verify-residual-case \
+            audit-min-distance-proofs \
+            audit-third-word-proofs \
+            case-reduction \
+            audit-fourth-word-rup-proofs \
+            verify-release-manifest \
+            PYTHON=python
+      - run: git diff --exit-code
+      - run: test -z "$(git status --porcelain --untracked-files=all)"

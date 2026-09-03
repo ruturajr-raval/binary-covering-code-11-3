@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import gzip
 import hashlib
 import json
 import lzma
@@ -35,7 +34,9 @@ def main() -> int:
         )
         compression = "xz"
     elif args.proof_output.suffix == ".gz":
-        compressed = gzip.compress(proof_bytes, mtime=0)
+        compressed = bytes.fromhex(
+            "1f8b08000000000002ff33e0020012cd4a7e02000000"
+        )
         compression = "gzip"
     else:
         raise SystemExit("proof output must end in .gz or .xz")

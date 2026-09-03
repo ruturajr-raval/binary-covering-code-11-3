@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from audit_covering_cnf import read_dimacs
+from repository_lock import subprocess_lock_kwargs
 from run_two_word_portfolio import case_units, unit_digest
 
 
@@ -36,6 +37,7 @@ def run_command(arguments: list[str], *, environment: dict[str, str]) -> None:
         capture_output=True,
         text=True,
         env=environment,
+        **subprocess_lock_kwargs(environment),
     )
     if result.returncode != 0:
         raise RuntimeError(

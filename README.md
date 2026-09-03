@@ -7,7 +7,10 @@ Certificate-oriented search for the exact value of the binary covering number
 
 This repository verifies a known 16-word cover and records a complete
 150-branch normalization of the size-15 search, with 112 certified normalized
-branch closures and 38 unresolved branches. The exact value remains open.
+branch closures and 38 unresolved branches. Within four selected hard
+third-word children, a further 350-branch split has 184 checked closures and
+166 residual branches. No complete child or normalized parent is closed by
+that split, so the exact value remains open.
 
 ## The Problem
 
@@ -92,7 +95,11 @@ impossibility frontier:
     matching condition and two without it.
 13. The final exact ledger closes 112 normalized branches from the 150-branch
     canonical cover and leaves 38 normalized residual branches.
-14. Construction searches have not found a 15-word cover. The best retained
+14. Four selected hard third-word children have a complete 350-branch
+    fourth-word orbit split. Checked RUP certificates close 184 branches and
+    leave 166 unresolved, without closing any complete child or normalized
+    parent.
+15. Construction searches have not found a 15-word cover. The best retained
     near-cover leaves 28 ambient words uncovered.
 
 The retained baseline code is:
@@ -133,6 +140,16 @@ the size-15 search:
 38 normalized residual branches
 ```
 
+The retained fourth-word refinement additionally establishes:
+
+```text
+4 selected hard third-word children
+350 exhaustive fourth-word branches
+184 checked RUP closures
+166 unresolved fourth-word branches
+0 complete third-word children closed
+```
+
 The exact value remains open. No 15-word code has been found, and the retained
 proofs do not yet exclude all 15-word codes. The published interval therefore
 remains `15 <= K_2(11,3) <= 16`.
@@ -146,6 +163,8 @@ remains `15 <= K_2(11,3) <= 16`.
 | Is the normalized branch cover complete? | Yes, all hypothetical 15-word covers enter one of 150 canonical parent branches. |
 | How much of that cover is certified closed? | 112 normalized branch closures have independently checkable certificates or checked DRAT traces. |
 | What remains unresolved? | 38 normalized residual branches, explicitly listed and authenticated. |
+| What does the fourth-word bundle add? | It closes 184 of 350 exhaustive fourth-word branches within four selected hard third-word children. |
+| Does that bundle close a complete child or parent? | No. All four selected children and all 38 residual normalized parents remain open. |
 | Was a new lower bound proved? | No. |
 | Is `K_2(11,3)` determined? | No. The exact value remains either 15 or 16. |
 
@@ -198,14 +217,19 @@ The work proceeds on two independent routes.
 - Use the fixed-pair stabilizer to select a canonical third-word orbit.
 - Apply the matching constraint only in cases where maximum-degree
   normalization proves it.
-- Continue proof-producing runs on the 38 audited residual branches and check
-  every retained trace with a separate proof checker.
+- Split selected hard third-word children into exhaustive fourth-word orbits.
+- Retain only branch exclusions with proof traces accepted by the separately
+  pinned checker.
+- Continue proof-producing runs on the 166 residual fourth-word branches, then
+  extend the split where needed across the remaining live children.
 
 ## Limitations
 
 - The current 16-word code reproduces the known upper bound.
 - The retained 15-word near-cover still leaves 28 ambient words uncovered.
 - Thirty-eight normalized residual branches remain unresolved.
+- The retained fourth-word bundle closes 184 branches but leaves 166 branches
+  open and closes no complete third-word child or normalized parent.
 - A solver timeout is not evidence that a 15-word code is impossible.
 - CP-SAT `INFEASIBLE` without a proof trace is not promoted to a theorem.
 - Fixing the all-zero codeword is sound only because translating a binary code
@@ -217,21 +241,30 @@ The work proceeds on two independent routes.
 - The prior-art audit is dated 2026-09-02 and must be refreshed before any
   novelty claim.
 - No external mathematical review has occurred.
+- Fresh replay still requires network access to retrieve hash-locked Python
+  wheels and the pinned checker source. A self-contained third-party artifact
+  archive remains future work.
 
 ## Reproduction
 
 The direct verifiers require Python 3.9 or newer and use only the standard
 library. Exact formula generation and certificate replay additionally require
-`python-sat` and `highspy`. Proof replay also requires Git, Make, and a C
-compiler. `make proof-checker` fetches and builds the pinned checker revision.
+`python-sat` and `highspy`. The hash-locked replay environment supports CPython
+3.9 through 3.12. Proof replay also requires Git, Make, and a C compiler.
+`make proof-checker` fetches and builds the pinned checker revision.
+
+`evidence/fourth-word-rup-revision-v1.json` binds the proof index, replay
+attestation, bundle manifest, and release manifest to a certified Git revision.
+Its clean-checkout record includes the exact replay commands and SHA-256 hashes
+of the Git, Make, and Python executables used for certification.
 
 Create an environment with all proof-replay dependencies:
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install \
-  -r requirements-sat.txt \
-  -r requirements-proof.txt
+.venv/bin/python -I -m pip install --isolated --no-cache-dir \
+  --require-hashes --only-binary=:all: --no-deps \
+  --index-url https://pypi.org/simple -r requirements-replay.txt
 ```
 
 ```bash
@@ -256,6 +289,12 @@ make audit-third-word-cases PYTHON=.venv/bin/python
 make max-degree-reduction PYTHON=.venv/bin/python
 make audit-third-word-proofs PYTHON=.venv/bin/python
 make case-reduction PYTHON=.venv/bin/python
+make audit-third-word-child-frontier PYTHON=.venv/bin/python
+make audit-fourth-word-hard-frontier PYTHON=.venv/bin/python
+make audit-fourth-word-rup-plan PYTHON=.venv/bin/python
+make check-fourth-word-rup-proof-index PYTHON=.venv/bin/python
+make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python
+make verify-release-manifest PYTHON=.venv/bin/python
 make native-test
 make local-search-smoke
 ```
@@ -280,7 +319,10 @@ The current supported claim is:
 - exact distance and overlap constraints for any hypothetical 15-word cover;
 - a complete 150-case canonical parent partition;
 - independently checkable certificates closing 112 normalized branches;
-- an explicit, hashed frontier of 38 unresolved normalized branches.
+- an explicit, hashed frontier of 38 unresolved normalized branches;
+- a complete 350-branch fourth-word split within four selected hard children;
+- checked RUP certificates closing 184 of those branches, with 166 unresolved
+  and no complete child or parent closure.
 
 This is substantive progress on the proof frontier, not a determination of
 `K_2(11,3)`.

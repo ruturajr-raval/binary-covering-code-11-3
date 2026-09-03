@@ -1,0 +1,138 @@
+{
+  "all_verified": true,
+  "case_count": 184,
+  "case_outcomes_sha256": "49723cd17aaed42631f596ca325f3be51eec14573a6e9f98fd978babf08f5a48",
+  "checker": {
+    "binary_sha256": "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "name": "drat-trim",
+    "repository": "https://github.com/marijnheule/drat-trim.git"
+  },
+  "closed_set_sha256": "414d614aab49a3d01a604622d24b714c21e36ec1589afbe4a24b2980db7ef216",
+  "environment": {
+    "platform_machine": "arm64",
+    "platform_system": "Darwin",
+    "python_executable_path": {
+      "scope": "repository-relative",
+      "value": ".venv/bin/python"
+    },
+    "python_executable_sha256": "bdea59019a38eb6600cc9e71e984a97fedadc406448431281e7657030f54987e",
+    "python_implementation": "CPython",
+    "python_sat_distribution_version": "1.9.dev15",
+    "python_sat_native_modules": {
+      "pycard": {
+        "filename": "pycard.cpython-39-darwin.so",
+        "sha256": "5c83f6e48a6055ab9f59a668e8cfb8d8689d8d0b3bcfe64f23d56af4091c16ae"
+      },
+      "pyformula": {
+        "filename": "pyformula.cpython-39-darwin.so",
+        "sha256": "5658a4d0b5af690cd70d89e0bdb128389012e0e379f2dab3dea962ddc531ec9c"
+      },
+      "pysolvers": {
+        "filename": "pysolvers.cpython-39-darwin.so",
+        "sha256": "789d1a81ce5cd8cf4df9bed01f80b5829fd40fadd4fdad6b8015577643967aff"
+      }
+    },
+    "python_sat_tree": {
+      "file_count": 28,
+      "root": "pysat",
+      "sha256": "a8203508155c1d7021fbb039907ad4f4fc3f3814779a142a9f3d282a9bb25230"
+    },
+    "python_sat_version": "1.9.dev15",
+    "python_version": "3.9.6"
+  },
+  "pipeline_files": {
+    "bundle_certifier": {
+      "path": "tools/certify_fourth_word_rup_bundle.py",
+      "sha256": "583b0ed1997f9b5bac2e6a00bee434ddd998884ce31f3595a09f2672a8bced9e"
+    },
+    "certified_revision_manager": {
+      "path": "tools/manage_fourth_word_rup_revision.py",
+      "sha256": "b01952ece4bf551989e3cd92579fdd3a8f26d276c7921351a0f2c36ee72257ab"
+    },
+    "checker_bootstrap": {
+      "path": "tools/bootstrap_drat_trim.py",
+      "sha256": "835214d7528e93d0edd92d8ac3c37a0efbad505cb0f9a7382ebb1f6824caf230"
+    },
+    "formula_auditor": {
+      "path": "tools/audit_fourth_word_formula.py",
+      "sha256": "5b6c4c447a4f3ce9f682b9f494681bc8cd655a4c559d0e3c9f3c930ec006b090"
+    },
+    "formula_generator": {
+      "path": "tools/generate_fourth_word_formula.py",
+      "sha256": "6239b5a8d85e35189697c0a3b807e97b119e44164ac9bdd3b69236efcbba0d86"
+    },
+    "index_auditor": {
+      "path": "tools/audit_fourth_word_rup_proofs.py",
+      "sha256": "e5c566b3bb951361158269dca489b0857f2269b923d285fbd5d7ce193067f038"
+    },
+    "lock_assertion": {
+      "path": "tools/assert_repository_lock.py",
+      "sha256": "5acb35a56b6ff940e652bd50c92cf922b790b55f1272a77f4ca50ffd641f734f"
+    },
+    "makefile": {
+      "path": "Makefile",
+      "sha256": "81a959751b05e80734c38e72349022235387cb3a52443553183bb1f95a95da97"
+    },
+    "manifest_verifier": {
+      "path": "tools/verify_checksum_manifest.py",
+      "sha256": "4df44d6fe76bbde3efb9ac6d3e100aa8a2a74756a2ebebcab519640e6c579fa1"
+    },
+    "plan_auditor": {
+      "path": "tools/audit_fourth_word_rup_plan.py",
+      "sha256": "6adb7caa43cb227e6098299e7661a7f7172f836c078b91833a67823f148f184c"
+    },
+    "plan_generator": {
+      "path": "tools/generate_fourth_word_rup_plan.py",
+      "sha256": "4626ccec70ec49065fdbfe98686f4a6bedf6c4b45aa9bb68a0d435657ca68174"
+    },
+    "proof_checker_driver": {
+      "path": "tools/check_drat_proof.py",
+      "sha256": "c1e63a06d4e3a10173295f980dbf49ad5bee487ed3f83260f510a413fc337a33"
+    },
+    "proof_orchestrator": {
+      "path": "tools/prove_fourth_word_rup_cases.py",
+      "sha256": "991f996da7d455e2c70e06cd532e603963eefe387eeb45d50ef7d24f5337df54"
+    },
+    "proof_requirements": {
+      "path": "requirements-proof.txt",
+      "sha256": "ebb8e5f98cc8645b1b56264be490a29f4e36905b32fbb6e1d56f42fdfca1ed8a"
+    },
+    "replay_requirements": {
+      "path": "requirements-replay.txt",
+      "sha256": "857c2a422093d2d2e8f6aeb669b082a4b69a950084d9a00df2c3d814e6ea4dfa"
+    },
+    "repository_lock": {
+      "path": "tools/repository_lock.py",
+      "sha256": "efc61ba1d037c871a45e24380fb8e7469923867dc281ff0afc0807d6a839b423"
+    },
+    "repository_lock_runner": {
+      "path": "tools/run_with_repository_lock.py",
+      "sha256": "d2a098fdddaf14f80c1b86fbec37a8ffc272d3b7880b463acd266262a69ed2ef"
+    },
+    "sat_requirements": {
+      "path": "requirements-sat.txt",
+      "sha256": "5c39718c34ee37edf082a7e7052045ef83ae6640f6099427d592ffcdd8391cdd"
+    }
+  },
+  "pipeline_python_tree": {
+    "file_count": 67,
+    "roots": [
+      "src",
+      "tools"
+    ],
+    "sha256": "7b59bae526c81b4404eb98d913303dc9b1c083b9f65406a78b9a161df8515a29"
+  },
+  "proof_index": {
+    "path": "evidence/fourth-word-rup-proof-index-v1.json",
+    "sha256": "56d74184e9f7d911bc952962ed818bec63948ad5bb8b7f5bb1347463e67a3b23"
+  },
+  "provenance": {
+    "externally_signed": false,
+    "scope": "local self-attestation"
+  },
+  "record_type": "fourth-word-rup-replay-attestation",
+  "replay_date": "2026-09-03",
+  "residual_set_sha256": "f52df0cc136bd8d2854040ab3f869e84661d3a7261a751a99ec2f1cbe9273638",
+  "schema_version": 3
+}

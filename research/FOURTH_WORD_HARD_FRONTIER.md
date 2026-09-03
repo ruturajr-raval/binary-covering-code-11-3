@@ -85,5 +85,70 @@ proof trace, and cooperative interrupt timing can change statuses near the
 threshold. The measured solve time can also exceed five seconds before the
 solver acknowledges an interrupt.
 
-No fourth-word branch is considered closed until its audited CNF has a proof
-accepted by an independent checker.
+## Certified RUP Closures
+
+A propagation-only classification was cross-checked with Glucose 4 and
+Glucose 4.2. Both solvers agreed on every branch. This identified 184 branch
+formulas whose assumptions force a contradiction by reverse unit propagation,
+leaving 166 branches outside this proof class.
+
+| Third-word child | Fourth-word branches | RUP-UNSAT | Residual |
+| --- | ---: | ---: | ---: |
+| `orbit-005` | 85 | 50 | 35 |
+| `orbit-007` | 76 | 53 | 23 |
+| `orbit-014` | 73 | 41 | 32 |
+| `orbit-015` | 116 | 40 | 76 |
+| **Total** | **350** | **184** | **166** |
+
+Every one of the 184 formulas was regenerated, independently audited, and
+checked with `drat-trim` at commit
+`2e3b2dc0ecf938addbd779d42877b6ed69d9a985`. The retained v1 bundle contains
+the formula metadata, proof summary, and checker record for each branch. The
+large CNF files are reproducible build artifacts and are not retained.
+
+The principal records are:
+
+- `evidence/fourth-word-up-classification.json`
+- `evidence/fourth-word-rup-proof-plan.json`
+- `evidence/fourth-word-rup-proof-index-v1.json`
+- `evidence/fourth-word-rup-replay-attestation-v1.json`
+- `evidence/fourth-word-rup-bundle-v1.sha256`
+- `evidence/proofs/fourth-word-rup-v1/`
+
+Replay all 184 certificates from regenerated formulas:
+
+```text
+make audit-fourth-word-rup-proofs
+```
+
+Check the retained index and artifact hashes without replaying the proofs:
+
+```text
+make check-fourth-word-rup-proof-index
+```
+
+The structural check requires every indexed pipeline file and the complete
+`src` and `tools` Python tree to match the current repository bytes. The full
+replay additionally rebuilds the checker from the pinned source commit,
+validates the tracked modes and raw source bytes, and rejects checker,
+pipeline, interpreter, or dependency changes during the run. Compiled checker
+hashes can differ across platforms, so the measured binary hash belongs to the
+local replay record rather than a universal cross-platform requirement.
+
+The retained replay attestation is an unsigned, hash-bound local
+self-attestation for a second successful 184-case replay on 2026-09-03. It
+binds the proof index, checker build, pipeline sources, exact interpreter
+command in privacy-safe form, Python executable, `pysat` source tree, native
+`python-sat` modules, and all case outcomes. The dedicated v1 manifest
+authenticates the classification, proof plan, proof index, replay attestation,
+and all 554 proof artifacts.
+
+The certification is branch-level. Each selected third-word child still has
+at least one residual fourth-word branch, so this bundle closes no complete
+third-word child and no normalized parent. The global frontier therefore
+remains at 38 unresolved normalized parents, and the exact value remains 15 or
+16.
+
+The next proof step is to seek checked nontrivial DRAT certificates for the
+166 residual branches. Branches that remain hard after proof-producing solver
+runs can be subdivided by a fifth-word orbit split.

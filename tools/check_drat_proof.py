@@ -11,6 +11,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+from repository_lock import subprocess_lock_kwargs
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -61,6 +63,7 @@ def main() -> int:
             check=False,
             capture_output=True,
             text=True,
+            **subprocess_lock_kwargs(),
         )
     combined_output = result.stdout + result.stderr
     verified = result.returncode == 0 and "VERIFIED" in combined_output

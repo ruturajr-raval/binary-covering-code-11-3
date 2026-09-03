@@ -5,7 +5,7 @@
     "n": 11,
     "radius": 3
   },
-  "frontier_checked_on": "2026-09-02",
+  "frontier_checked_on": "2026-09-03",
   "published_interval": {
     "lower_bound": 15,
     "upper_bound": 16,
@@ -88,6 +88,12 @@
       "parent_case_count": 49,
       "orbit_count": 3238,
       "completeness_argument": "docs/THIRD_WORD_SYMMETRY.md"
+    },
+    "fourth_word": {
+      "manifest": "research/fourth-word-hard-frontier.json",
+      "selected_third_word_children": 4,
+      "orbit_count": 350,
+      "completeness_argument": "research/FOURTH_WORD_HARD_FRONTIER.md"
     }
   },
   "distance_and_overlap": {
@@ -119,6 +125,25 @@
     "all_retained_proofs_checked": true,
     "completeness_argument": "docs/CASE_REDUCTION.md"
   },
+  "fourth_word_branch_reduction": {
+    "classification": "evidence/fourth-word-up-classification.json",
+    "proof_plan": "evidence/fourth-word-rup-proof-plan.json",
+    "proof_index": "evidence/fourth-word-rup-proof-index-v1.json",
+    "replay_attestation": "evidence/fourth-word-rup-replay-attestation-v1.json",
+    "bundle_manifest": "evidence/fourth-word-rup-bundle-v1.sha256",
+    "certified_revision_record": "evidence/fourth-word-rup-revision-v1.json",
+    "proof_directory": "evidence/proofs/fourth-word-rup-v1",
+    "replay_date": "2026-09-03",
+    "selected_third_word_children": 4,
+    "total_branches": 350,
+    "rup_unsat_branches": 184,
+    "unresolved_branches": 166,
+    "closed_third_word_children": 0,
+    "closed_normalized_branches": 0,
+    "proof_checker": "drat-trim",
+    "proof_checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "all_retained_proofs_checked": true
+  },
   "construction_search": {
     "best_retained_near_cover": "data/search/k2-11-3-near-cover-28.txt",
     "near_cover_sha256": "241d430ebde518a7515e531d357b81bcd7eab0a7387df17b59589eb1870f245c",
@@ -132,6 +157,9 @@
     "proof_trace": null,
     "new_claim": null,
     "normalized_branches_closed": 112,
-    "normalized_branches_remaining": 38
+    "normalized_branches_remaining": 38,
+    "fourth_word_rup_branches_closed": 184,
+    "fourth_word_branches_remaining": 166,
+    "newly_closed_normalized_branches": 0
   }
 }
