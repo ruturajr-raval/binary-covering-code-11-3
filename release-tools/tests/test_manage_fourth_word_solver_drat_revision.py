@@ -36,7 +36,7 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
         b"\nRan 14 tests in 0.100s\n\nOK\n"
     )
     outputs[6] = b"\nRan 80 tests in 1.000s\n\nOK\n"
-    outputs[7] = (
+    outputs[8] = (
         json.dumps(
             {
                 "case_count": 140,
@@ -50,7 +50,7 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
         ).encode("ascii")
         + b"\n"
     )
-    outputs[8] = (
+    outputs[9] = (
         json.dumps(
             {
                 "case_count": 140,
@@ -68,7 +68,7 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
         ).encode("ascii")
         + b"\n"
     )
-    outputs[9] = (
+    outputs[10] = (
         json.dumps(
             {
                 "artifact_count": 422,
@@ -80,7 +80,7 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
         ).encode("ascii")
         + b"\n"
     )
-    outputs[10] = (
+    outputs[11] = (
         json.dumps(
             {
                 "artifact_count": 23,
@@ -173,10 +173,21 @@ class SolverDratRevisionTests(unittest.TestCase):
 
     def test_command_results_require_clean_semantic_outputs(self) -> None:
         source = "1" * 40
+        self.assertEqual(
+            revision.REPLAY_COMMANDS[7],
+            (
+                "make prepare-fourth-word-proof-formulas "
+                "PYTHON=.venv/bin/python"
+            ),
+        )
+        self.assertEqual(
+            revision.REPLAY_COMMANDS[9],
+            "make -C proof-expansion audit-bundle",
+        )
         results = valid_command_results(source)
         revision.validate_command_results(results, source)
-        results[12] = revision.command_result(
-            revision.REPLAY_COMMANDS[12],
+        results[-1] = revision.command_result(
+            revision.REPLAY_COMMANDS[-1],
             b"untracked\n",
         )
         with self.assertRaisesRegex(
@@ -188,7 +199,10 @@ class SolverDratRevisionTests(unittest.TestCase):
     def test_retained_output_tampering_is_rejected(self) -> None:
         source = "1" * 40
         results = valid_command_results(source)
-        results[8]["output_base64"] = "e30K"
+        audit_index = revision.REPLAY_COMMANDS.index(
+            "make -C proof-expansion audit-bundle"
+        )
+        results[audit_index]["output_base64"] = "e30K"
         with self.assertRaisesRegex(
             RuntimeError,
             "retained output differs",

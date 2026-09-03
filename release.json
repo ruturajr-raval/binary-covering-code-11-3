@@ -35,7 +35,7 @@
     },
     "revision_manager": {
       "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
-      "sha256": "af00188ec8a95cd4299a218f179bc102cb34e8de63ed42c0e4302d3590a19559"
+      "sha256": "5b89a334cb503e528d304266a0074ea79809dcbe3807cfe586680fd2d9d8fc4d"
     },
     "certified_revision_record": null
   },

@@ -133,6 +133,7 @@ REPLAY_COMMANDS = (
         "-s release-tools/tests -v"
     ),
     "make -C proof-expansion test",
+    "make prepare-fourth-word-proof-formulas PYTHON=.venv/bin/python",
     "make -C proof-expansion audit-plan",
     "make -C proof-expansion audit-bundle",
     (
@@ -754,7 +755,7 @@ def validate_command_output_semantics(
             raise RuntimeError(
                 "proof-expansion test output is invalid"
             )
-    elif index == 7:
+    elif index == 8:
         require_json_result(
             output,
             {
@@ -767,7 +768,7 @@ def validate_command_output_semantics(
                 "valid": True,
             },
         )
-    elif index == 8:
+    elif index == 9:
         require_json_result(
             output,
             {
@@ -784,7 +785,7 @@ def validate_command_output_semantics(
                 "valid": True,
             },
         )
-    elif index == 9:
+    elif index == 10:
         require_json_result(
             output,
             {
@@ -793,7 +794,7 @@ def validate_command_output_semantics(
                 "valid": True,
             },
         )
-    elif index == 10:
+    elif index == 11:
         require_json_result(
             output,
             {
@@ -802,7 +803,7 @@ def validate_command_output_semantics(
                 "valid": True,
             },
         )
-    elif index in {11, 12} and output:
+    elif index in {12, 13} and output:
         raise RuntimeError(
             "clean-replay final repository output is not empty"
         )
@@ -1335,12 +1336,20 @@ def run_clean_checkout(
             REPLAY_COMMANDS[6],
         ),
         (
-            [make_executable, "-C", "proof-expansion", "audit-plan"],
+            [
+                make_executable,
+                "prepare-fourth-word-proof-formulas",
+                "PYTHON=.venv/bin/python",
+            ],
             REPLAY_COMMANDS[7],
         ),
         (
-            [make_executable, "-C", "proof-expansion", "audit-bundle"],
+            [make_executable, "-C", "proof-expansion", "audit-plan"],
             REPLAY_COMMANDS[8],
+        ),
+        (
+            [make_executable, "-C", "proof-expansion", "audit-bundle"],
+            REPLAY_COMMANDS[9],
         ),
         (
             [
@@ -1354,7 +1363,7 @@ def run_clean_checkout(
                 "--tree",
                 PROOF_DIRECTORY.as_posix(),
             ],
-            REPLAY_COMMANDS[9],
+            REPLAY_COMMANDS[10],
         ),
         (
             [
@@ -1362,7 +1371,7 @@ def run_clean_checkout(
                 "verify-release-manifest",
                 "PYTHON=.venv/bin/python",
             ],
-            REPLAY_COMMANDS[10],
+            REPLAY_COMMANDS[11],
         ),
         (
             replay_git_command(
@@ -1374,7 +1383,7 @@ def run_clean_checkout(
                     "--exit-code",
                 ],
             ),
-            REPLAY_COMMANDS[11],
+            REPLAY_COMMANDS[12],
         ),
     )
     for result_index, (arguments, description) in enumerate(
@@ -1393,6 +1402,7 @@ def run_clean_checkout(
             )
         )
 
+    status_index = len(REPLAY_COMMANDS) - 1
     status = run_process(
         replay_git_command(
             git_executable,
@@ -1405,17 +1415,22 @@ def run_clean_checkout(
         ),
         cwd=checkout,
         environment=environment,
-        description=REPLAY_COMMANDS[12],
+        description=REPLAY_COMMANDS[status_index],
         print_output=False,
     )
     status = normalize_output(status, replacements)
-    write_log(logs, 12, status)
+    write_log(logs, status_index, status)
     if status:
         raise RuntimeError(
             "clean-replay worktree is not clean after verification"
         )
-    results.append(command_result(REPLAY_COMMANDS[12], status))
-    print(f"[13/{len(REPLAY_COMMANDS)}] {REPLAY_COMMANDS[12]} passed")
+    results.append(
+        command_result(REPLAY_COMMANDS[status_index], status)
+    )
+    print(
+        f"[{len(REPLAY_COMMANDS)}/{len(REPLAY_COMMANDS)}] "
+        f"{REPLAY_COMMANDS[status_index]} passed"
+    )
 
     if executable_attestation(
         git_executable=Path(git_executable),
