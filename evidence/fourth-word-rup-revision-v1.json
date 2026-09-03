@@ -3,12 +3,76 @@
     "path": "evidence/fourth-word-rup-bundle-v1.sha256",
     "sha256": "c0df74342c2fbf7c3e95e3609034d6b8106b9b9ab3129c994daa99348d6124aa"
   },
-  "certified_release_manifest": null,
-  "certified_revision": null,
-  "certified_tree": null,
+  "certified_release_manifest": {
+    "path": "release-manifest.sha256",
+    "sha256": "175ac3106cebfa2c4489786fe3ca72f1668dc59f479de27c263cd8feb6995168"
+  },
+  "certified_revision": "06ecaa7bc28503efd871faf4450005f43e625124",
+  "certified_tree": "4888ad6c5305b5d30d6c4ca3e8435b9c872307b1",
   "clean_checkout_replay": {
-    "command_results": null,
-    "command_results_sha256": null,
+    "command_results": [
+      {
+        "command": "git clone --no-hardlinks --no-checkout <repository> <clean-replay>",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "return_code": 0
+      },
+      {
+        "command": "git checkout --detach <certified-revision>",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "return_code": 0
+      },
+      {
+        "command": "git rev-parse HEAD",
+        "output_bytes": 41,
+        "output_sha256": "c0842edf1237e0cd5d53d46ad5a3db17296c422d75212e2b093b800c974fa101",
+        "return_code": 0
+      },
+      {
+        "command": "python -I -m venv .venv",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "return_code": 0
+      },
+      {
+        "command": ".venv/bin/python -I -m pip install --isolated --disable-pip-version-check --no-input --no-cache-dir --require-hashes --only-binary=:all: --no-deps --index-url https://pypi.org/simple -r requirements-replay.txt",
+        "output_bytes": 664,
+        "output_sha256": "30313a33202d0426653aebf1aee9f537d433e5eafd5105cedac4d746fa8c4912",
+        "return_code": 0
+      },
+      {
+        "command": "make test PYTHON=.venv/bin/python",
+        "output_bytes": 19481,
+        "output_sha256": "81fdf1495579829381610a014d5d9b0387e5c649a6d69b4a33cfb2da9ba61f7b",
+        "return_code": 0
+      },
+      {
+        "command": "make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python",
+        "output_bytes": 17074,
+        "output_sha256": "5e673007daa4a6c6aaca2a763bba1d1fa2df70e50c32af9e169c70b8eed6c59e",
+        "return_code": 0
+      },
+      {
+        "command": "make verify-release-manifest PYTHON=.venv/bin/python ALLOW_PENDING_REVISION=1",
+        "output_bytes": 3412,
+        "output_sha256": "4357d82386c1b901cffa73a9fe304cc93e4cd1359c20c719342bfffba7033383",
+        "return_code": 0
+      },
+      {
+        "command": "git diff --exit-code",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "return_code": 0
+      },
+      {
+        "command": "git status --porcelain --untracked-files=all",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "return_code": 0
+      }
+    ],
+    "command_results_sha256": "527dd5fa22d0a0594cb1a43cac0605869d53bcb4fd5aa5684a3b2eeaf6051b4c",
     "commands": [
       "git clone --no-hardlinks --no-checkout <repository> <clean-replay>",
       "git checkout --detach <certified-revision>",
@@ -21,12 +85,25 @@
       "git diff --exit-code",
       "git status --porcelain --untracked-files=all"
     ],
-    "completed_on": null,
+    "completed_on": "2026-09-03",
     "output_commitment_scope": "host-specific-self-attestation",
-    "passed": false,
-    "revision": null,
-    "toolchain": null,
-    "working_tree_clean": false
+    "passed": true,
+    "revision": "06ecaa7bc28503efd871faf4450005f43e625124",
+    "toolchain": {
+      "git": {
+        "sha256": "b8763cf250e607a778bb4603cecb5b90338814d0a3dfcba0d57b1de242f610e9",
+        "source": "system-default-path"
+      },
+      "make": {
+        "sha256": "b8763cf250e607a778bb4603cecb5b90338814d0a3dfcba0d57b1de242f610e9",
+        "source": "system-default-path"
+      },
+      "python": {
+        "sha256": "bdea59019a38eb6600cc9e71e984a97fedadc406448431281e7657030f54987e",
+        "source": "explicit-absolute-path"
+      }
+    },
+    "working_tree_clean": true
   },
   "proof_index": {
     "path": "evidence/fourth-word-rup-proof-index-v1.json",
@@ -38,5 +115,5 @@
     "sha256": "a00aa7d2ee8d1aebc3c52f05f25a5b19041a31c675b6ea467fb0e7003ab40099"
   },
   "schema_version": 2,
-  "status": "pending-clean-checkout-replay"
+  "status": "clean-checkout-replay-passed"
 }

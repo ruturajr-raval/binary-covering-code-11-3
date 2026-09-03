@@ -1,7 +1,7 @@
 {
   "version": "0.2.0",
   "release_status": "candidate",
-  "artifact_release_status": "pending_clean_checkout_replay",
+  "artifact_release_status": "ready",
   "theorem_release_status": "hold",
   "release_date": null,
   "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_fourth_word_rup_bundle",
@@ -9,8 +9,8 @@
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "certified_partial_fourth_word_branch_reduction",
   "partial_progress_status": "significant_verified_proof_frontier_without_complete_child_closure",
-  "artifact_reproducibility_ready": false,
-  "artifact_release_ready": false,
+  "artifact_reproducibility_ready": true,
+  "artifact_release_ready": true,
   "theorem_announcement_ready": false,
   "result_routes": {
     "construction": {

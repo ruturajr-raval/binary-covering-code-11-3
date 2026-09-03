@@ -17,14 +17,14 @@
     "independent_child_formula_audit_passes": true,
     "construction_verified_twice": true,
     "all_required_proofs_replay": true,
-    "clean_checkout_replay_passes": false,
+    "clean_checkout_replay_passes": true,
     "claim_scope_audited": true,
     "limitations_documented": true,
     "manuscript_ready": false,
     "external_review_addressed": false
   },
-  "artifact_decision": "pending_clean_checkout_replay",
+  "artifact_decision": "ready",
   "decision_scope": "theorem_announcement",
   "decision": "hold",
-  "reason": "The strengthened fourth-word v1 artifact passes local proof replay, and clean-checkout certification is pending for the new source revision. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
+  "reason": "The strengthened fourth-word v1 partial-result artifact is clean-checkout certified at revision 06ecaa7bc28503efd871faf4450005f43e625124 and is ready for release. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
 }

@@ -262,17 +262,18 @@ library. Exact formula generation and certificate replay additionally require
 Proof verification reconstructs transient formulas and validates retained
 proof identities without rewriting the retained evidence.
 
-After clean-checkout finalization,
 `evidence/fourth-word-rup-revision-v1.json` binds the proof index, replay
-attestation, bundle manifest, and release manifest to the certified Git
-revision. Its record includes the normalized replay command sequence,
-host-specific self-attested per-command output byte counts and SHA-256 hashes,
-and SHA-256 hashes of the Git, Make, and Python executables used for
-certification. Exact invocation construction is frozen in the certified source
-tree. Output hashes include host-dependent text and are not expected to match
-across equivalent runs on different hosts. Only the revision, final diff, and
-final status outputs have invariant semantics checked independently by the
-record validator.
+attestation, bundle manifest, and release manifest to certified Git revision
+`06ecaa7bc28503efd871faf4450005f43e625124`, tree
+`4888ad6c5305b5d30d6c4ca3e8435b9c872307b1`, after a clean-checkout replay
+completed on 2026-09-03. Its record includes the normalized replay command
+sequence, host-specific self-attested per-command output byte counts and
+SHA-256 hashes, and SHA-256 hashes of the Git, Make, and Python executables used
+for certification. Exact invocation construction is frozen in the certified
+source tree. Output hashes include host-dependent text and are not expected to
+match across equivalent runs on different hosts. Only the revision, final
+diff, and final status outputs have invariant semantics checked independently
+by the record validator.
 
 Create an environment with all proof-replay dependencies:
 

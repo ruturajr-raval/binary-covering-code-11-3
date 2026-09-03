@@ -69,16 +69,23 @@
   proofs, verified both proof manifests and the release manifest, and finished
   with a clean checkout.
 - The `fe73dd0d166b5906faad4c262a4878ec5c9c7ecc` replay certified the schema-1
-  read-only repair. It is superseded for release purposes by the pending
-  schema-2 output-attestation source freeze.
+  read-only repair. It is superseded for release purposes by the schema-2
+  output-attestation source freeze.
 - Rebuilt and replayed all 184 fourth-word proofs against the schema-2 source.
   The 554 proof artifacts remained byte-identical, with proof-directory digest
   `927046410d0725a6b3d7ff7cd9832a882ec6f23dd8f6d8c89ddffbcd941368e8`.
 - Passed the complete local matrix on 2026-09-03: all 167 tests, the residual
   replay, 14 minimum-distance proofs, 6 third-word proofs, the 112/38 case
   reduction, all 184 fourth-word proofs, both proof manifests, and the
-  23-file release manifest. Schema-2 clean-checkout certification remains
-  pending for the new source revision.
+  23-file release manifest.
+- Completed the isolated schema-2 clean-checkout replay of certified revision
+  `06ecaa7bc28503efd871faf4450005f43e625124`, tree
+  `4888ad6c5305b5d30d6c4ca3e8435b9c872307b1`, on 2026-09-03. It passed all
+  167 tests with three optional OR-Tools tests skipped, replayed all 184
+  fourth-word proofs, verified both proof manifests and the pending release
+  manifest, and finished with an empty diff and status.
+- Retained ten ordered command-output commitments with aggregate digest
+  `527dd5fa22d0a0594cb1a43cac0605869d53bcb4fd5aa5684a3b2eeaf6051b4c`.
 
 ## 2026-09-02
 

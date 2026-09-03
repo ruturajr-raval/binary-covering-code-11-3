@@ -37,9 +37,10 @@ certified unsatisfiable by RUP.
 `evidence/proof-bundle.sha256` authenticates every retained proof artifact.
 `evidence/fourth-word-rup-bundle-v1.sha256` authenticates the new fourth-word
 index, attestation, classification, plan, and proof tree.
-After clean-checkout finalization,
 `evidence/fourth-word-rup-revision-v1.json` binds those artifacts to the
-certified Git revision and records the normalized command sequence,
+certified Git revision `06ecaa7bc28503efd871faf4450005f43e625124`,
+tree `4888ad6c5305b5d30d6c4ca3e8435b9c872307b1`, after a clean-checkout
+replay completed on 2026-09-03. It records the normalized command sequence,
 host-specific self-attested per-command output hashes, and toolchain hashes.
 Exact invocation construction is frozen in the certified source tree. The
 output hashes include host-dependent text and are not cross-host comparison
