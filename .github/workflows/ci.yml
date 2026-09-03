@@ -40,8 +40,18 @@ jobs:
       - run: make verify-baseline verify-independent
       - run: make distance-bounds overlap-bound
       - run: make audit-two-word-cases
-      - run: make verify-orbit-certificates PYTHON=python
-      - run: make verify-integer-profile-certificates PYTHON=python
+      - name: Verify retained orbit LP certificates
+        run: >-
+          PYTHONPATH=src:tools python
+          tools/verify_orbit_lp_certificates.py
+          evidence/two-word-cases.json
+          evidence/orbit-lp-certificates.json
+      - name: Verify retained integer profile certificates
+        run: >-
+          PYTHONPATH=src:tools python
+          tools/verify_integer_profile_certificates.py
+          evidence/two-word-cases.json
+          evidence/integer-profile-certificates.json
       - run: make verify-release-manifest
       - name: Assert no tracked files changed
         if: always()
