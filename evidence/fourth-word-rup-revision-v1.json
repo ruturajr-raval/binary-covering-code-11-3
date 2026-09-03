@@ -1,12 +1,13 @@
 {
   "bundle_manifest": {
     "path": "evidence/fourth-word-rup-bundle-v1.sha256",
-    "sha256": "c14dc0e42b64c2cc7466f3db3abdef7aef41028c471dc4a89166a4972b5c7032"
+    "sha256": "c0df74342c2fbf7c3e95e3609034d6b8106b9b9ab3129c994daa99348d6124aa"
   },
   "certified_release_manifest": null,
   "certified_revision": null,
   "certified_tree": null,
   "clean_checkout_replay": {
+    "command_results": null,
     "command_results_sha256": null,
     "commands": [
       "git clone --no-hardlinks --no-checkout <repository> <clean-replay>",
@@ -21,6 +22,7 @@
       "git status --porcelain --untracked-files=all"
     ],
     "completed_on": null,
+    "output_commitment_scope": "host-specific-self-attestation",
     "passed": false,
     "revision": null,
     "toolchain": null,
@@ -28,13 +30,13 @@
   },
   "proof_index": {
     "path": "evidence/fourth-word-rup-proof-index-v1.json",
-    "sha256": "386c8a85e8c5deefc42c8289b6d9c71df27b75ccabd1f721e5ea48684e90ffdf"
+    "sha256": "457eeb2fdcf68ca6dcdcd8b3e1c8c0934e23eb5dfaba8259ac4de25f662f2ef4"
   },
   "record_type": "fourth-word-rup-certified-revision",
   "replay_attestation": {
     "path": "evidence/fourth-word-rup-replay-attestation-v1.json",
-    "sha256": "1d7413bfbe46ea8e297ccac9d6c944f444c31a12206c91c9e334a1b787d7d7d9"
+    "sha256": "a00aa7d2ee8d1aebc3c52f05f25a5b19041a31c675b6ea467fb0e7003ab40099"
   },
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "pending-clean-checkout-replay"
 }

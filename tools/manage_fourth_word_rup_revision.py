@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from typing import Optional
 
 from audit_fourth_word_rup_proofs import (
     python_tree_record,
@@ -32,6 +33,8 @@ REPLAY_ATTESTATION = Path(
 RELEASE_MANIFEST = Path("release-manifest.sha256")
 REPLAY_REQUIREMENTS = Path("requirements-replay.txt")
 PYPI_INDEX = "https://pypi.org/simple"
+SCHEMA_VERSION = 2
+OUTPUT_COMMITMENT_SCOPE = "host-specific-self-attestation"
 TOOLCHAIN_SOURCES = {
     "git": "system-default-path",
     "make": "system-default-path",
@@ -192,10 +195,79 @@ def atomic_write_bytes(path: Path, payload: bytes) -> None:
             fsync_directory(temporary.parent)
 
 
-def canonical_json(record: dict[str, object]) -> bytes:
+def canonical_json(record: object) -> bytes:
     return (
         json.dumps(record, indent=2, sort_keys=True) + "\n"
     ).encode("ascii")
+
+
+def command_result(
+    command: str,
+    output: bytes,
+) -> dict[str, object]:
+    return {
+        "command": command,
+        "return_code": 0,
+        "output_bytes": len(output),
+        "output_sha256": sha256_bytes(output),
+    }
+
+
+def validate_command_results(
+    value: object,
+    *,
+    revision: Optional[str] = None,
+) -> list[dict[str, object]]:
+    if not isinstance(value, list) or len(value) != len(REPLAY_COMMANDS):
+        raise RuntimeError("clean-replay command results are invalid")
+    validated = []
+    for expected_command, result in zip(REPLAY_COMMANDS, value):
+        if (
+            not isinstance(result, dict)
+            or set(result)
+            != {
+                "command",
+                "return_code",
+                "output_bytes",
+                "output_sha256",
+            }
+            or result["command"] != expected_command
+            or type(result["return_code"]) is not int
+            or result["return_code"] != 0
+            or type(result["output_bytes"]) is not int
+            or result["output_bytes"] < 0
+        ):
+            raise RuntimeError("clean-replay command result is invalid")
+        validated.append(
+            {
+                "command": expected_command,
+                "return_code": 0,
+                "output_bytes": result["output_bytes"],
+                "output_sha256": require_sha256(
+                    result["output_sha256"],
+                    "clean-replay command output hash",
+                ),
+            }
+        )
+    if revision is not None:
+        semantic_expectations = {
+            2: (revision + "\n").encode("ascii"),
+            8: b"",
+            9: b"",
+        }
+        for index, expected_output in semantic_expectations.items():
+            if validated[index] != command_result(
+                REPLAY_COMMANDS[index],
+                expected_output,
+            ):
+                raise RuntimeError(
+                    "clean-replay command result has invalid semantics"
+                )
+    return validated
+
+
+def command_results_digest(results: object) -> str:
+    return sha256_bytes(canonical_json(validate_command_results(results)))
 
 
 def artifact_reference(path: Path, *, root: Path) -> dict[str, str]:
@@ -236,7 +308,7 @@ def pending_record(
 ) -> dict[str, object]:
     return {
         "record_type": "fourth-word-rup-certified-revision",
-        "schema_version": 1,
+        "schema_version": SCHEMA_VERSION,
         "status": "pending-clean-checkout-replay",
         "proof_index": proof_index,
         "bundle_manifest": bundle_manifest,
@@ -250,6 +322,8 @@ def pending_record(
             "completed_on": None,
             "working_tree_clean": False,
             "commands": REPLAY_COMMANDS,
+            "output_commitment_scope": OUTPUT_COMMITMENT_SCOPE,
+            "command_results": None,
             "command_results_sha256": None,
             "toolchain": None,
         },
@@ -263,9 +337,13 @@ def finalized_record(
     tree: str,
     release_manifest: dict[str, str],
     completed_on: str,
-    command_results_sha256: str,
+    command_results: list[dict[str, object]],
     toolchain: dict[str, dict[str, str]],
 ) -> dict[str, object]:
+    validated_results = validate_command_results(
+        command_results,
+        revision=revision,
+    )
     return {
         **pending,
         "status": "clean-checkout-replay-passed",
@@ -278,7 +356,11 @@ def finalized_record(
             "completed_on": completed_on,
             "working_tree_clean": True,
             "commands": REPLAY_COMMANDS,
-            "command_results_sha256": command_results_sha256,
+            "output_commitment_scope": OUTPUT_COMMITMENT_SCOPE,
+            "command_results": validated_results,
+            "command_results_sha256": command_results_digest(
+                validated_results
+            ),
             "toolchain": toolchain,
         },
     }
@@ -307,7 +389,7 @@ def validate_record_schema(
         raise RuntimeError("revision record type is invalid")
     if type(record["schema_version"]) is not int or record[
         "schema_version"
-    ] != 1:
+    ] != SCHEMA_VERSION:
         raise RuntimeError("revision record schema version is invalid")
     validate_reference(
         record["proof_index"],
@@ -334,10 +416,13 @@ def validate_record_schema(
             "completed_on",
             "working_tree_clean",
             "commands",
+            "output_commitment_scope",
+            "command_results",
             "command_results_sha256",
             "toolchain",
         }
         or replay["commands"] != REPLAY_COMMANDS
+        or replay["output_commitment_scope"] != OUTPUT_COMMITMENT_SCOPE
     ):
         raise RuntimeError("clean-checkout replay record is invalid")
     status = record["status"]
@@ -352,6 +437,7 @@ def validate_record_schema(
             or replay["revision"] is not None
             or replay["completed_on"] is not None
             or replay["working_tree_clean"] is not False
+            or replay["command_results"] is not None
             or replay["command_results_sha256"] is not None
             or replay["toolchain"] is not None
         ):
@@ -376,10 +462,18 @@ def validate_record_schema(
     ):
         raise RuntimeError("completed replay record is inconsistent")
     parse_date(replay["completed_on"], "replay completion date")
-    require_sha256(
+    command_results = validate_command_results(
+        replay["command_results"],
+        revision=revision,
+    )
+    command_results_sha256 = require_sha256(
         replay["command_results_sha256"],
         "clean-replay command-results hash",
     )
+    if command_results_sha256 != command_results_digest(command_results):
+        raise RuntimeError(
+            "clean-replay command-results hash does not match"
+        )
     validate_toolchain_attestation(replay["toolchain"])
     return status
 
@@ -689,15 +783,15 @@ def run_clean_checkout_replay(
             ),
         ]
         for arguments, cwd, description in commands:
-            run_process(
+            output = run_process(
                 arguments,
                 cwd=cwd,
                 environment=environment,
                 description=description,
             )
-            results.append(f"{description}:0")
+            results.append(command_result(description, output))
 
-        observed_revision = run_process(
+        revision_output = run_process(
             replay_git_command(
                 git_executable,
                 hooks_directory,
@@ -712,12 +806,15 @@ def run_clean_checkout_replay(
             environment=environment,
             description=REPLAY_COMMANDS[2],
             print_output=False,
-        ).decode("ascii").strip()
+        )
+        observed_revision = revision_output.decode("ascii").strip()
         if observed_revision != revision:
             raise RuntimeError(
                 "clean-replay checkout is not the certified revision"
             )
-        results.append(f"{REPLAY_COMMANDS[2]}:0:{observed_revision}")
+        results.append(
+            command_result(REPLAY_COMMANDS[2], revision_output)
+        )
 
         replay_python = replay_directory / ".venv/bin/python"
         replay_commands = [
@@ -791,13 +888,13 @@ def run_clean_checkout_replay(
             ),
         ]
         for arguments, description in replay_commands:
-            run_process(
+            output = run_process(
                 arguments,
                 cwd=replay_directory,
                 environment=environment,
                 description=description,
             )
-            results.append(f"{description}:0")
+            results.append(command_result(description, output))
 
         status = run_process(
             replay_git_command(
@@ -818,9 +915,7 @@ def run_clean_checkout_replay(
             raise RuntimeError(
                 "clean-replay worktree is not clean after verification"
             )
-        results.append(
-            f"{REPLAY_COMMANDS[9]}:0:{sha256_bytes(status)}"
-        )
+        results.append(command_result(REPLAY_COMMANDS[9], status))
         if executable_attestation(
             git_executable=Path(git_executable),
             make_executable=Path(make_executable),
@@ -830,9 +925,8 @@ def run_clean_checkout_replay(
                 "clean-replay toolchain changed during verification"
             )
         return {
-            "command_results_sha256": sha256_bytes(
-                ("\n".join(results) + "\n").encode("ascii")
-            ),
+            "command_results": results,
+            "command_results_sha256": command_results_digest(results),
             "toolchain": toolchain,
         }
     finally:
@@ -1063,10 +1157,18 @@ def finalize_record(
         revision=revision,
         python_command=python_command,
     )
+    command_results = validate_command_results(
+        replay_result.get("command_results"),
+        revision=revision,
+    )
     command_results_sha256 = require_sha256(
         replay_result.get("command_results_sha256"),
         "clean-replay command-results hash",
     )
+    if command_results_sha256 != command_results_digest(command_results):
+        raise RuntimeError(
+            "clean-replay command-results hash does not match"
+        )
     toolchain = validate_toolchain_attestation(
         replay_result.get("toolchain")
     )
@@ -1081,7 +1183,7 @@ def finalize_record(
             RELEASE_MANIFEST,
         ),
         completed_on=completed_on,
-        command_results_sha256=command_results_sha256,
+        command_results=command_results,
         toolchain=toolchain,
     )
     validate_record_schema(record, allow_pending=False)

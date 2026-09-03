@@ -42,16 +42,20 @@ They are related to data compression, test design, combinatorial coverings,
 and domination problems in Hamming graphs.
 
 The binary tables maintained by Gabor Keri record the one-unit interval
-`15-16` for length 11 and radius 3. The lower entry is attributed to Keri's
-2006 computation and the upper entry to the Graham-Sloane construction line
-from 1985. The table PDF was generated in 2009 and the table site was last
-revised in 2011.
+`15-16` for length 11 and radius 3. The table update log dated 2006-01-17
+records the lower bound 15 as a stepwise-refinement result. The binary table
+attributes the upper bound 16 to the Graham-Sloane construction line from
+1985. The PDF was generated on 2009-10-15, and the latest dated update on the
+table site is 2011-11-21.
 
-A September 2, 2026 audit found no later primary source closing this exact
-cell. A recent Lean covering-code database does not currently certify the
-table's `15-16` interval, and a recent semidefinite hierarchy reaches only
-`12.4700` numerically for this cell. The old lower computation therefore
-needs a modern proof certificate even if the final value is 16.
+A September 3, 2026 audit found no later primary source closing this exact
+cell. At audited commit
+`2ecbf887d7a29a8137da6b476d1f5de93c3936d4`, the Lean covering-code
+database certifies only `9-28` for this cell while retaining `15-16` as
+historical reference data. The Gijswijt-Polak semidefinite hierarchy reports
+`12.4700` numerically in its binary results table. The historical lower bound
+therefore still needs a modern proof certificate even if the final value is
+16.
 
 ## Starting Frontier
 
@@ -238,12 +242,15 @@ The work proceeds on two independent routes.
   sharp distance distributions are not claimed to be realizable covers.
 - The 2006 lower-bound computation has not yet been independently reconstructed
   or converted into a retained proof certificate.
-- The prior-art audit is dated 2026-09-02 and must be refreshed before any
-  novelty claim.
+- The prior-art audit is dated 2026-09-03. Any later novelty claim requires a
+  fresh search if publication is materially delayed.
 - No external mathematical review has occurred.
 - Fresh replay still requires network access to retrieve hash-locked Python
   wheels and the pinned checker source. A self-contained third-party artifact
   archive remains future work.
+- Final certification verification requires a full Git clone containing the
+  certified source revision. A source archive or shallow checkout is
+  insufficient for that revision-identity check.
 
 ## Reproduction
 
@@ -255,11 +262,17 @@ library. Exact formula generation and certificate replay additionally require
 Proof verification reconstructs transient formulas and validates retained
 proof identities without rewriting the retained evidence.
 
+After clean-checkout finalization,
 `evidence/fourth-word-rup-revision-v1.json` binds the proof index, replay
-attestation, bundle manifest, and release manifest to a certified Git revision
-after clean-checkout finalization. Its clean-checkout record includes the exact
-replay commands and SHA-256 hashes of the Git, Make, and Python executables used
-for certification.
+attestation, bundle manifest, and release manifest to the certified Git
+revision. Its record includes the normalized replay command sequence,
+host-specific self-attested per-command output byte counts and SHA-256 hashes,
+and SHA-256 hashes of the Git, Make, and Python executables used for
+certification. Exact invocation construction is frozen in the certified source
+tree. Output hashes include host-dependent text and are not expected to match
+across equivalent runs on different hosts. Only the revision, final diff, and
+final status outputs have invariant semantics checked independently by the
+record validator.
 
 Create an environment with all proof-replay dependencies:
 
@@ -349,14 +362,19 @@ maintainers of the covering-code tables and formal database.
 
 - Gabor Keri, tables of bounds for covering codes:
   `https://old.sztaki.hu/~keri/codes/`
+- Keri table update log containing the 2006-01-17 lower-bound entry:
+  `https://old.sztaki.hu/~keri/codes/index.htm`
 - Binary table PDF:
   `https://old.sztaki.hu/~keri/codes/2_tables.pdf`
+- Ronald L. Graham and Neil J. A. Sloane, "On the Covering Radius of Codes",
+  *IEEE Transactions on Information Theory* 31(3), 385-401, 1985,
+  DOI `10.1109/TIT.1985.1057039`.
 - Gerard Cohen, Iiro Honkala, Simon Litsyn, and Antoine Lobstein,
   *Covering Codes*, North-Holland, 1997.
 - Dion Gijswijt and Sven Polak, semidefinite bounds for covering codes:
   `https://arxiv.org/abs/2504.01932`
 - Formal covering-code database:
-  `https://github.com/florath/covering-codes-lean`
+  `https://github.com/florath/covering-codes-lean/tree/2ecbf887d7a29a8137da6b476d1f5de93c3936d4`
 
 ## License
 

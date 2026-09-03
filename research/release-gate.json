@@ -5,7 +5,7 @@
   "candidate_claim": null,
   "gates": {
     "significant_original_result": false,
-    "prior_art_refreshed": false,
+    "prior_art_refreshed": true,
     "complete_orbit_manifest": true,
     "independent_manifest_audit_passes": true,
     "fourth_word_rup_classification_audited": true,
@@ -15,7 +15,7 @@
     "closed_normalized_parent_from_fourth_word_bundle": false,
     "complete_child_formula_manifest": false,
     "independent_child_formula_audit_passes": true,
-    "construction_verified_twice": false,
+    "construction_verified_twice": true,
     "all_required_proofs_replay": true,
     "clean_checkout_replay_passes": false,
     "claim_scope_audited": true,
@@ -23,6 +23,8 @@
     "manuscript_ready": false,
     "external_review_addressed": false
   },
+  "artifact_decision": "pending_clean_checkout_replay",
+  "decision_scope": "theorem_announcement",
   "decision": "hold",
-  "reason": "The fourth-word v1 artifact passes local proof replay, and clean-checkout recertification is pending for the read-only replay revision. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
+  "reason": "The strengthened fourth-word v1 artifact passes local proof replay, and clean-checkout certification is pending for the new source revision. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
 }

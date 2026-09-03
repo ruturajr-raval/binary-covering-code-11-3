@@ -1,6 +1,8 @@
 {
   "version": "0.2.0",
   "release_status": "candidate",
+  "artifact_release_status": "pending_clean_checkout_replay",
+  "theorem_release_status": "hold",
   "release_date": null,
   "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_fourth_word_rup_bundle",
   "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches, leaving 166 branches and all four children open.",
@@ -44,6 +46,8 @@
     "Solver timeouts and unlogged statuses are not mathematical evidence of impossibility.",
     "Sharp witnesses for the retained overlap row system are not claimed to be realizable covers.",
     "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
+    "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
+    "Zenodo assigns a version-specific DOI only after a tagged release is archived; pre-release metadata uses the stable concept DOI.",
     "No external mathematical review has occurred."
   ],
   "last_reviewed": "2026-09-03"

@@ -13,8 +13,9 @@ covered by exact-membership checksum manifests.
 The retained 16-word code has covering radius 3. Any hypothetical 15-word
 cover satisfies the retained exact distance and overlap bounds. The complete
 150-branch normalization has 112 certified branch closures and 38 explicitly
-listed residual branches. Within four selected residual children, 184 of 350
-exhaustive fourth-word branches are certified unsatisfiable by RUP.
+listed residual branches. Within four selected hard third-word children under
+residual normalized parents, 184 of 350 exhaustive fourth-word branches are
+certified unsatisfiable by RUP.
 
 ## Not Claimed
 
@@ -36,9 +37,14 @@ exhaustive fourth-word branches are certified unsatisfiable by RUP.
 `evidence/proof-bundle.sha256` authenticates every retained proof artifact.
 `evidence/fourth-word-rup-bundle-v1.sha256` authenticates the new fourth-word
 index, attestation, classification, plan, and proof tree.
-`evidence/fourth-word-rup-revision-v1.json` binds those artifacts to a certified
-Git revision after clean-checkout finalization and records the replay and
-toolchain hashes.
+After clean-checkout finalization,
+`evidence/fourth-word-rup-revision-v1.json` binds those artifacts to the
+certified Git revision and records the normalized command sequence,
+host-specific self-attested per-command output hashes, and toolchain hashes.
+Exact invocation construction is frozen in the certified source tree. The
+output hashes include host-dependent text and are not cross-host comparison
+targets. Only the revision, final diff, and final status outputs have invariant
+semantics checked independently by the record validator.
 `release-manifest.sha256` authenticates the principal release files.
 
 ## Reproduction
@@ -50,6 +56,7 @@ python3 -m venv .venv
   --index-url https://pypi.org/simple -r requirements-replay.txt
 make test PYTHON=.venv/bin/python
 make proof-checker
+make verify-residual-case PYTHON=.venv/bin/python
 make audit-min-distance-proofs PYTHON=.venv/bin/python
 make audit-third-word-proofs PYTHON=.venv/bin/python
 make case-reduction PYTHON=.venv/bin/python
@@ -74,9 +81,15 @@ construction route remains open as well.
 Fresh replay also requires network access to retrieve hash-locked Python wheels
 and the pinned checker source. A self-contained third-party artifact archive
 remains future work.
+Final certification verification requires a full Git clone containing the
+certified source revision. A source archive or shallow checkout cannot verify
+that Git revision identity.
 
 ## Citation
 
 Citation metadata is provided in `CITATION.cff`, and `.zenodo.json` supplies
 the metadata for durable release archival. The stable concept DOI for all
 versions is [10.5281/zenodo.22260709](https://doi.org/10.5281/zenodo.22260709).
+The citation metadata pairs that concept DOI with repository version `0.2.0`.
+Zenodo assigns the version-specific DOI only after the tagged release is
+archived, so it cannot be embedded in pre-release metadata.

@@ -3525,7 +3525,7 @@
     },
     "certified_revision_manager": {
       "path": "tools/manage_fourth_word_rup_revision.py",
-      "sha256": "b01952ece4bf551989e3cd92579fdd3a8f26d276c7921351a0f2c36ee72257ab"
+      "sha256": "32034a80b0ebdc4768f25ba34c8fb3ff51c9b2fdbcbbd5e08f0bd4fd5daa20d0"
     },
     "checker_bootstrap": {
       "path": "tools/bootstrap_drat_trim.py",
@@ -3598,7 +3598,7 @@
       "src",
       "tools"
     ],
-    "sha256": "b04b8ae816f6a145faf54a9b83ded0f28aaabcb78024a157a06899c8af914cc3"
+    "sha256": "7e984c759af935abf75f1d1234d4934688745317937b6fe9b72778d2c2994ab8"
   },
   "proof_directory": "evidence/proofs/fourth-word-rup-v1",
   "proof_plan": {

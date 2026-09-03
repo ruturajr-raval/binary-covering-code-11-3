@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 from manage_fourth_word_rup_revision import (
     BUNDLE_MANIFEST,
+    OUTPUT_COMMITMENT_SCOPE,
     PROOF_INDEX,
     REPLAY_COMMANDS,
     REPLAY_REQUIREMENTS,
@@ -20,6 +21,8 @@ from manage_fourth_word_rup_revision import (
     PYPI_INDEX,
     TOOLCHAIN_SOURCES,
     canonical_json,
+    command_result,
+    command_results_digest,
     finalize_record,
     finalized_record,
     git_bytes,
@@ -57,23 +60,17 @@ def valid_pending() -> dict[str, object]:
     )
 
 
-def replay_result_digest() -> str:
-    results = [
-        f"{REPLAY_COMMANDS[0]}:0",
-        f"{REPLAY_COMMANDS[1]}:0",
-        f"{REPLAY_COMMANDS[2]}:0:{REVISION}",
-        *(
-            f"{description}:0"
-            for description in REPLAY_COMMANDS[3:9]
-        ),
-        (
-            f"{REPLAY_COMMANDS[9]}:0:"
-            f"{hashlib.sha256(b'').hexdigest()}"
-        ),
+def replay_command_results() -> list[dict[str, object]]:
+    outputs = [
+        b"",
+        b"",
+        (REVISION + "\n").encode("ascii"),
+        *([b""] * 7),
     ]
-    return hashlib.sha256(
-        ("\n".join(results) + "\n").encode("ascii")
-    ).hexdigest()
+    return [
+        command_result(command, output)
+        for command, output in zip(REPLAY_COMMANDS, outputs)
+    ]
 
 
 class FourthWordRupRevisionTests(unittest.TestCase):
@@ -93,7 +90,7 @@ class FourthWordRupRevisionTests(unittest.TestCase):
             tree=TREE,
             release_manifest=reference(RELEASE_MANIFEST),
             completed_on="2026-09-03",
-            command_results_sha256=DIGEST,
+            command_results=replay_command_results(),
             toolchain=TOOLCHAIN,
         )
         self.assertEqual(
@@ -108,7 +105,7 @@ class FourthWordRupRevisionTests(unittest.TestCase):
             tree=TREE,
             release_manifest=reference(RELEASE_MANIFEST),
             completed_on="2026-09-03",
-            command_results_sha256=DIGEST,
+            command_results=replay_command_results(),
             toolchain=TOOLCHAIN,
         )
         for mutation in ("missing-role", "wrong-source", "bad-hash"):
@@ -129,6 +126,95 @@ class FourthWordRupRevisionTests(unittest.TestCase):
                         changed,
                         allow_pending=False,
                     )
+
+    def test_final_record_has_strict_command_results(self) -> None:
+        record = finalized_record(
+            valid_pending(),
+            revision=REVISION,
+            tree=TREE,
+            release_manifest=reference(RELEASE_MANIFEST),
+            completed_on="2026-09-03",
+            command_results=replay_command_results(),
+            toolchain=TOOLCHAIN,
+        )
+        for mutation in (
+            "wrong-command",
+            "nonzero-return",
+            "wrong-byte-count",
+            "bad-output-hash",
+            "bad-results-digest",
+            "missing-result",
+        ):
+            with self.subTest(mutation=mutation):
+                changed = json.loads(json.dumps(record))
+                replay = changed["clean_checkout_replay"]
+                if mutation == "wrong-command":
+                    replay["command_results"][0][
+                        "command"
+                    ] = "different command"
+                elif mutation == "nonzero-return":
+                    replay["command_results"][0]["return_code"] = 1
+                elif mutation == "wrong-byte-count":
+                    replay["command_results"][0]["output_bytes"] = -1
+                elif mutation == "bad-output-hash":
+                    replay["command_results"][0][
+                        "output_sha256"
+                    ] = "not-a-hash"
+                elif mutation == "bad-results-digest":
+                    replay["command_results_sha256"] = "f" * 64
+                else:
+                    replay["command_results"].pop()
+                with self.assertRaises(RuntimeError):
+                    validate_record_schema(
+                        changed,
+                        allow_pending=False,
+                    )
+
+    def test_command_result_semantics_reject_coordinated_mutation(
+        self,
+    ) -> None:
+        record = finalized_record(
+            valid_pending(),
+            revision=REVISION,
+            tree=TREE,
+            release_manifest=reference(RELEASE_MANIFEST),
+            completed_on="2026-09-03",
+            command_results=replay_command_results(),
+            toolchain=TOOLCHAIN,
+        )
+        mutations = (
+            (2, b""),
+            (8, b"unexpected diff output\n"),
+            (9, b"?? unexpected-file\n"),
+        )
+        for index, output in mutations:
+            with self.subTest(index=index):
+                changed = json.loads(json.dumps(record))
+                replay = changed["clean_checkout_replay"]
+                replay["command_results"][index] = command_result(
+                    REPLAY_COMMANDS[index],
+                    output,
+                )
+                replay["command_results_sha256"] = command_results_digest(
+                    replay["command_results"]
+                )
+                with self.assertRaises(RuntimeError):
+                    validate_record_schema(
+                        changed,
+                        allow_pending=False,
+                    )
+
+    def test_output_commitment_scope_is_fixed(self) -> None:
+        pending = valid_pending()
+        self.assertEqual(
+            pending["clean_checkout_replay"]["output_commitment_scope"],
+            OUTPUT_COMMITMENT_SCOPE,
+        )
+        pending["clean_checkout_replay"][
+            "output_commitment_scope"
+        ] = "portable-output-identity"
+        with self.assertRaises(RuntimeError):
+            validate_record_schema(pending, allow_pending=True)
 
     def test_non_integer_schema_version_is_rejected(self) -> None:
         for value in (True, "1", 1.0):
@@ -335,8 +421,12 @@ class FourthWordRupRevisionTests(unittest.TestCase):
             )
             self.assertFalse(runtime_directory.exists())
         self.assertEqual(
+            replay_result["command_results"],
+            replay_command_results(),
+        )
+        self.assertEqual(
             replay_result["command_results_sha256"],
-            replay_result_digest(),
+            command_results_digest(replay_command_results()),
         )
         executable_digest = hashlib.sha256(
             Path(sys.executable).read_bytes()
@@ -898,7 +988,12 @@ class FourthWordRupRevisionTests(unittest.TestCase):
                 patch(
                     "manage_fourth_word_rup_revision.run_clean_checkout_replay",
                     return_value={
-                        "command_results_sha256": "d" * 64,
+                        "command_results": replay_command_results(),
+                        "command_results_sha256": (
+                            command_results_digest(
+                                replay_command_results()
+                            )
+                        ),
                         "toolchain": TOOLCHAIN,
                     },
                 ),
@@ -914,14 +1009,15 @@ class FourthWordRupRevisionTests(unittest.TestCase):
             self.assertEqual(clean_head.call_count, 2)
             self.assertEqual(record_path.read_bytes(), original)
 
-    def test_successful_replay_stores_returned_digest(self) -> None:
+    def test_successful_replay_stores_returned_results(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             record_path = root / "revision.json"
             (root / PROOF_INDEX).parent.mkdir(parents=True)
             (root / PROOF_INDEX).write_text("{}", encoding="ascii")
             record_path.write_bytes(canonical_json(valid_pending()))
-            replay_digest = "d" * 64
+            replay_results = replay_command_results()
+            replay_digest = command_results_digest(replay_results)
             references = {
                 PROOF_INDEX: reference(PROOF_INDEX),
                 BUNDLE_MANIFEST: reference(BUNDLE_MANIFEST),
@@ -949,6 +1045,7 @@ class FourthWordRupRevisionTests(unittest.TestCase):
                 patch(
                     "manage_fourth_word_rup_revision.run_clean_checkout_replay",
                     return_value={
+                        "command_results": replay_results,
                         "command_results_sha256": replay_digest,
                         "toolchain": TOOLCHAIN,
                     },
@@ -971,6 +1068,10 @@ class FourthWordRupRevisionTests(unittest.TestCase):
                 replay_digest,
             )
             self.assertEqual(
+                result["clean_checkout_replay"]["command_results"],
+                replay_results,
+            )
+            self.assertEqual(
                 result["clean_checkout_replay"]["toolchain"],
                 TOOLCHAIN,
             )
@@ -987,7 +1088,7 @@ class FourthWordRupRevisionTests(unittest.TestCase):
                 tree=TREE,
                 release_manifest=reference(RELEASE_MANIFEST),
                 completed_on="2026-09-03",
-                command_results_sha256=DIGEST,
+                command_results=replay_command_results(),
                 toolchain=TOOLCHAIN,
             )
             record_path.write_bytes(canonical_json(record))
@@ -1024,7 +1125,7 @@ class FourthWordRupRevisionTests(unittest.TestCase):
                 tree=TREE,
                 release_manifest=reference(RELEASE_MANIFEST),
                 completed_on="2026-09-03",
-                command_results_sha256=DIGEST,
+                command_results=replay_command_results(),
                 toolchain=TOOLCHAIN,
             )
             record_path.write_bytes(canonical_json(record))

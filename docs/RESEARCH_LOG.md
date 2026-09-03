@@ -6,15 +6,16 @@
   propagation with Glucose 4 and cross-checked every status with Glucose 4.2.
 - Identified exactly 184 RUP-conflicting branches and 166 branches outside
   that proof class.
-- Regenerated and independently audited each of the 184 selected branch
-  formulas.
+- Regenerated each of the 184 selected branch formulas and audited it with a
+  separate reconstruction path.
 - Retained an immutable v1 bundle with formula metadata, proof summaries, and
   checker records for all 184 branch certificates.
 - Rebuilt `drat-trim` from pinned commit
   `2e3b2dc0ecf938addbd779d42877b6ed69d9a985`, validated the exact tracked
   modes and raw source bytes, and accepted every proof.
-- Staged the complete bundle, audited it independently, rechecked its exact
-  digests, and durably promoted it with interruption recovery.
+- Staged the complete bundle, audited it through the separate reconstruction
+  path, rechecked its exact digests, and durably promoted it with interruption
+  recovery.
 - Replayed all 184 retained certificates in a second fresh run against
   freshly regenerated formulas.
 - Retained an unsigned local self-attestation binding the proof-index hash,
@@ -54,6 +55,30 @@
 - Restricted cross-platform checker comparison to stable proof identity and
   verification fields while retaining the original checker transcripts.
 - Added regression tests and CI clean-tree checks for read-only replay.
+- Strengthened the clean-replay record so its aggregate digest is derived from
+  ten retained host-specific self-attested per-command output byte counts and
+  SHA-256 hashes. The certified revision output and the empty final diff and
+  status outputs are checked semantically.
+- Refreshed the literature audit against the Keri update log, the audited Lean
+  database commit, arXiv:2504.01932v2, and arXiv:2608.19872v2.
+- For the `fe73dd0d166b5906faad4c262a4878ec5c9c7ecc` read-only repair, passed
+  all 164 tests in the primary environment. Its minimal clean replay passed
+  161 tests and skipped only three optional OR-Tools search tests.
+- Completed the isolated replay of certified revision
+  `fe73dd0d166b5906faad4c262a4878ec5c9c7ecc`: checked all 184 fourth-word
+  proofs, verified both proof manifests and the release manifest, and finished
+  with a clean checkout.
+- The `fe73dd0d166b5906faad4c262a4878ec5c9c7ecc` replay certified the schema-1
+  read-only repair. It is superseded for release purposes by the pending
+  schema-2 output-attestation source freeze.
+- Rebuilt and replayed all 184 fourth-word proofs against the schema-2 source.
+  The 554 proof artifacts remained byte-identical, with proof-directory digest
+  `927046410d0725a6b3d7ff7cd9832a882ec6f23dd8f6d8c89ddffbcd941368e8`.
+- Passed the complete local matrix on 2026-09-03: all 167 tests, the residual
+  replay, 14 minimum-distance proofs, 6 third-word proofs, the 112/38 case
+  reduction, all 184 fourth-word proofs, both proof manifests, and the
+  23-file release manifest. Schema-2 clean-checkout certification remains
+  pending for the new source revision.
 
 ## 2026-09-02
 
