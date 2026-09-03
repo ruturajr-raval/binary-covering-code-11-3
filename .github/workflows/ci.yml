@@ -43,3 +43,6 @@ jobs:
       - run: make verify-orbit-certificates PYTHON=python
       - run: make verify-integer-profile-certificates PYTHON=python
       - run: make verify-release-manifest
+      - name: Assert no tracked files changed
+        if: always()
+        run: git diff --exit-code

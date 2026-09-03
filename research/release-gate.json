@@ -17,12 +17,12 @@
     "independent_child_formula_audit_passes": true,
     "construction_verified_twice": false,
     "all_required_proofs_replay": true,
-    "clean_checkout_replay_passes": true,
+    "clean_checkout_replay_passes": false,
     "claim_scope_audited": true,
     "limitations_documented": true,
     "manuscript_ready": false,
     "external_review_addressed": false
   },
   "decision": "hold",
-  "reason": "The fourth-word v1 artifact passes clean-checkout replay and is ready as a certified partial branch reduction. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
+  "reason": "The fourth-word v1 artifact passes local proof replay, and clean-checkout recertification is pending for the read-only replay revision. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
 }

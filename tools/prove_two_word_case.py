@@ -5,10 +5,29 @@ import argparse
 import gzip
 import hashlib
 import json
+import math
 import time
 from pathlib import Path
 
 from run_two_word_portfolio import case_units
+
+
+def file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def require_equal(
+    record: dict[str, object],
+    expected: dict[str, object],
+) -> None:
+    mismatches = sorted(
+        key for key, value in expected.items() if record.get(key) != value
+    )
+    if mismatches:
+        raise RuntimeError(
+            "retained proof summary does not match reconstructed case; "
+            f"fields={mismatches}"
+        )
 
 
 def main() -> int:
@@ -21,12 +40,12 @@ def main() -> int:
     parser.add_argument("summary_output", type=Path)
     parser.add_argument("--solver", default="cadical300")
     parser.add_argument("--length", type=int, default=11)
+    parser.add_argument("--verify-existing", action="store_true")
     args = parser.parse_args()
 
     try:
         import pysat
         from pysat.formula import CNF
-        from pysat.solvers import Solver
     except ImportError as exc:
         raise SystemExit(
             "python-sat is required; install requirements-sat.txt"
@@ -57,7 +76,84 @@ def main() -> int:
     )
     formula_text = "\n".join(lines) + "\n"
     args.formula_output.parent.mkdir(parents=True, exist_ok=True)
-    args.formula_output.write_text(formula_text, encoding="ascii")
+    args.formula_output.write_bytes(formula_text.encode("ascii"))
+
+    if args.verify_existing:
+        summary = json.loads(
+            args.summary_output.read_text(encoding="ascii")
+        )
+        compressed = args.proof_output.read_bytes()
+        proof_bytes = gzip.decompress(compressed)
+        require_equal(
+            summary,
+            {
+                "case_id": args.case_id,
+                "base_formula": str(args.base_formula),
+                "base_formula_sha256": file_sha256(args.base_formula),
+                "case_formula": str(args.formula_output),
+                "case_formula_sha256": hashlib.sha256(
+                    formula_text.encode("ascii")
+                ).hexdigest(),
+                "variables": formula.nv,
+                "clauses": len(formula.clauses),
+                "unit_count": len(units),
+                "solver": args.solver,
+                "python_sat_version": pysat.__version__,
+                "status": "UNSAT",
+                "proof_format": "text DRAT",
+                "proof_lines": len(proof_bytes.splitlines()),
+                "proof_uncompressed_bytes": len(proof_bytes),
+                "proof_uncompressed_sha256": hashlib.sha256(
+                    proof_bytes
+                ).hexdigest(),
+                "proof_compressed": str(args.proof_output),
+                "proof_compressed_bytes": len(compressed),
+                "proof_compressed_sha256": hashlib.sha256(
+                    compressed
+                ).hexdigest(),
+                "proof_verification": (
+                    "recorded in a separate check file"
+                ),
+            },
+        )
+        solve_seconds = summary.get("solve_seconds")
+        if (
+            not isinstance(solve_seconds, (int, float))
+            or isinstance(solve_seconds, bool)
+            or not math.isfinite(solve_seconds)
+            or solve_seconds < 0
+        ):
+            raise RuntimeError(
+                "retained proof summary has invalid solve_seconds"
+            )
+        if not isinstance(summary.get("solver_statistics"), dict):
+            raise RuntimeError(
+                "retained proof summary has invalid solver statistics"
+            )
+        print(
+            json.dumps(
+                {
+                    "case_formula_sha256": summary[
+                        "case_formula_sha256"
+                    ],
+                    "case_id": args.case_id,
+                    "proof_compressed_sha256": summary[
+                        "proof_compressed_sha256"
+                    ],
+                    "verified_existing": True,
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
+
+    try:
+        from pysat.solvers import Solver
+    except ImportError as exc:
+        raise SystemExit(
+            "python-sat solvers are required; install requirements-sat.txt"
+        ) from exc
 
     started = time.monotonic()
     with Solver(

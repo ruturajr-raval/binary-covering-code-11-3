@@ -46,6 +46,14 @@
 - Recorded the exact claim boundary: 166 fourth-word branches remain, no
   selected third-word child is closed, no normalized parent is newly closed,
   and the exact covering number remains 15 or 16.
+- Separated proof generation from proof replay after a full-workflow check
+  exposed that the residual verifier regenerated a platform-dependent gzip
+  stream and run-dependent timing metadata.
+- Made the residual, minimum-distance, third-word, and fourth-word replay
+  paths validate retained proofs without rewriting proof records or indexes.
+- Restricted cross-platform checker comparison to stable proof identity and
+  verification fields while retaining the original checker transcripts.
+- Added regression tests and CI clean-tree checks for read-only replay.
 
 ## 2026-09-02
 

@@ -1367,22 +1367,30 @@ def main() -> int:
                     temporary_summary,
                     expected_summary,
                 )
+                check_output = (
+                    artifact_check
+                    if verify_existing
+                    else temporary_check
+                )
+                check_arguments = [
+                    python_command,
+                    "tools/check_drat_proof.py",
+                    str(checker_path),
+                    display_path(formula, root),
+                    display_path(artifact_shared_proof, root),
+                    display_path(temporary_summary, root),
+                    display_path(check_output, root),
+                    "--checker-commit",
+                    args.checker_commit,
+                ]
+                if verify_existing:
+                    check_arguments.append("--verify-existing")
                 run_command(
-                    [
-                        python_command,
-                        "tools/check_drat_proof.py",
-                        str(checker_path),
-                        display_path(formula, root),
-                        display_path(artifact_shared_proof, root),
-                        display_path(temporary_summary, root),
-                        display_path(temporary_check, root),
-                        "--checker-commit",
-                        args.checker_commit,
-                    ],
+                    check_arguments,
                     environment=environment,
                     root=root,
                 )
-                check = load_json(temporary_check)
+                check = load_json(check_output)
                 validate_check(
                     check,
                     branch_id=branch_id,
@@ -1393,7 +1401,6 @@ def main() -> int:
                 if verify_existing:
                     compare_json(artifact_metadata, metadata)
                     compare_json(artifact_summary, expected_summary)
-                    compare_json(artifact_check, check)
                 else:
                     atomic_write_bytes(
                         artifact_metadata,

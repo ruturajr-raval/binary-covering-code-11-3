@@ -43,7 +43,7 @@ RELEASE_MANIFEST_FILES := \
 	evidence/normalized-residual-two-word-cases.json \
 	evidence/proof-bundle.sha256
 
-.PHONY: test native-test proof-checker verify-release-manifest verify-release-manifest-locked verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest write-fourth-word-rup-revision-pending finalize-fourth-word-rup-revision verify-fourth-word-rup-revision verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier prepare-fourth-word-proof-formulas prepare-fourth-word-proof-formulas-locked fourth-word-rup-plan audit-fourth-word-rup-plan create-fourth-word-rup-proofs verify-fourth-word-rup-proofs audit-fourth-word-rup-proofs check-fourth-word-rup-proof-index fourth-word-rup-proof-smoke third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean clean-locked
+.PHONY: test native-test proof-checker verify-release-manifest verify-release-manifest-locked verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest write-fourth-word-rup-revision-pending finalize-fourth-word-rup-revision verify-fourth-word-rup-revision verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier prepare-fourth-word-proof-formulas prepare-fourth-word-proof-formulas-locked fourth-word-rup-plan audit-fourth-word-rup-plan create-fourth-word-rup-proofs verify-fourth-word-rup-proofs audit-fourth-word-rup-proofs check-fourth-word-rup-proof-index fourth-word-rup-proof-smoke third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case prepare-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean clean-locked
 
 test: prepare-fourth-word-proof-formulas
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m unittest discover -s tests -v
@@ -437,14 +437,36 @@ prove-residual-case: compact-cnf two-word-cases
 		evidence/proofs/w2-weight7-intersection1.drat.gz \
 		evidence/proofs/w2-weight7-intersection1-proof.json
 
-verify-residual-case: proof-checker prove-residual-case
+prepare-residual-case:
+	mkdir -p $(BUILD_DIR)/replay/residual-case
+	PYTHONPATH=$(PYTHONPATH) $(LOCKED) $(PYTHON) \
+		tools/generate_compact_cnf.py \
+		$(BUILD_DIR)/compact/k2-11-3-atmost15-kmtotalizer.cnf \
+		$(BUILD_DIR)/replay/residual-case/compact-kmtotalizer.json \
+		--length 11 --radius 3 --size 15 \
+		--encoding kmtotalizer --anchor-zero
+	PYTHONPATH=$(PYTHONPATH) $(LOCKED) $(PYTHON) \
+		tools/generate_two_word_cases.py \
+		$(BUILD_DIR)/replay/residual-case/two-word-cases.json
+	PYTHONPATH=$(PYTHONPATH):tools $(LOCKED) $(PYTHON) \
+		tools/prove_two_word_case.py \
+		$(BUILD_DIR)/compact/k2-11-3-atmost15-kmtotalizer.cnf \
+		$(BUILD_DIR)/replay/residual-case/two-word-cases.json \
+		w2-weight7-intersection1 \
+		$(BUILD_DIR)/proofs/w2-weight7-intersection1.cnf \
+		evidence/proofs/w2-weight7-intersection1.drat.gz \
+		evidence/proofs/w2-weight7-intersection1-proof.json \
+		--verify-existing
+
+verify-residual-case: proof-checker prepare-residual-case
 	$(LOCKED) $(PYTHON) tools/check_drat_proof.py \
 		$(DRAT_TRIM) \
 		$(BUILD_DIR)/proofs/w2-weight7-intersection1.cnf \
 		evidence/proofs/w2-weight7-intersection1.drat.gz \
 		evidence/proofs/w2-weight7-intersection1-proof.json \
 		evidence/proofs/w2-weight7-intersection1-check.json \
-		--checker-commit $(DRAT_TRIM_COMMIT)
+		--checker-commit $(DRAT_TRIM_COMMIT) \
+		--verify-existing
 
 verify-min-distance-proofs: proof-checker audit-min-distance-branches audit-two-word-cases
 	PYTHONPATH=$(PYTHONPATH):tools $(LOCKED) $(PYTHON) \

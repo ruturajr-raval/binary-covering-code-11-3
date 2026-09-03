@@ -22,15 +22,27 @@ jobs:
           python -I -m pip install --isolated --no-input --no-cache-dir
           --require-hashes --only-binary=:all: --no-deps
           --index-url https://pypi.org/simple -r requirements-replay.txt
-      - run: |
+      - name: Replay residual proof
+        run: make verify-residual-case PYTHON=python
+      - name: Assert residual replay is read-only
+        run: git diff --exit-code -- evidence
+      - name: Assert residual replay creates no evidence files
+        run: >-
+          test -z
+          "$(git status --porcelain --untracked-files=all -- evidence)"
+      - name: Replay remaining proof bundles
+        run: |
           make \
             test \
-            verify-residual-case \
             audit-min-distance-proofs \
             audit-third-word-proofs \
             case-reduction \
             audit-fourth-word-rup-proofs \
             verify-release-manifest \
             PYTHON=python
-      - run: git diff --exit-code
-      - run: test -z "$(git status --porcelain --untracked-files=all)"
+      - name: Assert no tracked files changed
+        if: always()
+        run: git diff --exit-code
+      - name: Assert no untracked files remain
+        if: always()
+        run: test -z "$(git status --porcelain --untracked-files=all)"

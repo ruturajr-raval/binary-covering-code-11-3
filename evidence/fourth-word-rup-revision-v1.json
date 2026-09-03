@@ -1,16 +1,13 @@
 {
   "bundle_manifest": {
     "path": "evidence/fourth-word-rup-bundle-v1.sha256",
-    "sha256": "7e10f03b7dc9ef216c08d41a030f9f114725de96763d6e25c06f70beca2bb11e"
+    "sha256": "c14dc0e42b64c2cc7466f3db3abdef7aef41028c471dc4a89166a4972b5c7032"
   },
-  "certified_release_manifest": {
-    "path": "release-manifest.sha256",
-    "sha256": "1efb641fb5b160c6b471e2e096cc5f483aaff4f892934afcd6bfbf9e028f68f0"
-  },
-  "certified_revision": "076a0f6703de2c6513799c0b43bfe689480fabda",
-  "certified_tree": "89344045384623000bfb91bca8b66348a29bde7d",
+  "certified_release_manifest": null,
+  "certified_revision": null,
+  "certified_tree": null,
   "clean_checkout_replay": {
-    "command_results_sha256": "87bb4b35fba54e069fedbdc86fcf5f759a36ca32a609ba08669f3192eedca197",
+    "command_results_sha256": null,
     "commands": [
       "git clone --no-hardlinks --no-checkout <repository> <clean-replay>",
       "git checkout --detach <certified-revision>",
@@ -23,34 +20,21 @@
       "git diff --exit-code",
       "git status --porcelain --untracked-files=all"
     ],
-    "completed_on": "2026-09-03",
-    "passed": true,
-    "revision": "076a0f6703de2c6513799c0b43bfe689480fabda",
-    "toolchain": {
-      "git": {
-        "sha256": "b8763cf250e607a778bb4603cecb5b90338814d0a3dfcba0d57b1de242f610e9",
-        "source": "system-default-path"
-      },
-      "make": {
-        "sha256": "b8763cf250e607a778bb4603cecb5b90338814d0a3dfcba0d57b1de242f610e9",
-        "source": "system-default-path"
-      },
-      "python": {
-        "sha256": "bdea59019a38eb6600cc9e71e984a97fedadc406448431281e7657030f54987e",
-        "source": "explicit-absolute-path"
-      }
-    },
-    "working_tree_clean": true
+    "completed_on": null,
+    "passed": false,
+    "revision": null,
+    "toolchain": null,
+    "working_tree_clean": false
   },
   "proof_index": {
     "path": "evidence/fourth-word-rup-proof-index-v1.json",
-    "sha256": "56d74184e9f7d911bc952962ed818bec63948ad5bb8b7f5bb1347463e67a3b23"
+    "sha256": "386c8a85e8c5deefc42c8289b6d9c71df27b75ccabd1f721e5ea48684e90ffdf"
   },
   "record_type": "fourth-word-rup-certified-revision",
   "replay_attestation": {
     "path": "evidence/fourth-word-rup-replay-attestation-v1.json",
-    "sha256": "a04adc03c27955eb68b36e9814fed709fb1bb6bec274fda2c80a18171bef3cad"
+    "sha256": "1d7413bfbe46ea8e297ccac9d6c944f444c31a12206c91c9e334a1b787d7d7d9"
   },
   "schema_version": 1,
-  "status": "clean-checkout-replay-passed"
+  "status": "pending-clean-checkout-replay"
 }

@@ -18,6 +18,26 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def write_or_verify_report(
+    path: Path,
+    report: dict[str, object],
+    *,
+    verify_existing: bool,
+) -> None:
+    encoded = (
+        json.dumps(report, indent=2, sort_keys=True) + "\n"
+    ).encode("ascii")
+    if verify_existing:
+        if path.read_bytes() != encoded:
+            raise RuntimeError(
+                "retained minimum-distance proof index "
+                "does not match replay"
+            )
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(encoded)
+
+
 def dimacs_text(
     variable_count: int,
     clauses: list[tuple[int, ...]],
@@ -122,9 +142,11 @@ def main() -> int:
             expected_clauses = list(base_clauses)
             expected_clauses.extend((literal,) for literal in units)
             formula.parent.mkdir(parents=True, exist_ok=True)
-            formula.write_text(
-                dimacs_text(base_variables, expected_clauses),
-                encoding="ascii",
+            formula.write_bytes(
+                dimacs_text(
+                    base_variables,
+                    expected_clauses,
+                ).encode("ascii")
             )
         else:
             run_command(
@@ -161,20 +183,20 @@ def main() -> int:
         if formula_clauses != expected_clauses:
             raise RuntimeError(f"{case_id}: formula reconstruction failed")
 
-        run_command(
-            [
-                args.python,
-                "tools/check_drat_proof.py",
-                str(args.checker),
-                str(formula),
-                str(proof),
-                str(summary),
-                str(check),
-                "--checker-commit",
-                args.checker_commit,
-            ],
-            environment=environment,
-        )
+        check_arguments = [
+            args.python,
+            "tools/check_drat_proof.py",
+            str(args.checker),
+            str(formula),
+            str(proof),
+            str(summary),
+            str(check),
+            "--checker-commit",
+            args.checker_commit,
+        ]
+        if args.verify_existing:
+            check_arguments.append("--verify-existing")
+        run_command(check_arguments, environment=environment)
 
         proof_summary = json.loads(summary.read_text(encoding="ascii"))
         check_report = json.loads(check.read_text(encoding="ascii"))
@@ -227,10 +249,10 @@ def main() -> int:
         "all_verified": all(record["verified"] for record in records),
         "cases": records,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(
-        json.dumps(report, indent=2, sort_keys=True) + "\n",
-        encoding="ascii",
+    write_or_verify_report(
+        args.output,
+        report,
+        verify_existing=args.verify_existing,
     )
     print(
         json.dumps(

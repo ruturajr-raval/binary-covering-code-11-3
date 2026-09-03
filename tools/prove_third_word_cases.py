@@ -16,6 +16,25 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def write_or_verify_report(
+    path: Path,
+    report: dict[str, object],
+    *,
+    verify_existing: bool,
+) -> None:
+    encoded = (
+        json.dumps(report, indent=2, sort_keys=True) + "\n"
+    ).encode("ascii")
+    if verify_existing:
+        if path.read_bytes() != encoded:
+            raise RuntimeError(
+                "retained third-word proof index does not match replay"
+            )
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(encoded)
+
+
 def run_command(arguments: list[str], environment: dict[str, str]) -> None:
     result = subprocess.run(
         arguments,
@@ -96,8 +115,13 @@ def main() -> int:
             raise SystemExit(f"{case_id}: unknown proof compression")
         suffix = ".drat.gz" if compression == "gzip" else ".drat.xz"
         formula = args.formula_directory / f"{case_id}.cnf"
-        formula_metadata = (
+        retained_formula_metadata = (
             args.proof_directory / f"{case_id}-formula.json"
+        )
+        formula_metadata = (
+            args.formula_directory / f"{case_id}-formula.json"
+            if args.verify_existing
+            else retained_formula_metadata
         )
         proof = args.proof_directory / f"{case_id}{suffix}"
         summary = args.proof_directory / f"{case_id}-proof.json"
@@ -143,24 +167,33 @@ def main() -> int:
                 ],
                 environment,
             )
-        run_command(
-            [
-                args.python,
-                "tools/check_drat_proof.py",
-                str(args.checker),
-                str(formula),
-                str(proof),
-                str(summary),
-                str(check),
-                "--checker-commit",
-                args.checker_commit,
-            ],
-            environment,
-        )
+        check_arguments = [
+            args.python,
+            "tools/check_drat_proof.py",
+            str(args.checker),
+            str(formula),
+            str(proof),
+            str(summary),
+            str(check),
+            "--checker-commit",
+            args.checker_commit,
+        ]
+        if args.verify_existing:
+            check_arguments.append("--verify-existing")
+        run_command(check_arguments, environment)
 
         formula_record = json.loads(
             formula_metadata.read_text(encoding="ascii")
         )
+        if (
+            args.verify_existing
+            and formula_metadata.read_bytes()
+            != retained_formula_metadata.read_bytes()
+        ):
+            raise RuntimeError(
+                f"{case_id}: retained formula metadata "
+                "does not match replay"
+            )
         proof_record = json.loads(summary.read_text(encoding="ascii"))
         check_record = json.loads(check.read_text(encoding="ascii"))
         if proof_record["solver"] != solver:
@@ -194,8 +227,10 @@ def main() -> int:
                 "enforce_minimum_distance_matching": matching,
                 "formula": str(formula),
                 "formula_sha256": file_sha256(formula),
-                "formula_metadata": str(formula_metadata),
-                "formula_metadata_sha256": file_sha256(formula_metadata),
+                "formula_metadata": str(retained_formula_metadata),
+                "formula_metadata_sha256": file_sha256(
+                    retained_formula_metadata
+                ),
                 "proof": str(proof),
                 "proof_sha256": file_sha256(proof),
                 "proof_summary": str(summary),
@@ -228,10 +263,10 @@ def main() -> int:
         "all_verified": all(record["verified"] for record in records),
         "cases": records,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(
-        json.dumps(report, indent=2, sort_keys=True) + "\n",
-        encoding="ascii",
+    write_or_verify_report(
+        args.output,
+        report,
+        verify_existing=args.verify_existing,
     )
     print(
         json.dumps(

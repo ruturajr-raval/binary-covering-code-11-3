@@ -37,8 +37,8 @@ exhaustive fourth-word branches are certified unsatisfiable by RUP.
 `evidence/fourth-word-rup-bundle-v1.sha256` authenticates the new fourth-word
 index, attestation, classification, plan, and proof tree.
 `evidence/fourth-word-rup-revision-v1.json` binds those artifacts to a certified
-Git revision, `076a0f6703de2c6513799c0b43bfe689480fabda`, and records the
-clean-checkout replay and toolchain hashes.
+Git revision after clean-checkout finalization and records the replay and
+toolchain hashes.
 `release-manifest.sha256` authenticates the principal release files.
 
 ## Reproduction

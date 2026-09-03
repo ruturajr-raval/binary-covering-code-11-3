@@ -72,7 +72,7 @@
     },
     "makefile": {
       "path": "Makefile",
-      "sha256": "81a959751b05e80734c38e72349022235387cb3a52443553183bb1f95a95da97"
+      "sha256": "edb7017e43a0f6f3b9aba0428dcdc47554d76e2984c178337007f01498300553"
     },
     "manifest_verifier": {
       "path": "tools/verify_checksum_manifest.py",
@@ -88,11 +88,11 @@
     },
     "proof_checker_driver": {
       "path": "tools/check_drat_proof.py",
-      "sha256": "c1e63a06d4e3a10173295f980dbf49ad5bee487ed3f83260f510a413fc337a33"
+      "sha256": "dc2f6e7dc1e78a720279e8c1bc4d971c72c671aa3a40e014f44cd3dc5748dcd7"
     },
     "proof_orchestrator": {
       "path": "tools/prove_fourth_word_rup_cases.py",
-      "sha256": "991f996da7d455e2c70e06cd532e603963eefe387eeb45d50ef7d24f5337df54"
+      "sha256": "0a124bccb52e113f9fd7dc88a8dd9422132db9711ae80f7399538752b4bc36da"
     },
     "proof_requirements": {
       "path": "requirements-proof.txt",
@@ -121,11 +121,11 @@
       "src",
       "tools"
     ],
-    "sha256": "7b59bae526c81b4404eb98d913303dc9b1c083b9f65406a78b9a161df8515a29"
+    "sha256": "b04b8ae816f6a145faf54a9b83ded0f28aaabcb78024a157a06899c8af914cc3"
   },
   "proof_index": {
     "path": "evidence/fourth-word-rup-proof-index-v1.json",
-    "sha256": "56d74184e9f7d911bc952962ed818bec63948ad5bb8b7f5bb1347463e67a3b23"
+    "sha256": "386c8a85e8c5deefc42c8289b6d9c71df27b75ccabd1f721e5ea48684e90ffdf"
   },
   "provenance": {
     "externally_signed": false,

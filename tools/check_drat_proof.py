@@ -14,6 +14,18 @@ from pathlib import Path
 from repository_lock import subprocess_lock_kwargs
 
 
+STABLE_REPLAY_FIELDS = (
+    "case_id",
+    "checker",
+    "checker_commit",
+    "formula_sha256",
+    "proof_compressed_sha256",
+    "proof_uncompressed_sha256",
+    "return_code",
+    "verified",
+)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("checker", type=Path)
@@ -22,6 +34,7 @@ def main() -> int:
     parser.add_argument("proof_summary", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--checker-commit", required=True)
+    parser.add_argument("--verify-existing", action="store_true")
     args = parser.parse_args()
 
     summary = json.loads(
@@ -66,24 +79,32 @@ def main() -> int:
             **subprocess_lock_kwargs(),
         )
     combined_output = result.stdout + result.stderr
-    verified = result.returncode == 0 and "VERIFIED" in combined_output
+    output_lines = combined_output.splitlines()
+    verified_statuses = [
+        line for line in output_lines if line.strip() == "s VERIFIED"
+    ]
+    verified = result.returncode == 0 and len(verified_statuses) == 1
     if not verified:
         raise SystemExit(
             "drat-trim did not verify the retained proof:\n"
             + combined_output
         )
 
-    output_lines = combined_output.splitlines()
     retained_lines = []
+    normalized_timing_lines = 0
     for line in output_lines:
         if not line.strip() or "WARNING:" in line:
             continue
-        retained_lines.append(
-            re.sub(
-                r"^(c verification time:) [0-9.]+ seconds$",
-                r"\1 <elapsed>",
-                line,
-            )
+        normalized_line, replacements = re.subn(
+            r"^(c verification time:) [0-9.]+ seconds$",
+            r"\1 <elapsed>",
+            line,
+        )
+        normalized_timing_lines += replacements
+        retained_lines.append(normalized_line)
+    if normalized_timing_lines != 1:
+        raise SystemExit(
+            "drat-trim output must contain exactly one verification-time line"
         )
     stable_output = "\n".join(retained_lines) + "\n"
     report = {
@@ -102,14 +123,40 @@ def main() -> int:
         "checker_warning_count": sum(
             "WARNING:" in line for line in output_lines
         ),
-        "checker_timing_normalized": True,
+        "checker_timing_normalized": normalized_timing_lines == 1,
         "checker_output": retained_lines,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(
-        json.dumps(report, indent=2, sort_keys=True) + "\n",
-        encoding="ascii",
-    )
+    report_bytes = (
+        json.dumps(report, indent=2, sort_keys=True) + "\n"
+    ).encode("ascii")
+    if args.verify_existing:
+        try:
+            retained_bytes = args.output.read_bytes()
+        except FileNotFoundError as exc:
+            raise SystemExit(
+                f"retained proof check is missing: {args.output}"
+            ) from exc
+        try:
+            retained_report = json.loads(
+                retained_bytes.decode("ascii")
+            )
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise SystemExit(
+                "retained proof check is not ASCII JSON"
+            ) from exc
+        changed_fields = [
+            key
+            for key in STABLE_REPLAY_FIELDS
+            if retained_report.get(key) != report.get(key)
+        ]
+        if changed_fields:
+            raise SystemExit(
+                "retained proof check does not match replay; "
+                f"changed_fields={changed_fields}"
+            )
+    else:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_bytes(report_bytes)
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0
 
