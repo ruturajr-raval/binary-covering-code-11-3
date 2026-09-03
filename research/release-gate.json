@@ -16,13 +16,13 @@
     "complete_child_formula_manifest": false,
     "independent_child_formula_audit_passes": true,
     "construction_verified_twice": false,
-    "all_required_proofs_replay": false,
-    "clean_checkout_replay_passes": false,
+    "all_required_proofs_replay": true,
+    "clean_checkout_replay_passes": true,
     "claim_scope_audited": true,
     "limitations_documented": true,
     "manuscript_ready": false,
     "external_review_addressed": false
   },
   "decision": "hold",
-  "reason": "The attested fourth-word v1 bundle checks 184 of 350 branches across four selected children. The other 166 branches remain unresolved, no selected child or normalized parent is closed, and all 38 residual parents remain open."
+  "reason": "The fourth-word v1 artifact passes clean-checkout replay and is ready as a certified partial branch reduction. A theorem announcement remains on hold because 166 selected fourth-word branches, every selected child, and all 38 residual parents remain open."
 }

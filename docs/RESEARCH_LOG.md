@@ -36,6 +36,13 @@
 - Required the final certification record to bind a Git revision, release
   manifest, command-result digest, and SHA-256 hashes of the Git, Make, and
   Python executables used for replay.
+- Passed all 161 tests in the primary environment. The minimal clean replay
+  passed 158 tests and skipped only three optional OR-Tools search tests,
+  which are outside the proof-replay dependency lock.
+- Completed the isolated replay of certified revision
+  `076a0f6703de2c6513799c0b43bfe689480fabda`: regenerated and checked all 184
+  formulas and proofs, verified both proof manifests and the release manifest,
+  and finished with a clean checkout.
 - Recorded the exact claim boundary: 166 fourth-word branches remain, no
   selected third-word child is closed, no normalized parent is newly closed,
   and the exact covering number remains 15 or 16.

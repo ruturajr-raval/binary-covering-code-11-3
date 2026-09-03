@@ -254,9 +254,10 @@ library. Exact formula generation and certificate replay additionally require
 `make proof-checker` fetches and builds the pinned checker revision.
 
 `evidence/fourth-word-rup-revision-v1.json` binds the proof index, replay
-attestation, bundle manifest, and release manifest to a certified Git revision.
-Its clean-checkout record includes the exact replay commands and SHA-256 hashes
-of the Git, Make, and Python executables used for certification.
+attestation, bundle manifest, and release manifest to certified Git revision
+`076a0f6703de2c6513799c0b43bfe689480fabda`. Its clean-checkout record includes
+the exact replay commands and SHA-256 hashes of the Git, Make, and Python
+executables used for certification.
 
 Create an environment with all proof-replay dependencies:
 

@@ -7,8 +7,8 @@
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "certified_partial_fourth_word_branch_reduction",
   "partial_progress_status": "significant_verified_proof_frontier_without_complete_child_closure",
-  "artifact_reproducibility_ready": false,
-  "artifact_release_ready": false,
+  "artifact_reproducibility_ready": true,
+  "artifact_release_ready": true,
   "theorem_announcement_ready": false,
   "result_routes": {
     "construction": {
