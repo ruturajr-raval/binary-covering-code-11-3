@@ -42,8 +42,8 @@ RECORD_TYPE = "fourth-word-solver-drat-certified-revision"
 STATUS = "clean-checkout-replay-passed"
 OUTPUT_COMMITMENT_SCOPE = "host-specific-self-attestation"
 PYPI_INDEX = "https://pypi.org/simple"
-CERTIFICATION_DATE = "2026-09-03"
-REVISION_MANAGER_TEST_COUNT = 14
+CERTIFICATION_DATE = "2026-09-04"
+REVISION_MANAGER_TEST_COUNT = 15
 
 RECORD_PATH = Path(
     "proof-expansion/evidence/"
@@ -738,6 +738,7 @@ def validate_command_output_semantics(
         required_tests = (
             "test_canonical_replay_root_rejects_symlink_parent",
             "test_finalization_git_parent_paths_and_modes",
+            "test_release_instructions_resolve_full_head",
             "test_retained_bundle_and_root_manifests_validate",
             "test_retained_output_tampering_is_rejected",
             "test_supported_python_record_is_strict",
@@ -1766,6 +1767,7 @@ def verify_metadata_bindings(
         is not False
         or source_release.get("artifact_release_ready") is not False
         or source_release.get("theorem_announcement_ready") is not False
+        or source_release.get("last_reviewed") != CERTIFICATION_DATE
         or source_release.get("artifact_verification")
         != expected_source_verification
         or source_release.get("research_records")
@@ -1777,6 +1779,8 @@ def verify_metadata_bindings(
             "certified release metadata is not the pending source"
         )
     expected_release = copy.deepcopy(source_release)
+    expected_release["release_status"] = "released"
+    expected_release["release_date"] = CERTIFICATION_DATE
     expected_release["artifact_release_status"] = (
         "clean_checkout_replay_passed"
     )
@@ -2009,7 +2013,7 @@ def main() -> int:
     action.add_argument("--run-clean-replay", action="store_true")
     action.add_argument("--verify", action="store_true")
     parser.add_argument("--revision")
-    parser.add_argument("--release-revision", default="HEAD")
+    parser.add_argument("--release-revision")
     parser.add_argument("--completed-on")
     parser.add_argument("--python", type=Path)
     args = parser.parse_args()
@@ -2037,6 +2041,8 @@ def main() -> int:
             python_executable=args.python,
         )
     else:
+        if args.release_revision is None:
+            parser.error("--verify requires --release-revision")
         result = verify_finalized_release(
             root=root,
             record_path=repository_path(RECORD_PATH, root),

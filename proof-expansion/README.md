@@ -122,7 +122,7 @@ membership with:
   --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
 .venv/bin/python \
   release-tools/manage_fourth_word_solver_drat_revision.py \
-  --verify --release-revision HEAD
+  --verify --release-revision "$(git rev-parse HEAD)"
 ```
 
 The default is one proof worker. Two workers are permitted only after

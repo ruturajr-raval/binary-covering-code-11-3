@@ -35,7 +35,7 @@
     },
     "revision_manager": {
       "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
-      "sha256": "5b89a334cb503e528d304266a0074ea79809dcbe3807cfe586680fd2d9d8fc4d"
+      "sha256": "ded3f899d32a2dcd851cca1f0e7ab4b3d63347d6ffc44517036179bf9a0f4e28"
     },
     "certified_revision_record": null
   },
@@ -46,7 +46,7 @@
     },
     "release_gate": {
       "path": "research/release-gate.json",
-      "sha256": "10d4e509ffef15cdb1ebd36d7cab0640928801b6d6bd0eade6d195b991ef3b54"
+      "sha256": "7346987ce65ea47fb17c59a9456381b865a2b57e39e6db72ccde9252cd10e738"
     }
   },
   "result_routes": {
@@ -92,5 +92,5 @@
     "The v2 artifact remains a release candidate until its committed revision passes an independent clean-checkout replay.",
     "No external mathematical review has occurred."
   ],
-  "last_reviewed": "2026-09-03"
+  "last_reviewed": "2026-09-04"
 }

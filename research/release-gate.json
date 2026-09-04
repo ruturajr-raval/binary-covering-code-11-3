@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project": "binary-covering-code-11-3",
-  "evaluated_at": "2026-09-03",
+  "evaluated_at": "2026-09-04",
   "candidate_claim": null,
   "gates": {
     "significant_original_result": false,

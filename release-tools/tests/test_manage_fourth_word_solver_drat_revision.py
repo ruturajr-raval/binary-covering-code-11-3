@@ -30,10 +30,11 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
     outputs[5] = (
         b"test_canonical_replay_root_rejects_symlink_parent ... ok\n"
         b"test_finalization_git_parent_paths_and_modes ... ok\n"
+        b"test_release_instructions_resolve_full_head ... ok\n"
         b"test_retained_bundle_and_root_manifests_validate ... ok\n"
         b"test_retained_output_tampering_is_rejected ... ok\n"
         b"test_supported_python_record_is_strict ... ok\n"
-        b"\nRan 14 tests in 0.100s\n\nOK\n"
+        b"\nRan 15 tests in 0.100s\n\nOK\n"
     )
     outputs[6] = b"\nRan 80 tests in 1.000s\n\nOK\n"
     outputs[8] = (
@@ -352,6 +353,19 @@ class SolverDratRevisionTests(unittest.TestCase):
             ),
         )
 
+    def test_release_instructions_resolve_full_head(self) -> None:
+        command = '--release-revision "$(git rev-parse HEAD)"'
+        for relative in (
+            Path("README.md"),
+            Path("PUBLICATION.md"),
+            Path("proof-expansion/README.md"),
+            Path("research/FOURTH_WORD_HARD_FRONTIER.md"),
+        ):
+            with self.subTest(path=relative):
+                text = (ROOT / relative).read_text(encoding="ascii")
+                self.assertIn(command, text)
+                self.assertNotIn("--release-revision HEAD", text)
+
     def test_record_schema_rejects_wrong_result_scope(self) -> None:
         source = "1" * 40
         results = valid_command_results(source)
@@ -408,7 +422,7 @@ class SolverDratRevisionTests(unittest.TestCase):
                 "covering_number_status": "15 or 16",
             },
             "clean_checkout_replay": {
-                "completed_on": "2026-09-03",
+                "completed_on": revision.CERTIFICATION_DATE,
                 "passed": True,
                 "revision": source,
                 "commands": list(revision.REPLAY_COMMANDS),

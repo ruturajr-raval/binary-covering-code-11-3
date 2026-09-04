@@ -2,6 +2,9 @@ name: Full Proof Replay
 
 on:
   workflow_dispatch:
+  push:
+    tags:
+      - "v*"
 
 permissions:
   contents: read
@@ -22,6 +25,8 @@ jobs:
           python -I -m pip install --isolated --no-input --no-cache-dir
           --require-hashes --only-binary=:all: --no-deps
           --index-url https://pypi.org/simple -r requirements-replay.txt
+      - name: Test release revision manager
+        run: python -I -m unittest discover -s release-tools/tests -v
       - name: Replay residual proof
         run: make verify-residual-case PYTHON=python
       - name: Assert residual replay is read-only
@@ -40,6 +45,22 @@ jobs:
             audit-fourth-word-rup-proofs \
             verify-release-manifest \
             PYTHON=python
+      - name: Replay solver-DRAT v2 proof bundle
+        run: |
+          make -C proof-expansion test PYTHON=python
+          make -C proof-expansion audit-plan PYTHON=python
+          make -C proof-expansion audit-bundle-structure PYTHON=python
+          make -C proof-expansion audit-bundle PYTHON=python
+          python tools/verify_checksum_manifest.py \
+            proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
+            --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
+            --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
+            --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
+      - name: Verify finalized release revision
+        run: |
+          python -I \
+            release-tools/manage_fourth_word_solver_drat_revision.py \
+            --verify --release-revision "$(git rev-parse HEAD)"
       - name: Assert no tracked files changed
         if: always()
         run: git diff --exit-code

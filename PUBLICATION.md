@@ -1,4 +1,4 @@
-# Release Candidate v0.2.0
+# Release v0.2.0
 
 ## What Was Done
 
@@ -63,9 +63,9 @@ files, including metadata that binds the dedicated v2 manifest by hash. The
 root release command does not traverse the v2 proof tree by itself, so both
 manifest verification commands below are required.
 
-For a finalized artifact, the retained
+The retained
 `proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json` record
-must bind the certified source revision, clean-checkout replay, and strict
+binds the certified source revision, clean-checkout replay, and strict
 single-parent finalization policy. Its validator is
 `release-tools/manage_fourth_word_solver_drat_revision.py`. The authoritative
 readiness state is recorded in `release.json`.
@@ -99,7 +99,7 @@ make -C proof-expansion audit-bundle
 make verify-release-manifest PYTHON=.venv/bin/python
 .venv/bin/python \
   release-tools/manage_fourth_word_solver_drat_revision.py \
-  --verify --release-revision HEAD
+  --verify --release-revision "$(git rev-parse HEAD)"
 ```
 
 The proof audit reconstructs every exact CNF, checks every retained trace, and
@@ -129,5 +129,5 @@ Citation metadata is provided in `CITATION.cff`, and `.zenodo.json` supplies
 the metadata for durable release archival. The stable concept DOI for all
 versions is [10.5281/zenodo.22260709](https://doi.org/10.5281/zenodo.22260709).
 The citation metadata pairs that concept DOI with repository version `0.2.0`.
-Zenodo assigns the version-specific DOI only after the tagged release is
-archived, so it cannot be embedded in pre-release metadata.
+Zenodo assigns a separate version-specific DOI when the tagged GitHub release
+is archived.

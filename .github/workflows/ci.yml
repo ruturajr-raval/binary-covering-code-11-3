@@ -37,6 +37,23 @@ jobs:
       - run: make audit-fourth-word-hard-frontier PYTHON=python
       - run: make audit-fourth-word-rup-plan PYTHON=python
       - run: make check-fourth-word-rup-proof-index PYTHON=python
+      - name: Test release revision manager
+        if: matrix.python-version == '3.12'
+        run: python -I -m unittest discover -s release-tools/tests -v
+      - name: Test solver-DRAT v2 subsystem
+        if: matrix.python-version == '3.12'
+        run: >-
+          make -C proof-expansion
+          test audit-plan audit-bundle-structure
+          PYTHON=python
+      - name: Verify solver-DRAT v2 manifest
+        if: matrix.python-version == '3.12'
+        run: >-
+          python tools/verify_checksum_manifest.py
+          proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256
+          --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json
+          --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json
+          --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
       - run: make verify-baseline verify-independent
       - run: make distance-bounds overlap-bound
       - run: make audit-two-word-cases
@@ -53,6 +70,15 @@ jobs:
           evidence/two-word-cases.json
           evidence/integer-profile-certificates.json
       - run: make verify-release-manifest
+      - name: Verify finalized release revision when present
+        if: matrix.python-version == '3.12'
+        run: |
+          record=proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json
+          if test -f "$record"; then
+            python -I \
+              release-tools/manage_fourth_word_solver_drat_revision.py \
+              --verify --release-revision "$(git rev-parse HEAD)"
+          fi
       - name: Assert no tracked files changed
         if: always()
         run: git diff --exit-code

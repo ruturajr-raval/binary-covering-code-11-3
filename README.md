@@ -292,7 +292,7 @@ SHA-256
 and its 420-artifact proof-directory digest is
 `44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
 All 140 retained proofs were independently replayed on 2026-09-03.
-Finalized releases additionally retain
+This release also retains
 `proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json`. The
 record is validated by
 `release-tools/manage_fourth_word_solver_drat_revision.py`, which binds the
@@ -350,7 +350,7 @@ make -C proof-expansion audit-bundle
   --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
 .venv/bin/python \
   release-tools/manage_fourth_word_solver_drat_revision.py \
-  --verify --release-revision HEAD
+  --verify --release-revision "$(git rev-parse HEAD)"
 ```
 
 Install the optional exact-search dependency with:

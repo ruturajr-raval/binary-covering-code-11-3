@@ -185,7 +185,7 @@ Verify exact v2 bundle membership from the repository root:
 Verify a finalized revision attestation:
 
 ```text
-.venv/bin/python release-tools/manage_fourth_word_solver_drat_revision.py --verify --release-revision HEAD
+.venv/bin/python release-tools/manage_fourth_word_solver_drat_revision.py --verify --release-revision "$(git rev-parse HEAD)"
 ```
 
 The certification remains branch-level. Every selected third-word child still
