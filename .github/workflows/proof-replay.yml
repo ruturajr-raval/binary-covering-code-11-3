@@ -21,14 +21,15 @@ jobs:
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: "3.12.11"
+      - run: python -I -m venv .venv
       - run: >-
-          python -I -m pip install --isolated --no-input --no-cache-dir
+          .venv/bin/python -I -m pip install --isolated --no-input --no-cache-dir
           --require-hashes --only-binary=:all: --no-deps
           --index-url https://pypi.org/simple -r requirements-replay.txt
       - name: Test release revision manager
-        run: python -I -m unittest discover -s release-tools/tests -v
+        run: .venv/bin/python -I -m unittest discover -s release-tools/tests -v
       - name: Replay residual proof
-        run: make verify-residual-case PYTHON=python
+        run: make verify-residual-case PYTHON=.venv/bin/python
       - name: Assert residual replay is read-only
         run: git diff --exit-code -- evidence
       - name: Assert residual replay creates no evidence files
@@ -44,21 +45,21 @@ jobs:
             case-reduction \
             audit-fourth-word-rup-proofs \
             verify-release-manifest \
-            PYTHON=python
+            PYTHON=.venv/bin/python
       - name: Replay solver-DRAT v2 proof bundle
         run: |
-          make -C proof-expansion test PYTHON=python
-          make -C proof-expansion audit-plan PYTHON=python
-          make -C proof-expansion audit-bundle-structure PYTHON=python
-          make -C proof-expansion audit-bundle PYTHON=python
-          python tools/verify_checksum_manifest.py \
+          make -C proof-expansion test PYTHON=.venv/bin/python
+          make -C proof-expansion audit-plan PYTHON=.venv/bin/python
+          make -C proof-expansion audit-bundle-structure PYTHON=.venv/bin/python
+          make -C proof-expansion audit-bundle PYTHON=.venv/bin/python
+          .venv/bin/python tools/verify_checksum_manifest.py \
             proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
             --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
             --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
             --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
       - name: Verify finalized release revision
         run: |
-          python -I \
+          .venv/bin/python -I \
             release-tools/manage_fourth_word_solver_drat_revision.py \
             --verify --release-revision "$(git rev-parse HEAD)"
       - name: Assert no tracked files changed

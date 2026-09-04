@@ -25,57 +25,58 @@ jobs:
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: ${{ matrix.python-version }}
+      - run: python -I -m venv .venv
       - run: >-
-          python -I -m pip install --isolated --no-input --no-cache-dir
+          .venv/bin/python -I -m pip install --isolated --no-input --no-cache-dir
           --require-hashes --only-binary=:all: --no-deps
           --index-url https://pypi.org/simple -r requirements-replay.txt
-      - run: make third-word-child-formula-smoke fourth-word-formula-smoke PYTHON=python
-      - run: make test PYTHON=python
+      - run: make third-word-child-formula-smoke fourth-word-formula-smoke PYTHON=.venv/bin/python
+      - run: make test PYTHON=.venv/bin/python
       - if: matrix.python-version == '3.9'
-        run: make fourth-word-rup-proof-smoke PYTHON=python
-      - run: make audit-third-word-child-frontier PYTHON=python
-      - run: make audit-fourth-word-hard-frontier PYTHON=python
-      - run: make audit-fourth-word-rup-plan PYTHON=python
-      - run: make check-fourth-word-rup-proof-index PYTHON=python
+        run: make fourth-word-rup-proof-smoke PYTHON=.venv/bin/python
+      - run: make audit-third-word-child-frontier PYTHON=.venv/bin/python
+      - run: make audit-fourth-word-hard-frontier PYTHON=.venv/bin/python
+      - run: make audit-fourth-word-rup-plan PYTHON=.venv/bin/python
+      - run: make check-fourth-word-rup-proof-index PYTHON=.venv/bin/python
       - name: Test release revision manager
         if: matrix.python-version == '3.12'
-        run: python -I -m unittest discover -s release-tools/tests -v
+        run: .venv/bin/python -I -m unittest discover -s release-tools/tests -v
       - name: Test solver-DRAT v2 subsystem
         if: matrix.python-version == '3.12'
         run: >-
           make -C proof-expansion
           test audit-plan audit-bundle-structure
-          PYTHON=python
+          PYTHON=.venv/bin/python
       - name: Verify solver-DRAT v2 manifest
         if: matrix.python-version == '3.12'
         run: >-
-          python tools/verify_checksum_manifest.py
+          .venv/bin/python tools/verify_checksum_manifest.py
           proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256
           --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json
           --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json
           --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
-      - run: make verify-baseline verify-independent
-      - run: make distance-bounds overlap-bound
-      - run: make audit-two-word-cases
+      - run: make verify-baseline verify-independent PYTHON=.venv/bin/python
+      - run: make distance-bounds overlap-bound PYTHON=.venv/bin/python
+      - run: make audit-two-word-cases PYTHON=.venv/bin/python
       - name: Verify retained orbit LP certificates
         run: >-
-          PYTHONPATH=src:tools python
+          PYTHONPATH=src:tools .venv/bin/python
           tools/verify_orbit_lp_certificates.py
           evidence/two-word-cases.json
           evidence/orbit-lp-certificates.json
       - name: Verify retained integer profile certificates
         run: >-
-          PYTHONPATH=src:tools python
+          PYTHONPATH=src:tools .venv/bin/python
           tools/verify_integer_profile_certificates.py
           evidence/two-word-cases.json
           evidence/integer-profile-certificates.json
-      - run: make verify-release-manifest
+      - run: make verify-release-manifest PYTHON=.venv/bin/python
       - name: Verify finalized release revision when present
         if: matrix.python-version == '3.12'
         run: |
           record=proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json
           if test -f "$record"; then
-            python -I \
+            .venv/bin/python -I \
               release-tools/manage_fourth_word_solver_drat_revision.py \
               --verify --release-revision "$(git rev-parse HEAD)"
           fi
