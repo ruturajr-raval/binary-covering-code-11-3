@@ -345,6 +345,100 @@ def python_tree_record(root: Path) -> dict[str, object]:
     }
 
 
+def validate_solver_environment_record(
+    record: object,
+) -> dict[str, object]:
+    expected_keys = {
+        "python_implementation",
+        "python_version",
+        "python_executable_sha256",
+        "python_executable_path",
+        "python_sat_version",
+        "python_sat_distribution_version",
+        "python_sat_tree",
+        "python_sat_native_modules",
+        "platform_system",
+        "platform_machine",
+    }
+    string_keys = {
+        "python_implementation",
+        "python_version",
+        "python_sat_version",
+        "python_sat_distribution_version",
+        "platform_system",
+        "platform_machine",
+    }
+    if (
+        not isinstance(record, dict)
+        or set(record) != expected_keys
+        or any(
+            not isinstance(record[key], str) or not record[key]
+            for key in string_keys
+        )
+        or record["python_implementation"] != "CPython"
+        or record["python_sat_distribution_version"]
+        != record["python_sat_version"]
+    ):
+        raise RuntimeError("Python interpreter probe schema is invalid")
+    require_sha256(
+        record["python_executable_sha256"],
+        "Python executable digest",
+    )
+    executable_path = record["python_executable_path"]
+    if (
+        not isinstance(executable_path, dict)
+        or executable_path
+        != {
+            "scope": "repository-relative",
+            "value": ".venv/bin/python",
+        }
+    ):
+        raise RuntimeError("Python executable path record is invalid")
+    tree = record["python_sat_tree"]
+    if (
+        not isinstance(tree, dict)
+        or set(tree) != {"root", "file_count", "sha256"}
+        or tree["root"] != "pysat"
+        or type(tree["file_count"]) is not int
+        or tree["file_count"] <= 0
+    ):
+        raise RuntimeError("python-sat tree record is invalid")
+    require_sha256(tree["sha256"], "python-sat tree digest")
+    native = record["python_sat_native_modules"]
+    if (
+        not isinstance(native, dict)
+        or set(native) != {"pycard", "pyformula", "pysolvers"}
+    ):
+        raise RuntimeError("python-sat native modules are invalid")
+    for name, module in native.items():
+        if (
+            not isinstance(module, dict)
+            or set(module) != {"filename", "sha256"}
+            or not isinstance(module["filename"], str)
+            or not module["filename"]
+        ):
+            raise RuntimeError(
+                f"python-sat native module is invalid: {name}"
+            )
+        require_sha256(
+            module["sha256"],
+            f"python-sat native module digest: {name}",
+        )
+    return record
+
+
+def solver_environment_sha256(record: object) -> str:
+    validated = validate_solver_environment_record(record)
+    payload = json.dumps(
+        validated,
+        ensure_ascii=True,
+        allow_nan=False,
+        separators=(",", ":"),
+        sort_keys=True,
+    ).encode("ascii")
+    return hashlib.sha256(payload).hexdigest()
+
+
 def solver_environment_record(
     python_command: str,
     *,
@@ -453,60 +547,7 @@ def solver_environment_record(
         "scope": "repository-relative",
         "value": relative.as_posix(),
     }
-    expected_keys = {
-        "python_implementation",
-        "python_version",
-        "python_executable_sha256",
-        "python_executable_path",
-        "python_sat_version",
-        "python_sat_distribution_version",
-        "python_sat_tree",
-        "python_sat_native_modules",
-        "platform_system",
-        "platform_machine",
-    }
-    if (
-        not isinstance(record, dict)
-        or set(record) != expected_keys
-        or record["python_sat_distribution_version"]
-        != record["python_sat_version"]
-    ):
-        raise RuntimeError("Python interpreter probe schema is invalid")
-    require_sha256(
-        record["python_executable_sha256"],
-        "Python executable digest",
-    )
-    tree = record["python_sat_tree"]
-    if (
-        not isinstance(tree, dict)
-        or set(tree) != {"root", "file_count", "sha256"}
-        or tree["root"] != "pysat"
-        or type(tree["file_count"]) is not int
-        or tree["file_count"] <= 0
-    ):
-        raise RuntimeError("python-sat tree record is invalid")
-    require_sha256(tree["sha256"], "python-sat tree digest")
-    native = record["python_sat_native_modules"]
-    if (
-        not isinstance(native, dict)
-        or set(native) != {"pycard", "pyformula", "pysolvers"}
-    ):
-        raise RuntimeError("python-sat native modules are invalid")
-    for name, module in native.items():
-        if (
-            not isinstance(module, dict)
-            or set(module) != {"filename", "sha256"}
-            or not isinstance(module["filename"], str)
-            or not module["filename"]
-        ):
-            raise RuntimeError(
-                f"python-sat native module is invalid: {name}"
-            )
-        require_sha256(
-            module["sha256"],
-            f"python-sat native module digest: {name}",
-        )
-    return record
+    return validate_solver_environment_record(record)
 
 
 def run_prerequisite_audits(

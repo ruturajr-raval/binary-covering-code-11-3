@@ -168,9 +168,9 @@ The principal v2 records are:
 - `proof-expansion/evidence/proofs/fourth-word-solver-drat-v2/`
 
 The v2 index SHA-256 is
-`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`.
+`c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f`.
 The exact 422-entry v2 bundle manifest SHA-256 is
-`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+`822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786`.
 The 420-artifact proof-directory digest is
 `44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
 The structural audit and independent replay of all 140 retained proofs passed

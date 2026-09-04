@@ -22,10 +22,32 @@ revision = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(revision)
 ARTIFACTS = ROOT / ".research-artifacts"
 ARTIFACTS.mkdir(exist_ok=True)
+PRODUCTION_SOLVER_ENVIRONMENT = json.loads(
+    (ROOT / revision.INDEX_PATH).read_text(encoding="ascii")
+)["solver_environment"]
+
+
+def verification_host_environment() -> dict[str, object]:
+    record = json.loads(json.dumps(PRODUCTION_SOLVER_ENVIRONMENT))
+    record["platform_machine"] = "x86_64"
+    record["platform_system"] = "Linux"
+    record["python_executable_sha256"] = "c" * 64
+    record["python_version"] = "3.12.11"
+    record["python_sat_tree"]["sha256"] = "d" * 64
+    for index, name in enumerate(
+        ("pycard", "pyformula", "pysolvers"),
+        start=1,
+    ):
+        record["python_sat_native_modules"][name] = {
+            "filename": f"{name}.cpython-312-linux.so",
+            "sha256": str(index) * 64,
+        }
+    return record
 
 
 def valid_command_results(source: str) -> list[dict[str, object]]:
     outputs = [b"" for _ in revision.REPLAY_COMMANDS]
+    host_environment = verification_host_environment()
     outputs[2] = (source + "\n").encode("ascii")
     outputs[5] = (
         b"test_canonical_replay_root_rejects_symlink_parent ... ok\n"
@@ -36,7 +58,7 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
         b"test_supported_python_record_is_strict ... ok\n"
         b"\nRan 15 tests in 0.100s\n\nOK\n"
     )
-    outputs[6] = b"\nRan 80 tests in 1.000s\n\nOK\n"
+    outputs[6] = b"\nRan 82 tests in 1.000s\n\nOK\n"
     outputs[8] = (
         json.dumps(
             {
@@ -60,10 +82,32 @@ def valid_command_results(source: str) -> list[dict[str, object]]:
                     "9e6a51977f27ca3c936019c9f657f08f"
                 ),
                 "proof_index_sha256": (
-                    "342c94b10eb182b18c369a526e3fc9d5"
-                    "ac2b9fc9faa8943b687ea1a357ce3ca8"
+                    "c528b1358504bad39a3b8770285913d7"
+                    "1da0a9ff02e77561d266b2d5dcb11d7f"
                 ),
                 "proofs_replayed": True,
+                "production_provenance": {
+                    "checker_binary_sha256": (
+                        revision.PRODUCTION_CHECKER_SHA256
+                    ),
+                    "checker_commit": revision.CHECKER_COMMIT,
+                    "solver_environment": (
+                        PRODUCTION_SOLVER_ENVIRONMENT
+                    ),
+                    "solver_environment_sha256": (
+                        revision.PRODUCTION_SOLVER_ENVIRONMENT_SHA256
+                    ),
+                },
+                "verification_host": {
+                    "checker_binary_sha256": "a" * 64,
+                    "checker_commit": revision.CHECKER_COMMIT,
+                    "solver_environment": host_environment,
+                    "solver_environment_sha256": (
+                        revision.solver_environment_sha256(
+                            host_environment
+                        )
+                    ),
+                },
                 "valid": True,
             }
         ).encode("ascii")
@@ -187,6 +231,30 @@ class SolverDratRevisionTests(unittest.TestCase):
         )
         results = valid_command_results(source)
         revision.validate_command_results(results, source)
+        audit = revision.validate_v2_audit_result(
+            revision.decode_command_output(results[9]),
+            proofs_replayed=True,
+        )
+        self.assertEqual(
+            audit["verification_host"]["checker_binary_sha256"],
+            "a" * 64,
+        )
+        host_environment = audit["verification_host"][
+            "solver_environment"
+        ]
+        self.assertEqual(
+            host_environment["python_executable_path"],
+            {
+                "scope": "repository-relative",
+                "value": ".venv/bin/python",
+            },
+        )
+        self.assertEqual(
+            audit["verification_host"][
+                "solver_environment_sha256"
+            ],
+            revision.solver_environment_sha256(host_environment),
+        )
         results[-1] = revision.command_result(
             revision.REPLAY_COMMANDS[-1],
             b"untracked\n",
@@ -365,6 +433,18 @@ class SolverDratRevisionTests(unittest.TestCase):
                 text = (ROOT / relative).read_text(encoding="ascii")
                 self.assertIn(command, text)
                 self.assertNotIn("--release-revision HEAD", text)
+        workflow = (
+            ROOT / ".github/workflows/proof-replay.yml"
+        ).read_text(encoding="ascii")
+        self.assertIn(
+            "Require finalized record on published refs",
+            workflow,
+        )
+        self.assertIn(
+            "hashFiles('proof-expansion/evidence/"
+            "fourth-word-solver-drat-revision-v2.json')",
+            workflow,
+        )
 
     def test_record_schema_rejects_wrong_result_scope(self) -> None:
         source = "1" * 40
@@ -436,6 +516,20 @@ class SolverDratRevisionTests(unittest.TestCase):
                 "toolchain": toolchain,
                 "working_tree_clean": True,
                 "proofs_replayed": True,
+                "proof_replay_provenance": {
+                    "production": (
+                        revision.validate_v2_audit_result(
+                            revision.decode_command_output(results[9]),
+                            proofs_replayed=True,
+                        )["production_provenance"]
+                    ),
+                    "verification_host": (
+                        revision.validate_v2_audit_result(
+                            revision.decode_command_output(results[9]),
+                            proofs_replayed=True,
+                        )["verification_host"]
+                    ),
+                },
             },
             "finalization_policy": {
                 "required_parent": source,
@@ -454,6 +548,13 @@ class SolverDratRevisionTests(unittest.TestCase):
             },
         }
         with self.assertRaisesRegex(RuntimeError, "result scope"):
+            revision.validate_record_schema(record)
+        record["result"]["combined_certified_branch_count"] = 324
+        record["result"]["remaining_branch_count"] = 26
+        record["clean_checkout_replay"]["proof_replay_provenance"][
+            "verification_host"
+        ]["checker_binary_sha256"] = "c" * 64
+        with self.assertRaisesRegex(RuntimeError, "proof provenance"):
             revision.validate_record_schema(record)
 
     def test_record_json_is_ascii_canonical(self) -> None:

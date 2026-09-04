@@ -52,13 +52,20 @@ semantics checked independently by the record validator.
 `proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256`
 authenticates the v2 plan, index, and exact 420-artifact proof tree. Its
 SHA-256 is
-`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+`822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786`.
 The v2 index SHA-256 is
-`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`,
+`c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f`,
 and the proof-directory digest is
 `44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
 The v2 bundle has passed its structural audit and independent replay of all
-140 proofs. `release-manifest.sha256` authenticates the principal release
+140 proofs. The index retains exact production environment hashes, while
+independent replay may rebuild the same pinned checker source on another
+platform. It still requires the same Python-SAT version, exact formula and
+proof identities, and matching normalized checker output.
+The certified revision record retains complete production and replay-host
+solver-environment records with canonical hashes, including the replay
+Python executable, package tree, native modules, platform, and checker hash.
+`release-manifest.sha256` authenticates the principal release
 files, including metadata that binds the dedicated v2 manifest by hash. The
 root release command does not traverse the v2 proof tree by itself, so both
 manifest verification commands below are required.
@@ -122,6 +129,10 @@ remains future work.
 Final certification verification requires a full Git clone containing the
 certified source revision. A source archive or shallow checkout cannot verify
 that Git revision identity.
+The retained clean-replay record is a host-specific self-attestation rather
+than a third-party signature. The GitHub workflows replay all 140 proofs on
+`main` and release tags, providing separate publicly visible executions tied
+to the released commit.
 
 ## Citation
 

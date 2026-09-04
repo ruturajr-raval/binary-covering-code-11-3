@@ -3,6 +3,8 @@ name: Full Proof Replay
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     tags:
       - "v*"
 
@@ -57,7 +59,15 @@ jobs:
             --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
             --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
             --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
+      - name: Require finalized record on published refs
+        if: github.event_name == 'push'
+        run: >-
+          test -f
+          proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json
       - name: Verify finalized release revision
+        if: >-
+          hashFiles('proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json')
+          != ''
         run: |
           .venv/bin/python -I \
             release-tools/manage_fourth_word_solver_drat_revision.py \

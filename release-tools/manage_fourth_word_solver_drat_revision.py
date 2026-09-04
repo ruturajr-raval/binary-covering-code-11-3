@@ -44,6 +44,20 @@ OUTPUT_COMMITMENT_SCOPE = "host-specific-self-attestation"
 PYPI_INDEX = "https://pypi.org/simple"
 CERTIFICATION_DATE = "2026-09-04"
 REVISION_MANAGER_TEST_COUNT = 15
+CHECKER_COMMIT = "2e3b2dc0ecf938addbd779d42877b6ed69d9a985"
+PRODUCTION_CHECKER_SHA256 = (
+    "f58f63b0f76945d4c4c9ff6e87afaf870f579e67c0f7cca589492df8fc7ebd47"
+)
+PRODUCTION_SOLVER_ENVIRONMENT_SHA256 = (
+    "30523b122935a6a513b19ff66b9f74cc85a9396d337c140224ebc7b11e74be1f"
+)
+PYTHON_SAT_VERSION = "1.9.dev15"
+PROOF_DIRECTORY_SHA256 = (
+    "44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f"
+)
+PROOF_INDEX_SHA256 = (
+    "c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f"
+)
 
 RECORD_PATH = Path(
     "proof-expansion/evidence/"
@@ -196,6 +210,12 @@ EXPECTED_LIMITATIONS = [
         "Zenodo assigns a version-specific DOI only after a tagged "
         "release is archived; pre-release metadata uses the stable "
         "concept DOI."
+    ),
+    (
+        "The retained clean-replay record is a host-specific "
+        "self-attestation, not a third-party signature; GitHub "
+        "main-branch and tag workflows provide separate publicly "
+        "visible replay runs."
     ),
     "No external mathematical review has occurred.",
 ]
@@ -384,6 +404,113 @@ def canonical_replay_root(root: Path, revision: str) -> Path:
 
 def sha256_bytes(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
+
+
+def validate_solver_environment_record(
+    record: object,
+    description: str,
+) -> dict[str, object]:
+    expected_keys = {
+        "python_implementation",
+        "python_version",
+        "python_executable_sha256",
+        "python_executable_path",
+        "python_sat_version",
+        "python_sat_distribution_version",
+        "python_sat_tree",
+        "python_sat_native_modules",
+        "platform_system",
+        "platform_machine",
+    }
+    string_keys = {
+        "python_implementation",
+        "python_version",
+        "python_sat_version",
+        "python_sat_distribution_version",
+        "platform_system",
+        "platform_machine",
+    }
+    if (
+        not isinstance(record, dict)
+        or set(record) != expected_keys
+        or any(
+            not isinstance(record[key], str) or not record[key]
+            for key in string_keys
+        )
+        or record["python_implementation"] != "CPython"
+        or record["python_sat_distribution_version"]
+        != record["python_sat_version"]
+    ):
+        raise RuntimeError(f"{description} schema is invalid")
+    version_parts = record["python_version"].split(".")
+    if (
+        len(version_parts) != 3
+        or any(not part.isdigit() for part in version_parts)
+        or int(version_parts[0]) != 3
+        or not 9 <= int(version_parts[1]) <= 12
+    ):
+        raise RuntimeError(
+            f"{description} requires CPython 3.9 through 3.12"
+        )
+    require_sha256(
+        record["python_executable_sha256"],
+        f"{description} Python executable hash",
+    )
+    if record["python_executable_path"] != {
+        "scope": "repository-relative",
+        "value": ".venv/bin/python",
+    }:
+        raise RuntimeError(
+            f"{description} Python executable path is invalid"
+        )
+    tree = record["python_sat_tree"]
+    if (
+        not isinstance(tree, dict)
+        or set(tree) != {"root", "file_count", "sha256"}
+        or tree["root"] != "pysat"
+        or type(tree["file_count"]) is not int
+        or tree["file_count"] <= 0
+    ):
+        raise RuntimeError(f"{description} package tree is invalid")
+    require_sha256(tree["sha256"], f"{description} package tree hash")
+    native = record["python_sat_native_modules"]
+    if (
+        not isinstance(native, dict)
+        or set(native) != {"pycard", "pyformula", "pysolvers"}
+    ):
+        raise RuntimeError(f"{description} native modules are invalid")
+    for name, module in native.items():
+        if (
+            not isinstance(module, dict)
+            or set(module) != {"filename", "sha256"}
+            or not isinstance(module["filename"], str)
+            or not module["filename"]
+            or PurePosixPath(module["filename"]).name
+            != module["filename"]
+        ):
+            raise RuntimeError(
+                f"{description} native module is invalid: {name}"
+            )
+        require_sha256(
+            module["sha256"],
+            f"{description} native module hash: {name}",
+        )
+    return record
+
+
+def solver_environment_sha256(record: object) -> str:
+    validated = validate_solver_environment_record(
+        record,
+        "solver environment",
+    )
+    payload = json.dumps(
+        validated,
+        ensure_ascii=True,
+        allow_nan=False,
+        separators=(",", ":"),
+        sort_keys=True,
+    ).encode("ascii")
+    return sha256_bytes(payload)
 
 
 def unique_json_object(
@@ -723,6 +850,109 @@ def require_json_result(
         )
 
 
+def validate_v2_audit_result(
+    output: bytes,
+    *,
+    proofs_replayed: bool,
+) -> dict[str, object]:
+    records = top_level_json_objects(output)
+    if not records:
+        raise RuntimeError("clean-replay audit result is missing")
+    record = records[-1]
+    if set(record) != {
+        "case_count",
+        "production_provenance",
+        "proof_directory_sha256",
+        "proof_index_sha256",
+        "proofs_replayed",
+        "verification_host",
+        "valid",
+    }:
+        raise RuntimeError("clean-replay audit result schema differs")
+    if (
+        record["case_count"] != 140
+        or record["proof_directory_sha256"]
+        != PROOF_DIRECTORY_SHA256
+        or record["proof_index_sha256"] != PROOF_INDEX_SHA256
+        or record["proofs_replayed"] is not proofs_replayed
+        or record["valid"] is not True
+    ):
+        raise RuntimeError("clean-replay audit result differs")
+    production = record["production_provenance"]
+    if (
+        not isinstance(production, dict)
+        or set(production)
+        != {
+            "checker_binary_sha256",
+            "checker_commit",
+            "solver_environment",
+            "solver_environment_sha256",
+        }
+        or production["checker_binary_sha256"]
+        != PRODUCTION_CHECKER_SHA256
+        or production["checker_commit"] != CHECKER_COMMIT
+    ):
+        raise RuntimeError(
+            "clean-replay production provenance differs"
+        )
+    production_environment = validate_solver_environment_record(
+        production["solver_environment"],
+        "production solver environment",
+    )
+    production_environment_sha256 = require_sha256(
+        production["solver_environment_sha256"],
+        "production solver environment hash",
+    )
+    if (
+        production_environment_sha256
+        != PRODUCTION_SOLVER_ENVIRONMENT_SHA256
+        or production_environment_sha256
+        != solver_environment_sha256(production_environment)
+        or production_environment["python_sat_version"]
+        != PYTHON_SAT_VERSION
+    ):
+        raise RuntimeError(
+            "clean-replay production environment differs"
+        )
+    host = record["verification_host"]
+    if (
+        not isinstance(host, dict)
+        or set(host)
+        != {
+            "checker_binary_sha256",
+            "checker_commit",
+            "solver_environment",
+            "solver_environment_sha256",
+        }
+        or host["checker_commit"] != CHECKER_COMMIT
+    ):
+        raise RuntimeError(
+            "clean-replay verification-host provenance differs"
+        )
+    require_sha256(
+        host["checker_binary_sha256"],
+        "clean-replay checker hash",
+    )
+    host_environment = validate_solver_environment_record(
+        host["solver_environment"],
+        "verification-host solver environment",
+    )
+    host_environment_sha256 = require_sha256(
+        host["solver_environment_sha256"],
+        "verification-host solver environment hash",
+    )
+    if (
+        host_environment_sha256
+        != solver_environment_sha256(host_environment)
+        or host_environment["python_sat_version"]
+        != PYTHON_SAT_VERSION
+    ):
+        raise RuntimeError(
+            "clean-replay verification-host environment differs"
+        )
+    return record
+
+
 def validate_command_output_semantics(
     index: int,
     output: bytes,
@@ -752,7 +982,7 @@ def validate_command_output_semantics(
             )
     elif index == 6:
         text = output.decode("utf-8", errors="strict")
-        if "Ran 80 tests in " not in text or "\nOK\n" not in text:
+        if "Ran 82 tests in " not in text or "\nOK\n" not in text:
             raise RuntimeError(
                 "proof-expansion test output is invalid"
             )
@@ -770,21 +1000,9 @@ def validate_command_output_semantics(
             },
         )
     elif index == 9:
-        require_json_result(
+        validate_v2_audit_result(
             output,
-            {
-                "case_count": 140,
-                "proof_directory_sha256": (
-                    "44504c6320ac22ad62507f70222c2e8b"
-                    "9e6a51977f27ca3c936019c9f657f08f"
-                ),
-                "proof_index_sha256": (
-                    "342c94b10eb182b18c369a526e3fc9d5"
-                    "ac2b9fc9faa8943b687ea1a357ce3ca8"
-                ),
-                "proofs_replayed": True,
-                "valid": True,
-            },
+            proofs_replayed=True,
         )
     elif index == 10:
         require_json_result(
@@ -971,6 +1189,7 @@ def validate_record_schema(record: object) -> dict[str, object]:
             "toolchain",
             "working_tree_clean",
             "proofs_replayed",
+            "proof_replay_provenance",
         }
         or replay["passed"] is not True
         or replay["revision"] != revision
@@ -992,6 +1211,21 @@ def validate_record_schema(record: object) -> dict[str, object]:
         replay["command_results"],
         revision,
     )
+    audit = validate_v2_audit_result(
+        decode_command_output(results[9]),
+        proofs_replayed=True,
+    )
+    expected_proof_replay_provenance = {
+        "production": audit["production_provenance"],
+        "verification_host": audit["verification_host"],
+    }
+    if (
+        replay["proof_replay_provenance"]
+        != expected_proof_replay_provenance
+    ):
+        raise RuntimeError(
+            "v2 clean-replay proof provenance differs"
+        )
     if replay["command_results_sha256"] != command_results_digest(
         results,
         revision,
@@ -1454,6 +1688,11 @@ def build_record(
 ) -> dict[str, object]:
     v2 = validate_v2_bundle(checkout)
     validate_root_release_manifest(checkout)
+    results = validate_command_results(results, revision)
+    audit = validate_v2_audit_result(
+        decode_command_output(results[9]),
+        proofs_replayed=True,
+    )
     record: dict[str, object] = {
         "schema_version": SCHEMA_VERSION,
         "record_type": RECORD_TYPE,
@@ -1509,6 +1748,10 @@ def build_record(
             "toolchain": toolchain,
             "working_tree_clean": True,
             "proofs_replayed": True,
+            "proof_replay_provenance": {
+                "production": audit["production_provenance"],
+                "verification_host": audit["verification_host"],
+            },
         },
         "finalization_policy": {
             "required_parent": revision,

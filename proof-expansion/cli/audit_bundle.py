@@ -66,7 +66,9 @@ from fourth_word_drat.bundle import (
     require_free_space,
     require_path_separation,
     run_prerequisite_audits,
+    solver_environment_sha256,
     solver_environment_record,
+    validate_solver_environment_record,
     validate_flat_case,
 )
 from fourth_word_drat.proof_core import (
@@ -80,6 +82,7 @@ from fourth_word_drat.proof_core import (
     materialized_retained_proof,
     repository_path,
     require_regular_single_link,
+    require_sha256,
     validate_proof_summary_record,
 )
 from repository_lock import acquire_repository_lock
@@ -163,13 +166,17 @@ def audit_structure(
     plan_sha256: str,
     index: dict[str, object],
     proof_directory: Path,
-    checker: Path,
     checker_commit: str,
-    solver_environment: dict[str, object],
+    replay_solver_environment: dict[str, object],
     replay_workspace: Path,
     *,
     root: Path,
-) -> tuple[list[dict[str, object]], dict[str, object]]:
+) -> tuple[
+    list[dict[str, object]],
+    dict[str, object],
+    str,
+    dict[str, object],
+]:
     if (
         plan.get("record_type") != "fourth-word-drat-proof-plan"
         or plan.get("schema_version") != 2
@@ -209,24 +216,39 @@ def audit_structure(
         or index["proof_directory"]
         != display_path(proof_directory, root)
         or index["solver"] != "glucose4"
-        or index["solver_environment"] != solver_environment
         or index["case_count"] != 140
         or len(index["cases"]) != 140
     ):
         raise RuntimeError("proof index identity is incorrect")
+    production_solver_environment = validate_solver_environment_record(
+        index["solver_environment"]
+    )
+    if (
+        production_solver_environment["python_sat_version"]
+        != replay_solver_environment["python_sat_version"]
+        or production_solver_environment[
+            "python_sat_distribution_version"
+        ]
+        != replay_solver_environment[
+            "python_sat_distribution_version"
+        ]
+    ):
+        raise RuntimeError(
+            "proof replay Python-SAT version differs from production"
+        )
     checker_record = index["checker"]
     if (
-        checker_record
-        != {
-            "name": "drat-trim",
-            "commit": checker_commit,
-            "binary_sha256": authenticated_file_sha256(
-                checker,
-                "proof checker",
-            ),
-        }
+        not isinstance(checker_record, dict)
+        or set(checker_record)
+        != {"name", "commit", "binary_sha256"}
+        or checker_record["name"] != "drat-trim"
+        or checker_record["commit"] != checker_commit
     ):
         raise RuntimeError("proof index checker identity changed")
+    production_checker_sha256 = require_sha256(
+        checker_record["binary_sha256"],
+        "production checker digest",
+    )
     pipeline_files = index["pipeline_files"]
     expected_pipeline_files = {
         display_path(path, root): authenticated_file_sha256(
@@ -317,10 +339,6 @@ def audit_structure(
 
     case_records = []
     expected_cases = []
-    checker_sha256 = authenticated_file_sha256(
-        checker,
-        "proof checker",
-    )
     for planned in plan["cases"]:
         case_record = validate_flat_case(proof_directory, planned)
         names = case_filenames(str(planned["branch_id"]))
@@ -332,9 +350,11 @@ def audit_structure(
             clauses=int(case_record["formula"]["clauses"]),
             proof_path=proof_directory / names["proof"],
             checker_commit=checker_commit,
-            checker_sha256=checker_sha256,
+            checker_sha256=production_checker_sha256,
             python_sat_version=str(
-                solver_environment["python_sat_version"]
+                production_solver_environment[
+                    "python_sat_version"
+                ]
             ),
             max_solve_seconds=int(
                 resource_limits["solve_seconds_per_case"]
@@ -378,7 +398,12 @@ def audit_structure(
     ]
     if index["per_child"] != expected_per_child:
         raise RuntimeError("proof index child counts are incorrect")
-    return case_records, resource_limits
+    return (
+        case_records,
+        resource_limits,
+        production_checker_sha256,
+        production_solver_environment,
+    )
 
 
 def replay_case(
@@ -391,6 +416,10 @@ def replay_case(
     python_command: str,
     checker: Path,
     checker_commit: str,
+    production_checker_sha256: str,
+    production_python_sat_version: str,
+    replay_checker_sha256: str,
+    replay_python_sat_version: str,
     environment: dict[str, str],
     commands: CommandRegistry,
     resource_limits: dict[str, object],
@@ -428,7 +457,7 @@ def replay_case(
         ):
             raise RuntimeError(f"{branch_id}: formula identity changed")
         names = case_filenames(branch_id)
-        commands.run(
+        output = commands.run(
             isolated_python_script_command(
                 python_command,
                 "proof-expansion/cli/prove_formula.py",
@@ -449,6 +478,10 @@ def replay_case(
                 display_path(checker, root),
                 "--checker-commit",
                 checker_commit,
+                "--production-checker-sha256",
+                production_checker_sha256,
+                "--production-python-sat-version",
+                production_python_sat_version,
                 "--scratch-directory",
                 display_path(scratch, root),
                 *proof_resource_arguments(
@@ -479,6 +512,29 @@ def replay_case(
             root=root,
             timeout_seconds=PROOF_COMMAND_TIMEOUT_SECONDS,
         )
+        try:
+            completion = json.loads(output)
+        except json.JSONDecodeError as exc:
+            raise RuntimeError(
+                f"{branch_id}: replay report is invalid JSON"
+            ) from exc
+        expected_completion = {
+            "case_id": branch_id,
+            "formula_sha256": formula_record["formula_sha256"],
+            "production_checker_sha256": (
+                production_checker_sha256
+            ),
+            "production_python_sat_version": (
+                production_python_sat_version
+            ),
+            "replay_checker_sha256": replay_checker_sha256,
+            "replay_python_sat_version": replay_python_sat_version,
+            "verified": True,
+        }
+        if completion != expected_completion:
+            raise RuntimeError(
+                f"{branch_id}: replay provenance report differs"
+            )
     return {
         "branch_id": branch_id,
         "verified": True,
@@ -495,6 +551,10 @@ def replay_cases(
     python_command: str,
     checker: Path,
     checker_commit: str,
+    production_checker_sha256: str,
+    production_python_sat_version: str,
+    replay_checker_sha256: str,
+    replay_python_sat_version: str,
     environment: dict[str, str],
     workers: int,
     resource_limits: dict[str, object],
@@ -515,6 +575,16 @@ def replay_cases(
                     python_command=python_command,
                     checker=checker,
                     checker_commit=checker_commit,
+                    production_checker_sha256=(
+                        production_checker_sha256
+                    ),
+                    production_python_sat_version=(
+                        production_python_sat_version
+                    ),
+                    replay_checker_sha256=replay_checker_sha256,
+                    replay_python_sat_version=(
+                        replay_python_sat_version
+                    ),
                     environment=environment,
                     commands=commands,
                     resource_limits=resource_limits,
@@ -695,22 +765,30 @@ def main() -> int:
     before_directory_hash = directory_sha256(proof_directory)
     before_python_tree = python_tree_record(root)
 
-    case_records, resource_limits = audit_structure(
+    (
+        case_records,
+        resource_limits,
+        production_checker_sha256,
+        production_solver_environment,
+    ) = audit_structure(
         plan,
         plan_path,
         before_plan_hash,
         index,
         proof_directory,
-        checker,
         args.checker_commit,
         solver_environment,
         replay_workspace,
         root=root,
     )
+    replay_checker_sha256 = authenticated_file_sha256(
+        checker,
+        "proof checker",
+    )
     authenticated_inputs = {
         plan_path: before_plan_hash,
         index_path: before_index_hash,
-        checker: authenticated_file_sha256(checker, "proof checker"),
+        checker: replay_checker_sha256,
     }
     for source in plan["sources"].values():
         source_path = repository_path(Path(source["path"]), root)
@@ -734,6 +812,20 @@ def main() -> int:
             python_command=args.python,
             checker=checker,
             checker_commit=args.checker_commit,
+            production_checker_sha256=(
+                production_checker_sha256
+            ),
+            production_python_sat_version=(
+                str(
+                    production_solver_environment[
+                        "python_sat_version"
+                    ]
+                )
+            ),
+            replay_checker_sha256=replay_checker_sha256,
+            replay_python_sat_version=str(
+                solver_environment["python_sat_version"]
+            ),
             environment=environment,
             workers=args.workers,
             resource_limits=resource_limits,
@@ -772,9 +864,35 @@ def main() -> int:
         json.dumps(
             {
                 "case_count": len(case_records),
+                "production_provenance": {
+                    "checker_binary_sha256": (
+                        production_checker_sha256
+                    ),
+                    "checker_commit": args.checker_commit,
+                    "solver_environment": (
+                        production_solver_environment
+                    ),
+                    "solver_environment_sha256": (
+                        solver_environment_sha256(
+                            production_solver_environment
+                        )
+                    ),
+                },
                 "proof_directory_sha256": before_directory_hash,
                 "proof_index_sha256": before_index_hash,
                 "proofs_replayed": not args.structure_only,
+                "verification_host": {
+                    "checker_binary_sha256": (
+                        replay_checker_sha256
+                    ),
+                    "checker_commit": args.checker_commit,
+                    "solver_environment": solver_environment,
+                    "solver_environment_sha256": (
+                        solver_environment_sha256(
+                            solver_environment
+                        )
+                    ),
+                },
                 "valid": True,
             },
             indent=2,

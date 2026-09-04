@@ -35,6 +35,7 @@ from fourth_word_drat.bundle import (
     require_certification_resource_limits,
     require_path_separation,
     run_case,
+    solver_environment_sha256,
     solver_environment_record,
     stage_bundle,
     StagedBundle,
@@ -1911,6 +1912,13 @@ class BundleUtilityTests(unittest.TestCase):
         self.assertEqual(
             record["python_sat_version"],
             record["python_sat_distribution_version"],
+        )
+        digest = solver_environment_sha256(record)
+        mutated = json.loads(json.dumps(record))
+        mutated["platform_system"] = "Different"
+        self.assertNotEqual(
+            solver_environment_sha256(mutated),
+            digest,
         )
 
     def test_repeated_signal_is_suppressed_during_cleanup(self) -> None:

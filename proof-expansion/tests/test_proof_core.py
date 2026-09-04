@@ -48,6 +48,8 @@ def run_cli(
     *,
     verify_existing: bool = False,
     checker: Path = CHECKER,
+    production_checker_sha256: str | None = None,
+    production_python_sat_version: str | None = None,
 ) -> subprocess.CompletedProcess[str]:
     command = [
         sys.executable,
@@ -79,6 +81,20 @@ def run_cli(
                 "--verify-existing",
             ]
         )
+        if production_checker_sha256 is not None:
+            command.extend(
+                [
+                    "--production-checker-sha256",
+                    production_checker_sha256,
+                ]
+            )
+        if production_python_sat_version is not None:
+            command.extend(
+                [
+                    "--production-python-sat-version",
+                    production_python_sat_version,
+                ]
+            )
     try:
         return subprocess.run(
             command,
@@ -139,6 +155,15 @@ class ProofCoreTests(unittest.TestCase):
                 verify_existing=True,
             )
             self.assertEqual(replayed.returncode, 0, replayed.stderr)
+            completion = json.loads(replayed.stdout)
+            self.assertEqual(
+                completion["production_checker_sha256"],
+                completion["replay_checker_sha256"],
+            )
+            self.assertEqual(
+                completion["production_python_sat_version"],
+                completion["replay_python_sat_version"],
+            )
             self.assertEqual(proof.read_bytes(), before_proof)
             self.assertEqual(summary.read_bytes(), before_summary)
             report = json.loads(summary.read_text(encoding="ascii"))
@@ -172,6 +197,93 @@ class ProofCoreTests(unittest.TestCase):
                 verify_existing=True,
             )
         self.assertNotEqual(replayed.returncode, 0)
+
+    def test_cross_platform_replay_uses_retained_provenance(self) -> None:
+        ARTIFACTS.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=ARTIFACTS) as directory:
+            directory_path = Path(directory)
+            formula = directory_path / "formula.cnf"
+            proof = directory_path / "proof.drat.gz"
+            summary = directory_path / "proof.json"
+            write_xor_formula(formula)
+            built = run_cli(formula, proof, summary)
+            self.assertEqual(built.returncode, 0, built.stderr)
+            record = json.loads(summary.read_text(encoding="ascii"))
+            production_checker_sha256 = "a" * 64
+            production_python_sat_version = "retained-version"
+            record["production"]["checker_binary_sha256"] = (
+                production_checker_sha256
+            )
+            record["production"]["python_sat_version"] = (
+                production_python_sat_version
+            )
+            record["retained_replay"]["checker_binary_sha256"] = (
+                production_checker_sha256
+            )
+            summary.write_text(
+                json.dumps(record, indent=2, sort_keys=True) + "\n",
+                encoding="ascii",
+            )
+            before_proof = proof.read_bytes()
+            before_summary = summary.read_bytes()
+            replayed = run_cli(
+                formula,
+                proof,
+                summary,
+                verify_existing=True,
+                production_checker_sha256=(
+                    production_checker_sha256
+                ),
+                production_python_sat_version=(
+                    production_python_sat_version
+                ),
+            )
+            self.assertEqual(replayed.returncode, 0, replayed.stderr)
+            completion = json.loads(replayed.stdout)
+            self.assertEqual(
+                completion["production_checker_sha256"],
+                production_checker_sha256,
+            )
+            self.assertEqual(
+                completion["production_python_sat_version"],
+                production_python_sat_version,
+            )
+            self.assertNotEqual(
+                completion["replay_checker_sha256"],
+                production_checker_sha256,
+            )
+            self.assertNotEqual(
+                completion["replay_python_sat_version"],
+                production_python_sat_version,
+            )
+            self.assertEqual(proof.read_bytes(), before_proof)
+            self.assertEqual(summary.read_bytes(), before_summary)
+
+    def test_cross_platform_replay_rejects_wrong_provenance(
+        self,
+    ) -> None:
+        ARTIFACTS.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=ARTIFACTS) as directory:
+            directory_path = Path(directory)
+            formula = directory_path / "formula.cnf"
+            proof = directory_path / "proof.drat.gz"
+            summary = directory_path / "proof.json"
+            write_xor_formula(formula)
+            built = run_cli(formula, proof, summary)
+            self.assertEqual(built.returncode, 0, built.stderr)
+            replayed = run_cli(
+                formula,
+                proof,
+                summary,
+                verify_existing=True,
+                production_checker_sha256="b" * 64,
+                production_python_sat_version="retained-version",
+            )
+        self.assertNotEqual(replayed.returncode, 0)
+        self.assertIn(
+            "production metadata changed",
+            replayed.stderr,
+        )
 
     def test_checker_substitution_is_rejected(self) -> None:
         ARTIFACTS.mkdir(exist_ok=True)

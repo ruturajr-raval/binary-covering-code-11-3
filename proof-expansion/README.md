@@ -2,11 +2,11 @@
 
 Author: Ruturaj R Raval
 
-Date: 2026-09-03
+Date: 2026-09-04
 
 ## Objective
 
-This workbench certifies 140 fourth-word branches that were not closed by
+This subsystem certifies 140 fourth-word branches that were not closed by
 unit propagation but were reported UNSAT by an authenticated exploratory
 Glucose4 run. Exploratory solver status was used only to select cases. Every
 counted branch has a retained DRAT proof checked independently with the pinned
@@ -34,14 +34,24 @@ normalized parent, and leaves the covering number at 15 or 16.
 
 The retained index is
 `evidence/fourth-word-solver-drat-index-v2.json`. Its SHA-256 is
-`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`.
+`c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f`.
 The exact-membership bundle manifest is
 `evidence/fourth-word-solver-drat-bundle-v2.sha256`. Its SHA-256 is
-`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`.
+`822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786`.
 The 420-artifact proof directory has digest
 `44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
-The 80 focused tests, structural audit, and independent replay of all 140
-retained proofs passed on 2026-09-03.
+The 82 focused tests and structural audit passed on 2026-09-04. All 140
+retained proofs were independently replayed on 2026-09-03.
+
+The retained index records the exact production Python-SAT environment and
+checker binary hash. Independent replay may use a different host binary built
+from the same pinned checker source revision. The audit still requires the
+same Python-SAT version, reconstructs every formula exactly, authenticates the
+current checker before and after use, and requires normalized checker output
+to match the retained replay record.
+The certified revision record retains complete production and replay-host
+solver-environment records with canonical hashes, including the replay
+Python executable, package tree, native modules, platform, and checker hash.
 
 Finalized releases also retain
 `evidence/fourth-word-solver-drat-revision-v2.json`. From the repository
@@ -50,7 +60,7 @@ checks its certified source revision, retained replay outputs, exact
 finalization ancestry, allowed paths, Git file modes, and release scope.
 
 The lower endpoint 15 is inherited from the previously published
-computational lower bound. This workbench does not reconstruct that
+computational lower bound. This subsystem does not reconstruct that
 historical computation into a new retained certificate.
 
 ## Integrity Model
@@ -133,7 +143,7 @@ safe on the host.
 
 The Python proof-generation process has a peak-RSS watchdog, but the
 external `drat-trim` process does not have a portable enforced memory
-ceiling in this workbench. Checker runtime, output size, and proof-file
+ceiling in this subsystem. Checker runtime, output size, and proof-file
 size are bounded. The one-worker default reduces concurrent memory risk,
 but independent replay should still be run on a suitably provisioned
 machine.
@@ -151,10 +161,15 @@ The integrity controls detect concurrent mutation and path replacement
 within the certification workflow. They do not claim containment against
 a malicious privileged host.
 
+The clean-replay record is a host-specific self-attestation, not a
+third-party signature. GitHub replays on `main` and release tags provide
+separate publicly visible executions tied to the released commit.
+
 ## Claim Boundary
 
-This work claims 140 new branch-level DRAT closures and 324 certified closures
-across the selected 350-branch fourth-word split when combined with the prior
-184 RUP certificates. It does not claim a 15-word covering code, a proof that
-no such code exists, a closed third-word child, a closed normalized parent, a
-new global bound, or a final value for `K_2(11,3)`.
+This work claims 140 additional branch-level DRAT closures relative to the
+prior RUP layer, giving 324 certified closures across the selected 350-branch
+fourth-word split when combined with the prior 184 RUP certificates. It does
+not claim a 15-word covering code, a proof that no such code exists, a closed
+third-word child, a closed normalized parent, a new global bound, or a final
+value for `K_2(11,3)`.

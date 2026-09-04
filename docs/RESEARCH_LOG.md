@@ -1,5 +1,29 @@
 # Research Log
 
+## 2026-09-04
+
+- Separated retained production provenance from independent replay-host
+  provenance. Cross-platform replay now preserves the original checker and
+  Python-SAT hashes while rebuilding the same pinned checker source, requiring
+  the same Python-SAT version, exact formula and proof identities, and matching
+  normalized checker output.
+- Retained the complete production and replay-host solver environments in the
+  certification output, including the replay Python executable, package tree,
+  native modules, platform, and canonical environment digest.
+- Added two cross-platform provenance regression tests, bringing the focused
+  proof-expansion suite to 82 passing tests.
+- Updated the v2 index digest to
+  `c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f`
+  and its 422-entry exact-membership manifest digest to
+  `822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786`.
+- Required the full 140-proof replay workflow on finalized `main` commits and
+  release tags, while allowing manual candidate replay before the final
+  revision record exists.
+- Aligned the source evidence and release metadata to the current revision
+  manager hash before recertification.
+- Aligned the package version to 0.2.0 and clarified that the 140 DRAT
+  closures are additional to the prior RUP layer rather than a priority claim.
+
 ## 2026-09-03
 
 - Authenticated an exact 140-case solver-proof plan selected from the retained

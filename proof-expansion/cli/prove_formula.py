@@ -87,9 +87,22 @@ def main() -> int:
         default=DEFAULT_MAX_MEMORY_BYTES,
     )
     parser.add_argument("--verify-existing", action="store_true")
+    parser.add_argument("--production-checker-sha256")
+    parser.add_argument("--production-python-sat-version")
     args = parser.parse_args()
 
     root = repository_root()
+    production_identity = (
+        args.production_checker_sha256,
+        args.production_python_sat_version,
+    )
+    if any(value is not None for value in production_identity) and not all(
+        value is not None for value in production_identity
+    ):
+        raise SystemExit(
+            "production checker and Python-SAT identity must be "
+            "provided together"
+        )
     if args.verify_existing:
         if args.scratch_directory is None:
             raise SystemExit(
@@ -104,12 +117,22 @@ def main() -> int:
             checker_commit=args.checker_commit,
             root=root,
             scratch_directory=args.scratch_directory,
+            production_checker_sha256=(
+                args.production_checker_sha256
+            ),
+            production_python_sat_version=(
+                args.production_python_sat_version
+            ),
             max_solve_seconds=args.max_solve_seconds,
             max_raw_proof_bytes=args.max_raw_proof_bytes,
             max_retained_proof_bytes=args.max_retained_proof_bytes,
             max_memory_bytes=args.max_memory_bytes,
         )
     else:
+        if any(value is not None for value in production_identity):
+            raise SystemExit(
+                "production identity requires --verify-existing"
+            )
         if args.scratch_directory is not None:
             raise SystemExit(
                 "--scratch-directory requires --verify-existing"
@@ -128,24 +151,27 @@ def main() -> int:
             max_retained_proof_bytes=args.max_retained_proof_bytes,
             max_memory_bytes=args.max_memory_bytes,
         )
-    print(
-        json.dumps(
-            {
-                "case_id": args.case_id,
-                "formula_sha256": report.get(
-                    "case_formula_sha256",
-                    report.get("formula_sha256"),
-                ),
-                "verified": (
-                    report.get("verified") is True
-                    or report.get("retained_replay", {}).get("verified")
-                    is True
-                ),
-            },
-            indent=2,
-            sort_keys=True,
-        )
-    )
+    completion = {
+        "case_id": args.case_id,
+        "formula_sha256": report.get(
+            "case_formula_sha256",
+            report.get("formula_sha256"),
+        ),
+        "verified": (
+            report.get("verified") is True
+            or report.get("retained_replay", {}).get("verified")
+            is True
+        ),
+    }
+    for key in (
+        "production_checker_sha256",
+        "production_python_sat_version",
+        "replay_checker_sha256",
+        "replay_python_sat_version",
+    ):
+        if key in report:
+            completion[key] = report[key]
+    print(json.dumps(completion, indent=2, sort_keys=True))
     return 0
 
 

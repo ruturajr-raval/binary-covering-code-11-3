@@ -21,11 +21,11 @@
     },
     "solver_drat_index": {
       "path": "proof-expansion/evidence/fourth-word-solver-drat-index-v2.json",
-      "sha256": "342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8"
+      "sha256": "c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f"
     },
     "solver_drat_bundle_manifest": {
       "path": "proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256",
-      "sha256": "be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf",
+      "sha256": "822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786",
       "artifact_count": 422
     },
     "solver_drat_proof_directory": {
@@ -35,7 +35,7 @@
     },
     "revision_manager": {
       "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
-      "sha256": "ded3f899d32a2dcd851cca1f0e7ab4b3d63347d6ffc44517036179bf9a0f4e28"
+      "sha256": "32a937f476e9e1ec9df416f3a7777d5404e44591647d530337b27ea63d032eec"
     },
     "certified_revision_record": null
   },
@@ -89,6 +89,7 @@
     "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
     "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
     "Zenodo assigns a version-specific DOI only after a tagged release is archived; pre-release metadata uses the stable concept DOI.",
+    "The retained clean-replay record is a host-specific self-attestation, not a third-party signature; GitHub main-branch and tag workflows provide separate publicly visible replay runs.",
     "The v2 artifact remains a release candidate until its committed revision passes an independent clean-checkout replay.",
     "No external mathematical review has occurred."
   ],

@@ -257,6 +257,9 @@ The work proceeds on two independent routes.
 - Final certification verification requires a full Git clone containing the
   certified source revision. A source archive or shallow checkout is
   insufficient for that revision-identity check.
+- The retained clean-replay record is a host-specific self-attestation rather
+  than a third-party signature. GitHub replays on `main` and release tags
+  provide separate publicly visible executions tied to the released commit.
 
 ## Reproduction
 
@@ -284,14 +287,21 @@ by the record validator.
 The solver-generated v2 bundle is indexed by
 `proof-expansion/evidence/fourth-word-solver-drat-index-v2.json`. Its index
 SHA-256 is
-`342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8`,
+`c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f`,
 its exact-membership bundle manifest is
 `proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256` with
 SHA-256
-`be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf`,
+`822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786`,
 and its 420-artifact proof-directory digest is
 `44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
 All 140 retained proofs were independently replayed on 2026-09-03.
+The v2 index preserves exact production hashes, while replay may rebuild the
+same pinned checker source on another platform. Cross-platform replay still
+requires the same Python-SAT version, exact formula hashes, exact retained
+proof bytes, and matching normalized checker output.
+The certified revision record retains complete production and replay-host
+solver-environment records with canonical hashes, including the replay
+Python executable, package tree, native modules, platform, and checker hash.
 This release also retains
 `proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json`. The
 record is validated by

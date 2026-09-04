@@ -136,14 +136,14 @@
     "solver_drat_plan": "proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json",
     "solver_drat_plan_sha256": "3f047f5d3dd4f5e9ffe67d38e425ccb4b6f5ea3274c07580c9ee57d08d0baa94",
     "solver_drat_index": "proof-expansion/evidence/fourth-word-solver-drat-index-v2.json",
-    "solver_drat_index_sha256": "342c94b10eb182b18c369a526e3fc9d5ac2b9fc9faa8943b687ea1a357ce3ca8",
+    "solver_drat_index_sha256": "c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f",
     "solver_drat_bundle_manifest": "proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256",
-    "solver_drat_bundle_manifest_sha256": "be104bad82e54edc2002d9cd089001ddb86d8ae39668b98da9ac9fd319e32cbf",
+    "solver_drat_bundle_manifest_sha256": "822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786",
     "solver_drat_bundle_artifact_count": 422,
     "solver_drat_certified_revision_record": null,
     "solver_drat_revision_manager": {
       "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
-      "sha256": "5b89a334cb503e528d304266a0074ea79809dcbe3807cfe586680fd2d9d8fc4d"
+      "sha256": "32a937f476e9e1ec9df416f3a7777d5404e44591647d530337b27ea63d032eec"
     },
     "solver_drat_proof_directory": "proof-expansion/evidence/proofs/fourth-word-solver-drat-v2",
     "solver_drat_proof_artifact_count": 420,

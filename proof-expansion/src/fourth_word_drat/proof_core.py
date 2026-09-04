@@ -1113,6 +1113,8 @@ def verify_existing(
     checker_commit: str,
     root: Path,
     scratch_directory: Path,
+    production_checker_sha256: str | None = None,
+    production_python_sat_version: str | None = None,
     max_solve_seconds: int = DEFAULT_MAX_SOLVE_SECONDS,
     max_raw_proof_bytes: int = DEFAULT_MAX_RAW_PROOF_BYTES,
     max_retained_proof_bytes: int = DEFAULT_MAX_RETAINED_PROOF_BYTES,
@@ -1149,6 +1151,20 @@ def verify_existing(
         import pysat
     except ImportError as exc:
         raise RuntimeError("python-sat is required") from exc
+    if production_checker_sha256 is None:
+        production_checker_sha256 = checker_sha256
+    else:
+        require_sha256(
+            production_checker_sha256,
+            "production checker digest",
+        )
+    if production_python_sat_version is None:
+        production_python_sat_version = pysat.__version__
+    elif (
+        not isinstance(production_python_sat_version, str)
+        or not production_python_sat_version
+    ):
+        raise RuntimeError("production Python-SAT version is invalid")
     with owned_temporary_directory(
         scratch,
         prefix=f".{proof.stem}.inputs.",
@@ -1185,8 +1201,10 @@ def verify_existing(
                     clauses=clauses,
                     proof_path=proof_snapshot_path,
                     checker_commit=checker_commit,
-                    checker_sha256=checker_sha256,
-                    python_sat_version=pysat.__version__,
+                    checker_sha256=production_checker_sha256,
+                    python_sat_version=(
+                        production_python_sat_version
+                    ),
                     max_solve_seconds=max_solve_seconds,
                     max_raw_proof_bytes=max_raw_proof_bytes,
                     max_retained_proof_bytes=(
@@ -1234,7 +1252,7 @@ def verify_existing(
     expected_replay = {
         "checker": "drat-trim",
         "checker_commit": checker_commit,
-        "checker_binary_sha256": checker_sha256,
+        "checker_binary_sha256": production_checker_sha256,
         **replay,
     }
     if record.get("retained_replay") != expected_replay:
@@ -1253,8 +1271,13 @@ def verify_existing(
     return {
         "case_id": case_id,
         "formula_sha256": formula_sha256,
+        "production_checker_sha256": production_checker_sha256,
+        "production_python_sat_version": (
+            production_python_sat_version
+        ),
         "proof_compressed_sha256": compressed_metrics["sha256"],
         "proof_uncompressed_sha256": uncompressed_metrics["sha256"],
+        "replay_checker_sha256": checker_sha256,
+        "replay_python_sat_version": pysat.__version__,
         "verified": True,
     }
-    quarantine_owned_path,
