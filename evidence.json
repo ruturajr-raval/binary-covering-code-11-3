@@ -140,7 +140,10 @@
     "solver_drat_bundle_manifest": "proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256",
     "solver_drat_bundle_manifest_sha256": "822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786",
     "solver_drat_bundle_artifact_count": 422,
-    "solver_drat_certified_revision_record": null,
+    "solver_drat_certified_revision_record": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json",
+      "sha256": "ee66709c20092a045542acf773ffdbf97d3f2c5820a3014b3572397044011853"
+    },
     "solver_drat_revision_manager": {
       "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
       "sha256": "32a937f476e9e1ec9df416f3a7777d5404e44591647d530337b27ea63d032eec"

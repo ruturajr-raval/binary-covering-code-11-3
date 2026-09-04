@@ -1,20 +1,19 @@
 {
   "version": "0.2.0",
-  "release_status": "candidate",
-  "artifact_release_status": "verification_pending_clean_checkout",
+  "release_status": "released",
+  "artifact_release_status": "clean_checkout_replay_passed",
   "theorem_release_status": "hold",
-  "release_date": null,
+  "release_date": "2026-09-04",
   "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_combined_fourth_word_proof_bundle",
   "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches and checked solver-generated DRAT certificates close 140 more. The combined certificates close 324 branches, leaving 26 branches and all four children open.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "certified_partial_solver_drat_branch_reduction",
   "partial_progress_status": "significant_verified_proof_frontier_without_complete_child_closure",
-  "artifact_reproducibility_ready": false,
-  "artifact_release_ready": false,
+  "artifact_reproducibility_ready": true,
+  "artifact_release_ready": true,
   "theorem_announcement_ready": false,
   "artifact_verification": {
-    "status": "pending_clean_checkout_replay",
-    "pending_requirement": "Replay the committed v2 proof bundle and release checks from an independent clean checkout, then retain a revision-bound attestation.",
+    "status": "clean_checkout_replay_passed",
     "solver_drat_plan": {
       "path": "proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json",
       "sha256": "3f047f5d3dd4f5e9ffe67d38e425ccb4b6f5ea3274c07580c9ee57d08d0baa94"
@@ -37,7 +36,18 @@
       "path": "release-tools/manage_fourth_word_solver_drat_revision.py",
       "sha256": "32a937f476e9e1ec9df416f3a7777d5404e44591647d530337b27ea63d032eec"
     },
-    "certified_revision_record": null
+    "certified_revision_record": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json",
+      "sha256": "ee66709c20092a045542acf773ffdbf97d3f2c5820a3014b3572397044011853"
+    },
+    "certified_source_revision": "b0714133780d9411ece7b815e559658fcaa74851",
+    "certified_source_tree": "6f1d67f454bde71ee9c220efa9a3a39d352269f2",
+    "certified_release_manifest": {
+      "path": "release-manifest.sha256",
+      "sha256": "f281503866843c84212932dfe30f05a1091fceedbd0c655453210a61712ee708"
+    },
+    "clean_checkout_completed_on": "2026-09-04",
+    "finalization_policy": "strict-single-parent-allowlist"
   },
   "research_records": {
     "claim": {
@@ -46,7 +56,7 @@
     },
     "release_gate": {
       "path": "research/release-gate.json",
-      "sha256": "7346987ce65ea47fb17c59a9456381b865a2b57e39e6db72ccde9252cd10e738"
+      "sha256": "b76dca670707ec48fbd8efda499f0c3f24f9d9f4b63ce12bdc016de8f2ac69de"
     }
   },
   "result_routes": {
@@ -90,7 +100,6 @@
     "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
     "Zenodo assigns a version-specific DOI only after a tagged release is archived; pre-release metadata uses the stable concept DOI.",
     "The retained clean-replay record is a host-specific self-attestation, not a third-party signature; GitHub main-branch and tag workflows provide separate publicly visible replay runs.",
-    "The v2 artifact remains a release candidate until its committed revision passes an independent clean-checkout replay.",
     "No external mathematical review has occurred."
   ],
   "last_reviewed": "2026-09-04"
