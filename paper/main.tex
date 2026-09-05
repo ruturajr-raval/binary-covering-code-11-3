@@ -45,7 +45,7 @@ enumeration, checked DRAT traces, and maximum-degree normalization close
 112 normalized branches and leave 38 explicit residual branches.
 Those residual branches contain 2548 third-word orbit children before
 static exclusions and 2163 live children afterward.  In four selected
-hard children, an exhaustive 350-branch fourth-word split has 184
+unresolved children, an exhaustive 350-branch fourth-word split has 184
 reverse-unit-propagation closures and 140 additional solver-generated
 DRAT closures.  Thus 324 selected branches are certified closed and 26
 remain.  No complete selected child or normalized parent is closed by
@@ -440,7 +440,7 @@ exclude 312, and the certified matching condition excludes 73
 additional children in its valid scope.  Exactly 2163 live children
 remain.
 
-The next retained layer studies four hard children below the parent
+The next retained layer studies four selected unresolved children below the parent
 \texttt{w4-weight5-intersection0}.  Once three nonzero words are fixed,
 the coordinates split into eight membership cells.  A fourth word is
 classified by its eight intersection counts.  In each selected child,
@@ -488,7 +488,7 @@ Child & RUP & DRAT & Residual & Total \\
 Total & 184 & 140 & 26 & 350 \\
 \bottomrule
 \end{tabular}
-\caption{Certified branch-level results inside four selected hard
+\caption{Certified branch-level results inside four selected unresolved
 third-word children.}
 \label{tab:fourth}
 \end{table}
@@ -572,7 +572,7 @@ problems with large automorphism groups.
 
 We have converted a broad size-15 search into an explicit certified
 frontier.  Every hypothetical cover can be normalized into one of 38
-retained branches.  Within four selected hard children, 324 of 350
+retained branches.  Within four selected unresolved children, 324 of 350
 fourth-word branches have checked certificates.  These are substantial
 branch-level reductions, but they are not a solution of $K_2(11,3)$.
 The remaining cases are stated explicitly so that future computation

@@ -7,7 +7,7 @@ Certificate-oriented search for the exact value of the binary covering number
 
 This repository verifies a known 16-word cover and records a complete
 150-branch normalization of the size-15 search, with 112 certified normalized
-branch closures and 38 unresolved branches. Within four selected hard
+branch closures and 38 unresolved branches. Within four selected unresolved
 third-word children, a further 350-branch split now has 324 checked closures:
 184 by reverse unit propagation and 140 by solver-generated DRAT proofs. The
 remaining 26 branches leave every selected child and normalized parent open,
@@ -119,7 +119,7 @@ impossibility frontier:
     matching condition and two without it.
 13. The final exact ledger closes 112 normalized branches from the 150-branch
     canonical cover and leaves 38 normalized residual branches.
-14. Four selected hard third-word children have a complete 350-branch
+14. Four selected unresolved third-word children have a complete 350-branch
     fourth-word orbit split. Checked RUP certificates close 184 branches and
     identify 166 branches outside that proof class.
 15. Independently checked solver-generated DRAT certificates close 140 of
@@ -170,7 +170,7 @@ the size-15 search:
 The retained fourth-word refinement additionally establishes:
 
 ```text
-4 selected hard third-word children
+4 selected unresolved third-word children
 350 exhaustive fourth-word branches
 184 checked RUP closures
 140 checked solver-generated DRAT closures
@@ -192,7 +192,7 @@ remains `15 <= K_2(11,3) <= 16`.
 | Is the normalized branch cover complete? | Yes, all hypothetical 15-word covers enter one of 150 canonical parent branches. |
 | How much of that cover is certified closed? | 112 normalized branch closures have independently checkable certificates or checked DRAT traces. |
 | What remains unresolved? | 38 normalized residual branches, explicitly listed and authenticated. |
-| What does the fourth-word bundle add? | It closes 324 of 350 exhaustive fourth-word branches within four selected hard third-word children: 184 by RUP and 140 by solver-generated DRAT. |
+| What does the fourth-word bundle add? | It closes 324 of 350 exhaustive fourth-word branches within four selected unresolved third-word children: 184 by RUP and 140 by solver-generated DRAT. |
 | Does that bundle close a complete child or parent? | No. All four selected children and all 38 residual normalized parents remain open. |
 | Was a new lower bound proved? | No. |
 | Is `K_2(11,3)` determined? | No. The exact value remains either 15 or 16. |
@@ -246,7 +246,8 @@ The work proceeds on two independent routes.
 - Use the fixed-pair stabilizer to select a canonical third-word orbit.
 - Apply the matching constraint only in cases where maximum-degree
   normalization proves it.
-- Split selected hard third-word children into exhaustive fourth-word orbits.
+- Split selected unresolved third-word children into exhaustive fourth-word
+  orbits.
 - Retain only branch exclusions with proof traces accepted by the separately
   pinned checker.
 - Subdivide the 26 remaining fourth-word branches by audited fifth-word orbit
@@ -403,7 +404,8 @@ The current supported claim is:
 - a complete 150-case canonical parent partition;
 - independently checkable certificates closing 112 normalized branches;
 - an explicit, hashed frontier of 38 unresolved normalized branches;
-- a complete 350-branch fourth-word split within four selected hard children;
+- a complete 350-branch fourth-word split within four selected unresolved
+  children;
 - checked RUP certificates closing 184 branches and checked solver-generated
   DRAT certificates closing 140 more, with 26 unresolved and no complete child
   or parent closure.

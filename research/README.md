@@ -25,8 +25,8 @@ The retained frontier record is documented in
 intermediate non-DRAT children, the 2,548 raw children below the 38 active
 parents, and the 2,163 children that survive all retained static constraints.
 
-The four hard children from the first focused parent have an independently
-audited fourth-word split documented in
+The four selected unresolved children from the first focused parent have an
+independently audited fourth-word split documented in
 `research/FOURTH_WORD_HARD_FRONTIER.md`. It contains 350 exhaustive orbit
 branches. Checked reverse-unit-propagation certificates close 184 branches,
 and independently replayed solver-generated DRAT certificates close 140 more.
@@ -66,12 +66,12 @@ Every child branch must be linked to its parent, canonical representative,
 stabilizer data, imposed constraints, and content digest. The current ledger
 provides these links. A child-level CNF generator and an independent auditor
 now reconstruct the exact minimum-distance, parent, orbit-prefix, and matching
-constraints for any live child. For the four selected hard children, the
-retained v1 proof bundle authenticates 184 branch formulas and their
+constraints for any live child. For the four selected unresolved children,
+the retained v1 proof bundle authenticates 184 branch formulas and their
 independently checked RUP certificates. The retained v2 bundle authenticates
 140 additional formulas and checked DRAT certificates. The remaining 26
-branches have no retained closure, and solver status alone is not treated as a
-mathematical conclusion.
+branches have no retained closure, and solver status alone is not treated as
+a mathematical conclusion.
 
 ## Promotion Standard
 

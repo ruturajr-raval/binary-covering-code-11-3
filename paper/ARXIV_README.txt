@@ -82,7 +82,7 @@ The report certifies:
 - a complete 150-case normalized partition with 112 certified normalized
   branch closures and 38 residual branches; and
 - 324 certified closures among 350 exhaustive fourth-word branches inside
-  four selected hard third-word children.
+  four selected unresolved third-word children.
 
 It does not:
 

@@ -1,7 +1,7 @@
 {
   "title": "Certified Branch Reductions for the Binary Covering Number K_2(11,3)",
   "upload_type": "software",
-  "description": "Technical report, software, and authenticated proof records for the binary covering-code cell K_2(11,3). Exact structural certificates and a complete normalized partition close 112 of 150 normalized branches, leaving 38. Within four selected hard third-word children, checked RUP and DRAT certificates close 324 of 350 exhaustive fourth-word branches, leaving 26 and closing no complete child or normalized parent. The exact value remains open and the known interval 15 <= K_2(11,3) <= 16 is unchanged.",
+  "description": "Technical report, software, and authenticated proof records for the binary covering-code cell K_2(11,3). Exact structural certificates and a complete normalized partition close 112 of 150 normalized branches, leaving 38. Within four selected unresolved third-word children, checked RUP and DRAT certificates close 324 of 350 exhaustive fourth-word branches, leaving 26 and closing no complete child or normalized parent. The exact value remains open and the known interval 15 <= K_2(11,3) <= 16 is unchanged.",
   "creators": [
     {
       "name": "Raval, Ruturaj R",

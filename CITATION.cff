@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the technical report and the archived repository release."
 title: "Certified Branch Reductions for the Binary Covering Number K_2(11,3)"
 type: software
-abstract: "A reproducible certified reduction of the unresolved size-15 search for K_2(11,3). Exact structural constraints and a complete 150-case normalized partition leave 38 residual branches. Within four selected hard third-word children, checked RUP and DRAT certificates close 324 of 350 exhaustive fourth-word branches, leaving 26 and closing no complete child or normalized parent. The exact value remains open and the known interval 15 <= K_2(11,3) <= 16 is unchanged."
+abstract: "A reproducible certified reduction of the unresolved size-15 search for K_2(11,3). Exact structural constraints and a complete 150-case normalized partition leave 38 residual branches. Within four selected unresolved third-word children, checked RUP and DRAT certificates close 324 of 350 exhaustive fourth-word branches, leaving 26 and closing no complete child or normalized parent. The exact value remains open and the known interval 15 <= K_2(11,3) <= 16 is unchanged."
 authors:
   - family-names: Raval
     given-names: Ruturaj R

@@ -30,7 +30,7 @@ partition. Exact orbit-profile certificates, integer-profile
 enumeration, checked DRAT traces, and maximum-degree normalization close
 112 normalized branches and leave 38 explicit residual branches. Those
 residual branches contain 2,548 third-word orbit children before static
-exclusions and 2,163 live children afterward. In four selected hard
+exclusions and 2,163 live children afterward. In four selected unresolved
 children, an exhaustive 350-branch fourth-word split has 184
 reverse-unit-propagation closures and 140 additional solver-generated
 DRAT closures. Thus 324 selected branches are certified closed and 26

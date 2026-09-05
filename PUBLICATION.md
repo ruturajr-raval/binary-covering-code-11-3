@@ -59,7 +59,7 @@ The complete normalized size-15 search has:
 38 residual normalized branches
 ```
 
-Within four selected hard third-word children:
+Within four selected unresolved third-word children:
 
 ```text
 350 exhaustive fourth-word branches
