@@ -180,5 +180,5 @@ complete checked exclusion cover.
 ## Citation
 
 Citation metadata is in `CITATION.cff`. The all-versions concept DOI is
-`10.5281/zenodo.22260709`. Zenodo assigns a new version-specific DOI when the
-tagged v0.3.0 GitHub release is archived.
+`10.5281/zenodo.22260709`. The archived v0.3.0 release DOI is
+`10.5281/zenodo.22332416`.

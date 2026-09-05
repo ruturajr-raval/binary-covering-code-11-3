@@ -30,7 +30,9 @@ scope of the certified reduction:
   `750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff`.
 
 The report claims a certified frontier reduction, not a new bound or an exact
-value. The all-versions repository DOI is `10.5281/zenodo.22260709`.
+value. The archived v0.3.0 release DOI is
+`10.5281/zenodo.22332416`. The all-versions repository DOI is
+`10.5281/zenodo.22260709`.
 
 ## The Problem
 
@@ -68,7 +70,7 @@ attributes the upper bound 16 to the Graham-Sloane construction line from
 1985. The PDF was generated on 2009-10-15, and the latest dated update on the
 table site is 2011-11-21.
 
-A September 3, 2026 audit found no later primary source closing this exact
+A September 5, 2026 audit found no later primary source closing this exact
 cell. At audited commit
 `2ecbf887d7a29a8137da6b476d1f5de93c3936d4`, the Lean covering-code
 database certifies only `9-28` for this cell while retaining `15-16` as

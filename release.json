@@ -23,6 +23,8 @@
     "source_archive": "dist/arxiv/binary-covering-code-11-3.tar.gz",
     "compact_summary": "evidence/technical-report-summary-v1.json",
     "compact_replay": "paper/replay.py",
+    "release_version_doi": "10.5281/zenodo.22332416",
+    "release_concept_doi": "10.5281/zenodo.22260709",
     "full_proof_archive_version_doi": "10.5281/zenodo.22302261",
     "full_proof_archive_concept_doi": "10.5281/zenodo.22260709",
     "full_proof_archive_file": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
@@ -120,7 +122,7 @@
     "Sharp witnesses for the retained overlap row system are not claimed to be realizable covers.",
     "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
     "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
-    "Zenodo assigns a version-specific DOI only after a tagged release is archived; pre-release metadata uses the stable concept DOI.",
+    "The archived v0.3.0 release DOI is 10.5281/zenodo.22332416 and the stable all-versions concept DOI is 10.5281/zenodo.22260709.",
     "The retained clean-replay record is a host-specific self-attestation, not a third-party signature; GitHub main-branch and tag workflows provide separate publicly visible replay runs.",
     "No external mathematical review has occurred."
   ],
