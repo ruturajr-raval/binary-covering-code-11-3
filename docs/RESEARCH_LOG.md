@@ -109,7 +109,7 @@
   SHA-256 hashes. The certified revision output and the empty final diff and
   status outputs are checked semantically.
 - Refreshed the literature audit against the Keri update log, the audited Lean
-  database commit, arXiv:2504.01932v2, and arXiv:2608.19872v2.
+  database commit, arXiv:2504.01932v2, and arXiv:2608.19872v1.
 - For the `fe73dd0d166b5906faad4c262a4878ec5c9c7ecc` read-only repair, passed
   all 164 tests in the primary environment. Its minimal clean replay passed
   161 tests and skipped only three optional OR-Tools search tests.

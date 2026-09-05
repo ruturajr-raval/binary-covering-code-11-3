@@ -1,6 +1,6 @@
 # Literature And Status Audit
 
-Audit date: 2026-09-03
+Audit date: 2026-09-05
 
 ## Current Cell
 
@@ -27,11 +27,11 @@ the Graham-Sloane construction line from 1985. The binary PDF was generated on
   reports numerical value `12.4700` at row `n=11`, column `R=3`, in its
   appendix table for binary codes. This is below the historical lower bound
   15.
-- Version 2 of Mark Marosi's arXiv:2608.19872, updated 2026-08-23, concerns
-  alphabet sizes 5 through 21 and therefore does not close the binary cell
-  here.
+- Version 1 of Mark Marosi's arXiv:2608.19872, submitted 2026-08-20, concerns
+  alphabet sizes 6 and 7 and therefore does not close the binary cell here.
 - Searches for the exact notation, parameter tuple, and a post-2011 exact
   determination did not locate a primary source closing the gap.
+
 ## Search Record
 
 The 2026-09-03 refresh used general web search, arXiv search, repository search,
@@ -43,7 +43,7 @@ and direct inspection of these source locations:
 - the formal database at commit
   `https://github.com/florath/covering-codes-lean/tree/2ecbf887d7a29a8137da6b476d1f5de93c3936d4`;
 - `https://arxiv.org/abs/2504.01932v2` and
-  `https://arxiv.org/abs/2608.19872v2`.
+  `https://arxiv.org/abs/2608.19872v1`.
 
 The exact search strings were:
 
@@ -97,5 +97,5 @@ refreshed audit.
   *Covering Codes*, North-Holland, 1997.
 - Dion Gijswijt and Sven Polak, "Semidefinite lower bounds for covering
   codes", arXiv:2504.01932v2, 2025-2026.
-- Mark Marosi, "New upper and lower bounds on covering codes K_q(n,R) for
-  alphabets of size 5 <= q <= 21", arXiv:2608.19872v2, 2026.
+- Mark Marosi, "New upper bounds on covering codes K_q(n,R) for alphabets of
+  size six and seven", arXiv:2608.19872v1, 2026.
