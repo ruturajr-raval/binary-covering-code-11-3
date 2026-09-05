@@ -26,7 +26,8 @@ jobs:
       - name: Prepare frozen v0.2.0 proof checkout
         run: |
           cert_dir="$RUNNER_TEMP/k2-11-3-v0.2.0"
-          git worktree add --detach "$cert_dir" v0.2.0
+          certified_revision=7f5a3b524d703985b5e6c36270173578598c8b3a
+          git worktree add --detach "$cert_dir" "$certified_revision"
           cd "$cert_dir"
           python -I -m venv .venv
           .venv/bin/python -I -m pip install \
