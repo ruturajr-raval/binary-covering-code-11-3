@@ -15,8 +15,6 @@ jobs:
   replay:
     runs-on: ubuntu-24.04
     timeout-minutes: 240
-    env:
-      CERT_DIR: ${{ runner.temp }}/k2-11-3-v0.2.0
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -27,30 +25,34 @@ jobs:
           python-version: "3.12.11"
       - name: Prepare frozen v0.2.0 proof checkout
         run: |
-          git worktree add --detach "$CERT_DIR" v0.2.0
-          cd "$CERT_DIR"
+          cert_dir="$RUNNER_TEMP/k2-11-3-v0.2.0"
+          git worktree add --detach "$cert_dir" v0.2.0
+          cd "$cert_dir"
           python -I -m venv .venv
           .venv/bin/python -I -m pip install \
             --isolated --no-input --no-cache-dir \
             --require-hashes --only-binary=:all: --no-deps \
             --index-url https://pypi.org/simple -r requirements-replay.txt
       - name: Test release revision manager
-        working-directory: ${{ env.CERT_DIR }}
-        run: .venv/bin/python -I -m unittest discover -s release-tools/tests -v
-      - name: Replay residual proof
-        working-directory: ${{ env.CERT_DIR }}
-        run: make verify-residual-case PYTHON=.venv/bin/python
-      - name: Assert residual replay is read-only
-        working-directory: ${{ env.CERT_DIR }}
-        run: git diff --exit-code -- evidence
-      - name: Assert residual replay creates no evidence files
-        working-directory: ${{ env.CERT_DIR }}
-        run: >-
-          test -z
-          "$(git status --porcelain --untracked-files=all -- evidence)"
-      - name: Replay remaining proof bundles
-        working-directory: ${{ env.CERT_DIR }}
         run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
+          .venv/bin/python -I -m unittest discover -s release-tools/tests -v
+      - name: Replay residual proof
+        run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
+          make verify-residual-case PYTHON=.venv/bin/python
+      - name: Assert residual replay is read-only
+        run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
+          git diff --exit-code -- evidence
+      - name: Assert residual replay creates no evidence files
+        run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
+          test -z \
+            "$(git status --porcelain --untracked-files=all -- evidence)"
+      - name: Replay remaining proof bundles
+        run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
           make \
             test \
             audit-min-distance-proofs \
@@ -60,8 +62,8 @@ jobs:
             verify-release-manifest \
             PYTHON=.venv/bin/python
       - name: Replay solver-DRAT v2 proof bundle
-        working-directory: ${{ env.CERT_DIR }}
         run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
           make -C proof-expansion test PYTHON=.venv/bin/python
           make -C proof-expansion audit-plan PYTHON=.venv/bin/python
           make -C proof-expansion audit-bundle-structure PYTHON=.venv/bin/python
@@ -72,24 +74,25 @@ jobs:
             --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
             --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
       - name: Require finalized record on published refs
-        working-directory: ${{ env.CERT_DIR }}
-        run: >-
-          test -f
-          proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json
-      - name: Verify finalized release revision
-        working-directory: ${{ env.CERT_DIR }}
         run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
+          test -f \
+            proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json
+      - name: Verify finalized release revision
+        run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
           .venv/bin/python -I \
             release-tools/manage_fourth_word_solver_drat_revision.py \
             --verify --release-revision "$(git rev-parse HEAD)"
       - name: Assert frozen proof checkout is unchanged
-        working-directory: ${{ env.CERT_DIR }}
         run: |
+          cd "$RUNNER_TEMP/k2-11-3-v0.2.0"
           git diff --exit-code
           test -z "$(git status --porcelain --untracked-files=all)"
       - name: Remove frozen proof checkout
         if: always()
         run: |
-          if test -d "$CERT_DIR"; then
-            git worktree remove --force "$CERT_DIR"
+          cert_dir="$RUNNER_TEMP/k2-11-3-v0.2.0"
+          if test -d "$cert_dir"; then
+            git worktree remove --force "$cert_dir"
           fi
