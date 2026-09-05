@@ -1,15 +1,31 @@
 cff-version: 1.2.0
-message: "For the tagged 0.2.0 release, cite repository version 0.2.0 and the Zenodo concept DOI."
-title: "Proof-Producing Search for the Binary Covering Number K_2(11,3)"
+message: "Please cite the technical report and the archived repository release."
+title: "Certified Branch Reductions for the Binary Covering Number K_2(11,3)"
 type: software
-abstract: "Verification and proof-producing search for K_2(11,3), with a checked 16-word cover, exact structural certificates, 112 certified normalized branch closures, and a checked 324-of-350 fourth-word branch reduction within four selected hard children. The exact value remains open."
+abstract: "A reproducible certified reduction of the unresolved size-15 search for K_2(11,3). Exact structural constraints and a complete 150-case normalized partition leave 38 residual branches. Within four selected hard third-word children, checked RUP and DRAT certificates close 324 of 350 exhaustive fourth-word branches, leaving 26 and closing no complete child or normalized parent. The exact value remains open and the known interval 15 <= K_2(11,3) <= 16 is unchanged."
 authors:
   - family-names: Raval
     given-names: Ruturaj R
+    orcid: "https://orcid.org/0000-0003-4930-8981"
 repository-code: "https://github.com/ruturajr-raval/binary-covering-code-11-3"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22260709"
+keywords:
+  - covering codes
+  - coding theory
+  - SAT
+  - DRAT
+  - extremal combinatorics
+  - computer-assisted proof
 license: MIT
-version: 0.2.0
-date-released: 2026-09-04
+version: 0.3.0
+date-released: 2026-09-05
+preferred-citation:
+  type: article
+  title: "Certified Branch Reductions for the Binary Covering Number K_2(11,3)"
+  authors:
+    - family-names: Raval
+      given-names: Ruturaj R
+      orcid: "https://orcid.org/0000-0003-4930-8981"
+  year: 2026

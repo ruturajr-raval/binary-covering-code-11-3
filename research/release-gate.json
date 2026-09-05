@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
   "project": "binary-covering-code-11-3",
-  "evaluated_at": "2026-09-04",
+  "evaluated_at": "2026-09-05",
   "candidate_claim": null,
   "gates": {
-    "significant_original_result": false,
+    "significant_original_result": true,
+    "complete_exact_value_result": false,
     "prior_art_refreshed": true,
     "complete_orbit_manifest": true,
     "independent_manifest_audit_passes": true,
@@ -25,11 +26,13 @@
     "clean_checkout_replay_passes": true,
     "claim_scope_audited": true,
     "limitations_documented": true,
-    "manuscript_ready": false,
+    "manuscript_ready": true,
     "external_review_addressed": false
   },
   "artifact_decision": "ready",
+  "technical_report_significance_basis": "The report freezes exact structural constraints, a complete 150-case normalized partition, and 324 checked closures in a 350-branch selected frontier with explicit residual cases and reusable replay infrastructure. It does not satisfy the separate parent-reduction threshold for a broad exact-value theorem announcement.",
   "decision_scope": "theorem_announcement",
   "decision": "hold",
-  "reason": "The fourth-word evidence contains 184 checked RUP closures and 140 clean-checkout-replayed solver-generated DRAT closures, for 324 certified closures out of 350. Artifact release is ready under the retained revision attestation. A theorem announcement remains on hold because 26 fourth-word branches, every selected child, and all 38 residual parents remain open."
+  "reason": "The technical progress report and compact ancillary replay are ready. The fourth-word evidence contains 184 checked RUP closures and 140 clean-checkout-replayed solver-generated DRAT closures, for 324 certified closures out of 350. A final exact-value theorem announcement remains on hold because 26 fourth-word branches, every selected child, and all 38 residual normalized branches remain open.",
+  "technical_report_decision": "ready"
 }

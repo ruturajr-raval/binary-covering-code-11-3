@@ -1,0 +1,614 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\cube}{\{0,1\}}
+\newcommand{\F}{\mathbb F}
+\newcommand{\dist}{d_{\mathrm H}}
+\newcommand{\K}{K_2(11,3)}
+
+\title{Certified Branch Reductions for the Binary Covering Number
+  $K_2(11,3)$}
+\author{Ruturaj R Raval\\
+  Independent Researcher\\
+  \href{https://orcid.org/0000-0003-4930-8981}
+  {ORCID: 0000-0003-4930-8981}}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The binary covering number $K_2(11,3)$ is recorded in the interval
+$15\leq K_2(11,3)\leq16$.  We give a reproducible, certificate-oriented
+reduction of the unresolved size-15 search.  Exact shell and
+parity-refined Delsarte certificates show that every hypothetical
+15-word cover has minimum distance at most 5, total pair-ball overlap at
+least 1712, and total triple-ball overlap at least 280.  Translation and
+coordinate symmetry then yield a complete 150-case normalized
+partition.  Exact orbit-profile certificates, integer-profile
+enumeration, checked DRAT traces, and maximum-degree normalization close
+112 normalized branches and leave 38 explicit residual branches.
+Those residual branches contain 2548 third-word orbit children before
+static exclusions and 2163 live children afterward.  In four selected
+hard children, an exhaustive 350-branch fourth-word split has 184
+reverse-unit-propagation closures and 140 additional solver-generated
+DRAT closures.  Thus 324 selected branches are certified closed and 26
+remain.  No complete selected child or normalized parent is closed by
+this final layer.  The exact value and the known interval are unchanged.
+\end{abstract}
+
+\section{Introduction}
+
+A binary code $C\subseteq\F_2^n$ has covering radius at most $R$ when
+every word in $\F_2^n$ is within Hamming distance $R$ of some codeword.
+The covering number $K_2(n,R)$ is the minimum possible size of such a
+code.  Covering codes are a classical subject in coding theory, with
+connections to data compression, test design, combinatorial coverings,
+and domination in Hamming graphs \cite{cohen-book,graham-sloane}.
+
+The binary covering-code table maintained by Keri records
+\[
+  15\leq K_2(11,3)\leq16.
+\]
+Its update log dates the lower-bound entry to 2006, while the table
+attributes the upper-bound line to the Graham--Sloane construction
+record \cite{keri-table,graham-sloane}.  A targeted literature audit in
+September 2026 found no later primary source determining this exact
+cell.  This dated audit is not a proof of absence.  Recent work on
+semidefinite lower bounds also illustrates that a modern,
+proof-carrying treatment of individual table cells remains useful
+\cite{gijswijt-polak}.
+
+There are two definitive ways to close the gap.  A verified 15-word
+cover would prove $K_2(11,3)=15$.  A checked exclusion of every
+15-word candidate, combined with a verified 16-word cover, would prove
+$K_2(11,3)=16$.  The work reported here does neither.  Its contribution
+is a finite and reproducible reduction of the second route.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Item & Status \\
+\midrule
+Known interval & $15\leq K_2(11,3)\leq16$ \\
+Verified 16-word radius-3 cover & Yes \\
+Verified 15-word radius-3 cover & No \\
+Complete normalized parent partition & 150 branches \\
+Certified normalized branch closures & 112 \\
+Residual normalized branches & 38 \\
+Selected fourth-word branches & 350 \\
+Certified selected fourth-word closures & 324 \\
+Exact value determined & No \\
+\bottomrule
+\end{tabular}
+\caption{The certified frontier.  The fourth-word layer is local to
+four selected children and does not reduce the global count of 38
+residual normalized branches.}
+\label{tab:frontier}
+\end{table}
+
+The reduction combines exact analytic inequalities, Hamming-cube
+automorphisms, orbit averaging, exact integer enumeration, and
+proof-producing satisfiability solving.  Every retained SAT-based
+exclusion is tied to a reconstructed formula and a separately
+checked proof trace.  The complete proof artifacts are archived with
+the version-specific DOI
+\href{https://doi.org/10.5281/zenodo.22302261}
+{10.5281/zenodo.22302261}.  The archived file and its SHA-256 digest
+are, respectively,
+\begin{center}
+\begin{minipage}{0.94\linewidth}
+\small\ttfamily
+ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip\\
+750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff
+\end{minipage}
+\end{center}
+After the source archive is authenticated against the SHA-256 published
+with the release, its compact replay checks the principal ledgers, the
+root and fourth-word proof manifests, and the Zenodo archive binding.
+It also regenerates the analytic certificates and verifies the known
+16-word construction.
+
+\section{Definitions and the verified upper endpoint}
+
+\begin{definition}
+For $x,y\in\F_2^n$, let $\dist(x,y)$ be their Hamming distance.  The
+radius-$R$ ball centered at $x$ is
+\[
+  B_R(x)=\{y\in\F_2^n:\dist(x,y)\leq R\}.
+\]
+A code $C\subseteq\F_2^n$ is an $(n,R)$ covering code when
+\[
+  \bigcup_{c\in C} B_R(c)=\F_2^n.
+\]
+\end{definition}
+
+For $(n,R)=(11,3)$, the ambient space has 2048 words and each ball has
+\[
+  |B_3(0)|=\sum_{i=0}^{3}\binom{11}{i}=232.
+\]
+The repository contains the following 16-word linear code:
+\[
+\begin{array}{llll}
+00000000000 & 00010001001 & 00101010101 & 00111011100\\
+01001101011 & 01011100010 & 01100111110 & 01110110111\\
+10001001000 & 10011000001 & 10100011101 & 10110010100\\
+11000100011 & 11010101010 & 11101110110 & 11111111111.
+\end{array}
+\]
+Direct enumeration and a syndrome-space computation both give covering
+radius exactly 3.  This verifies the known upper bound
+$K_2(11,3)\leq16$; no originality is claimed for the construction.
+
+\section{Exact structural constraints at size 15}
+
+Assume throughout this section that $C\subseteq\F_2^{11}$ is a
+radius-3 cover with $|C|=15$.  Let $p_d$ be the number of unordered
+codeword pairs at Hamming distance $d$.
+
+\subsection{Shell and Delsarte rows}
+
+There are 105 unordered pairs, so
+\[
+  \sum_{d=1}^{11}p_d=105.
+\]
+For a fixed codeword and a target shell at distance $j$, define
+\[
+  H(d,j)=
+  \sum_{\substack{0\leq a\leq d\\
+                  0\leq j-a\leq 11-d\\
+                  d+j-2a\leq3}}
+    \binom da\binom{11-d}{j-a}.
+\]
+Summing the coverage requirement over codewords and over every target
+in shell $j$ gives, for $4\leq j\leq11$,
+\[
+  2\sum_{d=1}^{11}H(d,j)p_d
+  \geq15\binom{11}{j}.
+\]
+
+Let $K_k(d)$ be the binary Krawtchouk polynomial.  Fourier expansion of
+the distance distribution gives
+\[
+  15\binom{11}{k}
+  +2\sum_{d=1}^{11}K_k(d)p_d
+  =
+  \sum_{\operatorname{wt}(a)=k}
+  \left(\sum_{c\in C}(-1)^{a\cdot c}\right)^2.
+\]
+Every inner sum is odd because $|C|=15$.  Its square is therefore at
+least 1, yielding the parity-refined inequality
+\[
+  2\sum_{d=1}^{11}K_k(d)p_d
+  \geq-14\binom{11}{k}.
+\]
+
+\begin{theorem}[Distance-distribution constraints]
+\label{thm:distance}
+Every 15-word radius-3 cover in $\F_2^{11}$ satisfies
+\[
+  \sum_{d=1}^{6}p_d\geq28,
+  \qquad
+  \sum_{d=1}^{5}p_d\geq11.
+\]
+In particular, its minimum distance is at most 5.
+\end{theorem}
+
+\begin{proof}
+The first inequality is the exact nonnegative combination
+\[
+  \tfrac13 P+\tfrac1{24}D_1+\tfrac1{24}D_{11},
+\]
+where $P$ is the pair-count equality and $D_k$ is the degree-$k$
+parity-refined Delsarte row.  Its coefficient vector, ordered by
+distances 1 through 11, is
+\[
+  (1,1,\tfrac23,\tfrac23,\tfrac13,\tfrac13,
+    0,0,-\tfrac13,-\tfrac13,-\tfrac23).
+\]
+This is coefficientwise at most the indicator of distances 1 through 6,
+and the resulting rational lower bound is 28.
+
+For the second inequality, combine
+\[
+  \tfrac{37}{615}P+\tfrac1{410}S_4
+  +\tfrac{11}{82}S_{11}
+  +\tfrac{33}{820}D_1+\tfrac{13}{2460}D_9,
+\]
+where $S_j$ denotes the shell-$j$ row.  Coefficientwise comparison with
+$p_1+\cdots+p_5$ gives the lower bound $12467/1230$.  The left side is
+an integer, so it is at least 11.  Both combinations and every
+coefficient are recomputed using exact rational arithmetic by the
+ancillary verifier.
+\end{proof}
+
+\subsection{Pair and triple overlap}
+
+Let
+\[
+  O=\sum_{\{c,c'\}\subseteq C}|B_3(c)\cap B_3(c')|
+\]
+be the total pair-ball overlap.  The intersection sizes for pair
+distances $1,\ldots,11$ are
+\[
+  112,112,56,56,20,20,0,0,0,0,0.
+\]
+Normalize the shell-10, shell-11, degree-1 Delsarte, and degree-11
+Delsarte rows by dividing their even coefficients by 2.  Explicitly,
+\[
+\begin{array}{rcl}
+J_{10}&=&(0,0,0,0,0,0,4,3,11,11,11)\cdot p\geq83,\\
+J_{11}&=&(0,0,0,0,0,0,0,1,1,1,1)\cdot p\geq8,\\
+D_1&=&(9,7,5,3,1,-1,-3,-5,-7,-9,-11)\cdot p\geq-77,\\
+D_{11}&=&(-1,1,-1,1,-1,1,-1,1,-1,1,-1)\cdot p\geq-7.
+\end{array}
+\]
+Here $p=(p_1,\ldots,p_{11})$.  Exact coefficient comparison gives
+\[
+\begin{split}
+  O={}&20P+4J_{10}+4J_{11}+9D_1+9D_{11}\\
+     &+20(p_1+p_2)+4(p_9+p_{10})+40p_{11}.
+\end{split}
+\]
+The row bounds give a base value 1708.  Every coefficient of
+$J_{10}+J_{11}$ is divisible by 4, while $83+8\equiv3\pmod4$.
+The shell slacks $u=J_{10}-83$ and $v=J_{11}-8$ therefore satisfy
+$u+v\equiv1\pmod4$, hence $u+v\geq1$.
+
+\begin{theorem}[Overlap constraints]
+\label{thm:overlap}
+Every 15-word radius-3 cover satisfies
+\[
+  O\geq1712+20(p_1+p_2)+4(p_9+p_{10})+40p_{11}.
+\]
+In particular, $O\geq1712$.  If
+\[
+  T=\sum_{\{c_1,c_2,c_3\}\subseteq C}
+  |B_3(c_1)\cap B_3(c_2)\cap B_3(c_3)|,
+\]
+then $T\geq280$.
+\end{theorem}
+
+\begin{proof}
+The displayed exact identity and the shell-slack congruence prove the
+pair-overlap inequality.  For the triple term, let $m_x$ be the number
+of codeword balls containing $x$.  Since $C$ is a cover, $m_x\geq1$.
+Pointwise,
+\[
+  \binom{m_x}{3}\geq\binom{m_x}{2}-(m_x-1).
+\]
+The total incidence excess is
+\[
+  15\cdot232-2048=1432.
+\]
+After summing over $x\in\F_2^{11}$, we obtain
+$T\geq O-1432\geq280$.
+\end{proof}
+
+\section{The size-15 formula}
+
+Introduce one Boolean variable $x_v$ for each $v\in\F_2^{11}$.
+Coverage is expressed by the 2048 clauses
+\[
+  \bigvee_{\dist(u,v)\leq3}x_v,
+  \qquad u\in\F_2^{11}.
+\]
+An exact or at-most-15 cardinality constraint restricts the selected
+codewords.  For a nonempty covering code, an at-most-15 model can be
+padded to exactly 15 distinct codewords without losing coverage, so the
+two formulations are equivalent for existence.
+
+Two separately audited encodings were retained.  A sequential
+exact-cardinality formula has 34816 variables and 131029 clauses.  A
+compact at-most-15 totalizer formula has 9464 variables and 26804
+clauses.  Projection tests on smaller instances verify that auxiliary
+variables preserve the intended codeword semantics.
+
+The Hamming cube automorphism group contains all translations and
+coordinate permutations.  The reduction uses only transformations that
+are explicitly shown to preserve coverage and the formula assumptions.
+No solver-discovered symmetry-breaking condition enters the proof
+ledger without a separate completeness argument.
+
+\section{A complete 150-case normalized partition}
+
+Since $15\cdot232>2048$, the 15 radius-3 balls cannot be pairwise
+disjoint.  Thus some pair of codewords has distance at most 6.  Choose
+a globally closest pair, let its distance be $w$, and translate one
+endpoint to zero.  The other endpoint is then a minimum-weight nonzero
+codeword of the translated code.  A coordinate permutation maps it to
+\[
+  A=2^w-1,\qquad 1\leq w\leq6.
+\]
+The stabilizer of $A$ is $S_w\times S_{11-w}$.  Its orbit on a second
+word $B$ is determined by
+\[
+  \bigl(\operatorname{wt}(B),
+        |\operatorname{supp}(A)\cap\operatorname{supp}(B)|\bigr).
+\]
+Choose the lexicographically first occupied orbit and map one selected
+word in it to its canonical representative.  Across the six possible
+minimum weights, this produces 150 canonical parent branches.
+
+\begin{theorem}[Certified normalized frontier]
+\label{thm:parents}
+If a 15-word radius-3 cover exists, a Hamming-cube automorphism and the
+documented closest-pair and maximum-degree normalizations map it into
+one of 38 explicitly retained normalized branches.
+\end{theorem}
+
+\begin{proof}
+The complete two-word orbit manifest contains 150 branches.  The
+stage-1 ledger classifies them in the disjoint precedence order shown
+in Table~\ref{tab:parents}.  Exact Farkas multipliers close 80 branches.
+Exhaustive integer orbit-profile certificates close two more.  One
+standalone formula and 14 closest-pair formulas have checked DRAT
+proofs.  Theorem~\ref{thm:distance} closes the four remaining
+weight-6 branches in the broader first-stage ledger.
+
+The 49 stage-1 residual branches are then normalized as follows.  For a
+code of minimum distance $d$, form the graph on its codewords in which
+two vertices are adjacent exactly when their distance is $d$.  Choose a
+maximum-degree vertex, translate it to zero, choose one of its neighbors,
+and map that neighbor to $A=2^d-1$.  This is compatible with the
+two-word partition because translations and coordinate permutations
+preserve distances and coverage.
+
+Let $B$ be the selected word in the first remaining descriptor.  If
+$\operatorname{wt}(B)=d$, then zero has at least two minimum-distance
+neighbors, and no additional conclusion is drawn.  If
+$\operatorname{wt}(B)>d$, the descriptor ordering implies that $A$ is
+the only selected word of weight $d$, so zero has degree one.  If
+$\dist(A,B)=d$, then $A$ has at least the two neighbors zero and $B$,
+contradicting the maximum-degree choice.  This excludes five branches.
+If instead $\dist(A,B)>d$, the maximum degree is one and the entire
+minimum-distance graph is a matching.  This proves the completeness of
+the classification into 5 contradiction, 34 matching, and 10
+multiple-neighbor cases.
+
+Six complete third-word formulas have checked DRAT proofs, four within
+the separately proved matching scope and two without that condition.
+The machine ledger checks disjointness, all 150 identities, all input
+hashes, and the final count $150-112=38$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lr@{}}
+\toprule
+Closure reason & Branches \\
+\midrule
+Exact rational orbit-profile infeasibility & 80 \\
+Exact integer orbit-profile infeasibility & 2 \\
+Standalone checked DRAT & 1 \\
+Minimum distance at most 5 & 4 \\
+Closest-pair checked DRAT & 14 \\
+Maximum-degree contradiction & 5 \\
+Checked third-word DRAT & 6 \\
+\midrule
+Certified normalized closures & 112 \\
+Residual normalized branches & 38 \\
+\bottomrule
+\end{tabular}
+\caption{The complete normalized parent ledger.  The advanced rows are
+normalization statements and must not be reinterpreted as 11 additional
+unrestricted parent-CNF exclusions.}
+\label{tab:parents}
+\end{table}
+
+\begin{remark}
+The exact rational orbit analysis leaves 70 cases feasible over the
+reals.  Integer orbit counts exclude two of these, leaving 68 feasible
+aggregate profiles.  Such profiles are necessary averaged data, not
+vertex-level covering codes.
+\end{remark}
+
+\section{Third-word and fourth-word orbit frontiers}
+
+Fix a canonical parent with selected words $0,A,B$.  The ordered pair
+$(A,B)$ partitions the 11 coordinates into four cells:
+\[
+  A\cap B,\quad A\setminus B,\quad B\setminus A,\quad
+  [11]\setminus(A\cup B).
+\]
+The pointwise stabilizer permutes coordinates within these cells.
+Therefore the orbit of a third word $D$ is determined by its four
+intersection counts.  Selecting the first occupied orbit gives an
+exhaustive child split.
+
+The 49 stage-1 residual parents have 3238 such child orbits.  Six
+third-word DRAT closures remove 423 children, and five
+maximum-degree-closed parents account for 267 more.  The 38 active
+parents contain 2548 raw children.  Existing minimum-distance clauses
+exclude 312, and the certified matching condition excludes 73
+additional children in its valid scope.  Exactly 2163 live children
+remain.
+
+The next retained layer studies four hard children below the parent
+\texttt{w4-weight5-intersection0}.  Once three nonzero words are fixed,
+the coordinates split into eight membership cells.  A fourth word is
+classified by its eight intersection counts.  In each selected child,
+the first occupied fourth-word orbit gives an exhaustive split because
+the fixed words leave more than 1200 ambient vertices uncovered.
+
+\begin{theorem}[Selected fourth-word reduction]
+\label{thm:fourth}
+The four selected third-word children in Table~\ref{tab:fourth} split
+into 350 exhaustive fourth-word branches.  Checked reverse unit
+propagation certificates close 184 branches, and checked
+solver-generated DRAT certificates close 140 more.  Exactly 26 branches
+remain unresolved.  Every selected child retains at least one residual
+branch.
+\end{theorem}
+
+\begin{proof}
+The separate orbit auditor reconstructs the eight coordinate cells,
+all candidate words, static exclusions, canonical representatives, and
+branch digests.  It obtains 350 branches.
+
+For 184 formulas, the branch units force a contradiction by reverse
+unit propagation.  Each resulting trace is checked against the
+reconstructed formula.  The remaining 166 formulas formed the
+exploratory solver frontier.  A retained proof-producing rerun generated
+DRAT traces for 140 of them, while 26 remained unresolved.  Each
+retained trace is checked by \texttt{drat-trim} at pinned revision
+\texttt{2e3b2dc0ecf938addbd779d42877b6ed69d9a985}.  The proof indexes
+authenticate every formula, trace, checker result, and production
+record.  Clean-checkout self-attestation replay passed for both layers.
+The per-child residual counts in Table~\ref{tab:fourth} sum to 26.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Child & RUP & DRAT & Residual & Total \\
+\midrule
+\texttt{orbit-005} & 50 & 29 & 6 & 85 \\
+\texttt{orbit-007} & 53 & 15 & 8 & 76 \\
+\texttt{orbit-014} & 41 & 28 & 4 & 73 \\
+\texttt{orbit-015} & 40 & 68 & 8 & 116 \\
+\midrule
+Total & 184 & 140 & 26 & 350 \\
+\bottomrule
+\end{tabular}
+\caption{Certified branch-level results inside four selected hard
+third-word children.}
+\label{tab:fourth}
+\end{table}
+
+\begin{corollary}
+The selected fourth-word layer closes no complete third-word child and
+no normalized parent.  Consequently, it does not reduce the global
+count of 38 residual normalized branches.
+\end{corollary}
+
+\section{Certificate architecture and reproduction}
+
+The proof records separate mathematical scope from computational
+status.  A timeout, an unlogged UNSAT response, or a heuristic search
+failure is never entered as an exclusion.  A retained SAT-based closure
+contains:
+\begin{enumerate}
+  \item an exact formula identity and semantic metadata;
+  \item a deterministic formula reconstruction path;
+  \item a SHA-256 digest of the formula;
+  \item a compressed RUP or DRAT trace;
+  \item a checker record tied to a pinned \texttt{drat-trim} revision;
+  \item an exact-membership manifest for the proof bundle; and
+  \item a clean-checkout replay record.
+\end{enumerate}
+The DRAT format permits compact separately checked certificates for
+SAT-solver refutations \cite{heule-drat}.
+
+The arXiv source archive intentionally omits the large proof payloads.
+It contains the exact ledgers, proof indexes, replay records, the
+16-word code, and a deterministic manifest.  Running
+\begin{verbatim}
+python3 replay.py
+\end{verbatim}
+from the extracted source:
+\begin{enumerate}
+  \item checks every ancillary file against the internal manifest;
+  \item verifies the 16-word covering radius by direct enumeration;
+  \item checks the recorded 150-to-38 and 350-to-26 ledger counts,
+        statuses, and source digests;
+  \item checks the retained RUP and solver-DRAT proof-index identities;
+  \item checks the retained clean-checkout replay statuses; and
+  \item regenerates the distance and overlap certificates
+        byte-for-byte using standard-library Python.
+\end{enumerate}
+No network access or third-party package is required for this compact
+replay.  Full replay of all 324 retained proof traces requires the
+immutable v0.2.0 artifact deposit at
+\href{https://doi.org/10.5281/zenodo.22302261}
+{10.5281/zenodo.22302261} and the pinned verification environment.
+The all-versions concept DOI is
+\href{https://doi.org/10.5281/zenodo.22260709}
+{10.5281/zenodo.22260709}.
+
+\section{Limitations and next steps}
+
+The known interval remains
+\[
+  15\leq K_2(11,3)\leq16.
+\]
+The present work does not prove a new lower bound and does not produce
+a 15-word cover.  Thirty-eight normalized parent branches remain
+unresolved.  The 2163 live third-word children have not been
+exhaustively decided.  The selected fourth-word bundle leaves 26
+branches and closes no complete selected child.
+
+The immediate proof route is an audited fifth-word orbit split of those
+26 branches.  Closing all four selected children would still leave
+other live children below the 38 residual parents, so subsequent work
+must expand the certified cover rather than extrapolate from local
+success.  In parallel, nonlinear construction search remains valuable:
+a single independently verified 15-word cover would settle the problem
+in the opposite direction.
+
+The methods are reusable beyond this table cell.  Exact orbit averaging,
+integer profile certificates, stabilizer-aware SAT formulas, and
+proof-logged branch exclusions apply to finite covering and domination
+problems with large automorphism groups.
+
+\section{Conclusion}
+
+We have converted a broad size-15 search into an explicit certified
+frontier.  Every hypothetical cover can be normalized into one of 38
+retained branches.  Within four selected hard children, 324 of 350
+fourth-word branches have checked certificates.  These are substantial
+branch-level reductions, but they are not a solution of $K_2(11,3)$.
+The remaining cases are stated explicitly so that future computation
+can extend a verified proof cover rather than repeat an unauthenticated
+search.
+
+\begin{thebibliography}{9}
+
+\bibitem{cohen-book}
+G.~Cohen, I.~Honkala, S.~Litsyn, and A.~Lobstein,
+\emph{Covering Codes},
+North-Holland, 1997.
+
+\bibitem{gijswijt-polak}
+D.~Gijswijt and S.~Polak,
+``Semidefinite lower bounds for covering codes,''
+arXiv:2504.01932, version 2, 2026.
+
+\bibitem{graham-sloane}
+R.~L. Graham and N.~J.~A. Sloane,
+``On the covering radius of codes,''
+\emph{IEEE Transactions on Information Theory},
+31(3):385--401, 1985.
+doi:10.1109/TIT.1985.1057039.
+
+\bibitem{heule-drat}
+M.~J.~H. Heule,
+``The DRAT format and DRAT-trim checker,''
+arXiv:1610.06229, 2016.
+
+\bibitem{keri-table}
+G.~Keri,
+``Tables of covering codes,''
+\url{https://old.sztaki.hu/~keri/codes/}.
+Accessed September 2026.
+
+\end{thebibliography}
+
+\end{document}

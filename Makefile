@@ -19,11 +19,14 @@ FOURTH_WORD_RUP_BUNDLE_FILES := \
 	evidence/fourth-word-rup-proof-index-v1.json \
 	evidence/fourth-word-rup-replay-attestation-v1.json
 RELEASE_MANIFEST_FILES := \
+	.github/workflows/ci.yml \
+	.github/workflows/proof-replay.yml \
 	README.md \
 	.zenodo.json \
 	CITATION.cff \
 	PUBLICATION.md \
 	LICENSE \
+	Makefile \
 	release.json \
 	requirements-proof.txt \
 	requirements-replay.txt \
@@ -41,9 +44,27 @@ RELEASE_MANIFEST_FILES := \
 	evidence/third-word-proof-index.json \
 	evidence/case-reduction-summary.json \
 	evidence/normalized-residual-two-word-cases.json \
-	evidence/proof-bundle.sha256
+	evidence/proof-bundle.sha256 \
+	evidence/release-manifest-v0.2.0.sha256 \
+	evidence/technical-report-summary-v1.json \
+	evidence/zenodo-v0.2.0-archive.json \
+	research/README.md \
+	research/claim.yaml \
+	research/release-gate.json \
+	paper/ARXIV_METADATA.md \
+	paper/ARXIV_README.txt \
+	paper/RIGHTS.md \
+	paper/main.tex \
+	paper/replay.py \
+	tests/test_arxiv_bundle.py \
+	tests/test_fourth_word_rup_proofs.py \
+	tools/audit_fourth_word_rup_proofs.py \
+	tools/build_arxiv_bundle.py \
+	tools/replay_arxiv_bundle.py \
+	tools/verify_technical_report.py \
+	dist/arxiv/binary-covering-code-11-3.tar.gz
 
-.PHONY: test native-test proof-checker verify-release-manifest verify-release-manifest-locked verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest write-fourth-word-rup-revision-pending finalize-fourth-word-rup-revision verify-fourth-word-rup-revision verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier prepare-fourth-word-proof-formulas prepare-fourth-word-proof-formulas-locked fourth-word-rup-plan audit-fourth-word-rup-plan create-fourth-word-rup-proofs verify-fourth-word-rup-proofs audit-fourth-word-rup-proofs check-fourth-word-rup-proof-index fourth-word-rup-proof-smoke third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case prepare-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean clean-locked
+.PHONY: test native-test proof-checker verify-release-manifest verify-release-manifest-locked verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest write-fourth-word-rup-revision-pending finalize-fourth-word-rup-revision verify-fourth-word-rup-revision verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound verify-technical-report paper-build paper-bundle paper-replay cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier prepare-fourth-word-proof-formulas prepare-fourth-word-proof-formulas-locked fourth-word-rup-plan audit-fourth-word-rup-plan create-fourth-word-rup-proofs verify-fourth-word-rup-proofs audit-fourth-word-rup-proofs check-fourth-word-rup-proof-index fourth-word-rup-proof-smoke third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case prepare-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean clean-locked
 
 test: prepare-fourth-word-proof-formulas
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m unittest discover -s tests -v
@@ -92,7 +113,7 @@ verify-release-manifest:
 	$(LOCKED) $(MAKE) --no-print-directory \
 		verify-release-manifest-locked PYTHON=$(PYTHON)
 
-verify-release-manifest-locked: verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest verify-fourth-word-rup-revision
+verify-release-manifest-locked: verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest
 	$(PYTHON) tools/assert_repository_lock.py
 	$(PYTHON) tools/verify_checksum_manifest.py \
 		release-manifest.sha256 \
@@ -117,6 +138,20 @@ distance-bounds:
 overlap-bound:
 	PYTHONPATH=tools $(LOCKED) $(PYTHON) tools/verify_overlap_bound.py \
 		evidence/overlap-bound.json
+
+verify-technical-report:
+	$(PYTHON) tools/verify_technical_report.py
+
+paper-build:
+	mkdir -p $(BUILD_DIR)/paper
+	latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error \
+		-output-directory=$(BUILD_DIR)/paper paper/main.tex
+
+paper-bundle:
+	$(PYTHON) tools/build_arxiv_bundle.py
+
+paper-replay: paper-bundle
+	$(PYTHON) tools/replay_arxiv_bundle.py
 
 cnf:
 	mkdir -p $(BUILD_DIR)

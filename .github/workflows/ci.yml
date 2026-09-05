@@ -37,26 +37,9 @@ jobs:
       - run: make audit-third-word-child-frontier PYTHON=.venv/bin/python
       - run: make audit-fourth-word-hard-frontier PYTHON=.venv/bin/python
       - run: make audit-fourth-word-rup-plan PYTHON=.venv/bin/python
-      - run: make check-fourth-word-rup-proof-index PYTHON=.venv/bin/python
-      - name: Test release revision manager
-        if: matrix.python-version == '3.12'
-        run: .venv/bin/python -I -m unittest discover -s release-tools/tests -v
-      - name: Test solver-DRAT v2 subsystem
-        if: matrix.python-version == '3.12'
-        run: >-
-          make -C proof-expansion
-          test audit-plan audit-bundle-structure
-          PYTHON=.venv/bin/python
-      - name: Verify solver-DRAT v2 manifest
-        if: matrix.python-version == '3.12'
-        run: >-
-          .venv/bin/python tools/verify_checksum_manifest.py
-          proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256
-          --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json
-          --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json
-          --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
       - run: make verify-baseline verify-independent PYTHON=.venv/bin/python
       - run: make distance-bounds overlap-bound PYTHON=.venv/bin/python
+      - run: make verify-technical-report PYTHON=.venv/bin/python
       - run: make audit-two-word-cases PYTHON=.venv/bin/python
       - name: Verify retained orbit LP certificates
         run: >-
@@ -71,15 +54,65 @@ jobs:
           evidence/two-word-cases.json
           evidence/integer-profile-certificates.json
       - run: make verify-release-manifest PYTHON=.venv/bin/python
-      - name: Verify finalized release revision when present
+      - name: Verify historical v0.2.0 certificate revisions
         if: matrix.python-version == '3.12'
         run: |
+          cert_dir="$RUNNER_TEMP/k2-11-3-v0.2.0"
+          git worktree add --detach "$cert_dir" v0.2.0
+          cd "$cert_dir"
+          python -I -m venv .venv
+          .venv/bin/python -I -m pip install \
+            --isolated --no-input --no-cache-dir \
+            --require-hashes --only-binary=:all: --no-deps \
+            --index-url https://pypi.org/simple -r requirements-replay.txt
+          cert_python="$cert_dir/.venv/bin/python"
+          "$cert_python" -I -m unittest discover \
+            -s release-tools/tests -v
+          make \
+            check-fourth-word-rup-proof-index \
+            verify-fourth-word-rup-revision \
+            PYTHON="$cert_python"
+          make -C proof-expansion \
+            test audit-plan audit-bundle-structure \
+            PYTHON="$cert_python"
+          "$cert_python" \
+            tools/verify_checksum_manifest.py \
+            proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
+            --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
+            --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
+            --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
           record=proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json
           if test -f "$record"; then
-            .venv/bin/python -I \
+            "$cert_python" -I \
               release-tools/manage_fourth_word_solver_drat_revision.py \
-              --verify --release-revision "$(git rev-parse HEAD)"
+              --verify \
+              --release-revision "$(git rev-parse HEAD)"
           fi
+          cd "$GITHUB_WORKSPACE"
+          git worktree remove --force "$cert_dir"
       - name: Assert no tracked files changed
         if: always()
         run: git diff --exit-code
+
+  paper:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y latexmk texlive-latex-extra
+      - run: make paper-build
+      - run: make paper-bundle
+      - run: git diff --exit-code -- dist/arxiv/binary-covering-code-11-3.tar.gz
+      - run: tar -tzf dist/arxiv/binary-covering-code-11-3.tar.gz
+      - run: mkdir -p build/arxiv-extracted
+      - run: >-
+          tar -xzf dist/arxiv/binary-covering-code-11-3.tar.gz
+          -C build/arxiv-extracted
+      - run: python3 replay.py
+        working-directory: build/arxiv-extracted
+      - run: mkdir -p compiled
+        working-directory: build/arxiv-extracted
+      - run: >-
+          latexmk -pdf -interaction=nonstopmode -halt-on-error
+          -file-line-error -output-directory=compiled main.tex
+        working-directory: build/arxiv-extracted

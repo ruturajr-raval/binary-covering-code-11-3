@@ -1,0 +1,155 @@
+{
+  "record_type": "technical-report-summary",
+  "schema_version": 1,
+  "title": "Certified Branch Reductions for the Binary Covering Number K_2(11,3)",
+  "author": {
+    "name": "Ruturaj R Raval",
+    "orcid": "0000-0003-4930-8981"
+  },
+  "problem": {
+    "alphabet_size": 2,
+    "length": 11,
+    "radius": 3,
+    "target_size": 15
+  },
+  "known_interval": {
+    "lower_bound": 15,
+    "upper_bound": 16,
+    "exact_value_resolved": false
+  },
+  "verified_baseline": {
+    "code_size": 16,
+    "covering_radius": 3,
+    "new_construction_claimed": false
+  },
+  "structural_bounds_for_hypothetical_size_15_cover": {
+    "pairs_at_distance_at_most_6_lower_bound": 28,
+    "pairs_at_distance_at_most_5_lower_bound": 11,
+    "minimum_distance_at_most": 5,
+    "pair_ball_overlap_at_least": 1712,
+    "triple_ball_overlap_at_least": 280
+  },
+  "normalized_frontier": {
+    "canonical_parent_cases": 150,
+    "stage1_closures": {
+      "orbit_lp_infeasible": 80,
+      "integer_profile_infeasible": 2,
+      "standalone_drat": 1,
+      "minimum_distance_at_most_5": 4,
+      "closest_pair_drat": 14
+    },
+    "advanced_closures": {
+      "maximum_degree_normalization": 5,
+      "third_word_drat": 6
+    },
+    "certified_normalized_branch_closures": 112,
+    "residual_normalized_branches": 38
+  },
+  "third_word_frontier": {
+    "stage1_parent_count": 49,
+    "stage1_child_count": 3238,
+    "active_parent_count": 38,
+    "active_parent_child_count": 2548,
+    "excluded_minimum_distance_child_count": 312,
+    "excluded_matching_child_count": 73,
+    "live_child_count": 2163
+  },
+  "selected_fourth_word_frontier": {
+    "selected_third_word_children": [
+      "w4-weight5-intersection0::orbit-005",
+      "w4-weight5-intersection0::orbit-007",
+      "w4-weight5-intersection0::orbit-014",
+      "w4-weight5-intersection0::orbit-015"
+    ],
+    "fourth_word_branches": 350,
+    "rup_certified_branches": 184,
+    "solver_drat_certified_branches": 140,
+    "combined_certified_branches": 324,
+    "unresolved_branches": 26,
+    "closed_selected_children": 0,
+    "closed_normalized_parents": 0
+  },
+  "artifact_archive": {
+    "release": "v0.2.0",
+    "version_doi": "10.5281/zenodo.22302261",
+    "concept_doi": "10.5281/zenodo.22260709",
+    "file_key": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
+    "size_bytes": 269833751,
+    "md5": "326154a9b17cbced17bf750222744c81",
+    "sha256": "750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff"
+  },
+  "sources": {
+    "baseline_code": {
+      "path": "data/baseline/k2-11-3-linear-16.txt",
+      "sha256": "6f056ff8fb88c423155514f959d6f211bcffb2653c85ff6399731fde3827e691"
+    },
+    "case_reduction": {
+      "path": "evidence/case-reduction-summary.json",
+      "sha256": "ce2b365d49f6f537b678af9d109f65529fc91e9cfb1ea0882ba626e889816b9f"
+    },
+    "distance_distribution": {
+      "path": "evidence/distance-distribution-bounds.json",
+      "sha256": "b18bed33012228508164dc438775ea1eff0fe8b65dcd3a41ae588879dcbe5205"
+    },
+    "overlap_bound": {
+      "path": "evidence/overlap-bound.json",
+      "sha256": "666294c498be25281805d2ca20190c72358980b0a99c6154eadc3851a7b02a78"
+    },
+    "third_word_frontier": {
+      "path": "research/third-word-child-frontier.json",
+      "sha256": "d6a5b1082aa64ae37092fe20094e7832f40b3374da059aac1da52d7dd90a1314"
+    },
+    "fourth_word_frontier": {
+      "path": "research/fourth-word-hard-frontier.json",
+      "sha256": "d517095aaf5fdc5ba05f1131d91d10c67a8e862ec5752ec748c88db0c127c5b3"
+    },
+    "rup_classification": {
+      "path": "evidence/fourth-word-up-classification.json",
+      "sha256": "4d831f09e3ec34f1bb3f0c66f1d4e6f0323b7e712f46dc8ee2b72a6ce34b194f"
+    },
+    "rup_proof_index": {
+      "path": "evidence/fourth-word-rup-proof-index-v1.json",
+      "sha256": "457eeb2fdcf68ca6dcdcd8b3e1c8c0934e23eb5dfaba8259ac4de25f662f2ef4"
+    },
+    "rup_revision": {
+      "path": "evidence/fourth-word-rup-revision-v1.json",
+      "sha256": "cccb38a745c97d75dbe4493d508163ecbe0240b5b44326b1d450a95b7e272e93"
+    },
+    "solver_drat_index": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-index-v2.json",
+      "sha256": "c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f"
+    },
+    "solver_drat_revision": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json",
+      "sha256": "ee66709c20092a045542acf773ffdbf97d3f2c5820a3014b3572397044011853"
+    },
+    "v0_2_release_manifest": {
+      "path": "evidence/release-manifest-v0.2.0.sha256",
+      "sha256": "a9280b4a2cb34eef4f9bfa1f9c5359ed43d93e0caa7af36a1d2b690295cd1afc"
+    },
+    "root_proof_manifest": {
+      "path": "evidence/proof-bundle.sha256",
+      "sha256": "8aa25bf2d5b00e6075054e7b026f7a774a239697cf2b64269298a34b94257aaf"
+    },
+    "rup_proof_manifest": {
+      "path": "evidence/fourth-word-rup-bundle-v1.sha256",
+      "sha256": "c0df74342c2fbf7c3e95e3609034d6b8106b9b9ab3129c994daa99348d6124aa"
+    },
+    "solver_drat_proof_manifest": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256",
+      "sha256": "822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786"
+    },
+    "zenodo_archive_binding": {
+      "path": "evidence/zenodo-v0.2.0-archive.json",
+      "sha256": "bc393fb155c2a745175565cb5dc735ee42ffb0234ea193593a244ecf04025773"
+    }
+  },
+  "claim_scope": "Certified structural constraints and a reproducible partial reduction of the size-15 search frontier.",
+  "nonclaims": [
+    "The exact value of K_2(11,3) is not determined.",
+    "No 15-word covering code is constructed.",
+    "The 38 residual normalized branches are not excluded.",
+    "The selected fourth-word certificates close no complete third-word child or normalized parent.",
+    "The known interval 15 <= K_2(11,3) <= 16 is unchanged."
+  ]
+}

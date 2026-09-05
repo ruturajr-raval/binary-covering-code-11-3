@@ -1,83 +1,118 @@
-# Release v0.2.0
+# Release v0.3.0
 
-## What Was Done
+## Background
 
-This release adds an exhaustive fourth-word orbit split for four selected hard
-third-word children. The split contains 350 branches. Checked RUP certificates
-close 184 branches, and checked solver-generated DRAT certificates close 140
-more. The combined certificates close 324 branches and leave 26 unresolved.
-Each retained proof is bound to its reconstructed formula, checked by the
-pinned `drat-trim` revision, and covered by exact-membership checksum
-manifests.
+The binary covering number `K_2(11,3)` asks for the smallest number of
+length-11 binary words whose radius-3 Hamming balls cover all 2,048 ambient
+words. The established table interval is
 
-## Supported Claim
+```text
+15 <= K_2(11,3) <= 16.
+```
 
-The retained 16-word code has covering radius 3. Any hypothetical 15-word
-cover satisfies the retained exact distance and overlap bounds. The complete
-150-branch normalization has 112 certified branch closures and 38 explicitly
-listed residual branches. Within four selected hard third-word children under
-residual normalized parents, 324 of 350 exhaustive fourth-word branches are
-certified unsatisfiable: 184 by RUP and 140 by solver-generated DRAT proofs.
+A 15-word cover would settle the value at 15. A checked exclusion of every
+15-word cover, together with the verified 16-word construction, would settle
+it at 16.
 
-## Not Claimed
+## What This Release Adds
 
-- No 15-word cover has been found.
+This release adds a publication-ready technical report and a deterministic
+arXiv source archive for the certified partial result already represented by
+the proof records:
+
+- `paper/main.tex` gives the mathematical definitions, exact structural
+  inequalities, symmetry reductions, closure ledgers, certificate model, and
+  limitations.
+- `paper/ARXIV_METADATA.md` records the exact submission title, abstract,
+  categories, and final manual checks.
+- `dist/arxiv/binary-covering-code-11-3.tar.gz` is a deterministic,
+  allowlisted source archive.
+- `paper/replay.py` checks the archive's internal manifest, verifies the
+  compact evidence, checks the 16-word construction, and regenerates the
+  exact distance and overlap certificates using standard-library Python.
+- `evidence/technical-report-summary-v1.json` binds the report's principal
+  counts to the retained evidence by SHA-256.
+
+The full RUP and DRAT proof payloads remain in the immutable v0.2.0 Zenodo
+deposit at version DOI `10.5281/zenodo.22302261`. Its archived file is
+`ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip`, with SHA-256
+`750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff`.
+The compact archive includes the v0.2.0 root release manifest, the root proof
+manifest, the fourth-word RUP manifest, the solver-DRAT v2 manifest, and a
+machine-readable Zenodo archive binding.
+
+## Supported Claims
+
+For every hypothetical 15-word radius-3 cover in the binary 11-cube:
+
+- at least 28 unordered codeword pairs have distance at most 6;
+- at least 11 unordered pairs have distance at most 5;
+- the minimum distance is at most 5;
+- total pair-ball overlap is at least 1,712; and
+- total triple-ball overlap is at least 280.
+
+The complete normalized size-15 search has:
+
+```text
+150 canonical parent branches
+112 certified normalized branch closures
+38 residual normalized branches
+```
+
+Within four selected hard third-word children:
+
+```text
+350 exhaustive fourth-word branches
+184 checked RUP closures
+140 checked solver-generated DRAT closures
+324 total certified closures
+26 unresolved branches
+0 complete selected children closed
+0 normalized parents closed by this layer
+```
+
+## What Is Not Claimed
+
+- No 15-word covering code has been found.
 - The remaining 38 normalized branches have not been excluded.
-- The 26 residual fourth-word branches have not been excluded.
-- No complete third-word child or normalized parent is closed by this bundle.
-- The exact value of `K_2(11,3)` remains either 15 or 16.
+- The 26 selected fourth-word residual branches have not been excluded.
+- The 324 fourth-word closures do not close a complete selected child or
+  normalized parent.
+- The exact value of `K_2(11,3)` is not determined.
+- No new global lower or upper bound is claimed.
 - Solver timeouts and statuses without retained proof traces are not
   mathematical exclusions.
-- No final resolution or theorem-priority claim is made.
+- Feasible aggregate orbit profiles are not covering codes.
+- The retained local replay records are not third-party signatures.
 
-## Evidence
+The known interval remains
 
-`evidence.json` provides the machine-readable evidence map.
-`evidence/min-distance-proof-index.json` and
-`evidence/third-word-proof-index.json` authenticate the retained proof traces.
-`evidence/case-reduction-summary.json` records the final 112/38 ledger.
-`evidence/proof-bundle.sha256` authenticates the retained root proof tree
-outside the solver-generated v2 expansion.
-`evidence/fourth-word-rup-bundle-v1.sha256` authenticates the new fourth-word
-index, attestation, classification, plan, and proof tree.
-`evidence/fourth-word-rup-revision-v1.json` binds those artifacts to the
-certified Git revision `06ecaa7bc28503efd871faf4450005f43e625124`,
-tree `4888ad6c5305b5d30d6c4ca3e8435b9c872307b1`, after a clean-checkout
-replay completed on 2026-09-03. It records the normalized command sequence,
-host-specific self-attested per-command output hashes, and toolchain hashes.
-Exact invocation construction is frozen in the certified source tree. The
-output hashes include host-dependent text and are not cross-host comparison
-targets. Only the revision, final diff, and final status outputs have invariant
-semantics checked independently by the record validator.
-`proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256`
-authenticates the v2 plan, index, and exact 420-artifact proof tree. Its
-SHA-256 is
-`822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786`.
-The v2 index SHA-256 is
-`c528b1358504bad39a3b8770285913d71da0a9ff02e77561d266b2d5dcb11d7f`,
-and the proof-directory digest is
-`44504c6320ac22ad62507f70222c2e8b9e6a51977f27ca3c936019c9f657f08f`.
-The v2 bundle has passed its structural audit and independent replay of all
-140 proofs. The index retains exact production environment hashes, while
-independent replay may rebuild the same pinned checker source on another
-platform. It still requires the same Python-SAT version, exact formula and
-proof identities, and matching normalized checker output.
-The certified revision record retains complete production and replay-host
-solver-environment records with canonical hashes, including the replay
-Python executable, package tree, native modules, platform, and checker hash.
-`release-manifest.sha256` authenticates the principal release
-files, including metadata that binds the dedicated v2 manifest by hash. The
-root release command does not traverse the v2 proof tree by itself, so both
-manifest verification commands below are required.
-
-The retained
-`proof-expansion/evidence/fourth-word-solver-drat-revision-v2.json` record
-binds the certified source revision, clean-checkout replay, and strict
-single-parent finalization policy. Its validator is
-`release-tools/manage_fourth_word_solver_drat_revision.py`. The authoritative
-readiness state is recorded in `release.json`.
+```text
+15 <= K_2(11,3) <= 16.
+```
 
 ## Reproduction
+
+Compact report replay:
+
+```bash
+make paper-bundle
+make paper-replay
+```
+
+The compact replay uses no network access or third-party Python package. It
+does not replay the large proof payloads.
+
+The internal manifest does not authenticate an untrusted download. Before
+executing `paper/replay.py`, verify the downloaded release asset against the
+SHA-256 published with the GitHub release.
+
+The repository-side archive checker compares every member byte-for-byte with
+an allowlist from the checked-out repository. It rejects noncanonical paths,
+metadata, member types, duplicate entries, and oversized members, and never
+executes code taken from the archive under test.
+
+Full repository verification:
 
 ```bash
 python3 -m venv .venv
@@ -85,60 +120,65 @@ python3 -m venv .venv
   --require-hashes --only-binary=:all: --no-deps \
   --index-url https://pypi.org/simple -r requirements-replay.txt
 make test PYTHON=.venv/bin/python
-make proof-checker
+make audit-third-word-child-frontier PYTHON=.venv/bin/python
+make audit-fourth-word-hard-frontier PYTHON=.venv/bin/python
+make audit-fourth-word-rup-plan PYTHON=.venv/bin/python
+make verify-baseline verify-independent PYTHON=.venv/bin/python
+make distance-bounds overlap-bound PYTHON=.venv/bin/python
+make verify-technical-report PYTHON=.venv/bin/python
+make verify-release-manifest PYTHON=.venv/bin/python
+```
+
+Full replay of the retained RUP and DRAT proofs must use the frozen v0.2.0
+source revision, whose pipeline bytes are authenticated by the proof indexes:
+
+```bash
+git worktree add --detach build/v0.2.0-proof-replay v0.2.0
+cd build/v0.2.0-proof-replay
+python3 -m venv .venv
+.venv/bin/python -I -m pip install --isolated --no-cache-dir \
+  --require-hashes --only-binary=:all: --no-deps \
+  --index-url https://pypi.org/simple -r requirements-replay.txt
+make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python
 make verify-residual-case PYTHON=.venv/bin/python
 make audit-min-distance-proofs PYTHON=.venv/bin/python
 make audit-third-word-proofs PYTHON=.venv/bin/python
 make case-reduction PYTHON=.venv/bin/python
-make audit-third-word-child-frontier PYTHON=.venv/bin/python
-make audit-fourth-word-hard-frontier PYTHON=.venv/bin/python
-make audit-fourth-word-rup-plan PYTHON=.venv/bin/python
-make audit-fourth-word-rup-proofs PYTHON=.venv/bin/python
-make -C proof-expansion test
-make -C proof-expansion audit-plan
-make -C proof-expansion audit-bundle-structure
-make -C proof-expansion audit-bundle
+make verify-release-manifest PYTHON=.venv/bin/python
+make -C proof-expansion test audit-plan audit-bundle-structure audit-bundle \
+  PYTHON=.venv/bin/python
 .venv/bin/python tools/verify_checksum_manifest.py \
   proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256 \
   --path proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json \
   --path proof-expansion/evidence/fourth-word-solver-drat-index-v2.json \
   --tree proof-expansion/evidence/proofs/fourth-word-solver-drat-v2
-make verify-release-manifest PYTHON=.venv/bin/python
-.venv/bin/python \
+.venv/bin/python -I \
   release-tools/manage_fourth_word_solver_drat_revision.py \
   --verify --release-revision "$(git rev-parse HEAD)"
 ```
 
-The proof audit reconstructs every exact CNF, checks every retained trace, and
-validates the replay attestation. The root and v2 manifest commands jointly
-enforce exact membership. The revision validator additionally checks the
-certified source revision, retained replay outputs, finalization ancestry,
-allowed changed paths, Git file modes, evidence bindings, and theorem-hold
-scope.
+That replay requires a full Git clone, the v0.2.0 proof payloads, network
+access for the hash-locked environment, and the pinned checker source.
 
-## Limitations And Remaining Work
+## Significance
 
-The 26 residual branches within the selected fourth-word split are the
-immediate proof frontier. Even closing all four selected children would leave
-other live children under the 38 residual normalized parents. A final
-lower-bound result requires a complete checked exclusion cover. The independent
-construction route remains open as well.
-Fresh replay also requires network access to retrieve hash-locked Python wheels
-and the pinned checker source. A self-contained third-party artifact archive
-remains future work.
-Final certification verification requires a full Git clone containing the
-certified source revision. A source archive or shallow checkout cannot verify
-that Git revision identity.
-The retained clean-replay record is a host-specific self-attestation rather
-than a third-party signature. The GitHub workflows replay all 140 proofs on
-`main` and release tags, providing separate publicly visible executions tied
-to the released commit.
+The release replaces an unauthenticated open-ended search with an explicit,
+machine-checkable frontier. Future work can extend a complete branch cover
+from the 38 normalized residuals and the 26 selected fourth-word residuals,
+or independently search for a 15-word construction. The normalization,
+orbit-profile, and proof-logged SAT methods also apply to finite covering and
+domination problems with large symmetry groups.
+
+## Remaining Work
+
+The immediate local frontier is an audited fifth-word orbit split of the 26
+selected residual branches. Even closing all four selected children would
+leave other live children below the 38 residual normalized branches. A final
+result therefore requires either a verified 15-word construction or a
+complete checked exclusion cover.
 
 ## Citation
 
-Citation metadata is provided in `CITATION.cff`, and `.zenodo.json` supplies
-the metadata for durable release archival. The stable concept DOI for all
-versions is [10.5281/zenodo.22260709](https://doi.org/10.5281/zenodo.22260709).
-The citation metadata pairs that concept DOI with repository version `0.2.0`.
-Zenodo assigns a separate version-specific DOI when the tagged GitHub release
-is archived.
+Citation metadata is in `CITATION.cff`. The all-versions concept DOI is
+`10.5281/zenodo.22260709`. Zenodo assigns a new version-specific DOI when the
+tagged v0.3.0 GitHub release is archived.

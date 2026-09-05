@@ -1,4 +1,4 @@
-# Binary Covering Code `K_2(11,3)`
+# Binary Covering Number `K_2(11,3)`
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22260709.svg)](https://doi.org/10.5281/zenodo.22260709)
 
@@ -12,6 +12,25 @@ third-word children, a further 350-branch split now has 324 checked closures:
 184 by reverse unit propagation and 140 by solver-generated DRAT proofs. The
 remaining 26 branches leave every selected child and normalized parent open,
 so the exact value remains unresolved.
+
+## Technical Report
+
+The repository includes a technical progress report documenting the exact
+scope of the certified reduction:
+
+- manuscript source: `paper/main.tex`;
+- arXiv submission metadata: `paper/ARXIV_METADATA.md`;
+- deterministic source archive:
+  `dist/arxiv/binary-covering-code-11-3.tar.gz`;
+- compact standard-library replay: `python3 replay.py` inside the extracted
+  archive; and
+- complete proof payloads: Zenodo version DOI
+  `10.5281/zenodo.22302261`, archived as
+  `ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip` with SHA-256
+  `750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff`.
+
+The report claims a certified frontier reduction, not a new bound or an exact
+value. The all-versions repository DOI is `10.5281/zenodo.22260709`.
 
 ## The Problem
 

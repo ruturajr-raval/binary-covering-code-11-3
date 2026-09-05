@@ -162,13 +162,13 @@ def validate_pipeline_provenance(
         if record != expected_record:
             raise SystemExit(
                 f"proof-index pipeline record {label} does not match "
-                "the current repository"
+                "the selected pipeline root"
             )
     current_pipeline_tree = python_tree_record(root)
     if pipeline_tree != current_pipeline_tree:
         raise SystemExit(
             "proof-index Python source tree does not match "
-            "the current repository"
+            "the selected pipeline root"
         )
     return pipeline_hashes, current_pipeline_tree
 
@@ -517,9 +517,21 @@ def main() -> int:
     parser.add_argument("index", type=Path)
     parser.add_argument("proof_directory", type=Path)
     parser.add_argument("--staged", action="store_true")
+    parser.add_argument(
+        "--pipeline-root",
+        type=Path,
+        help="root containing the exact proof-producing pipeline sources",
+    )
     args = parser.parse_args()
 
     root = repository_root()
+    pipeline_root = (
+        Path(os.path.abspath(str(args.pipeline_root)))
+        if args.pipeline_root is not None
+        else root
+    )
+    if not pipeline_root.is_dir() or pipeline_root.is_symlink():
+        raise SystemExit("pipeline root is not a regular directory")
     repository_lock = acquire_repository_lock(root)
     atexit.register(repository_lock.close)
     paths = {
@@ -862,7 +874,7 @@ def main() -> int:
         validate_pipeline_provenance(
             index["pipeline_files"],
             index["pipeline_python_tree"],
-            root=root,
+            root=pipeline_root,
         )
     )
     formula_directory = repository_path(FORMULA_DIRECTORY, root)
@@ -1268,9 +1280,9 @@ def main() -> int:
             raise RuntimeError(
                 "a fourth-word proof pipeline file changed during audit"
             )
-    if python_tree_record(root) != current_pipeline_tree:
+    if python_tree_record(pipeline_root) != current_pipeline_tree:
         raise RuntimeError(
-            "the repository Python source tree changed during audit"
+            "the selected pipeline Python source tree changed during audit"
         )
     print(
         json.dumps(

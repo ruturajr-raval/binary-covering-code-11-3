@@ -197,6 +197,21 @@
     "uncovered_words": 28,
     "found_cover": false
   },
+  "technical_report": {
+    "title": "Certified Branch Reductions for the Binary Covering Number K_2(11,3)",
+    "manuscript": "paper/main.tex",
+    "arxiv_metadata": "paper/ARXIV_METADATA.md",
+    "source_archive": "dist/arxiv/binary-covering-code-11-3.tar.gz",
+    "compact_summary": "evidence/technical-report-summary-v1.json",
+    "compact_replay": "paper/replay.py",
+    "full_proof_archive_version_doi": "10.5281/zenodo.22302261",
+    "full_proof_archive_concept_doi": "10.5281/zenodo.22260709",
+    "full_proof_archive_file": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
+    "full_proof_archive_sha256": "750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff",
+    "full_proof_archive_binding": "evidence/zenodo-v0.2.0-archive.json",
+    "claim_scope": "certified partial reduction with unchanged global interval",
+    "exact_value_resolved": false
+  },
   "size_15_result": {
     "status": "open",
     "certificate": null,

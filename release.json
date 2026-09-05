@@ -1,10 +1,10 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "release_status": "released",
   "artifact_release_status": "clean_checkout_replay_passed",
   "theorem_release_status": "hold",
-  "release_date": "2026-09-04",
-  "artifact_status": "verified_baseline_structural_bounds_partial_parent_frontier_and_combined_fourth_word_proof_bundle",
+  "release_date": "2026-09-05",
+  "artifact_status": "verified_certified_frontier_with_technical_report_and_compact_replay",
   "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized cover has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches and checked solver-generated DRAT certificates close 140 more. The combined certificates close 324 branches, leaving 26 branches and all four children open.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "certified_partial_solver_drat_branch_reduction",
@@ -12,6 +12,24 @@
   "artifact_reproducibility_ready": true,
   "artifact_release_ready": true,
   "theorem_announcement_ready": false,
+  "technical_report_release_status": "released",
+  "manuscript_ready": true,
+  "preprint_submission_status": "prepared_not_submitted",
+  "external_review_status": "No external mathematical review is claimed.",
+  "technical_report": {
+    "title": "Certified Branch Reductions for the Binary Covering Number K_2(11,3)",
+    "manuscript": "paper/main.tex",
+    "arxiv_metadata": "paper/ARXIV_METADATA.md",
+    "source_archive": "dist/arxiv/binary-covering-code-11-3.tar.gz",
+    "compact_summary": "evidence/technical-report-summary-v1.json",
+    "compact_replay": "paper/replay.py",
+    "full_proof_archive_version_doi": "10.5281/zenodo.22302261",
+    "full_proof_archive_concept_doi": "10.5281/zenodo.22260709",
+    "full_proof_archive_file": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
+    "full_proof_archive_sha256": "750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff",
+    "full_proof_archive_binding": "evidence/zenodo-v0.2.0-archive.json",
+    "claim_scope": "certified partial reduction with unchanged global interval"
+  },
   "artifact_verification": {
     "status": "clean_checkout_replay_passed",
     "solver_drat_plan": {
@@ -42,9 +60,13 @@
     },
     "certified_source_revision": "b0714133780d9411ece7b815e559658fcaa74851",
     "certified_source_tree": "6f1d67f454bde71ee9c220efa9a3a39d352269f2",
-    "certified_release_manifest": {
-      "path": "release-manifest.sha256",
+    "certified_source_manifest": {
+      "path_at_certified_revision": "release-manifest.sha256",
       "sha256": "f281503866843c84212932dfe30f05a1091fceedbd0c655453210a61712ee708"
+    },
+    "released_v0_2_manifest_snapshot": {
+      "path": "evidence/release-manifest-v0.2.0.sha256",
+      "sha256": "a9280b4a2cb34eef4f9bfa1f9c5359ed43d93e0caa7af36a1d2b690295cd1afc"
     },
     "clean_checkout_completed_on": "2026-09-04",
     "finalization_policy": "strict-single-parent-allowlist"
@@ -52,11 +74,11 @@
   "research_records": {
     "claim": {
       "path": "research/claim.yaml",
-      "sha256": "cf2f71ea2da97a79b4e85d81fb8f6a9ea6d6b21bd2bbb71a7642b9532d831924"
+      "sha256": "213aa5734f3560e04767c7075d8cb76cf5f5755dc226ee4ee08d0eafa2b35c9a"
     },
     "release_gate": {
       "path": "research/release-gate.json",
-      "sha256": "b76dca670707ec48fbd8efda499f0c3f24f9d9f4b63ce12bdc016de8f2ac69de"
+      "sha256": "fbc731e25107a395e9217ffd4b3e05384a1eca2ae319d25a0d6e9402f5f3b1ad"
     }
   },
   "result_routes": {
@@ -102,5 +124,5 @@
     "The retained clean-replay record is a host-specific self-attestation, not a third-party signature; GitHub main-branch and tag workflows provide separate publicly visible replay runs.",
     "No external mathematical review has occurred."
   ],
-  "last_reviewed": "2026-09-04"
+  "last_reviewed": "2026-09-05"
 }

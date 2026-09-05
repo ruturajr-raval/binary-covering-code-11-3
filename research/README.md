@@ -76,8 +76,14 @@ mathematical conclusion.
 ## Promotion Standard
 
 The preferred promotion threshold is an exact determination of `K_2(11,3)`.
-A partial result is substantial enough only if it proves a reusable theorem
-and reduces the 38 authenticated residual parents to at most 19.
+For a broad theorem announcement centered on progress toward the exact value,
+a partial reduction is substantial enough only if it proves a reusable
+theorem and reduces the 38 authenticated residual parents to at most 19.
+
+A technical progress report has a separate threshold. It may be promoted when
+it freezes a fully replayable structural theorem or certificate frontier,
+states exact nonclaims, and gives a reusable continuation path. Such a report
+must not be presented as a new global bound or as an exact-value result.
 
 Before promotion, prior art must be refreshed, all evidence must replay from a
 clean checkout, the exact claim and non-claim must be explicit, and independent

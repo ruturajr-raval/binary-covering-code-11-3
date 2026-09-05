@@ -1,0 +1,34 @@
+{
+  "record_type": "zenodo-release-archive-binding",
+  "schema_version": 1,
+  "release": "v0.2.0",
+  "release_commit": "7f5a3b524d703985b5e6c36270173578598c8b3a",
+  "zenodo_record_id": 22302261,
+  "version_doi": "10.5281/zenodo.22302261",
+  "concept_doi": "10.5281/zenodo.22260709",
+  "file": {
+    "key": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
+    "size_bytes": 269833751,
+    "md5": "326154a9b17cbced17bf750222744c81",
+    "sha256": "750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff"
+  },
+  "release_manifest": {
+    "path": "evidence/release-manifest-v0.2.0.sha256",
+    "sha256": "a9280b4a2cb34eef4f9bfa1f9c5359ed43d93e0caa7af36a1d2b690295cd1afc"
+  },
+  "proof_manifests": {
+    "root": {
+      "path": "evidence/proof-bundle.sha256",
+      "sha256": "8aa25bf2d5b00e6075054e7b026f7a774a239697cf2b64269298a34b94257aaf"
+    },
+    "fourth_word_rup_v1": {
+      "path": "evidence/fourth-word-rup-bundle-v1.sha256",
+      "sha256": "c0df74342c2fbf7c3e95e3609034d6b8106b9b9ab3129c994daa99348d6124aa"
+    },
+    "fourth_word_solver_drat_v2": {
+      "path": "proof-expansion/evidence/fourth-word-solver-drat-bundle-v2.sha256",
+      "sha256": "822e78b40e4393ce9b78c8725227f0dd41ab11dd1dc91f4d0bd6d696c7c54786"
+    }
+  },
+  "verified_on": "2026-09-05"
+}

@@ -43,6 +43,53 @@ ATTESTATION = (
     ROOT / "evidence/fourth-word-rup-replay-attestation-v1.json"
 )
 ARTIFACTS = ROOT / ".research-artifacts"
+CERTIFIED_PIPELINE_REVISION = (
+    "7f5a3b524d703985b5e6c36270173578598c8b3a"
+)
+
+
+def materialize_certified_pipeline(destination: Path) -> Path:
+    index = json.loads(INDEX.read_text(encoding="ascii"))
+    paths = {
+        record["path"]
+        for record in index["pipeline_files"].values()
+    }
+    listing = subprocess.run(
+        [
+            "git",
+            "ls-tree",
+            "-r",
+            "--name-only",
+            CERTIFIED_PIPELINE_REVISION,
+            "--",
+            "src",
+            "tools",
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    paths.update(
+        path
+        for path in listing.stdout.splitlines()
+        if path.endswith(".py")
+    )
+    for path in sorted(paths):
+        payload = subprocess.run(
+            [
+                "git",
+                "show",
+                f"{CERTIFIED_PIPELINE_REVISION}:{path}",
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+        ).stdout
+        output = destination / path
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_bytes(payload)
+    return destination
 
 
 def environment() -> dict[str, str]:
@@ -537,50 +584,60 @@ class FourthWordRupProofUnitTests(unittest.TestCase):
     "retained fourth-word RUP proof bundle is missing",
 )
 class FourthWordRupProofIntegrationTests(unittest.TestCase):
-    def test_pipeline_provenance_must_match_current_sources(self) -> None:
+    def test_pipeline_provenance_matches_certified_sources(self) -> None:
         index = json.loads(INDEX.read_text(encoding="ascii"))
-        validate_pipeline_provenance(
-            index["pipeline_files"],
-            index["pipeline_python_tree"],
-            root=ROOT,
-        )
-        changed = json.loads(json.dumps(index["pipeline_files"]))
-        changed["index_auditor"]["sha256"] = "0" * 64
-        with self.assertRaises(SystemExit):
-            validate_pipeline_provenance(
-                changed,
-                index["pipeline_python_tree"],
-                root=ROOT,
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = materialize_certified_pipeline(
+                Path(directory)
             )
-        changed_tree = dict(index["pipeline_python_tree"])
-        changed_tree["sha256"] = "0" * 64
-        with self.assertRaises(SystemExit):
             validate_pipeline_provenance(
                 index["pipeline_files"],
-                changed_tree,
-                root=ROOT,
+                index["pipeline_python_tree"],
+                root=pipeline_root,
             )
+            changed = json.loads(json.dumps(index["pipeline_files"]))
+            changed["index_auditor"]["sha256"] = "0" * 64
+            with self.assertRaises(SystemExit):
+                validate_pipeline_provenance(
+                    changed,
+                    index["pipeline_python_tree"],
+                    root=pipeline_root,
+                )
+            changed_tree = dict(index["pipeline_python_tree"])
+            changed_tree["sha256"] = "0" * 64
+            with self.assertRaises(SystemExit):
+                validate_pipeline_provenance(
+                    index["pipeline_files"],
+                    changed_tree,
+                    root=pipeline_root,
+                )
 
     def test_retained_index_passes_structural_audit(self) -> None:
-        result = subprocess.run(
-            [
-                sys.executable,
-                str(AUDITOR),
-                str(PARENTS),
-                str(THIRD),
-                str(CHILD_FRONTIER),
-                str(FOURTH_FRONTIER),
-                str(CLASSIFICATION),
-                str(PLAN),
-                str(INDEX),
-                str(PROOF_DIRECTORY),
-            ],
-            check=False,
-            capture_output=True,
-            text=True,
-            cwd=ROOT,
-            env=environment(),
-        )
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = materialize_certified_pipeline(
+                Path(directory)
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(AUDITOR),
+                    str(PARENTS),
+                    str(THIRD),
+                    str(CHILD_FRONTIER),
+                    str(FOURTH_FRONTIER),
+                    str(CLASSIFICATION),
+                    str(PLAN),
+                    str(INDEX),
+                    str(PROOF_DIRECTORY),
+                    "--pipeline-root",
+                    str(pipeline_root),
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+                cwd=ROOT,
+                env=environment(),
+            )
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('"case_count": 184', result.stdout)
         self.assertIn('"proofs_replayed": false', result.stdout)
