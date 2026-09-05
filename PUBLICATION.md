@@ -41,6 +41,10 @@ The compact archive includes the v0.2.0 root release manifest, the root proof
 manifest, the fourth-word RUP manifest, the solver-DRAT v2 manifest, and a
 machine-readable Zenodo archive binding.
 
+The v0.3.0 report snapshot is archived at version DOI
+`10.5281/zenodo.22332416`. `release.json` binds its repository ZIP, release
+commit, GitHub source and PDF assets, sizes, and checksums.
+
 ## Supported Claims
 
 For every hypothetical 15-word radius-3 cover in the binary 11-cube:
@@ -51,7 +55,7 @@ For every hypothetical 15-word radius-3 cover in the binary 11-cube:
 - total pair-ball overlap is at least 1,712; and
 - total triple-ball overlap is at least 280.
 
-The complete normalized size-15 search has:
+The complete normalized parent partition has:
 
 ```text
 150 canonical parent branches

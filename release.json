@@ -23,8 +23,39 @@
     "source_archive": "dist/arxiv/binary-covering-code-11-3.tar.gz",
     "compact_summary": "evidence/technical-report-summary-v1.json",
     "compact_replay": "paper/replay.py",
+    "release_tag": "v0.3.0",
+    "release_tag_object": "21da9f5a712fee7f50fccb27854c35ebad33faca",
+    "release_commit": "4748983fc35d299b14d58522a75bcc9aa6c88b28",
+    "release_tag_protection": {
+      "ruleset_id": 22324653,
+      "enforcement": "active",
+      "pattern": "refs/tags/v*",
+      "rules": [
+        "update",
+        "deletion"
+      ],
+      "bypass_actors": []
+    },
     "release_version_doi": "10.5281/zenodo.22332416",
     "release_concept_doi": "10.5281/zenodo.22260709",
+    "release_assets": {
+      "source": {
+        "name": "binary-covering-code-11-3.tar.gz",
+        "size": 4485483,
+        "sha256": "6cdba52be6e9510ef800e7b86f883203fca88692a4d2e8c85cb893ed44b249f3"
+      },
+      "pdf": {
+        "name": "main.pdf",
+        "size": 96933,
+        "sha256": "d557b213f1b6a4b06a8ec3f6dc40d0da48c1a3603054ec2f5e3c7b829805e1e7"
+      }
+    },
+    "release_zenodo_archive": {
+      "file": "ruturajr-raval/binary-covering-code-11-3-v0.3.0.zip",
+      "size": 270441163,
+      "md5": "2f0e133d8dd53a690838d7f6507b7447",
+      "sha256": "80f0e903fc9307900d8701907b19d758467de462462c30421d99f33cc96cfed5"
+    },
     "full_proof_archive_version_doi": "10.5281/zenodo.22302261",
     "full_proof_archive_concept_doi": "10.5281/zenodo.22260709",
     "full_proof_archive_file": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
@@ -123,6 +154,7 @@
     "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
     "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
     "The archived v0.3.0 release DOI is 10.5281/zenodo.22332416 and the stable all-versions concept DOI is 10.5281/zenodo.22260709.",
+    "The v0.3.0 GitHub tag, release assets, and Zenodo repository snapshot are bound by the release commit and checksums recorded in the technical_report object.",
     "The retained clean-replay record is a host-specific self-attestation, not a third-party signature; GitHub main-branch and tag workflows provide separate publicly visible replay runs.",
     "No external mathematical review has occurred."
   ],

@@ -70,8 +70,8 @@ attributes the upper bound 16 to the Graham-Sloane construction line from
 1985. The PDF was generated on 2009-10-15, and the latest dated update on the
 table site is 2011-11-21.
 
-A September 5, 2026 audit found no later primary source closing this exact
-cell. At audited commit
+A September 3, 2026 search refresh, with metadata rechecked on September 5,
+found no later primary source closing this exact cell. At audited commit
 `2ecbf887d7a29a8137da6b476d1f5de93c3936d4`, the Lean covering-code
 database certifies only `9-28` for this cell while retaining `15-16` as
 historical reference data. The Gijswijt-Polak semidefinite hierarchy reports
