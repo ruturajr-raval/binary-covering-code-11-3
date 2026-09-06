@@ -5,6 +5,9 @@
 | Field | Value |
 | --- | --- |
 | Title | Certified Branch Reductions for the Binary Covering Number K_2(11,3) |
+| Author | Ruturaj R Raval |
+| Affiliation | Independent Researcher |
+| ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
 | Tagged release | [`v0.3.0`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.0) |
 | Release date | 2026-09-05 |
 | Audited release commit | `4748983fc35d299b14d58522a75bcc9aa6c88b28` |
