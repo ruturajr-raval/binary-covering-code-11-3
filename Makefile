@@ -22,6 +22,7 @@ RELEASE_MANIFEST_FILES := \
 	.github/workflows/ci.yml \
 	.github/workflows/proof-replay.yml \
 	README.md \
+	RELEASE_NOTES.md \
 	.zenodo.json \
 	CITATION.cff \
 	PUBLICATION.md \

@@ -2,6 +2,96 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22260709.svg)](https://doi.org/10.5281/zenodo.22260709)
 
+## Project Overview
+
+### Project Metadata
+
+| Field | Value |
+| --- | --- |
+| Author | Ruturaj R Raval |
+| Affiliation | Independent Researcher |
+| ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
+| Field | Coding theory, finite geometry, and proof-producing SAT |
+| Problem | Determine the binary covering number `K_2(11,3)` |
+| Current result | 112 certified normalized branch closures among 150 branches, plus 324 of 350 selected fourth-word closures |
+| Result type | Significant certified proof frontier with unchanged global bounds |
+| Release | `v0.3.0` |
+| Version DOI | `10.5281/zenodo.22332416` |
+| Concept DOI | `10.5281/zenodo.22260709` |
+| License | MIT for project-original material |
+
+### Problem And Context
+
+The covering number asks for the fewest radius-3 Hamming balls covering all
+2,048 binary words of length 11. Graham and Sloane supplied the recorded
+16-word upper-bound construction in 1985, and Keri's 2006 update log records
+the lower bound 15. The interval `15 <= K_2(11,3) <= 16` has therefore
+remained open for more than twenty years. A dated 2026 audit found no later
+primary source closing this one-unit gap.
+
+### Work And Verified Outcome
+
+The project independently reconstructs and verifies a known 16-word cover,
+derives exact structural constraints, and partitions every hypothetical
+15-word cover into 150 normalized parent branches. Certificates close 112
+normalized branches under the certified normalization, leaving 38 normalized
+residual branches. Four selected unresolved children are split into 350
+fourth-word branches; checked RUP and DRAT evidence closes 324, leaving 26
+without closing a complete selected child or normalized parent.
+
+### Claim Boundary
+
+The project claims the verified construction, structural lemmas, complete
+normalizations, and exact certified closures stated above. It does not claim
+a 15-word code, a complete size-15 exclusion, a new global bound, or the exact
+value of `K_2(11,3)`. Solver statuses without accepted proof evidence are not
+promoted to theorems. No external mathematical review is claimed.
+
+### Verification And Reproduction
+
+Direct enumeration, syndrome analysis, exact profile certificates, audited
+CNF generation, RUP replay, and independently checked DRAT traces provide
+separate verification layers. The complete proof payloads, manifests, source
+archives, hashes, and replay commands are documented below and in the
+versioned Zenodo records. Compact report replay uses Python 3 on a commodity
+workstation. Full proof replay additionally requires the archived proof
+payload, pinned proof checkers, substantial local storage, and longer
+CPU-bound runs; exploratory construction searches are not part of the claim.
+
+### Significance, Limitations, And Future Work
+
+The repository provides a reusable certified frontier for a one-unit
+covering-code gap and a proof architecture for symmetric finite set-cover
+problems. Thirty-eight normalized parents remain open, and the fourth-word
+work closes no complete parent. Next work uses fifth-word orbit splits,
+broader proof coverage, and independent nonlinear construction search.
+
+### Release, Citation, And Author
+
+- **Public repository:** [`ruturajr-raval/binary-covering-code-11-3`](https://github.com/ruturajr-raval/binary-covering-code-11-3).
+- **Tagged release:** [`v0.3.0`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.0)
+  at audited release commit
+  `4748983fc35d299b14d58522a75bcc9aa6c88b28`.
+- **Archive status:** The technical report snapshot is published on Zenodo at
+  version DOI
+  [`10.5281/zenodo.22332416`](https://doi.org/10.5281/zenodo.22332416);
+  all versions use concept DOI
+  [`10.5281/zenodo.22260709`](https://doi.org/10.5281/zenodo.22260709).
+  The full earlier proof payload is archived at
+  [`10.5281/zenodo.22302261`](https://doi.org/10.5281/zenodo.22302261).
+- **Next acceptance gate:** An exact-value result requires either a 15-word
+  code accepted by independent verifiers or checked exclusions covering all
+  38 residual normalized branches, followed by a refreshed novelty audit and
+  external mathematical review.
+- **Provenance boundary:** The 16-word code reproduces a known upper bound and
+  is not claimed as a new construction. Project code, certificates, proof
+  records, and documentation are independently produced and MIT licensed;
+  external sources are referenced rather than copied.
+
+Citation metadata is in `CITATION.cff`, and release history is in
+`RELEASE_NOTES.md`. The author is Ruturaj R Raval, Independent Researcher,
+ORCID `0000-0003-4930-8981`.
+
 Certificate-oriented search for the exact value of the binary covering number
 `K_2(11,3)`, currently bounded by `15 <= K_2(11,3) <= 16`.
 
@@ -69,6 +159,9 @@ records the lower bound 15 as a stepwise-refinement result. The binary table
 attributes the upper bound 16 to the Graham-Sloane construction line from
 1985. The PDF was generated on 2009-10-15, and the latest dated update on the
 table site is 2011-11-21.
+
+The currently recorded one-unit interval has therefore remained unclosed for
+more than twenty years as of the 2026-09-06 audit.
 
 A September 3, 2026 search refresh, with metadata rechecked on September 5,
 found no later primary source closing this exact cell. At audited commit
@@ -425,28 +518,31 @@ A new-result announcement requires one of these outcomes:
 
 ## Dissemination
 
-After a result passes its gate, the release package should include a tagged
-repository version, durable archive, machine-readable certificate, independent
-checker, technical manuscript, exact claim statement, and notification to the
-maintainers of the covering-code tables and formal database.
+The `v0.3.0` technical progress report has passed the artifact gate and is
+released through a tagged repository version and durable Zenodo archive. It
+includes machine-readable evidence, independent checking paths, a technical
+manuscript, and an explicit claim boundary. It may be shared as a certified
+partial reduction, but it must not be described as an exact value or a new
+global bound. Notification of a bound change to table and formal-database
+maintainers remains conditional on satisfying one of the exact-result gates
+above.
 
 ## References
 
-- Gabor Keri, tables of bounds for covering codes:
-  `https://old.sztaki.hu/~keri/codes/`
-- Keri table update log containing the 2006-01-17 lower-bound entry:
-  `https://old.sztaki.hu/~keri/codes/index.htm`
-- Binary table PDF:
-  `https://old.sztaki.hu/~keri/codes/2_tables.pdf`
-- Ronald L. Graham and Neil J. A. Sloane, "On the Covering Radius of Codes",
-  *IEEE Transactions on Information Theory* 31(3), 385-401, 1985,
-  DOI `10.1109/TIT.1985.1057039`.
+- Gabor Keri, [tables of bounds for covering
+  codes](https://old.sztaki.hu/~keri/codes/).
+- Keri [table update log](https://old.sztaki.hu/~keri/codes/index.htm)
+  containing the 2006-01-17 lower-bound entry.
+- Keri [binary table PDF](https://old.sztaki.hu/~keri/codes/2_tables.pdf).
+- Ronald L. Graham and Neil J. A. Sloane, [On the Covering Radius of
+  Codes](https://doi.org/10.1109/TIT.1985.1057039),
+  *IEEE Transactions on Information Theory* 31(3), 385-401, 1985.
 - Gerard Cohen, Iiro Honkala, Simon Litsyn, and Antoine Lobstein,
   *Covering Codes*, North-Holland, 1997.
-- Dion Gijswijt and Sven Polak, semidefinite bounds for covering codes:
-  `https://arxiv.org/abs/2504.01932`
-- Formal covering-code database:
-  `https://github.com/florath/covering-codes-lean/tree/2ecbf887d7a29a8137da6b476d1f5de93c3936d4`
+- Dion Gijswijt and Sven Polak, [Semidefinite lower bounds for covering
+  codes](https://arxiv.org/abs/2504.01932).
+- [Formal covering-code database at the audited
+  commit](https://github.com/florath/covering-codes-lean/tree/2ecbf887d7a29a8137da6b476d1f5de93c3936d4).
 
 ## License
 

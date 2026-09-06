@@ -107,11 +107,11 @@
   "research_records": {
     "claim": {
       "path": "research/claim.yaml",
-      "sha256": "213aa5734f3560e04767c7075d8cb76cf5f5755dc226ee4ee08d0eafa2b35c9a"
+      "sha256": "13025dfa4097e87a8b34ff8fb03184eca2f883c80a48504b7eaa1fd405c9577b"
     },
     "release_gate": {
       "path": "research/release-gate.json",
-      "sha256": "fbc731e25107a395e9217ffd4b3e05384a1eca2ae319d25a0d6e9402f5f3b1ad"
+      "sha256": "04f63dbc5a4aee15d3903ee9f2116a8e40541ab04504879c65d8f60e45fafe81"
     }
   },
   "result_routes": {

@@ -1,4 +1,29 @@
-# Release v0.3.0
+# Release Dossier v0.3.0
+
+## Release Identity
+
+| Field | Value |
+| --- | --- |
+| Title | Certified Branch Reductions for the Binary Covering Number K_2(11,3) |
+| Tagged release | [`v0.3.0`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.0) |
+| Release date | 2026-09-05 |
+| Audited release commit | `4748983fc35d299b14d58522a75bcc9aa6c88b28` |
+| Certified full-proof source revision | `b0714133780d9411ece7b815e559658fcaa74851` |
+| Version DOI | [`10.5281/zenodo.22332416`](https://doi.org/10.5281/zenodo.22332416) |
+| Concept DOI | [`10.5281/zenodo.22260709`](https://doi.org/10.5281/zenodo.22260709) |
+| Archive status | Technical report and repository snapshot published; full proof payload archived separately |
+| License | MIT for project-original material |
+
+## Claim-Safe Public Summary
+
+Release `v0.3.0` documents a certified partial reduction of the unresolved
+size-15 search for `K_2(11,3)`. A complete 150-branch normalized parent
+partition has 112 certified normalized branch closures and 38 residual
+branches. Within four selected unresolved third-word children, checked RUP and
+solver-generated DRAT evidence closes 324 of 350 exhaustive fourth-word
+branches, leaving 26 and closing no complete selected child or normalized
+parent. The exact value remains open, and the known interval remains
+`15 <= K_2(11,3) <= 16`.
 
 ## Background
 
@@ -45,6 +70,22 @@ The v0.3.0 report snapshot is archived at version DOI
 `10.5281/zenodo.22332416`. `release.json` binds its repository ZIP, release
 commit, GitHub source and PDF assets, sizes, and checksums.
 
+## Manifest And Asset Verification
+
+Use `release-manifest.sha256` from a clean checkout of tag `v0.3.0` to verify
+the tracked report release. `release.json` records:
+
+- the release tag object and audited release commit;
+- source and PDF asset names, sizes, and SHA-256 values;
+- the Zenodo `v0.3.0` repository snapshot name, size, MD5, and SHA-256;
+- the certified full-proof source revision;
+- proof-plan, proof-index, and proof-bundle manifest digests; and
+- the archived `v0.2.0` proof payload identity and SHA-256.
+
+The frozen `v0.2.0` manifest snapshot is
+`evidence/release-manifest-v0.2.0.sha256`, and its Zenodo binding is
+`evidence/zenodo-v0.2.0-archive.json`.
+
 ## Supported Claims
 
 For every hypothetical 15-word radius-3 cover in the binary 11-cube:
@@ -75,7 +116,7 @@ Within four selected unresolved third-word children:
 0 normalized parents closed by this layer
 ```
 
-## What Is Not Claimed
+## Claim Boundary
 
 - No 15-word covering code has been found.
 - The remaining 38 normalized branches have not been excluded.
@@ -94,6 +135,23 @@ The known interval remains
 ```text
 15 <= K_2(11,3) <= 16.
 ```
+
+## Provenance Boundary
+
+The verified 16-word code reproduces a known upper bound and is not claimed as
+a new construction. Project code, formulas, certificates, proof records,
+replay tools, and documentation are independently produced and MIT licensed.
+External sources are cited rather than copied. The retained proof payloads are
+bound to their certified source revision and archived release.
+
+## Review Status
+
+The artifact and technical report are released. Internal manifest,
+classification, RUP, DRAT, clean-checkout, claim-scope, and manuscript gates
+are recorded as passed. The exact-value theorem announcement remains on hold
+because 26 selected fourth-word branches, every selected child, and all 38
+residual normalized branches remain open. No external mathematical review is
+claimed.
 
 ## Reproduction
 
@@ -181,8 +239,25 @@ leave other live children below the 38 residual normalized branches. A final
 result therefore requires either a verified 15-word construction or a
 complete checked exclusion cover.
 
-## Citation
+## Archive And Citation
 
 Citation metadata is in `CITATION.cff`. The all-versions concept DOI is
 `10.5281/zenodo.22260709`. The archived v0.3.0 release DOI is
 `10.5281/zenodo.22332416`.
+
+The complete earlier RUP and DRAT proof payload is archived at version DOI
+`10.5281/zenodo.22302261` as
+`ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip`. Its recorded SHA-256 is
+`750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff`.
+
+Historical release scope is summarized in `RELEASE_NOTES.md`.
+
+## Next Acceptance Gate
+
+An exact-value result requires one of two outcomes:
+
+1. A 15-word code accepted by independent exhaustive verifiers, followed by a
+   refreshed novelty audit and external review.
+2. Checked proof coverage for all 38 residual normalized branches, together
+   with the verified 16-word construction, a refreshed novelty audit, and
+   external review.

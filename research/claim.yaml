@@ -1,8 +1,9 @@
 schema_version: 1
 project: binary-covering-code-11-3
 author: Ruturaj R Raval
+affiliation: Independent Researcher
 orcid: 0000-0003-4930-8981
-updated: 2026-09-05
+updated: 2026-09-06
 status: certified-partial-result
 target:
   type: exact-covering-number
