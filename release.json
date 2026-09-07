@@ -1,7 +1,7 @@
 {
   "version": "0.3.1",
-  "release_status": "prepared",
-  "artifact_release_status": "local_archival_patch_assets_verified",
+  "release_status": "published",
+  "artifact_release_status": "paper_inclusive_archival_patch_published_and_verified",
   "theorem_release_status": "hold",
   "release_date": "2026-09-07",
   "artifact_status": "verified_certified_frontier_with_paper_inclusive_archival_patch",
@@ -12,7 +12,7 @@
   "artifact_reproducibility_ready": true,
   "artifact_release_ready": true,
   "theorem_announcement_ready": false,
-  "technical_report_release_status": "paper_inclusive_patch_prepared",
+  "technical_report_release_status": "published",
   "manuscript_ready": true,
   "preprint_submission_status": "prepared_not_submitted",
   "external_review_status": "No external mathematical review is claimed.",
@@ -31,6 +31,48 @@
     "compact_summary": "evidence/technical-report-summary-v1.json",
     "compact_replay": "paper/replay.py",
     "release_tag": "v0.3.1",
+    "release_tag_object": "b59bc8f2b10113eee23d35397a47900804632b2e",
+    "release_commit": "3543518d89d35f57753caa25a8ce73b004c4561b",
+    "github_release": "https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.1",
+    "github_release_id": 384349074,
+    "release_workflows": {
+      "public_main_ci": {
+        "run_id": 34159901270,
+        "name": "CI",
+        "workflow_path": ".github/workflows/ci.yml",
+        "event": "push",
+        "ref": "main",
+        "head_sha": "3543518d89d35f57753caa25a8ce73b004c4561b",
+        "status": "success"
+      },
+      "public_main_full_proof_replay": {
+        "run_id": 34159901314,
+        "name": "Full Proof Replay",
+        "workflow_path": ".github/workflows/proof-replay.yml",
+        "event": "push",
+        "ref": "main",
+        "head_sha": "3543518d89d35f57753caa25a8ce73b004c4561b",
+        "status": "success"
+      },
+      "public_tag_ci": {
+        "run_id": 34163740426,
+        "name": "CI",
+        "workflow_path": ".github/workflows/ci.yml",
+        "event": "push",
+        "ref": "v0.3.1",
+        "head_sha": "3543518d89d35f57753caa25a8ce73b004c4561b",
+        "status": "success"
+      },
+      "public_tag_full_proof_replay": {
+        "run_id": 34163740483,
+        "name": "Full Proof Replay",
+        "workflow_path": ".github/workflows/proof-replay.yml",
+        "event": "push",
+        "ref": "v0.3.1",
+        "head_sha": "3543518d89d35f57753caa25a8ce73b004c4561b",
+        "status": "success"
+      }
+    },
     "underlying_mathematical_release": {
       "tag": "v0.3.0",
       "tag_object": "21da9f5a712fee7f50fccb27854c35ebad33faca",
@@ -48,21 +90,31 @@
     },
     "release_version_doi": "10.5281/zenodo.22647766",
     "release_concept_doi": "10.5281/zenodo.22260709",
+    "zenodo_record": {
+      "record_id": 22647766,
+      "doi": "10.5281/zenodo.22647766",
+      "status": "published",
+      "publication_date": "2026-09-07",
+      "public_files_verified": true
+    },
     "release_assets": {
       "source": {
         "name": "binary-covering-code-11-3-v0.3.1-paper-source.tar.gz",
         "size": 4485483,
-        "sha256": "b0ecd3031f494cdea7a75183a5cb8992146f4b026d9e37d05e9ec7063c72c715"
+        "sha256": "b0ecd3031f494cdea7a75183a5cb8992146f4b026d9e37d05e9ec7063c72c715",
+        "md5": "8b38866ad97894179f2ed3220d2a5d53"
       },
       "pdf": {
         "name": "binary-covering-code-11-3-v0.3.1-paper.pdf",
         "size": 97876,
-        "sha256": "1f5514125237b9439d112fa0edb9526256ce123e4c4539431bb0188abbd55a28"
+        "sha256": "1f5514125237b9439d112fa0edb9526256ce123e4c4539431bb0188abbd55a28",
+        "md5": "c7b06a68920ad63f769e0933889f04c2"
       },
       "checksums": {
         "name": "SHA256SUMS",
         "size": 228,
-        "sha256": "61f8f38dddd97de98dd38be55d77135a3db28c5f37044508ce989c143487d691"
+        "sha256": "61f8f38dddd97de98dd38be55d77135a3db28c5f37044508ce989c143487d691",
+        "md5": "968e2ba5bc560c8286e20e2850b2dc0b"
       }
     },
     "previous_release_zenodo_archive": {
@@ -81,6 +133,14 @@
   },
   "artifact_verification": {
     "status": "clean_checkout_replay_passed",
+    "public_main_ci_passes": true,
+    "public_main_full_proof_replay_passes": true,
+    "public_tag_ci_passes": true,
+    "public_tag_full_proof_replay_passes": true,
+    "github_release_created": true,
+    "github_release_assets_downloaded_and_verified": true,
+    "zenodo_record_published": true,
+    "zenodo_assets_downloaded_and_verified": true,
     "solver_drat_plan": {
       "path": "proof-expansion/evidence/fourth-word-solver-drat-plan-v2.json",
       "sha256": "3f047f5d3dd4f5e9ffe67d38e425ccb4b6f5ea3274c07580c9ee57d08d0baa94"
@@ -127,7 +187,7 @@
     },
     "release_gate": {
       "path": "research/release-gate.json",
-      "sha256": "22d9910f9edb276c409296268731e178bc61f665bcdbc587c6bf2bac0974d917"
+      "sha256": "20960396b3578b2818b41f2e329e576058cedf3a20bf7ba3719a36b3291713fa"
     }
   },
   "result_routes": {

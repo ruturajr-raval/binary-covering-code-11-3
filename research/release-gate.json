@@ -32,14 +32,19 @@
     "release_asset_checksums_valid": true,
     "archival_patch_changes_mathematics": false,
     "archival_patch_local_checks_pass": true,
-    "archival_patch_hosted_ci_passes": false,
+    "archival_patch_hosted_ci_passes": true,
+    "public_release_created": true,
+    "zenodo_version_doi_assigned": true,
+    "zenodo_record_updated_with_paper": true,
+    "public_release_assets_downloaded_and_verified": true,
+    "public_zenodo_assets_downloaded_and_verified": true,
     "external_review_addressed": false
   },
-  "artifact_decision": "ready",
+  "artifact_decision": "published",
   "technical_report_significance_basis": "The report freezes exact structural constraints, a complete 150-case normalized partition, and 324 checked closures in a 350-branch selected frontier with explicit residual cases and reusable replay infrastructure. It does not satisfy the separate parent-reduction threshold for a broad exact-value theorem announcement.",
   "decision_scope": "theorem_announcement",
   "decision": "hold",
-  "reason": "The technical progress report, compact ancillary replay, compiled PDF, deterministic source bundle, and release checksums are ready. Version 0.3.1 is an archival and documentation patch and does not change the theorem or computations. A final exact-value theorem announcement remains on hold because 26 fourth-word branches, every selected child, and all 38 residual normalized branches remain open.",
-  "technical_report_decision": "ready",
-  "archival_patch_decision": "ready"
+  "reason": "The v0.3.1 compiled PDF, deterministic source bundle, release checksums, protected tag, exact public main and tag workflow replays, GitHub release, Zenodo publication, and public download verification gates passed. Version 0.3.1 is an archival and documentation patch and does not change the theorem or computations. A final exact-value theorem announcement remains on hold because 26 fourth-word branches, every selected child, and all 38 residual normalized branches remain open. No external mathematical review is claimed.",
+  "technical_report_decision": "published",
+  "archival_patch_decision": "published"
 }

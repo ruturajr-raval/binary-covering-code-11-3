@@ -10,8 +10,10 @@
 | ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
 | Tagged release | [`v0.3.1`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.1) |
 | Release date | 2026-09-07 |
-| Release commit | Pending until the `v0.3.1` tag is created |
-| Archive status | Paper-inclusive Zenodo successor draft reserved; publication pending |
+| Release commit | `3543518d89d35f57753caa25a8ce73b004c4561b` |
+| Tag object | `b59bc8f2b10113eee23d35397a47900804632b2e` |
+| GitHub release ID | `384349074` |
+| Archive status | GitHub and Zenodo releases published; all three public assets downloaded and verified |
 | Underlying mathematical release | `v0.3.0` at commit `4748983fc35d299b14d58522a75bcc9aa6c88b28` |
 | Certified full-proof source revision | `b0714133780d9411ece7b815e559658fcaa74851` |
 | Version DOI | [`10.5281/zenodo.22647766`](https://doi.org/10.5281/zenodo.22647766) |
@@ -80,7 +82,7 @@ manifest, the fourth-word RUP manifest, the solver-DRAT v2 manifest, and a
 machine-readable Zenodo archive binding.
 
 The paper-inclusive v0.3.1 archive is identified by version DOI
-`10.5281/zenodo.22647766`. `release.json` binds the prepared source, PDF, and
+`10.5281/zenodo.22647766`. `release.json` binds the published source, PDF, and
 checksum assets by exact names, sizes, and SHA-256 values.
 
 ```text
@@ -170,12 +172,17 @@ bound to their certified source revision and archived release.
 
 ## Review Status
 
-The archival patch assets are prepared for release. Internal manifest,
-classification, RUP, DRAT, clean-checkout, claim-scope, manuscript, and
-paper-asset gates are recorded separately. The exact-value theorem
-announcement remains on hold because 26 selected fourth-word branches, every
-selected child, and all 38 residual normalized branches remain open. No
-external mathematical review is claimed.
+The paper-inclusive archival patch is published and verified. Public
+main-branch CI run `34159901270`, public main-branch Full Proof Replay run
+`34159901314`, tag CI run `34163740426`, and tag Full Proof Replay run
+`34163740483` all passed on the exact release commit or protected release
+tag. The three GitHub release assets and the three Zenodo files were
+downloaded after publication and matched the local release assets by size
+and SHA-256.
+
+The exact-value theorem announcement remains on hold because 26 selected
+fourth-word branches, every selected child, and all 38 residual normalized
+branches remain open. No external mathematical review is claimed.
 
 ## Reproduction
 

@@ -19,6 +19,7 @@ proof-checked exclusions.
 | Current result | 112 certified normalized branch closures among 150 branches, plus 324 of 350 selected fourth-word closures |
 | Result type | Significant certified proof frontier with unchanged global bounds |
 | Release | `v0.3.1` |
+| Audited release commit | `3543518d89d35f57753caa25a8ce73b004c4561b` |
 | Version DOI | [`10.5281/zenodo.22647766`](https://doi.org/10.5281/zenodo.22647766) |
 | Concept DOI | [`10.5281/zenodo.22260709`](https://doi.org/10.5281/zenodo.22260709) |
 | License | MIT for project-original material |
@@ -499,6 +500,10 @@ explicitly named compiled PDF, a deterministic paper-source archive, and a
 checksum file suitable for GitHub and Zenodo. The theorem, proof
 certificates, retained data, branch counts, and computations are unchanged
 from `v0.3.0`.
+
+The GitHub release and Zenodo record were published on 2026-09-07. The PDF,
+paper-source archive, and checksum manifest were downloaded from both public
+services and matched the local release assets by size and SHA-256.
 
 The complete earlier proof payload is archived at
 [`10.5281/zenodo.22302261`](https://doi.org/10.5281/zenodo.22302261) as
