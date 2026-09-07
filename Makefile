@@ -1,6 +1,8 @@
 PYTHON ?= python3
 CXX ?= clang++
 CXXFLAGS ?= -O3 -std=c++20 -Wall -Wextra -Wpedantic
+TECTONIC ?= tectonic
+SOURCE_DATE_EPOCH ?= 1788739200
 DRAT_TRIM ?= build/drat-trim-src/drat-trim
 DRAT_TRIM_COMMIT ?= 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
 FOURTH_WORD_RUP_ATTESTATION_DATE ?= 2026-09-03
@@ -11,6 +13,10 @@ REVISION_VERIFY_FLAGS := $(if $(filter 1,$(ALLOW_PENDING_REVISION)),--allow-pend
 PYTHONPATH := src:tools
 LOCKED := $(PYTHON) tools/run_with_repository_lock.py --
 BUILD_DIR := build
+RELEASE_DIR := dist/release
+RELEASE_PDF := $(RELEASE_DIR)/binary-covering-code-11-3-v0.3.1-paper.pdf
+RELEASE_SOURCE := $(RELEASE_DIR)/binary-covering-code-11-3-v0.3.1-paper-source.tar.gz
+RELEASE_CHECKSUMS := $(RELEASE_DIR)/SHA256SUMS
 BASELINE := data/baseline/k2-11-3-linear-16.txt
 PARITY := data/baseline/k2-11-3-parity-columns-16.json
 FOURTH_WORD_RUP_BUNDLE_FILES := \
@@ -28,6 +34,7 @@ RELEASE_MANIFEST_FILES := \
 	PUBLICATION.md \
 	LICENSE \
 	Makefile \
+	pyproject.toml \
 	release.json \
 	requirements-proof.txt \
 	requirements-replay.txt \
@@ -57,15 +64,22 @@ RELEASE_MANIFEST_FILES := \
 	paper/RIGHTS.md \
 	paper/main.tex \
 	paper/replay.py \
+	tests/test_archival_release.py \
 	tests/test_arxiv_bundle.py \
 	tests/test_fourth_word_rup_proofs.py \
+	tests/test_verify_checksum_manifest.py \
 	tools/audit_fourth_word_rup_proofs.py \
+	tools/build_archival_release.py \
 	tools/build_arxiv_bundle.py \
 	tools/replay_arxiv_bundle.py \
+	tools/verify_checksum_manifest.py \
 	tools/verify_technical_report.py \
-	dist/arxiv/binary-covering-code-11-3.tar.gz
+	dist/arxiv/binary-covering-code-11-3.tar.gz \
+	$(RELEASE_PDF) \
+	$(RELEASE_SOURCE) \
+	$(RELEASE_CHECKSUMS)
 
-.PHONY: test native-test proof-checker verify-release-manifest verify-release-manifest-locked verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest write-fourth-word-rup-revision-pending finalize-fourth-word-rup-revision verify-fourth-word-rup-revision verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound verify-technical-report paper-build paper-bundle paper-replay cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier prepare-fourth-word-proof-formulas prepare-fourth-word-proof-formulas-locked fourth-word-rup-plan audit-fourth-word-rup-plan create-fourth-word-rup-proofs verify-fourth-word-rup-proofs audit-fourth-word-rup-proofs check-fourth-word-rup-proof-index fourth-word-rup-proof-smoke third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates verify-integer-profile-certificates prove-residual-case prepare-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean clean-locked
+.PHONY: test native-test proof-checker release-manifest verify-release-manifest verify-release-manifest-locked verify-proof-bundle-manifest verify-fourth-word-rup-bundle-manifest write-fourth-word-rup-revision-pending finalize-fourth-word-rup-revision verify-fourth-word-rup-revision verify-baseline verify-independent analyze-baseline distance-bounds overlap-bound verify-technical-report paper-build paper-bundle paper-replay release-assets verify-release-assets archival-release cnf audit-cnf compact-cnf audit-compact-cnf cases audit-cases two-word-cases audit-two-word-cases third-word-cases audit-third-word-cases third-word-child-frontier audit-third-word-child-frontier rebuild-and-audit-third-word-child-frontier fourth-word-hard-frontier audit-fourth-word-hard-frontier rebuild-and-audit-fourth-word-hard-frontier prepare-fourth-word-proof-formulas prepare-fourth-word-proof-formulas-locked fourth-word-rup-plan audit-fourth-word-rup-plan create-fourth-word-rup-proofs verify-fourth-word-rup-proofs audit-fourth-word-rup-proofs check-fourth-word-rup-proof-index fourth-word-rup-proof-smoke third-word-child-formula-smoke fourth-word-formula-smoke min-distance-branches audit-min-distance-branches max-degree-reduction orbit-certificates verify-orbit-certificates integer-profile-certificates prove-residual-case prepare-residual-case verify-residual-case verify-min-distance-proofs audit-min-distance-proofs verify-third-word-proofs audit-third-word-proofs case-reduction-stage1 case-reduction solver-test search-smoke sat-smoke local-search-smoke clean clean-locked
 
 test: prepare-fourth-word-proof-formulas
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) -m unittest discover -s tests -v
@@ -110,6 +124,12 @@ verify-fourth-word-rup-revision: check-fourth-word-rup-proof-index verify-fourth
 		evidence/fourth-word-rup-revision-v1.json \
 		--verify $(REVISION_VERIFY_FLAGS)
 
+release-manifest:
+	$(PYTHON) tools/verify_checksum_manifest.py \
+		release-manifest.sha256 \
+		$(foreach file,$(RELEASE_MANIFEST_FILES),--path $(file)) \
+		--write
+
 verify-release-manifest:
 	$(LOCKED) $(MAKE) --no-print-directory \
 		verify-release-manifest-locked PYTHON=$(PYTHON)
@@ -145,14 +165,24 @@ verify-technical-report:
 
 paper-build:
 	mkdir -p $(BUILD_DIR)/paper
-	latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error \
-		-output-directory=$(BUILD_DIR)/paper paper/main.tex
+	SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH) FORCE_SOURCE_DATE=1 \
+		TECTONIC_CACHE_DIR=$(BUILD_DIR)/tectonic-cache \
+		$(TECTONIC) -X compile paper/main.tex \
+		--outdir $(BUILD_DIR)/paper --keep-logs
 
 paper-bundle:
 	$(PYTHON) tools/build_arxiv_bundle.py
 
 paper-replay: paper-bundle
 	$(PYTHON) tools/replay_arxiv_bundle.py
+
+release-assets:
+	$(PYTHON) tools/build_archival_release.py
+
+verify-release-assets:
+	$(PYTHON) tools/build_archival_release.py --verify
+
+archival-release: paper-build paper-bundle release-assets verify-release-assets
 
 cnf:
 	mkdir -p $(BUILD_DIR)

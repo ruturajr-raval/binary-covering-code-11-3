@@ -31,12 +31,15 @@ def run_verifier(
     *,
     paths: list[Path] | None = None,
     trees: list[Path] | None = None,
+    write: bool = False,
 ) -> subprocess.CompletedProcess[str]:
     arguments = [sys.executable, str(TOOL), relative(manifest)]
     for path in paths or []:
         arguments.extend(["--path", relative(path)])
     for tree in trees or []:
         arguments.extend(["--tree", relative(tree)])
+    if write:
+        arguments.append("--write")
     return subprocess.run(
         arguments,
         check=False,
@@ -47,6 +50,35 @@ def run_verifier(
 
 
 class VerifyChecksumManifestTests(unittest.TestCase):
+    def test_write_mode_is_deterministic_and_verifiable(self) -> None:
+        ARTIFACTS.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=ARTIFACTS) as directory:
+            base = Path(directory)
+            first = base / "first.txt"
+            second = base / "second.txt"
+            first.write_text("first\n", encoding="ascii")
+            second.write_text("second\n", encoding="ascii")
+            manifest = base / "manifest.sha256"
+            written = run_verifier(
+                manifest,
+                paths=[second, first],
+                write=True,
+            )
+            self.assertEqual(written.returncode, 0, written.stderr)
+            first_payload = manifest.read_bytes()
+            rewritten = run_verifier(
+                manifest,
+                paths=[first, second],
+                write=True,
+            )
+            self.assertEqual(rewritten.returncode, 0, rewritten.stderr)
+            self.assertEqual(first_payload, manifest.read_bytes())
+            verified = run_verifier(
+                manifest,
+                paths=[first, second],
+            )
+            self.assertEqual(verified.returncode, 0, verified.stderr)
+
     def test_exact_tree_and_path_membership_passes(self) -> None:
         ARTIFACTS.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=ARTIFACTS) as directory:

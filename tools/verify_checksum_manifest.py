@@ -158,6 +158,7 @@ def main() -> int:
     parser.add_argument("manifest")
     parser.add_argument("--path", action="append", default=[])
     parser.add_argument("--tree", action="append", default=[])
+    parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 
     if not args.path and not args.tree:
@@ -166,6 +167,32 @@ def main() -> int:
     repository_lock = acquire_repository_lock(root)
     atexit.register(repository_lock.close)
     manifest_path = repository_path(args.manifest, root)
+    if args.write:
+        expected = expected_membership(args.path, args.tree, root)
+        manifest_relative = manifest_path.relative_to(root).as_posix()
+        if manifest_relative in expected:
+            raise SystemExit("checksum manifest cannot include itself")
+        lines = [
+            f"{file_sha256(repository_path(relative, root))}  {relative}\n"
+            for relative in sorted(expected)
+        ]
+        temporary_path = manifest_path.with_name(
+            f".{manifest_path.name}.tmp"
+        )
+        temporary_path.write_text("".join(lines), encoding="ascii")
+        os.replace(temporary_path, manifest_path)
+        print(
+            json.dumps(
+                {
+                    "artifact_count": len(expected),
+                    "manifest": args.manifest,
+                    "written": True,
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
     manifest_before = require_regular_single_link(
         manifest_path,
         "checksum manifest",

@@ -1,10 +1,10 @@
 {
-  "version": "0.3.0",
-  "release_status": "released",
-  "artifact_release_status": "clean_checkout_replay_passed",
+  "version": "0.3.1",
+  "release_status": "prepared",
+  "artifact_release_status": "local_archival_patch_assets_verified",
   "theorem_release_status": "hold",
-  "release_date": "2026-09-05",
-  "artifact_status": "verified_certified_frontier_with_technical_report_and_compact_replay",
+  "release_date": "2026-09-07",
+  "artifact_status": "verified_certified_frontier_with_paper_inclusive_archival_patch",
   "supported_claim": "A 16-word binary length-11 code has covering radius 3, verified by two direct enumeration paths and a syndrome-space cross-check. For hypothetical 15-word covers, exact certificates prove minimum distance at most 5, total pair-ball overlap at least 1712, and total triple-ball overlap at least 280. A complete 150-branch normalized parent partition has 112 certified closures and 38 residual branches. Within four selected hard third-word children, checked RUP certificates close 184 of 350 exhaustive fourth-word branches and checked solver-generated DRAT certificates close 140 more. The combined certificates close 324 branches, leaving 26 branches and all four children open.",
   "claim_status": "known_upper_bound_reproduced_exact_value_open",
   "new_result_status": "certified_partial_solver_drat_branch_reduction",
@@ -12,7 +12,7 @@
   "artifact_reproducibility_ready": true,
   "artifact_release_ready": true,
   "theorem_announcement_ready": false,
-  "technical_report_release_status": "released",
+  "technical_report_release_status": "paper_inclusive_patch_prepared",
   "manuscript_ready": true,
   "preprint_submission_status": "prepared_not_submitted",
   "external_review_status": "No external mathematical review is claimed.",
@@ -20,12 +20,22 @@
     "title": "Certified Branch Reductions for the Binary Covering Number K_2(11,3)",
     "manuscript": "paper/main.tex",
     "arxiv_metadata": "paper/ARXIV_METADATA.md",
-    "source_archive": "dist/arxiv/binary-covering-code-11-3.tar.gz",
+    "source_archive": "dist/release/binary-covering-code-11-3-v0.3.1-paper-source.tar.gz",
+    "compiled_pdf": "dist/release/binary-covering-code-11-3-v0.3.1-paper.pdf",
+    "checksums": "dist/release/SHA256SUMS",
+    "reproducible_pdf_build": {
+      "engine": "Tectonic 0.16.9",
+      "source_date_epoch": 1788739200,
+      "force_source_date": true
+    },
     "compact_summary": "evidence/technical-report-summary-v1.json",
     "compact_replay": "paper/replay.py",
-    "release_tag": "v0.3.0",
-    "release_tag_object": "21da9f5a712fee7f50fccb27854c35ebad33faca",
-    "release_commit": "4748983fc35d299b14d58522a75bcc9aa6c88b28",
+    "release_tag": "v0.3.1",
+    "underlying_mathematical_release": {
+      "tag": "v0.3.0",
+      "tag_object": "21da9f5a712fee7f50fccb27854c35ebad33faca",
+      "commit": "4748983fc35d299b14d58522a75bcc9aa6c88b28"
+    },
     "release_tag_protection": {
       "ruleset_id": 22324653,
       "enforcement": "active",
@@ -36,21 +46,26 @@
       ],
       "bypass_actors": []
     },
-    "release_version_doi": "10.5281/zenodo.22332416",
+    "release_version_doi": "10.5281/zenodo.22647766",
     "release_concept_doi": "10.5281/zenodo.22260709",
     "release_assets": {
       "source": {
-        "name": "binary-covering-code-11-3.tar.gz",
+        "name": "binary-covering-code-11-3-v0.3.1-paper-source.tar.gz",
         "size": 4485483,
-        "sha256": "6cdba52be6e9510ef800e7b86f883203fca88692a4d2e8c85cb893ed44b249f3"
+        "sha256": "7472eff12833dcbafe065643245f6cd46169197024f18bee68823beb14fc839c"
       },
       "pdf": {
-        "name": "main.pdf",
-        "size": 96933,
-        "sha256": "d557b213f1b6a4b06a8ec3f6dc40d0da48c1a3603054ec2f5e3c7b829805e1e7"
+        "name": "binary-covering-code-11-3-v0.3.1-paper.pdf",
+        "size": 97876,
+        "sha256": "1f5514125237b9439d112fa0edb9526256ce123e4c4539431bb0188abbd55a28"
+      },
+      "checksums": {
+        "name": "SHA256SUMS",
+        "size": 228,
+        "sha256": "cf05191f61e976d82d588142927c6508c35c98abfd9c33c46c949f36b4483eaf"
       }
     },
-    "release_zenodo_archive": {
+    "previous_release_zenodo_archive": {
       "file": "ruturajr-raval/binary-covering-code-11-3-v0.3.0.zip",
       "size": 270441163,
       "md5": "2f0e133d8dd53a690838d7f6507b7447",
@@ -61,7 +76,8 @@
     "full_proof_archive_file": "ruturajr-raval/binary-covering-code-11-3-v0.2.0.zip",
     "full_proof_archive_sha256": "750003eba2e9f9baf5fee9ed93c679b3661daf6d8c68ca40eeb681202b5e72ff",
     "full_proof_archive_binding": "evidence/zenodo-v0.2.0-archive.json",
-    "claim_scope": "certified partial reduction with unchanged global interval"
+    "claim_scope": "certified partial reduction with unchanged global interval",
+    "patch_scope": "Archival and documentation patch adding an explicit compiled PDF, deterministic paper-source archive, and SHA256SUMS. The theorem, proof certificates, retained data, branch counts, and computations are unchanged."
   },
   "artifact_verification": {
     "status": "clean_checkout_replay_passed",
@@ -111,7 +127,7 @@
     },
     "release_gate": {
       "path": "research/release-gate.json",
-      "sha256": "04f63dbc5a4aee15d3903ee9f2116a8e40541ab04504879c65d8f60e45fafe81"
+      "sha256": "22d9910f9edb276c409296268731e178bc61f665bcdbc587c6bf2bac0974d917"
     }
   },
   "result_routes": {
@@ -153,10 +169,10 @@
     "Sharp witnesses for the retained overlap row system are not claimed to be realizable covers.",
     "Fresh replay requires network access to retrieve hash-locked Python wheels and the pinned checker source.",
     "Final certification verification requires a full Git clone containing the certified source revision; source archives and shallow checkouts cannot verify revision identity.",
-    "The archived v0.3.0 release DOI is 10.5281/zenodo.22332416 and the stable all-versions concept DOI is 10.5281/zenodo.22260709.",
-    "The v0.3.0 GitHub tag, release assets, and Zenodo repository snapshot are bound by the release commit and checksums recorded in the technical_report object.",
+    "The paper-inclusive v0.3.1 version DOI is 10.5281/zenodo.22647766 and the stable all-versions concept DOI is 10.5281/zenodo.22260709.",
+    "Version 0.3.1 changes archival packaging and documentation only. The theorem, proof certificates, retained data, branch counts, and computations are unchanged from v0.3.0.",
     "The retained clean-replay record is a host-specific self-attestation, not a third-party signature; GitHub main-branch and tag workflows provide separate publicly visible replay runs.",
     "No external mathematical review has occurred."
   ],
-  "last_reviewed": "2026-09-05"
+  "last_reviewed": "2026-09-07"
 }

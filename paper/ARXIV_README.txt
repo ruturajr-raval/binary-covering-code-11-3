@@ -45,7 +45,7 @@ From the extracted archive:
 
   python3 replay.py
 
-Do not execute an extracted copy until the downloaded v0.3.0 release asset
+Do not execute an extracted copy until the downloaded v0.3.1 release asset
 has been authenticated against the SHA-256 value published with the GitHub
 release. The internal manifest alone does not establish archive authenticity.
 
@@ -97,4 +97,5 @@ REPOSITORY
 
 https://github.com/ruturajr-raval/binary-covering-code-11-3
 
-Release: v0.3.0
+Release: v0.3.1
+Version DOI: https://doi.org/10.5281/zenodo.22647766

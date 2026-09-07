@@ -2,6 +2,17 @@
 
 These notes summarize the claim boundary of every tagged public release.
 
+## [v0.3.1](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.1) - 2026-09-07
+
+- Added an explicitly named compiled PDF, deterministic paper-source archive,
+  and `SHA256SUMS` for GitHub and Zenodo archival.
+- Updated citation, release, and archive metadata to version DOI
+  `10.5281/zenodo.22647766` and concept DOI
+  `10.5281/zenodo.22260709`.
+- This is an archival and documentation patch. The theorem, proof
+  certificates, data, branch counts, and computations are unchanged from
+  `v0.3.0`.
+
 ## [v0.3.0](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.0) - 2026-09-05
 
 - Added the publication-ready technical report, deterministic source archive,

@@ -99,21 +99,44 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y latexmk texlive-latex-extra
-      - run: make paper-build
+      - name: Install pinned Tectonic
+        run: |
+          mkdir -p build/tectonic
+          curl -fL \
+            https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.16.9/tectonic-0.16.9-x86_64-unknown-linux-gnu.tar.gz \
+            -o build/tectonic/tectonic.tar.gz
+          echo "f3c825128095dc3399ea11c08c18035b33050a216930c295c79e8eb11bd21de4  build/tectonic/tectonic.tar.gz" \
+            | sha256sum --check
+          tar -xzf build/tectonic/tectonic.tar.gz -C build/tectonic
+      - run: make paper-build TECTONIC="$PWD/build/tectonic/tectonic"
       - run: make paper-bundle
+      - run: make release-assets
+      - run: make verify-release-assets
       - run: git diff --exit-code -- dist/arxiv/binary-covering-code-11-3.tar.gz
+      - run: git diff --exit-code -- dist/release
       - run: tar -tzf dist/arxiv/binary-covering-code-11-3.tar.gz
+      - run: >-
+          tar -tzf
+          dist/release/binary-covering-code-11-3-v0.3.1-paper-source.tar.gz
       - run: mkdir -p build/arxiv-extracted
       - run: >-
-          tar -xzf dist/arxiv/binary-covering-code-11-3.tar.gz
+          cmp dist/arxiv/binary-covering-code-11-3.tar.gz
+          dist/release/binary-covering-code-11-3-v0.3.1-paper-source.tar.gz
+      - run: >-
+          tar -xzf
+          dist/release/binary-covering-code-11-3-v0.3.1-paper-source.tar.gz
           -C build/arxiv-extracted
       - run: python3 replay.py
         working-directory: build/arxiv-extracted
       - run: mkdir -p compiled
         working-directory: build/arxiv-extracted
       - run: >-
-          latexmk -pdf -interaction=nonstopmode -halt-on-error
-          -file-line-error -output-directory=compiled main.tex
+          SOURCE_DATE_EPOCH=1788739200 FORCE_SOURCE_DATE=1
+          TECTONIC_CACHE_DIR="$GITHUB_WORKSPACE/build/tectonic-cache"
+          "$GITHUB_WORKSPACE/build/tectonic/tectonic"
+          -X compile main.tex --outdir compiled --keep-logs
         working-directory: build/arxiv-extracted
+      - name: Compare source-built and released PDFs
+        run: >-
+          cmp build/arxiv-extracted/compiled/main.pdf
+          dist/release/binary-covering-code-11-3-v0.3.1-paper.pdf

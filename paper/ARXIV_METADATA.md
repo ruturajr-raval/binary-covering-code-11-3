@@ -44,6 +44,12 @@ evidence and a standard-library replay command. The complete RUP and DRAT
 proof payloads are archived separately at Zenodo DOI
 10.5281/zenodo.22302261.
 
+The paper-inclusive archival release is `v0.3.1`, version DOI
+`10.5281/zenodo.22647766`, under concept DOI
+`10.5281/zenodo.22260709`. This documentation patch adds an explicit
+compiled PDF and deterministic source bundle; the theorem and computations
+are unchanged.
+
 ## License
 
 The repository manuscript, software, and original evidence are distributed

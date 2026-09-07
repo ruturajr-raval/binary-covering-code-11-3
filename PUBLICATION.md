@@ -1,4 +1,4 @@
-# Release Dossier v0.3.0
+# Release Dossier v0.3.1
 
 ## Release Identity
 
@@ -8,18 +8,20 @@
 | Author | Ruturaj R Raval |
 | Affiliation | Independent Researcher |
 | ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
-| Tagged release | [`v0.3.0`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.0) |
-| Release date | 2026-09-05 |
-| Audited release commit | `4748983fc35d299b14d58522a75bcc9aa6c88b28` |
+| Tagged release | [`v0.3.1`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.1) |
+| Release date | 2026-09-07 |
+| Release commit | Pending until the `v0.3.1` tag is created |
+| Archive status | Paper-inclusive Zenodo successor draft reserved; publication pending |
+| Underlying mathematical release | `v0.3.0` at commit `4748983fc35d299b14d58522a75bcc9aa6c88b28` |
 | Certified full-proof source revision | `b0714133780d9411ece7b815e559658fcaa74851` |
-| Version DOI | [`10.5281/zenodo.22332416`](https://doi.org/10.5281/zenodo.22332416) |
+| Version DOI | [`10.5281/zenodo.22647766`](https://doi.org/10.5281/zenodo.22647766) |
 | Concept DOI | [`10.5281/zenodo.22260709`](https://doi.org/10.5281/zenodo.22260709) |
-| Archive status | Technical report and repository snapshot published; full proof payload archived separately |
+| Patch scope | Paper-inclusive archival and documentation patch |
 | License | MIT for project-original material |
 
 ## Claim-Safe Public Summary
 
-Release `v0.3.0` documents a certified partial reduction of the unresolved
+Release `v0.3.1` documents a certified partial reduction of the unresolved
 size-15 search for `K_2(11,3)`. A complete 150-branch normalized parent
 partition has 112 certified normalized branch closures and 38 residual
 branches. Within four selected unresolved third-word children, checked RUP and
@@ -27,6 +29,10 @@ solver-generated DRAT evidence closes 324 of 350 exhaustive fourth-word
 branches, leaving 26 and closing no complete selected child or normalized
 parent. The exact value remains open, and the known interval remains
 `15 <= K_2(11,3) <= 16`.
+
+This patch adds an explicit compiled PDF, deterministic paper-source archive,
+and `SHA256SUMS`. The theorem, proof certificates, retained data, branch
+counts, and computations are unchanged from `v0.3.0`.
 
 ## Background
 
@@ -44,13 +50,17 @@ it at 16.
 
 ## What This Release Adds
 
-This release adds a publication-ready technical report and a deterministic
-arXiv source archive for the certified partial result already represented by
-the proof records:
+This archival patch adds an explicit paper asset set for the technical report
+already represented by the proof records:
 
 - `paper/main.tex` gives the mathematical definitions, exact structural
   inequalities, symmetry reductions, closure ledgers, certificate model, and
   limitations.
+- `dist/release/binary-covering-code-11-3-v0.3.1-paper.pdf` is the compiled
+  report.
+- `dist/release/binary-covering-code-11-3-v0.3.1-paper-source.tar.gz` is the
+  deterministic paper and ancillary source package.
+- `dist/release/SHA256SUMS` binds both release payloads.
 - `paper/ARXIV_METADATA.md` records the exact submission title, abstract,
   categories, and final manual checks.
 - `dist/arxiv/binary-covering-code-11-3.tar.gz` is a deterministic,
@@ -69,18 +79,29 @@ The compact archive includes the v0.2.0 root release manifest, the root proof
 manifest, the fourth-word RUP manifest, the solver-DRAT v2 manifest, and a
 machine-readable Zenodo archive binding.
 
-The v0.3.0 report snapshot is archived at version DOI
-`10.5281/zenodo.22332416`. `release.json` binds its repository ZIP, release
-commit, GitHub source and PDF assets, sizes, and checksums.
+The paper-inclusive v0.3.1 archive is identified by version DOI
+`10.5281/zenodo.22647766`. `release.json` binds the prepared source, PDF, and
+checksum assets by exact names, sizes, and SHA-256 values.
+
+```text
+binary-covering-code-11-3-v0.3.1-paper.pdf
+SHA-256 1f5514125237b9439d112fa0edb9526256ce123e4c4539431bb0188abbd55a28
+
+binary-covering-code-11-3-v0.3.1-paper-source.tar.gz
+SHA-256 7472eff12833dcbafe065643245f6cd46169197024f18bee68823beb14fc839c
+
+SHA256SUMS
+SHA-256 cf05191f61e976d82d588142927c6508c35c98abfd9c33c46c949f36b4483eaf
+```
 
 ## Manifest And Asset Verification
 
-Use `release-manifest.sha256` from a clean checkout of tag `v0.3.0` to verify
+Use `release-manifest.sha256` from a clean checkout of tag `v0.3.1` to verify
 the tracked report release. `release.json` records:
 
-- the release tag object and audited release commit;
-- source and PDF asset names, sizes, and SHA-256 values;
-- the Zenodo `v0.3.0` repository snapshot name, size, MD5, and SHA-256;
+- the release tag and archival patch scope;
+- source, PDF, and checksum asset names, sizes, and SHA-256 values;
+- the preceding `v0.3.0` repository snapshot identity;
 - the certified full-proof source revision;
 - proof-plan, proof-index, and proof-bundle manifest digests; and
 - the archived `v0.2.0` proof payload identity and SHA-256.
@@ -149,21 +170,26 @@ bound to their certified source revision and archived release.
 
 ## Review Status
 
-The artifact and technical report are released. Internal manifest,
-classification, RUP, DRAT, clean-checkout, claim-scope, and manuscript gates
-are recorded as passed. The exact-value theorem announcement remains on hold
-because 26 selected fourth-word branches, every selected child, and all 38
-residual normalized branches remain open. No external mathematical review is
-claimed.
+The archival patch assets are prepared for release. Internal manifest,
+classification, RUP, DRAT, clean-checkout, claim-scope, manuscript, and
+paper-asset gates are recorded separately. The exact-value theorem
+announcement remains on hold because 26 selected fourth-word branches, every
+selected child, and all 38 residual normalized branches remain open. No
+external mathematical review is claimed.
 
 ## Reproduction
 
 Compact report replay:
 
 ```bash
+make archival-release
 make paper-bundle
 make paper-replay
+make verify-release-assets
 ```
+
+The paper build uses Tectonic 0.16.9 and a fixed `SOURCE_DATE_EPOCH`.
+Independent clean builds must reproduce the archived PDF hash.
 
 The compact replay uses no network access or third-party Python package. It
 does not replay the large proof payloads.
@@ -245,8 +271,8 @@ complete checked exclusion cover.
 ## Archive And Citation
 
 Citation metadata is in `CITATION.cff`. The all-versions concept DOI is
-`10.5281/zenodo.22260709`. The archived v0.3.0 release DOI is
-`10.5281/zenodo.22332416`.
+`10.5281/zenodo.22260709`. The paper-inclusive v0.3.1 version DOI is
+`10.5281/zenodo.22647766`.
 
 The complete earlier RUP and DRAT proof payload is archived at version DOI
 `10.5281/zenodo.22302261` as
