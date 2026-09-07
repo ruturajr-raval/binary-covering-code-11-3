@@ -476,8 +476,8 @@ Claims section.
   manifest, proof artifacts, and certified revision record.
 - `release-tools/manage_fourth_word_solver_drat_revision.py` validates the v2
   certified revision record.
-- `docs/CLAIMS.md` and `docs/PRIOR_ART.md` document the claim boundary and
-  dated literature audit.
+- `PUBLICATION.md` and `docs/LITERATURE_AUDIT.md` document the claim boundary
+  and dated literature audit.
 - `CITATION.cff` contains citation metadata.
 - `RELEASE_NOTES.md` records release history.
 - `release.json` records authoritative release readiness.

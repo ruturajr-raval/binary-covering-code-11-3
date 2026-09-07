@@ -6,6 +6,7 @@ This source archive accompanies:
   Certified Branch Reductions for the Binary Covering Number K_2(11,3)
 
 Author: Ruturaj R Raval
+Affiliation: Independent Researcher
 ORCID: 0000-0003-4930-8981
 
 CONTENTS
