@@ -10,7 +10,7 @@
 | ORCID | [0000-0003-4930-8981](https://orcid.org/0000-0003-4930-8981) |
 | Tagged release | [`v0.3.1`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.1) |
 | Release date | 2026-09-07 |
-| Release commit | `3543518d89d35f57753caa25a8ce73b004c4561b` |
+| Audited release commit | `3543518d89d35f57753caa25a8ce73b004c4561b` |
 | Tag object | `b59bc8f2b10113eee23d35397a47900804632b2e` |
 | GitHub release ID | `384349074` |
 | Archive status | GitHub and Zenodo releases published; all three public assets downloaded and verified |

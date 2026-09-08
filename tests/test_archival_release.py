@@ -77,6 +77,8 @@ class ArchivalReleaseTests(unittest.TestCase):
         metadata = json.loads(
             (ROOT / "release.json").read_text(encoding="ascii")
         )
+        readme = (ROOT / "README.md").read_text(encoding="ascii")
+        publication = (ROOT / "PUBLICATION.md").read_text(encoding="ascii")
         report = metadata["technical_report"]
         workflows = report["release_workflows"]
         record = report["zenodo_record"]
@@ -100,6 +102,16 @@ class ArchivalReleaseTests(unittest.TestCase):
             "b59bc8f2b10113eee23d35397a47900804632b2e",
         )
         self.assertEqual(report["github_release_id"], 384349074)
+        self.assertIn(
+            "audited release commit is\n"
+            "`3543518d89d35f57753caa25a8ce73b004c4561b`",
+            readme,
+        )
+        self.assertIn(
+            "| Audited release commit | "
+            "`3543518d89d35f57753caa25a8ce73b004c4561b` |",
+            publication,
+        )
         self.assertEqual(
             {
                 key: value["run_id"]

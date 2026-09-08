@@ -489,6 +489,8 @@ The public repository is
 [`ruturajr-raval/binary-covering-code-11-3`](https://github.com/ruturajr-raval/binary-covering-code-11-3).
 The paper-inclusive archival release is
 [`v0.3.1`](https://github.com/ruturajr-raval/binary-covering-code-11-3/releases/tag/v0.3.1).
+Its audited release commit is
+`3543518d89d35f57753caa25a8ce73b004c4561b`.
 
 The exact archival patch is identified by version DOI
 [`10.5281/zenodo.22647766`](https://doi.org/10.5281/zenodo.22647766).
